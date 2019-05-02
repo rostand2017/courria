@@ -1,0 +1,111 @@
+<?php
+
+namespace HomeBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Client
+ *
+ * @ORM\Table(name="client")
+ * @ORM\Entity
+ */
+class Client
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=254, nullable=true)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom", type="string", length=254, nullable=true)
+     */
+    private $prenom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="photo", type="string", length=254, nullable=true)
+     */
+    private $photo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cni", type="string", length=254, nullable=true)
+     */
+    private $cni;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="age", type="integer", nullable=true)
+     */
+    private $age;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sexe", type="string", length=254, nullable=true)
+     */
+    private $sexe;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=254, nullable=true)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mdp", type="string", length=254, nullable=true)
+     */
+    private $mdp;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="createdat", type="datetime", nullable=true)
+     */
+    private $createdat;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="Concert", inversedBy="cli")
+     * @ORM\JoinTable(name="reservation",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="cli_id", referencedColumnName="id")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="con_id", referencedColumnName="id")
+     *   }
+     * )
+     */
+    private $con;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->con = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+}
+

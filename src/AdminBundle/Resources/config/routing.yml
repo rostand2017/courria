@@ -1,0 +1,37 @@
+admin_homepage:
+    path:     /
+    defaults: { _controller: AdminBundle:Concert:index }
+
+#COMMAND
+admin_command:
+    path:     /command
+    defaults: { _controller: AdminBundle:Command:index }
+admin_command_user:
+    path:     /command/{name}-{user}
+    defaults: { _controller: AdminBundle:Command:userCommand }
+    requirements:
+        name: .+
+        user: \d+
+admin_command_valid:
+    path:     /command/valid
+    defaults: { _controller: AdminBundle:Command:validCommand }
+admin_command_valid_all:
+    path:     /command/valid_all
+    defaults: { _controller: AdminBundle:Command:validAllCommand }
+
+#CONNEXION
+admin_login:
+    path:     /login
+    defaults: { _controller: AdminBundle:Account:login }
+
+admin_change_password:
+    path:     /change_password
+    defaults: { _controller: AdminBundle:Account:changePassword }
+
+admin_logout:
+    path:     /logout
+    defaults: { _controller: AdminBundle:Account:logout }
+
+admin_create:
+    path:     /create
+    defaults: { _controller: AdminBundle:Account:create }

@@ -1,0 +1,32 @@
+{% extends "HomeBundle::layout.html.twig" %}
+
+{% block title %} ME-{{ app.session.get("user").name }} {% endblock %}
+{% block body %}
+    <div class="card-columns m-5">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-title"><a href="{{ path('home_cart') }}"><i class="fa fa-2x fa-shopping-cart"></i> Mon panier</a></div>
+                <div class="card-text">Acceder à mon panier</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="card-title"><a href="{{ path('home_command') }}"><i class="fa fa-2x fa-list"></i> Mes commandes</a></div>
+                <div class="card-text">Voir toutes mes commandes déjà effectuées</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="card-title"><a href="{{ path('home_change_password') }}" class="card-link"><i class="fa fa-2x fa-key"></i> Mot de passe</a></div>
+                <div class="card-text">Modifier votre mot de passe</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="card-title"><a href="{{ path('home_command') }}" class="card-link"><i class="fa fa-2x fa-history"></i> Historiques</a></div>
+                <div class="card-text">Historiques de commandes </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block script %}{% endblock %}

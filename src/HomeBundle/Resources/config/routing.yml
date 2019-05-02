@@ -1,0 +1,118 @@
+home_homepage:
+    path:     /
+    defaults: { _controller: HomeBundle:Home:index }
+
+home_login:
+    path:     /login
+    defaults: { _controller: HomeBundle:Home:login }
+
+home_register:
+    path:     /register
+    defaults: { _controller: HomeBundle:Home:register }
+
+home_change_password:
+    path:     /change_password
+    defaults: { _controller: HomeBundle:Home:changePassword }
+
+home_forgot_password:
+    path:     /forgot_password
+    defaults: { _controller: HomeBundle:Home:forgotPassword }
+
+# shopping cart
+home_cart:
+    path:     /Shoping-Cart
+    defaults: { _controller: HomeBundle:Command:index }
+home_cart_add:
+    path:     /Shoping-Cart/add-{product}
+    defaults: { _controller: HomeBundle:Command:addToCart }
+    requirements:
+        product: \d+
+home_cart_remove:
+    path:     /Shoping-Cart/remove-{command}
+    defaults: { _controller: HomeBundle:Command:removeToCart }
+    requirements:
+        command: \d+
+home_cart_update:
+    path:     /Shoping-Cart/update
+    defaults: { _controller: HomeBundle:Command:update }
+home_cart_verify:
+    path:     /Shoping-Cart/verify
+    defaults: { _controller: HomeBundle:Command:verify}
+
+home_show_cart:
+    path:     /show_cart
+    defaults: { _controller: HomeBundle:Command:showCart}
+
+home_cart_valid:
+    path:  /Shoping-Cart/valid
+    defaults: { _controller: HomeBundle:Command:valid }
+home_command:
+    path:     /old-command
+    defaults: { _controller: HomeBundle:Command:allCommand }
+home_command_payment:
+    path:     /payment_mode
+    defaults: { _controller: HomeBundle:Command:payment }
+
+# PRODUCT
+home_product:
+    path:     /products
+    defaults: { _controller: HomeBundle:Home:product }
+
+home_product_category:
+    path:     /product/{category}
+    defaults: { _controller: HomeBundle:Product:productCategory }
+    requirements:
+        category: \w+
+
+home_add_products:
+    path:     /product/add/{limit}
+    defaults: { _controller: HomeBundle:Product:addProducts }
+    requirements:
+        limit: \d+
+
+home_add_category_products:
+    path:     /product/add_{category}/{limit}
+    defaults: { _controller: HomeBundle:Product:addCategoryProducts }
+    requirements:
+        limit: \d+
+        category: \w+
+
+home_single_product:
+    path:     /product/{name}-{id}
+    defaults: { _controller: HomeBundle:Product:singleProduct }
+    requirements:
+        id: \d+
+        name: .+
+
+home_show_single_product:
+    path:     /product/show/{product}
+    defaults: { _controller: HomeBundle:Product:showSingleProduct }
+    requirements:
+        product: \d+
+
+#WISHES LIST
+home_wisheslist:
+    path:     /wishes-list
+    defaults: { _controller: HomeBundle:WishesList:index }
+
+home_wisheslist_add:
+    path:     /wishes/{product}
+    defaults: { _controller: HomeBundle:WishesList:add }
+    requirements:
+        product: \d+
+
+home_dashboard:
+    path:     /dashboard
+    defaults: { _controller: HomeBundle:Home:userDashboard }
+
+home_about:
+    path:     /about
+    defaults: { _controller: HomeBundle:Home:about }
+
+home_contact:
+    path:     /contact
+    defaults: { _controller: HomeBundle:Home:contact }
+
+home_subscribe:
+    path:     /subscribe
+    defaults: { _controller: HomeBundle:Home:subscribe }

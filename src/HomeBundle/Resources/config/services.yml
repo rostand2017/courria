@@ -1,0 +1,7 @@
+services:
+    home.set_number:
+        class: HomeBundle\Classes\NumberCartWishes
+        arguments:
+            - '@doctrine.orm.entity_manager'
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: setNumber }

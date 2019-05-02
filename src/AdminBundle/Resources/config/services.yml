@@ -1,0 +1,7 @@
+services:
+    admin.authentication:
+        class: AdminBundle\Classes\Authentication
+        arguments:
+            - '@router'
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: isAuthenticate }

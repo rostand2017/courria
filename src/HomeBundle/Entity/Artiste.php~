@@ -1,0 +1,78 @@
+<?php
+
+namespace HomeBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Artiste
+ *
+ * @ORM\Table(name="artiste", indexes={@ORM\Index(name="fk_association3", columns={"con_id"})})
+ * @ORM\Entity
+ */
+class Artiste
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=254, nullable=true)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom", type="string", length=254, nullable=true)
+     */
+    private $prenom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="photo", type="string", length=254, nullable=true)
+     */
+    private $photo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="datenaissance", type="string", length=254, nullable=true)
+     */
+    private $datenaissance;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nationalite", type="string", length=254, nullable=true)
+     */
+    private $nationalite;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="createdat", type="datetime", nullable=true)
+     */
+    private $createdat;
+
+    /**
+     * @var \Concert
+     *
+     * @ORM\ManyToOne(targetEntity="Concert")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="con_id", referencedColumnName="id")
+     * })
+     */
+    private $con;
+
+
+}
+

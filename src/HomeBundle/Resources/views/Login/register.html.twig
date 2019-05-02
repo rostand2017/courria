@@ -1,0 +1,64 @@
+{% extends "HomeBundle::layout.html.twig" %}
+
+{% block title %} register {% endblock %}
+{% block body %}
+    <div class="size-210  p-lr-70 p-t-100 p-b-70 p-lr-15-lg " style="margin: 0 auto;">
+        <form action="{{ path('auth_register') }}" method="post" id="registerForm">
+            <h4 class="mtext-105 cl2 txt-center p-b-30">
+                Inscription
+            </h4>
+
+            <div class="bor8 m-b-20 how-pos4-parent">
+                <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" required name="username" placeholder="Entrer votre nom et prénom">
+            </div>
+            <div class="bor8 m-b-20 how-pos4-parent">
+                <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="email" required name="email" placeholder="Entrer votre adresse email">
+            </div>
+
+            <div class="bor8 m-b-20 how-pos4-parent">
+                <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="password" required name="password" placeholder="Entrer votre mot de passe">
+            </div>
+            <div class="bor8 m-b-20 how-pos4-parent">
+                <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="password" required name="confirm_password" placeholder="Confirmer votre mot de passe">
+            </div>
+            <button class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer" type="submit" id="register_btn">
+                S'inscrire
+            </button>
+        </form>
+    </div>
+{% endblock %}
+{% block script %}
+    <script>
+        $(document).ready(function() {
+            $(document).on('submit', '#registerForm', function(e){
+                e.preventDefault();
+                var url = $(this).attr('action'),
+                    act = $('.register_btn').text();
+                data = $(this).serialize();
+
+                $.ajax({
+                    type: 'post',
+                    url: url,
+                    data: data,
+                    datatype: 'json',
+                    beforeSend: function () {
+                        $('.register_btn').text('Chargement...').prop('disabled', true);
+                    },
+                    success: function (json) {
+                        if (json.status == 0) {
+                            swal("Succèss", json.mes);
+                            window.location.reload();
+                        }else{
+                            swal("Alerte!", json.mes);
+                        }
+                    },
+                    complete: function () {
+                        $('.register_btn').text(act).prop('disabled', false);
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock %}

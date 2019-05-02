@@ -1,0 +1,23 @@
+auth_login:
+    path:     /login/done
+    defaults: { _controller: AuthenticationBundle:Account:login }
+
+auth_login_facebook:
+    path:     /facebook_login
+    defaults: { _controller: AuthenticationBundle:Account:loginFacebook }
+
+auth_register:
+    path:     /register/done
+    defaults: { _controller: AuthenticationBundle:Account:register }
+
+auth_change_password:
+    path:     /change_password/done
+    defaults: { _controller: AuthenticationBundle:Account:changePassword }
+
+auth_forgot_password:
+    path:     /forgot_password/done
+    defaults: { _controller: AuthenticationBundle:Account:forgotPassword }
+
+auth_logout:
+    path:     /logout
+    defaults: { _controller: AuthenticationBundle:Account:logout }

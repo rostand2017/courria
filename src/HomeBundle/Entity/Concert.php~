@@ -1,0 +1,92 @@
+<?php
+
+namespace HomeBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Concert
+ *
+ * @ORM\Table(name="concert", indexes={@ORM\Index(name="fk_association2", columns={"sal_id"})})
+ * @ORM\Entity
+ */
+class Concert
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="prix", type="integer", nullable=true)
+     */
+    private $prix;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nbplace", type="integer", nullable=true)
+     */
+    private $nbplace;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="intitule", type="string", length=254, nullable=true)
+     */
+    private $intitule;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=254, nullable=true)
+     */
+    private $description;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="datetime", nullable=true)
+     */
+    private $date;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="affiche", type="string", length=254, nullable=true)
+     */
+    private $affiche;
+
+    /**
+     * @var \Salle
+     *
+     * @ORM\ManyToOne(targetEntity="Salle")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="sal_id", referencedColumnName="id")
+     * })
+     */
+    private $sal;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="Client", mappedBy="con")
+     */
+    private $cli;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->cli = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+}
+

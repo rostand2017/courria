@@ -1,0 +1,64 @@
+<?php
+
+namespace HomeBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Salle
+ *
+ * @ORM\Table(name="salle", indexes={@ORM\Index(name="fk_association4", columns={"adm_id"})})
+ * @ORM\Entity
+ */
+class Salle
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=254, nullable=true)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="lieu", type="string", length=254, nullable=true)
+     */
+    private $lieu;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="capacite", type="integer", nullable=true)
+     */
+    private $capacite;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="createdat", type="string", length=254, nullable=true)
+     */
+    private $createdat;
+
+    /**
+     * @var \Admin
+     *
+     * @ORM\ManyToOne(targetEntity="Admin")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="adm_id", referencedColumnName="id")
+     * })
+     */
+    private $adm;
+
+
+}
+

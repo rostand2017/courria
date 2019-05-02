@@ -1,0 +1,116 @@
+{% extends "HomeBundle::layout.html.twig" %}
+
+{% block title %} login {% endblock %}
+{% block body %}
+    <div class="size-210  p-lr-70 p-t-100 p-b-70 p-lr-15-lg " style="margin: 0 auto;">
+        <form action="{{ path('auth_login') }}" method="post" id="loginForm">
+            <h4 class="mtext-105 cl2 txt-center p-b-30">
+                Se connecter
+            </h4>
+
+            <div class="bor8 m-b-20 how-pos4-parent">
+                <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="email"  required name="email" placeholder="Entrer votre adresse email">
+            </div>
+
+            <div class="bor8 m-b-20 how-pos4-parent">
+                <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="password" required name="password" placeholder="Entrer votre mot de passe">
+            </div>
+            <button class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer" id="login_btn" type="submit">
+                Connexion
+            </button>
+            <div class="m-b-20 row">
+                <div class="col-md-6 text-center"><a href="{{ path('home_forgot_password') }}">Mot de passe oublié</a></div>
+                <div class="col-md-6 text-center"><a href="{{ path('home_register') }}" class="m-l-20">Je n'ai pas de compte</a></div>
+            </div>
+        </form>
+        <div class="row justify-content-center">
+            <a href="{{ url }}" style="text-decoration: none; color: white" class="loginBtn loginBtn--facebook">
+                Se connecter avec facebook
+            </a>
+        </div>
+    </div>
+    <style>
+        .loginBtn {
+            box-sizing: border-box;
+            position: relative;
+            /* width: 13em;  - apply for fixed size */
+            margin: 0.2em;
+            padding: 3px 15px 5px 46px;
+            border: none;
+            text-align: left;
+            line-height: 34px;
+            white-space: nowrap;
+            border-radius: 0.2em;
+            font-size: 16px;
+            color: #FFF;
+        }
+        .loginBtn:before {
+            content: "";
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 34px;
+            height: 100%;
+        }
+        .loginBtn:focus {
+            outline: none;
+        }
+        .loginBtn:active {
+            box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+        }
+
+
+        /* Facebook */
+        .loginBtn--facebook {
+            background-color: #4C69BA;
+            background-image: linear-gradient(#4C69BA, #3B55A0);
+            /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+            text-shadow: 0 -1px 0 #354C8C;
+        }
+        .loginBtn--facebook:before {
+            border-right: #364e92 1px solid;
+            background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
+        }
+        .loginBtn--facebook:hover,
+        .loginBtn--facebook:focus {
+            background-color: #5B7BD5;
+            background-image: linear-gradient(#5B7BD5, #4864B1);
+        }
+    </style>
+{% endblock %}
+{% block script %}
+    <script>
+        $(document).ready(function() {
+            $(document).on('submit', '#loginForm', function (e) {
+                e.preventDefault();
+                var url = $(this).attr('action'),
+                    act = $('.login_btn').text();
+                data = $(this).serialize();
+
+                $.ajax({
+                    type: 'post',
+                    url: url,
+                    data: data,
+                    datatype: 'json',
+                    beforeSend: function () {
+                        $('.login_btn').text('Chargement...').prop('disabled', true);
+                    },
+                    success: function (json) {
+                        if (json.status == 0) {
+                            swal("Succèss", json.mes);
+                            window.location.reload();
+                        }else{
+                            swal("Alerte!", json.mes);
+                        }
+                    },
+                    complete: function () {
+                        $('.login_btn').text(act).prop('disabled', false);
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock %}
