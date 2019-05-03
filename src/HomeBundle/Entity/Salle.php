@@ -59,10 +59,7 @@ class Salle
      */
     private $adm;
 
-    public function __construct()
-    {
-        $this->createdat = new \DateTime();
-    }
+
 
     /**
      * Get id

@@ -10,11 +10,13 @@ namespace AdminBundle\Controller;
 
 
 use AdminBundle\Classes\Thumbnails;
+use HomeBundle\Entity\Artiste;
 use HomeBundle\Entity\Category;
 use HomeBundle\Entity\Concert;
 use HomeBundle\Entity\Image;
 use HomeBundle\Entity\InfoProduct;
 use HomeBundle\Entity\Product;
+use HomeBundle\Entity\Salle;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -27,33 +29,25 @@ class ConcertController extends Controller
         $page = ( $request->query->get("page") )?$request->query->get("page") : 1;
         $nbPerPage = 2;
         $em = $this->getDoctrine()->getManager();
-        $nbproducts = $em->getRepository(Concert::class)
-                        ->countDateproducts($page, $nbPerPage, $request->query->get("begin"), $request->query->get("end"));
-        $products = $em->getRepository(Concert::class)
-                        ->getSearchDateproducts($page, $nbPerPage, $request->query->get("begin"), $request->query->get("end"));
+        $nbConcert = $em->getRepository(Concert::class)
+                        ->countDateConcert($page, $nbPerPage, $request->query->get("begin"), $request->query->get("end"));
+        $concerts = $em->getRepository(Concert::class)
+                        ->getSearchDateConcert($page, $nbPerPage, $request->query->get("begin"), $request->query->get("end"));
+        $artistes = $em->getRepository(Artiste::class)->findAll();
+        $salles =  $em->getRepository(Salle::class)->findAll();
 
-        // recupère les images et les info attachées à chaque produit
-        foreach ($products as $index=>$product){
 
-            $products[$index]["images"] = $em->getRepository("HomeBundle\Entity\Image")
-                                    ->getProductImages($product["id"]);
-            $products[$index]["number"] = $em->getRepository("HomeBundle\Entity\InfoProduct")
-                                            ->getProductInfo($product["id"]);
-        }
-        // var_dump($products[0]["images"][0]["image"]);
-        // die();
-        $categories = $em->getRepository("HomeBundle\Entity\Category")->findAll();
-
-        $nbPage = ceil($nbproducts / $nbPerPage);
-        return $this->render('AdminBundle:Product:index.html.twig', array(
-            "categories" =>$categories,
-            "products" => $products,
+        $nbPage = ceil($nbConcert / $nbPerPage);
+        return $this->render('AdminBundle:Concert:index.html.twig', array(
+            "concerts" => $concerts,
             "page" => $page,
             "nbPage" => $nbPage,
+            "nbConcert" => $nbConcert,
+            "salles" => $salles,
+            "artistes" => $artistes,
         ));
     }
 
-    // modification sur les images à terminer
     public function editAction(Request $request){
 
         $em = $this->getDoctrine()->getManager();
@@ -245,6 +239,24 @@ class ConcertController extends Controller
         ));
     }
 
+    public function changeAfficheAction(Request $request){
+        $id = $request->request->get('id');
+        $affiche = $request->files->get('affiche');
+        $em = $this->getDoctrine()->getManager();
+        if($id && $affiche && is_numeric($id)){
+            $concert = $em->getRepository(Concert::class)->find($id);
+            unlink($this->getParameter("image_directory")."/".$concert->getAffiche());
+            unlink($this->getParameter("thumbnail_directory")."/".$concert->getAffiche());
+            $imageDirectory = $this->getParameter("image_directory");
+            $fileName = $this->getUniqueFileName();
+            $affiche->move($imageDirectory, $fileName);
+            $concert->setAffiche($fileName);
+            $em->persist($concert);
+            $em->flush();
+        }else{
+            return new JsonResponse(["status"=>0, "json"=>"Ajoutez une image dans la zone correspondante"]);
+        }
+    }
 
     private function getUniqueFileName(){
         return md5(uniqid());

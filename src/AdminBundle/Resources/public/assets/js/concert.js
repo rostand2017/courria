@@ -1,10 +1,15 @@
 $(document).ready(function() {
 
-    $(document).on('click','.deleteProduct', function (e) {
+    $('#detail').ckeditor(function() {},
+        {
+            customConfig: '../../assets/js/custom/ckeditor_config.js'
+        });
+
+    $(document).on('click','.deleteConcert', function (e) {
         e.preventDefault();
         var url = $(this).data('url'),
             id = $(this).data('id');
-        mess = "Êtes vous sûr de vouloir supprimer cet employé?";
+        mess = "Voulez vous annuler ce concert?";
         UIkit.modal.confirm(mess, function(){
             if(url!=''&&id!=''){
                 $.ajax({
@@ -25,12 +30,12 @@ $(document).ready(function() {
                     error: function (jqXHR, textStatus, errorThrown) {}
                 });
             }else{
-                UIkit.notify({message:"A error appear, please reload",status:'danger',timeout : 5000,pos:'top-center'});
+                UIkit.notify({message:"Une erreur est survenue",status:'danger',timeout : 5000,pos:'top-center'});
             }
         });
     });
 
-    $(document).on('click','.changeProduct', function(e){
+    $(document).on('click','.changeConcert', function(e){
         e.preventDefault();
         var id = $(this).data('id');
         $('.idCashier').val(id);
@@ -69,17 +74,20 @@ $(document).ready(function() {
             }
         });
     });
-	$(document).on('submit', '#formCustomer', function (e) {
+	$(document).on('submit', '#formConcert', function (e) {
 		e.preventDefault();
         var url = $(this).attr('action');
         var $form = $(this);
         var formdata = (window.FormData) ? new FormData($form[0]) : null;
         var data = (formdata !== null) ? formdata : $form.serialize();
-		var nom = $('#nom').val(),
-			fonction = $('#fonction').val(),
-			detail = $('#detail').val(),
+		var intitule = $('#intitule').val(),
+			description = $('#description').val(),
+			prix = $('#prix').val(),
+			date = $('#date').val(),
+			nbPlace = $('#nbPlace').val(),
+			salle = $('#salle').val(),
         act = $('.sendBtn').text();
-		if (nom != '' && fonction != '') {
+		if (intitule != '' && description != '' && prix != '' && prix > 1000 && date != '' && nbPlace != '' && salle != '') {
             $.ajax({
                 type: 'post',
                 url: url,
@@ -88,7 +96,7 @@ $(document).ready(function() {
                 processData: false,
                 datatype: 'json',
                 beforeSend: function () {
-                    $('.sendBtn').text('Chargement ...').prop('disabled', true);
+                    $('.sendBtn').text('CHARGEMENT ...').prop('disabled', true);
                 },
                 success: function (json) {
                     if (json.statuts == 0) {
@@ -98,7 +106,7 @@ $(document).ready(function() {
                     }
                 },
                 complete: function () {
-                    $('.sendBtn').text(act).prop('disabled', false);
+                    $('.sendBtn').prop('disabled', false).text(act);
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
 
@@ -106,43 +114,35 @@ $(document).ready(function() {
             });
 
         } else {
-            UIkit.notify({message:"A error appear, please reload",status:'danger',timeout : 5000,pos:'top-center'});
+            UIkit.notify({message:"Une erreur est survenue",status:'danger',timeout : 5000,pos:'top-center'});
 		}
 	});
-    $(document).on('click','#addCustomer', function (e) {
+    $(document).on('click','#addConcert', function (e) {
         e.preventDefault();
-        $('#nom').val('');
-        $('#fonction').val('');
-        $('#email').val('');
-        $('#facebook').val('https://facebook.com/');
-        $('#twitter').val('https://twitter.com/');
+        $('#intitule').val('');
+        $('#description').val('');
         $('#idMandataire').val('');
         $('#action').val('add');
         $('#pictureContent').show();
-        $('.titleForm').text("AJOUTER UN EMPLOYE");
+        $('.titleForm').text("AJOUTER UN CONCERT");
         $('.sendBtn').text("AJOUTER");
-        UIkit.modal('#modalCustomer').show();
+        UIkit.modal('#modalConcert').show();
     });
-	$(document).on('click','.editProduct', function (e) {
+	$(document).on('click','.editConcert', function (e) {
 		e.preventDefault();
 		var nom = $(this).data('nom'),
-			fonction = $(this).data('fonction'),
-			facebook = $(this).data('facebook'),
-			twitter = $(this).data('twitter'),
-            email = $(this).data('email'),
+			prix = $(this).data('prix'),
+            detail = $(this).data('detail'),
 			id = $(this).data('id');
-        $('#nom').val(nom);
-        $('#fonction').val(fonction);
-        $('#email').val(email);
-        $('#facebook').val(facebook);
-        $('#twitter').val(twitter);
-        $('#idCustomer').val(id);
+        $('#intitule').val(nom);
+        $('#description').val(detail);
+        $('#id').val(id);
         $('#action').val('edit');
         $('#pictureContent').hide();
         $('.md-input-wrapper').addClass('md-input-focus');
-        $('.titleForm').text("MODIFIER UN EMPLOYE");
+        $('.titleForm').text("MODIFIER LES INFORMATIONS SUR CE CONCERT");
         $('.sendBtn').text("MODIFIER");
-        UIkit.modal('#modalCustomer').show();
+        UIkit.modal('#modalConcert').show();
 	});
 
 });

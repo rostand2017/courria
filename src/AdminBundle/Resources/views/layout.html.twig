@@ -1,324 +1,161 @@
 <!doctype html>
 <html lang="fr" xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="msapplication-tap-highlight" content="no"/>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="msapplication-tap-highlight" content="no"/>
+        <link rel="icon" type="image/png" href="{{ asset('bundles/admin/assets/img/logo.png') }}" sizes="16x16">
+        <link rel="icon" type="image/png" href="{{ asset('bundles/admin/assets/img/logo.png') }}" sizes="32x32">
+        <link rel="stylesheet" href="{{ asset("bundles/admin/bower_components/uikit/css/uikit.almost-flat.min.css")}}"/>
+        <link rel="stylesheet" href="{{ asset("bundles/admin/assets/icons/flags/flags.min.css")}}"/>
+        <link rel="stylesheet" href="{{ asset("bundles/admin/assets/css/main.min.css")}}"/>
+        <link rel="stylesheet" href="{{ asset("bundles/admin/assets/css/themes/themes_combined.min.css")}}"/>
+        <link rel="stylesheet" href="{{ asset("bundles/admin/assets/css/style.css")}}"/>
 
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/admin/assets/plugins/bootstrap/css/bootstrap.min.css") }}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/admin/assets/plugins/pace-master/themes/blue/pace-theme-flash.css")}}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/admin/assets/plugins/uniform/css/uniform.default.min.css")}}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/admin/assets/plugins/fontawesome/css/font-awesome.css")}}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/admin/assets/plugins/line-icons/simple-line-icons.css")}}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/admin/assets/plugins/offcanvasmenueffects/css/menu_cornerbox.css")}}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/admin/assets/plugins/waves/waves.min.css")}}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/admin/assets/plugins/switchery/switchery.min.css")}}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/admin/assets/plugins/3d-bold-navigation/css/style.css")}}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/admin/assets/plugins/slidepushmenus/css/component.css")}}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/admin/assets/plugins/weather-icons-master/css/weather-icons.min.css")}}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/admin/assets/plugins/toastr/toastr.min.css")}}"/>
+        <title>{% block title %}{% endblock %}</title>
+    </head>
 
-    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/admin/assets/css/modern.min.css")}}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/admin/assets/css/themes/green.css")}}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/admin/assets/css/sweetalert.css")}}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/admin/assets/css/custom.css")}}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/admin/assets/plugins/bootstrap-datepicker/css/datepicker3.css")}}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/admin/assets/plugins/bootstrap-timepicker/css/bootstrap-timepicker.css")}}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/admin/assets/css/colors.css")}}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/admin/assets/css/alertify.css")}}"/>
-</head>
-
-<body class="page-header-fixed">
-    <div class="overlay"></div>
-    <div class="menu-wrap">
-        <button class="close-button" id="close-button">Close Menu</button>
-    </div>
-    <form class="search-form" action="#" method="post">
-        <div class="input-group">
-            <input type="text" name="search" class="form-control search-input" placeholder="Chercher...">
-            <span class="input-group-btn">
-                <button class="btn btn-default close-search waves-effect waves-button waves-classic" type="button"><i class="fa fa-times"></i></button>
-            </span>
-        </div>
-    </form>
-
-    <main class="page-content content-wrap">
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="sidebar-pusher">
-                    <a href="javascript:void(0);" class="waves-effect waves-button waves-classic push-sidebar">
-                        <i class="fa fa-bars"></i>
+    <body class=" sidebar_main_open sidebar_main_swipe">
+    <!-- main header -->
+        <header id="header_main">
+            <div class="header_main_content">
+                <nav class="uk-navbar">
+                    <!-- main sidebar switch -->
+                    <a href="#" id="sidebar_main_toggle" class="sSwitch sSwitch_left">
+                        <span class="sSwitchIcon"></span>
                     </a>
-                </div>
-                <div class="logo-box" style="background: lightgrey;">
-                    <a href="" class="logo-text">
-                        <img src="" style="width: 80px;height: 50px" alt="logo">
+                    <!-- secondary sidebar switch -->
+                    <a href="#" id="sidebar_secondary_toggle" class="sSwitch sSwitch_right sidebar_secondary_check">
+                        <span class="sSwitchIcon"></span>
                     </a>
-                </div>
-                <div class="search-button">
-                    <a href="javascript:void(0);" class="waves-effect waves-button waves-classic show-search"><i class="fa fa-search"></i></a>
-                </div>
-                <div class="topmenu-outer">
-                    <div class="top-menu">
-                        <ul class="nav navbar-nav navbar-left">
-                            <li>
-                                <a href="javascript:void(0);" class="waves-effect waves-button waves-classic sidebar-toggle"><i class="fa fa-bars"></i></a>
-                            </li>
-                            <li>
-                                <a href="#cd-nav" class="waves-effect waves-button waves-classic cd-nav-trigger"><i class="fa fa-diamond"></i></a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);" class="waves-effect waves-button waves-classic toggle-fullscreen"><i class="fa fa-expand"></i></a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle waves-effect waves-button waves-classic" data-toggle="dropdown">
-                                    <i class="fa fa-cogs"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-md dropdown-list theme-settings" role="menu">
-                                    <li class="li-group">
-                                        <ul class="list-unstyled">
-                                            <li class="no-link" role="presentation">
-                                                Entête fixe
-                                                <div class="ios-switch pull-right switch-md">
-                                                    <input type="checkbox" class="js-switch pull-right fixed-header-check" checked>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="li-group">
-                                        <ul class="list-unstyled">
-                                            <li class="no-link" role="presentation">
-                                                Menu fixe
-                                                <div class="ios-switch pull-right switch-md">
-                                                    <input type="checkbox" class="js-switch pull-right fixed-sidebar-check">
-                                                </div>
-                                            </li>
-                                            <li class="no-link" role="presentation">
-                                                Menu horizontal
-                                                <div class="ios-switch pull-right switch-md">
-                                                    <input type="checkbox" class="js-switch pull-right horizontal-bar-check">
-                                                </div>
-                                            </li>
-                                            <li class="no-link" role="presentation">
-                                                Menu réduit
-                                                <div class="ios-switch pull-right switch-md">
-                                                    <input type="checkbox" class="js-switch pull-right toggle-sidebar-check">
-                                                </div>
-                                            </li>
-                                            <li class="no-link" role="presentation">
-                                                Menu compact
-                                                <div class="ios-switch pull-right switch-md">
-                                                    <input type="checkbox" class="js-switch pull-right compact-menu-check">
-                                                </div>
-                                            </li>
-                                            <li class="no-link" role="presentation">
-                                                Menu actif
-                                                <div class="ios-switch pull-right switch-md">
-                                                    <input type="checkbox" class="js-switch pull-right hover-menu-check">
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="li-group">
-                                        <ul class="list-unstyled">
-                                            <li class="no-link" role="presentation">
-                                                Vue réduite
-                                                <div class="ios-switch pull-right switch-md">
-                                                    <input type="checkbox" class="js-switch pull-right boxed-layout-check">
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="li-group">
-                                        <ul class="list-unstyled">
-                                            <li class="no-link" role="presentation">
-                                                Choisir une couleur de thème
-                                                <div class="color-switcher">
-                                                    <a class="colorbox color-blue" href="#" title="Blue Theme" data-css="blue"></a>
-                                                    <a class="colorbox color-green" href="#" title="Green Theme" data-css="green"></a>
-                                                    <a class="colorbox color-red" href="#" title="Red Theme" data-css="red"></a>
-                                                    <a class="colorbox color-white" href="#" title="White Theme" data-css="white"></a>
-                                                    <a class="colorbox color-purple" href="#" title="purple Theme" data-css="purple"></a>
-                                                    <a class="colorbox color-dark" href="#" title="Dark Theme" data-css="dark"></a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="no-link"><button class="btn btn-default reset-options">Réinitialiser</button></li>
-                                </ul>
+                    <div class="uk-navbar-flip">
+                        <ul class="uk-navbar-nav user_actions">
+                            <li><a href="#" id="full_screen_toggle" class="user_action_icon uk-visible-large"><i class="material-icons md-24 md-light">&#xE5D0;</i></a></li>
+                            <li><a href="#" id="main_search_btn" class="user_action_icon"><i class="material-icons md-24 md-light">&#xE8B6;</i></a></li>
+                            <li data-uk-dropdown="{mode:'click',pos:'bottom-right'}">
+                                <a href="#" class="user_action_image"><img class="md-user-image" src="#" alt=""/></a>
+                                <div class="uk-dropdown uk-dropdown-small touruser">
+                                    <ul class="uk-nav js-uk-prevent">
+                                        <li><a href="{{ path('admin_change_password') }}">changer de mot de passe</a></li>
+                                        <li><a href="{{ path('admin_logout') }}">Déconnexion</a></li>
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="javascript:void(0);" class="waves-effect waves-button waves-classic show-search"><i class="fa fa-search"></i></a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle waves-effect waves-button waves-classic" data-toggle="dropdown">
-                                    <span class="user-name"><i class="fa fa-angle-down"></i></span>
-                                    <span>{{ app.request.session.get("username") }}</span>
-                                </a>
-                                {% set uri = app.request.getRequestUri() %}
-                                <ul class="dropdown-menu dropdown-list" role="menu">
-                                    <li role="presentation " class="active"><a href="{{ path("admin_change_password") }}"><i class="fa fa-lock"></i>Mot de passe</a></li>
-                                    <li role="presentation" class="divider"></li>
-                                    <li role="presentation"><a href="{{ path("admin_logout") }}"><i class="fa fa-sign-out m-r-xs"></i>Se déconnecter</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="{{ path("admin_logout") }}" class="log-out waves-effect waves-button waves-classic">
-                                    <span><i class="fa fa-sign-out m-r-xs"></i>Déconnexion</span>
-                                </a>
-                            </li>
-                        </ul><!-- Nav -->
                     </div>
+                </nav>
+            </div>
+            <div class="header_main_search_form">
+                <i class="md-icon header_main_search_close material-icons">&#xE5CD;</i>
+                <form class="uk-form uk-autocomplete" data-uk-autocomplete="{source:'data/search_data.json'}">
+                    <input type="text" class="header_main_search_input" />
+                    <button class="header_main_search_btn uk-button-link"><i class="md-icon material-icons">&#xE8B6;</i></button>
+                    <script type="text/autocomplete">
+                    </script>
+                </form>
+            </div>
+        </header>
+        <aside id="sidebar_main">
+            <div class="sidebar_main_header">
+                <div class="sidebar_logo" style="height: auto;">
+                    <a href="" class="sSidebar_hide sidebar_logo_large">
+                    <img class="logo_regular" src="{{asset("bundles/admin/assets//img/logo.png") }}" alt="" style="width: 100px; padding-top: 5px" />
+                    </a>
+                </div>
+                <div class="menu_section">
+                    <ul>
+                        <li class="current_section" title="Concert">
+                            <a href="{{ path('admin_concert') }}">
+                                <span class="menu_icon"><i class="uk-icon-calendar-minus-o uk-icon-medium"></i></span>
+                                <span class="menu_title">Concerts</span>
+                            </a>
+                        </li>
+                        <li title="Salles concert">
+                            <a href="{{ path('admin_salle') }}">
+                                <span class="menu_icon"><i class="uk-icon-building uk-icon-medium"></i></span>
+                                <span class="menu_title">Salles de concert</span>
+                            </a>
+                        </li>
+                        <li title="Concert">
+                            <a href="{{ path('admin_client') }}">
+                                <span class="menu_icon"><i class="uk-icon-user uk-icon-medium"></i></span>
+                                <span class="menu_title">Utilisateurs</span>
+                            </a>
+                        </li>
+                        <li title="Concert">
+                            <a href="{{ path('admin_reservation') }}">
+                                <span class="menu_icon"><i class="uk-icon-location-arrow uk-icon-medium"></i></span>
+                                <span class="menu_title">Réservations</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div class="page-sidebar sidebar">
-            <div class="page-sidebar-inner slimscroll">
-                <div class="sidebar-header">
-                    <div class="sidebar-profile">
-                        <a href="javascript:void(0);" id="profile-menu-link">
-                            <div class="sidebar-profile-image">
-                                <img src="" class="img-circle img-responsive" alt="">
-                            </div>
-                            <div class="sidebar-profile-details">
-                                <span> No permission </span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <ul class="menu accordion-menu">
-                    <li>
-                        <a href="{{ path('admin_homepage') }}" class="waves-effect waves-button">
-                            <span class="menu-icon glyphicon glyphicon-home"></span>
-                            <p>Vêtements</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ path('admin_category') }}" class="waves-effect waves-button">
-                            <span class="menu-icon fa fa-tags"></span>
-                            <p>Catégories</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ path('admin_slide') }}" class="waves-effect waves-button">
-                            <span class="menu-icon fa fa-sliders"></span>
-                            <p>Slide</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ path('admin_shipping') }}" class="waves-effect waves-button">
-                            <span class="menu-icon fa fa-send"></span>
-                            <p>Expédition</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ path('admin_newsletter') }}" class="waves-effect waves-button">
-                            <span class="menu-icon fa fa-newspaper-o"></span>
-                            <p>NewsLetter</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ path('admin_command') }}" class="waves-effect waves-button">
-                            <span class="menu-icon fa fa-list"></span>
-                            <p>Commandes</p>
-                        </a>
-                    </li>
-                </ul>
+        </aside><!-- main sidebar end -->
+
+        <div id="page_content">
+            <div id="page_content_inner">
+                <div class="uk-alert uk-alert-success uk-text-center" data-uk-alert=""><a href="#" class="uk-alert-close uk-close"></a><span class="alertJss"></span></div>
+                {% block body%}{% endblock %}
             </div>
         </div>
+        <script src="{{ assets('bundles/admin/assets/js/common.js') }}"></script>
+        <script src="{{ assets('bundles/admin/assets/js/uikit_custom.js') }}"></script>
+        <script src="{{ assets('bundles/admin/assets/js/altair_admin_common.js') }}"></script>
+        <script src="{{ assets('bundles/admin/bower_components/enjoyhint/enjoyhint.js') }}"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                if($('.alertJss').text() != ''){
+                    UIkit.notify({message:$('.alertJss').text(),status:'success',timeout : 5000,pos:'top-center'});
+                }
+                if($('.alertJs').text() != ''){
+                    UIkit.notify({message:$('.alertJs').text(),status:'danger',timeout : 5000,pos:'top-center'});
+                }
+                altair_form_adv = {
+                    date_range: function () {
+                        var $dp_start = $('#uk_dp_start'),
+                            $dp_end = $('#uk_dp_end');
 
-        <div class="page-inner">
-            <div class="page-title">
-                <h3>{% block titleContent %}{% endblock %}</h3>
-            </div>
-            <div id="main-wrapper">
-                {% block body %}{% endblock %}
-            </div>
-            <div class="page-footer">
-                <p class="no-s">2018 &copy; nopermission.com par <a href="mailto:rostandfotso32@gmail.com">rostandfotso32@gmail.com</a>.</p>
-            </div>
-        </div>
-    </main>
-    <div class="cd-overlay"></div>
+                        var start_date = UIkit.datepicker($dp_start, {
+                            format: 'DD.MM.YYYY'
+                        });
 
-    <script src="{{ asset("bundles/admin/assets/plugins/jquery/jquery-2.1.4.min.js") }}"></script>
-    <script src="{{ asset("bundles/admin/assets/plugins/jquery-ui/jquery-ui.min.js") }}"></script>
-    <script src="{{ asset("bundles/admin/assets/plugins/pace-master/pace.min.js") }}"></script>
-    <script src="{{ asset("bundles/admin/assets/plugins/jquery-blockui/jquery.blockui.js") }}"></script>
-    <script src="{{ asset("bundles/admin/assets/plugins/bootstrap/js/bootstrap.min.js") }}"></script>
-    <script src="{{ asset("bundles/admin/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js") }}"></script>
-    <script src="{{ asset("bundles/admin/assets/plugins/switchery/switchery.min.js") }}"></script>
-    <script src="{{ asset("bundles/admin/assets/plugins/uniform/jquery.uniform.min.js") }}"></script>
-    <script src="{{ asset("bundles/admin/assets/plugins/offcanvasmenueffects/js/classie.js") }}"></script>
-    <script src="{{ asset("bundles/admin/assets/plugins/offcanvasmenueffects/js/main.js") }}"></script>
-    <script src="{{ asset("bundles/admin/assets/plugins/waves/waves.min.js") }}"></script>
-    <script src="{{ asset("bundles/admin/assets/plugins/3d-bold-navigation/js/main.js") }}"></script>
-    <script src="{{ asset("bundles/admin/assets/plugins/waypoints/jquery.waypoints.min.js") }}"></script>
-    <script src="{{ asset("bundles/admin/assets/plugins/jquery-counterup/jquery.counterup.min.js") }}"></script>
-    <script src="{{ asset("bundles/admin/assets/js/sweetalert.min.js") }}"></script>
-    <script src="{{ asset("bundles/admin/assets/plugins/toastr/toastr.min.js") }}"></script>
-    <script src="{{ asset("bundles/admin/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js")}}"></script>
-    <script src="{{ asset("bundles/admin/assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js") }}"></script>
-    <script src="{{ asset("bundles/admin/assets/js/modern.js")}}"></script>
-    <script src="{{ asset("bundles/admin/assets/js/alertify.js") }}"></script>
+                        var end_date = UIkit.datepicker($dp_end, {
+                            format: 'DD.MM.YYYY'
+                        });
 
-    <script type="text/javascript">
-        function DateRanges(debut,fin) {
-            var $dp_start = $('#'+debut),
-                $dp_end = $('#'+fin);
-            $($dp_start).datepicker({
-                format: 'dd-mm-yyyy',
-                todayBtn:  1,
-                autoclose: true
-            }).on('changeDate', function (selected) {
-                var minDate = new Date(selected.date.valueOf());
-                $dp_end.datepicker('setStartDate', minDate);
-                setTimeout(function () {
-                    $dp_end.focus();
-                }, 300);
-            });
+                        $dp_start.on('change', function () {
+                            end_date.options.minDate = $dp_start.val();
+                            setTimeout(function () {
+                                $dp_end.focus();
+                            }, 300);
+                        });
 
-            $($dp_end).datepicker({
-                format: 'dd-mm-yyyy',
-                autoclose: true
-            }).on('changeDate', function (selected) {
-                var maxDate = new Date(selected.date.valueOf());
-                $dp_start.datepicker('setEndDate', maxDate);
-            });
-        }
-        DateRanges('debut','end');
-    </script>
-    <script type="text/javascript">
-
-        $(document).ready(function () {
-            if($('.alertJss').text() != ''){
-                toastr.options = {
-                    closeButton: true,
-                    progressBar: true,
-                    positionClass: "toast-top-center",
-                    showMethod: 'fadeIn',
-                    hideMethod: 'fadeOut',
-                    timeOut: 3000
+                        $dp_end.on('change', function () {
+                            start_date.options.maxDate = $dp_end.val();
+                        });
+                    }
                 };
-                toastr.success($('.alertJss').text(),'Succès !');
-            }
-            if($('.alertJs').text() != ''){
-                toastr.options = {
-                    closeButton: true,
-                    progressBar: true,
-                    positionClass: "toast-top-center",
-                    showMethod: 'fadeIn',
-                    hideMethod: 'fadeOut',
-                    timeOut: 3000
-                };
-                toastr.error($('.alertJs').text(),'Oups !');
-            }
-        });
-    </script>
-    {% block scripts %}{% endblock %}
-</body>
+            });
+        </script>
+        <script>
+            $(function() {
+                if(isHighDensity()) {
+                    $.getScript("{{ asset('bundles/admin/bower_components/dense/src/dense.js') }}", function() {
+                        altair_helpers.retina_images();
+                    });
+                }
+                if(Modernizr.touch) {
+                    // fastClick (touch devices)
+                    FastClick.attach(document.body);
+                }
+            });
+            $window.load(function() {
+                // ie fixes
+                altair_helpers.ie_fix();
+            });
+        </script>
+        {% block scripts %}{% endblock %}
+    </body>
 </html>

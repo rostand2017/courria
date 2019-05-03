@@ -30,7 +30,7 @@ $(document).ready(function() {
                     error: function (jqXHR, textStatus, errorThrown) {}
                 });
             }else{
-                UIkit.notify({message:"A error appear, please reload",status:'danger',timeout : 5000,pos:'top-center'});
+                UIkit.notify({message:"An error appear, please reload",status:'danger',timeout : 5000,pos:'top-center'});
             }
         });
     });

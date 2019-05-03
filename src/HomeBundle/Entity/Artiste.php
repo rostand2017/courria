@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Artiste
  *
- * @ORM\Table(name="artiste", indexes={@ORM\Index(name="fk_association3", columns={"con_id"})})
+ * @ORM\Table(name="artiste")
  * @ORM\Entity
  */
 class Artiste
@@ -63,20 +63,7 @@ class Artiste
      */
     private $createdat;
 
-    /**
-     * @var \Concert
-     *
-     * @ORM\ManyToOne(targetEntity="Concert")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="con_id", referencedColumnName="id")
-     * })
-     */
-    private $con;
 
-    public function __construct()
-    {
-        $this->createdat = new \DateTime();
-    }
 
     /**
      * Get id
@@ -230,29 +217,5 @@ class Artiste
     public function getCreatedat()
     {
         return $this->createdat;
-    }
-
-    /**
-     * Set con
-     *
-     * @param \HomeBundle\Entity\Concert $con
-     *
-     * @return Artiste
-     */
-    public function setCon(\HomeBundle\Entity\Concert $con = null)
-    {
-        $this->con = $con;
-
-        return $this;
-    }
-
-    /**
-     * Get con
-     *
-     * @return \HomeBundle\Entity\Concert
-     */
-    public function getCon()
-    {
-        return $this->con;
     }
 }

@@ -73,20 +73,6 @@ class Concert
      */
     private $sal;
 
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\ManyToMany(targetEntity="Client", mappedBy="con")
-     */
-    private $cli;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->cli = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
 }
 

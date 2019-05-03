@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Artiste
  *
- * @ORM\Table(name="artiste", indexes={@ORM\Index(name="fk_association3", columns={"con_id"})})
+ * @ORM\Table(name="artiste")
  * @ORM\Entity
  */
 class Artiste
@@ -62,16 +62,6 @@ class Artiste
      * @ORM\Column(name="createdat", type="datetime", nullable=true)
      */
     private $createdat;
-
-    /**
-     * @var \Concert
-     *
-     * @ORM\ManyToOne(targetEntity="Concert")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="con_id", referencedColumnName="id")
-     * })
-     */
-    private $con;
 
 
 }

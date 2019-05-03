@@ -73,20 +73,6 @@ class Concert
      */
     private $sal;
 
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\ManyToMany(targetEntity="Client", mappedBy="con")
-     */
-    private $cli;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->cli = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
 
     /**
@@ -265,39 +251,5 @@ class Concert
     public function getSal()
     {
         return $this->sal;
-    }
-
-    /**
-     * Add cli
-     *
-     * @param \HomeBundle\Entity\Client $cli
-     *
-     * @return Concert
-     */
-    public function addCli(\HomeBundle\Entity\Client $cli)
-    {
-        $this->cli[] = $cli;
-
-        return $this;
-    }
-
-    /**
-     * Remove cli
-     *
-     * @param \HomeBundle\Entity\Client $cli
-     */
-    public function removeCli(\HomeBundle\Entity\Client $cli)
-    {
-        $this->cli->removeElement($cli);
-    }
-
-    /**
-     * Get cli
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getCli()
-    {
-        return $this->cli;
     }
 }

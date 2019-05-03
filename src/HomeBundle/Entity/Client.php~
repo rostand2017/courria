@@ -84,28 +84,6 @@ class Client
      */
     private $createdat;
 
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\ManyToMany(targetEntity="Concert", inversedBy="cli")
-     * @ORM\JoinTable(name="reservation",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="cli_id", referencedColumnName="id")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="con_id", referencedColumnName="id")
-     *   }
-     * )
-     */
-    private $con;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->con = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
 }
 

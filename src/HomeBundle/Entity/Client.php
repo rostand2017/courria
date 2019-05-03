@@ -84,29 +84,6 @@ class Client
      */
     private $createdat;
 
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\ManyToMany(targetEntity="Concert", inversedBy="cli")
-     * @ORM\JoinTable(name="reservation",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="cli_id", referencedColumnName="id")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="con_id", referencedColumnName="id")
-     *   }
-     * )
-     */
-    private $con;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->con = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->createdat = new \DateTime();
-    }
 
 
     /**
@@ -333,39 +310,5 @@ class Client
     public function getCreatedat()
     {
         return $this->createdat;
-    }
-
-    /**
-     * Add con
-     *
-     * @param \HomeBundle\Entity\Concert $con
-     *
-     * @return Client
-     */
-    public function addCon(\HomeBundle\Entity\Concert $con)
-    {
-        $this->con[] = $con;
-
-        return $this;
-    }
-
-    /**
-     * Remove con
-     *
-     * @param \HomeBundle\Entity\Concert $con
-     */
-    public function removeCon(\HomeBundle\Entity\Concert $con)
-    {
-        $this->con->removeElement($con);
-    }
-
-    /**
-     * Get con
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getCon()
-    {
-        return $this->con;
     }
 }

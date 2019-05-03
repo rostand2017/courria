@@ -42,10 +42,7 @@ class Admin
      */
     private $createdat;
 
-    public function __construct()
-    {
-        $this->createdat = new \DateTime();
-    }
+
 
     /**
      * Get id
