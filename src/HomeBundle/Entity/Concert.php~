@@ -50,11 +50,16 @@ class Concert
     private $description;
 
     /**
-     * @var \DateTime
      *
-     * @ORM\Column(name="date", type="datetime", nullable=true)
+     * @ORM\Column(name="date", type="date", nullable=false)
      */
     private $date;
+
+    /**
+     *
+     * @ORM\Column(name="heure", type="time", nullable=false)
+     */
+    private $heure;
 
     /**
      * @var string

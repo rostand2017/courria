@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="{{ asset("bundles/admin/assets/css/main.min.css")}}"/>
         <link rel="stylesheet" href="{{ asset("bundles/admin/assets/css/themes/themes_combined.min.css")}}"/>
         <link rel="stylesheet" href="{{ asset("bundles/admin/assets/css/style.css")}}"/>
+
         {% block style %}{% endblock %}
 
         <title>{% block title %}{% endblock %}</title>
@@ -125,11 +126,11 @@
                             $dp_end = $('#uk_dp_end');
 
                         var start_date = UIkit.datepicker($dp_start, {
-                            format: 'DD.MM.YYYY'
+                            format: 'DD-MM-YYYY'
                         });
 
                         var end_date = UIkit.datepicker($dp_end, {
-                            format: 'DD.MM.YYYY'
+                            format: 'DD-MM-YYYY'
                         });
 
                         $dp_start.on('change', function () {
@@ -144,6 +145,12 @@
                         });
                     }
                 };
+                altair_form_adv.date_range();
+
+                UIkit.timepicker($('#time'));
+                UIkit.datepicker($('#date'), {
+                    format: 'DD-MM-YYYY'
+                });
             });
         </script>
         <script>

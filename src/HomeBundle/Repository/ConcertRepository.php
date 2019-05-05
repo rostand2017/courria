@@ -40,6 +40,7 @@ class ConcertRepository extends \Doctrine\ORM\EntityRepository
         if($begin)
             $sql .= " WHERE c.date BETWEEN :begin AND :end ";
 
+        $sql .= " ORDER BY c.date DESC";
         $sql .= " LIMIT :limit,:offset";
 
         $state = $this->_em->getConnection()->prepare($sql);

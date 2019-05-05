@@ -12,7 +12,7 @@
                 <a href="{{ path('admin_homepage') }}"><i class="md-icon uk-icon-refresh"></i></a>
             </div>
             <h3 class="md-card-toolbar-heading-text">
-                Nombre de concert organisé
+                Liste des concerts
                 <span class="uk-badge uk-badge-warning">{{ nbConcert }}</span>
             </h3>
         </div>
@@ -36,9 +36,8 @@
                     <div class="uk-grid" style="margin-top: 10px">
                         <div class="uk-width-medium-1-1">
                             <div class="">
-                                <label for="mail_new_to">Chercher par titre de la news</label>
-                                <input type="text"
-                                class="md-input" name="search" />
+                                <label for="mail_new_to">Recherche par l'intitulé du concert</label>
+                                <input type="text" class="md-input" name="search" />
                             </div>
                         </div>
                     </div>
@@ -60,15 +59,17 @@
                                             <img src="/uploads/thumbnails/{{ concerne.concert.affiche }}" style="width: 100%" alt="{{ concerne.concert.intitule }}">
                                             <div class="md-card-content">
                                                 <strong>{{ concerne.concert.intitule }}</strong><br>
-                                                <span class="uk-text-muted">{{ concert.date }}</span>
+                                                <span class="uk-text-muted">Le {{ concerne.concert.date | date('d-m-y')}} à {{ concerne.concert.heure | date('h:m') }}</span>
                                                 <p>{{ concerne.concert.description }}</p>
                                             </div>
                                         </div>
                                         <div class="md-card-fullscreen-content">
                                             <div class="uk-article">
                                                 <h1 class="uk-article-title">{{ concerne.concert.intitule }}</h1>
+                                                <img src="/uploads/thumbnails/{{ concerne.concert.affiche }}" style="width: 100%" alt="{{ concerne.concert.intitule }}">
                                                 <p class="uk-article-meta">
-                                                    Date de deroulement:  {{ concerne.concert.intitule }}
+                                                    Date de deroulement:  Le {{ concerne.concert.date | date('d-m-y')}}à {{ concerne.concert.heure | date('h:m') }}
+
                                                 </p>
                                                 <hr style="margin: 30px 0">
                                                 {{ concerne.concert.description }}
@@ -81,8 +82,8 @@
                                         <i class="material-icons"></i>
                                         <div class="md-fab-sheet-actions">
                                             <a data-id="{{ concerne.concert.id }}" data-intitule="{{ concerne.concert.intitule }}"
-                                               data-description="{{ concerne.concert.description }}" data-prix="{{ concerne.concert.prix }}" data-nbPlace="{{ concerne.concert.nbPlace }}"
-                                               data-salle="{{ concerne.concert.sal.id }}" data-date="{{ concerne.concert.date }}" data-artiste="{{ concerne.artiste }}"
+                                               data-description="{{ concerne.concert.description }}" data-prix="{{ concerne.concert.prix }}" data-nbplace="{{ concerne.concert.nbPlace }}"
+                                               data-salle="{{ concerne.concert.sal.id }}" data-date="{{ concerne.concert.date | date('d-m-y') }}"  data-time="{{ concerne.concert.heure | date('h:m') }}" data-artiste="{{ concerne.artiste.id }}"
                                                href="javascript:void(0)" class="editConcert md-color-white"><i class="material-icons md-color-white"></i> Modifier</a>
                                             <a data-id="{{ concerne.concert.id }}" href="javascript:void(0)" class="changeConcert md-color-white"><i class="material-icons md-color-white"></i> Changer l'image</a>
                                             <a data-id="{{ concerne.concert.id }}" data-url="{{ path('admin_concert_delete') }}" href="javascript:void(0)" class="deleteConcert md-color-white"><i class="material-icons md-color-white"></i> Supprimer</a>
@@ -196,7 +197,7 @@
                         <div class="parsley-row">
                             <h4>Artistes</h4>
                             {% if artistes is not empty %}
-                                <select name="artistes" multiple="multiple" class="uk-form-select" id="artistes">
+                                <select name="artistes[]" multiple="multiple" class="uk-form-select md-input" id="artistes">
                                     <option value="">Choisissez les artistes pour ce concert</option>
                                     {% for artiste in artistes %}
                                         <option value="{{ artiste.id }}">{{ artiste.nom }}  {{ artiste.prenom }}</option>
@@ -204,16 +205,23 @@
                                 </select>
                             {% else %}
                                 <span class="uk-badge-danger" style="color: white; padding: 3px"><i class="uk-icon-warning" style="color: white"></i> Aucun artiste disponible. Veuillez rajouter un artiste <a
-                                            href="{{ path('admin_artiste') }}"> cliquez ici <i class="uk-icon-hand-pointer-o"></i></a></span>
+                                            href="{{ path('admin_artiste') }}"> cliquez ici <i class="uk-icon-hand-pointer-o"></i></a>
+                                </span>
                             {% endif %}
                         </div>
                     </div>
                 </div>
                 <div class="uk-grid" data-uk-grid-margin>
-                    <div class="uk-width-medium-1-1">
+                    <div class="uk-width-medium-1-2">
                         <div class="parsley-row">
-                            <h4>Date et heure du concert</h4>
-                            <input type="datetime-local" name="date" id="date" class="uk-datepicker md-input">
+                            <h4>Date du concert</h4>
+                            <input type="text" name="date" id="date" class="md-input">
+                        </div>
+                    </div>
+                    <div class="uk-width-medium-1-2">
+                        <div class="parsley-row">
+                            <h4>Heure du concert</h4>
+                            <input type="text" name="time" id="time" class="md-input">
                         </div>
                     </div>
                 </div>
@@ -244,7 +252,8 @@
             <button class="uk-modal-close uk-close" type="button"></button>
             <form action="{{ path('admin_concert_change_affiche') }}" id="addPictureForm" method="post">
                 <h3 class="heading_b uk-margin-bottom titleForm">CHANGER L'AFFICHE DU CONCERT</h3>
-                <input type="hidden" id="id" class="idCashier" name="idCashier">
+                <div id="messageformImage"></div>
+                <input type="hidden" id="idImage" name="id">
                 <div id="pictureContent">
                     <div class="uk-grid" data-uk-grid-margin>
                         <div class="uk-width-medium-1-1">

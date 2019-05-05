@@ -36,7 +36,7 @@ class ConcertController extends Controller
                         ->getSearchDateConcert($page, $nbPerPage, $request->query->get("begin"), $request->query->get("end"));
         $concernes = array();
         foreach ($concerts as $concert){
-            $concerne[] = $em->getRepository(Concerne::class)->findBy(['concert_id'=>$concert->getId()]);
+            array_push($concernes, $em->getRepository(Concerne::class)->findOneBy(['concert'=>$concert['id']]) );
         }
         $artistes = $em->getRepository(Artiste::class)->findAll();
         $salles =  $em->getRepository(Salle::class)->findAll();
@@ -45,7 +45,7 @@ class ConcertController extends Controller
         $nbPage = ceil($nbConcert / $nbPerPage);
         return $this->render('AdminBundle:Concert:index.html.twig', array(
             "concerts" => $concerts,
-            "concernes"=>$concernes,
+            "concernes" => $concernes,
             "page" => $page,
             "nbPage" => $nbPage,
             "nbConcert" => $nbConcert,
@@ -64,6 +64,7 @@ class ConcertController extends Controller
         $description = $post->get("description");
         $prix = $post->get("prix");
         $date = $post->get("date");
+        $time = $post->get("time");
         $nbPlace = $post->get("nbPlace");
         $salleId = $post->get("salle");
         $artistes = $post->get("artistes");
@@ -74,14 +75,15 @@ class ConcertController extends Controller
         if($action && $action == "edit" && $id && is_numeric($id) && $id > 0){
             $concert = $em->getRepository(Concert::class)->find($id);
             if($intitule != '' && $description != '' && $prix!='' && is_numeric($prix) && $prix > 0
-                && $date != '' && $nbPlace!='' && is_numeric($nbPlace) && $nbPlace >0 && $salleId != ''
+                && $date != '' && $time != '' && $nbPlace!='' && is_numeric($nbPlace) && $nbPlace >0 && $salleId != ''
                 && is_numeric($salleId) && $salleId > 0 && $artistes && !empty($artistes)
             ){
                 $concert = $em->getRepository(Concert::class)->find($id);
                 $concert->setIntitule($intitule);
                 $concert->setDescription($description);
                 $concert->setPrix($prix);
-                $concert->setDate($date);
+                $concert->setDate(new \DateTime($date));
+                $concert->setHeure(new \DateTime($time));
                 $concert->setNbplace($nbPlace);
                 $concert->setSal($em->getRepository(Salle::class)->find($salleId));
                 $concerne = new Concerne();
@@ -103,27 +105,31 @@ class ConcertController extends Controller
             }
 
         }else{
-            var_dump($artistes);
             $imageAccepted = array("jpg", "png", "jpeg");
             if($intitule != '' && $description != '' && $prix!='' && is_numeric($prix) && $prix > 0
-                && $date != '' && $nbPlace!='' && is_numeric($nbPlace) && $nbPlace >0 && $salleId != ''
+                && $date != '' && $time != '' && $nbPlace!='' && is_numeric($nbPlace) && $nbPlace >0 && $salleId != ''
                 && is_numeric($salleId) && $salleId > 0 && $affiche && $artistes && !empty($artistes)){
                 if(in_array($affiche->guessExtension(), $imageAccepted)){
                     $imageDirectory = $this->getParameter("image_directory");
+                    $thumbnailDirectory = $this->getParameter("thumbnail_directory");
                     $filename = $this->getUniqueFileName().".".$affiche->guessExtension();
                     $affiche->move($imageDirectory, $filename);
+                    $thumb = new Thumbnails();
+                    $thumb->createThumbnail($imageDirectory."/".$filename, $thumbnailDirectory."/".$filename, 200);
                     $concerne = new Concerne();
                     $concert = new Concert();
                     $concert->setIntitule($intitule);
                     $concert->setDescription($description);
                     $concert->setPrix($prix);
-                    $concert->setDate($date);
+                    $concert->setDate(new \DateTime($date));
+                    $concert->setHeure(new \DateTime($time));
                     $concert->setNbplace($nbPlace);
                     $concert->setAffiche($filename);
                     $concert->setSal($em->getRepository(Salle::class)->find($salleId));
 
-                    foreach ($artistes as $artiste){
-                        $concerne->setArtiste($em->getRepository(Artiste::class)->find($artiste));
+                    foreach ($artistes as $artisteId){
+                        $artiste = $em->getRepository(Artiste::class)->find($artisteId);
+                        $concerne->setArtiste($artiste);
                     }
                     $concerne->setConcert($concert);
                     $em->persist($concerne);
@@ -135,7 +141,7 @@ class ConcertController extends Controller
                 }else{
                     return new JsonResponse(array(
                         "status"=>1,
-                        "mes"=>"Format d'image incorrecte"
+                        "mes"=>"Format d'image incorrecte!"
                     ));
                 }
             }else{
@@ -154,8 +160,10 @@ class ConcertController extends Controller
             $concert = $em->getRepository(Concert::class)->find($id);
             $em->remove($concert);
             $em->flush();
-            unlink($this->getParameter("image_directory")."/".$concert->getAffiche());
-            unlink($this->getParameter("thumbnail_directory")."/".$concert->getAffiche() );
+            if(file_exists($this->getParameter("image_directory")."/".$concert->getAffiche()))
+                unlink($this->getParameter("image_directory")."/".$concert->getAffiche());
+            if(file_exists($this->getParameter("thumbnail_directory")."/".$concert->getAffiche()))
+                unlink($this->getParameter("thumbnail_directory")."/".$concert->getAffiche() );
             return new JsonResponse(array(
                 "status"=>0,
                 "mes"=>"Concert supprimé avec succès"
@@ -173,17 +181,24 @@ class ConcertController extends Controller
         $em = $this->getDoctrine()->getManager();
         if($id && $affiche && is_numeric($id)){
             $concert = $em->getRepository(Concert::class)->find($id);
-            unlink($this->getParameter("image_directory")."/".$concert->getAffiche());
-            unlink($this->getParameter("thumbnail_directory")."/".$concert->getAffiche());
             $imageDirectory = $this->getParameter("image_directory");
+            $thumbnailDirectory = $this->getParameter("thumbnail_directory");
+
+            if(file_exists($imageDirectory."/".$concert->getAffiche()))
+                unlink($imageDirectory."/".$concert->getAffiche());
+            if(file_exists($thumbnailDirectory."/".$concert->getAffiche()))
+                unlink($thumbnailDirectory."/".$concert->getAffiche() );
+
             $fileName = $this->getUniqueFileName().".".$affiche->guessExtension();
             $affiche->move($imageDirectory, $fileName);
+            $thumb = new Thumbnails();
+            $thumb->createThumbnail($imageDirectory."/".$fileName, $thumbnailDirectory."/".$fileName, 200);
             $concert->setAffiche($fileName);
             $em->persist($concert);
             $em->flush();
-            return new JsonResponse(["status"=>1, "json"=>"Image modifiée avec succès."]);
+            return new JsonResponse(["status"=>0, "mes"=>"Image modifiée avec succès."]);
         }else{
-            return new JsonResponse(["status"=>1, "json"=>"Ajoutez une image dans la zone correspondante"]);
+            return new JsonResponse(["status"=>1, "mes"=>"Ajoutez une image dans la zone correspondante"]);
         }
     }
 

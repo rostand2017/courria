@@ -50,11 +50,16 @@ class Concert
     private $description;
 
     /**
-     * @var \DateTime
      *
-     * @ORM\Column(name="date", type="datetime", nullable=true)
+     * @ORM\Column(name="date", type="date", nullable=false)
      */
     private $date;
+
+    /**
+     *
+     * @ORM\Column(name="heure", type="time", nullable=false)
+     */
+    private $heure;
 
     /**
      * @var string
@@ -75,7 +80,7 @@ class Concert
 
     public function __construct()
     {
-        $this->date = new \DateTime();
+
     }
 
     /**
@@ -265,5 +270,29 @@ class Concert
     public function getSal()
     {
         return $this->sal;
+    }
+
+    /**
+     * Set heure
+     *
+     * @param \DateTime $heure
+     *
+     * @return Concert
+     */
+    public function setHeure($heure)
+    {
+        $this->heure = $heure;
+
+        return $this;
+    }
+
+    /**
+     * Get heure
+     *
+     * @return \DateTime
+     */
+    public function getHeure()
+    {
+        return $this->heure;
     }
 }

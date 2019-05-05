@@ -5,8 +5,18 @@ $(document).ready(function() {
             customConfig: '../../assets/js/custom/ckeditor_config.js'
         });
 
+    $(document).on('click','.changeConcert', function(e){
+        e.preventDefault();
+        $('#messageformImage').html('');
+        var id = $(this).data('id');
+        $('#idImage').val(id);
+        var modal = UIkit.modal("#addPicture");
+        modal.show();
+
+    });
     $(document).on('click','.deleteConcert', function (e) {
         e.preventDefault();
+        $('#messageformSalle').html('');
         var url = $(this).data('url'),
             id = $(this).data('id');
         mess = "Voulez vous annuler ce concert?";
@@ -34,15 +44,36 @@ $(document).ready(function() {
             }
         });
     });
-
-    $(document).on('click','.changeConcert', function(e){
+    $(document).on('click','.editConcert', function (e) {
+        $('#messageformSalle').html('');
         e.preventDefault();
-        var id = $(this).data('id');
-        $('.idCashier').val(id);
-        var modal = UIkit.modal("#addPictureCashier");
-        modal.show();
-
+        var intitule = $(this).data('intitule'),
+            prix = $(this).data('prix'),
+            description = $(this).data('description'),
+            nbPlace = $(this).data('nbplace'),
+            date = $(this).data('date'),
+            time = $(this).data('time'),
+            artistes = $(this).data('artistes'),
+            salle = $(this).data('salle'),
+            id = $(this).data('id');
+        $('#intitule').val(intitule);
+        $('#description').val(description);
+        $('#prix').val(prix);
+        $('#nbPlace').val(nbPlace);
+        $('#date').val(date);
+        $('#time').val(time);
+        $('#artistes').val(artistes);
+        $('#salle').val(salle);
+        $('#id').val(id);
+        $('#action').val('edit');
+        $('#pictureContent').hide();
+        $('.md-input-wrapper').addClass('md-input-focus');
+        $('.titleForm').text("MODIFIER LES INFORMATIONS SUR CE CONCERT");
+        $('.sendBtn').text("MODIFIER");
+        UIkit.modal('#modalConcert').show();
     });
+
+
     $(document).on('submit','#addPictureForm',function (e) {
         e.preventDefault();
         var url = $(this).attr('action');
@@ -60,10 +91,10 @@ $(document).ready(function() {
                 $('.addBtn').text('Chargement ...').prop('disabled',true);
             },
             success: function (json) {
-                if (json.statuts == 0){
+                if (json.status == 0){
                     window.location.reload();
                 }else{
-                    alert(json.mes);
+                    $('#messageformImage').html("<div class='uk-alert uk-alert-danger uk-text-center' data-uk-alert=''><a href='' class='uk-alert-close uk-close'></a><span class='alertJss'>"+json.mes+"</span></div>");
                 }
             },
             complete: function () {
@@ -84,10 +115,11 @@ $(document).ready(function() {
 			description = $('#description').val(),
 			prix = $('#prix').val(),
 			date = $('#date').val(),
+			time = $('#time').val(),
 			nbPlace = $('#nbPlace').val(),
 			salle = $('#salle').val(),
         act = $('.sendBtn').text();
-		if (intitule != '' && description != '' && prix != '' && prix > 1000 && date != '' && nbPlace != '' && salle != '') {
+		if (intitule != '' && description != '' && prix != '' && prix > 1000 && date != '' && time != '' && nbPlace != '' && salle != '') {
             $.ajax({
                 type: 'post',
                 url: url,
@@ -127,6 +159,7 @@ $(document).ready(function() {
         $('#id').val('');
         $('#nbPlace').val('');
         $('#date').val('');
+        $('#time').val('');
         $('#artistes').val('');
         $('#prix').val('');
         $('#salle').val('');
@@ -136,30 +169,5 @@ $(document).ready(function() {
         $('.sendBtn').text("AJOUTER");
         UIkit.modal('#modalConcert').show();
     });
-	$(document).on('click','.editConcert', function (e) {
-		e.preventDefault();
-		var intitule = $(this).data('intitule'),
-			prix = $(this).data('prix'),
-            description = $(this).data('description'),
-            nbPlace = $(this).data('nbPlace'),
-            date = $(this).data('date'),
-            artistes = $(this).data('artistes'),
-            salle = $(this).data('salle'),
-			id = $(this).data('id');
-        $('#intitule').val(intitule);
-        $('#description').val(description);
-        $('#prix').val(prix);
-        $('#nbPlace').val(nbPlace);
-        $('#date').val(date);
-        $('#artistes').val(artistes);
-        $('#salle').val(salle);
-        $('#id').val(id);
-        $('#action').val('edit');
-        $('#pictureContent').hide();
-        $('.md-input-wrapper').addClass('md-input-focus');
-        $('.titleForm').text("MODIFIER LES INFORMATIONS SUR CE CONCERT");
-        $('.sendBtn').text("MODIFIER");
-        UIkit.modal('#modalConcert').show();
-	});
 
 });

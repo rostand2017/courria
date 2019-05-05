@@ -24,7 +24,7 @@ class Concerne
     /**
      * @var \Concert
      *
-     * @ORM\ManyToOne(targetEntity="Concert")
+     * @ORM\ManyToOne(targetEntity="Concert", cascade="persist")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="concert_id", referencedColumnName="id")
      * })
