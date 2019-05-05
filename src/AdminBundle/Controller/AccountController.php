@@ -87,9 +87,9 @@ class AccountController extends Controller
                 $em->persist($user2);
                 $em->flush();
                 $request->getSession()->set("admin", $user2 );
-                return new JsonResponse( ["status"=>1, "mes"=>"Mot de passe modifié avec succès"] );
+                return new JsonResponse( ["status"=>0, "mes"=>"Mot de passe modifié avec succès"] );
             }else{
-                return new JsonResponse( ["status"=>0, "mes"=>"Mot de passe incorrect"] );
+                return new JsonResponse( ["status"=>1, "mes"=>"Mot de passe incorrect"] );
             }
         }
 

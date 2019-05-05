@@ -1,5 +1,5 @@
 #CONCERT
-admin_concert:
+admin_homepage:
     path:     /concert
     defaults: { _controller: AdminBundle:Concert:index }
 admin_concert_delete:
@@ -11,12 +11,48 @@ admin_concert_edit:
 admin_concert_change_affiche:
     path:     /concert/change_affiche
     defaults: { _controller: AdminBundle:Concert:changeAffiche }
-admin_command_user:
-    path:     /command/{name}-{user}
-    defaults: { _controller: AdminBundle:Command:userCommand }
-    requirements:
-        name: .+
-        user: \d+
+
+#CLIENT
+admin_client:
+    path:     /client
+    defaults: { _controller: AdminBundle:Client:index }
+admin_client_edit:
+    path:     /client/edit
+    defaults: { _controller: AdminBundle:Client:edit }
+
+#SALE
+admin_salle:
+    path:     /salle
+    defaults: { _controller: AdminBundle:Salle:index }
+admin_salle_edit:
+    path:     /salle/edit
+    defaults: { _controller: AdminBundle:Salle:edit }
+admin_salle_delete:
+    path:     /salle/delete
+    defaults: { _controller: AdminBundle:Salle:delete }
+
+#ARTISTE
+admin_artiste:
+    path:     /artiste
+    defaults: { _controller: AdminBundle:Artiste:index }
+admin_artiste_edit:
+    path:     /artiste/edit
+    defaults: { _controller: AdminBundle:Artiste:edit }
+admin_artiste_delete:
+    path:     /artiste/delete
+    defaults: { _controller: AdminBundle:Artiste:delete }
+
+#RESERVATION
+admin_reservation:
+    path:     /reservation
+    defaults: { _controller: AdminBundle:Reservation:index }
+admin_salle_edit:
+    path:     /reservation/edit
+    defaults: { _controller: AdminBundle:Reservation:edit }
+admin_salle_delete:
+    path:     /reservation/delete
+    defaults: { _controller: AdminBundle:Reservation:delete }
+
 
 #CONNEXION
 admin_login:

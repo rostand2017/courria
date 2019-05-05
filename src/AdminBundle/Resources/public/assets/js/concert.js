@@ -99,9 +99,11 @@ $(document).ready(function() {
                     $('.sendBtn').text('CHARGEMENT ...').prop('disabled', true);
                 },
                 success: function (json) {
-                    if (json.statuts == 0) {
+                    if (json.status == 0) {
+                        $('#messageformSalle').html("<div class='uk-alert uk-alert-success uk-text-center' data-uk-alert=''><a href='' class='uk-alert-close uk-close'></a><span class='alertJss'>"+json.mes+"</span></div>");
                         window.location.reload();
                     } else {
+                        $('#messageformSalle').html("<div class='uk-alert uk-alert-danger uk-text-center' data-uk-alert=''><a href='' class='uk-alert-close uk-close'></a><span class='alertJss'>"+json.mes+"</span></div>");
                         UIkit.notify({message:json.mes,status:'danger',timeout : 5000,pos:'bottom-center'});
                     }
                 },
@@ -114,14 +116,20 @@ $(document).ready(function() {
             });
 
         } else {
-            UIkit.notify({message:"Une erreur est survenue",status:'danger',timeout : 5000,pos:'top-center'});
+            $('#messageformSalle').html("<div class='uk-alert uk-alert-danger uk-text-center' data-uk-alert=''><a href='' class='uk-alert-close uk-close'></a><span class='alertJss'>Renseignez les différents champs</span></div>");
+            UIkit.notify({message:"Renseignez les différents champs",status:'danger',timeout : 5000,pos:'top-center'});
 		}
 	});
     $(document).on('click','#addConcert', function (e) {
         e.preventDefault();
         $('#intitule').val('');
         $('#description').val('');
-        $('#idMandataire').val('');
+        $('#id').val('');
+        $('#nbPlace').val('');
+        $('#date').val('');
+        $('#artistes').val('');
+        $('#prix').val('');
+        $('#salle').val('');
         $('#action').val('add');
         $('#pictureContent').show();
         $('.titleForm').text("AJOUTER UN CONCERT");
@@ -130,12 +138,21 @@ $(document).ready(function() {
     });
 	$(document).on('click','.editConcert', function (e) {
 		e.preventDefault();
-		var nom = $(this).data('nom'),
+		var intitule = $(this).data('intitule'),
 			prix = $(this).data('prix'),
-            detail = $(this).data('detail'),
+            description = $(this).data('description'),
+            nbPlace = $(this).data('nbPlace'),
+            date = $(this).data('date'),
+            artistes = $(this).data('artistes'),
+            salle = $(this).data('salle'),
 			id = $(this).data('id');
-        $('#intitule').val(nom);
-        $('#description').val(detail);
+        $('#intitule').val(intitule);
+        $('#description').val(description);
+        $('#prix').val(prix);
+        $('#nbPlace').val(nbPlace);
+        $('#date').val(date);
+        $('#artistes').val(artistes);
+        $('#salle').val(salle);
         $('#id').val(id);
         $('#action').val('edit');
         $('#pictureContent').hide();

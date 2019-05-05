@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Salle
  *
  * @ORM\Table(name="salle", indexes={@ORM\Index(name="fk_association4", columns={"adm_id"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="HomeBundle\Repository\SalleRepository")
  */
 class Salle
 {
@@ -43,11 +43,11 @@ class Salle
     private $capacite;
 
     /**
-     * @var string
+     * @var \DateTime
      *
-     * @ORM\Column(name="createdat", type="string", length=254, nullable=true)
+     * @ORM\Column(name="createdat", type="datetime", nullable=true)
      */
-    private $createdat;
+    private $createdat = 'CURRENT_TIMESTAMP';
 
     /**
      * @var \Admin
@@ -59,6 +59,10 @@ class Salle
      */
     private $adm;
 
+    public function __construct()
+    {
+        $this->createdat = new \DateTime();
+    }
 
 
     /**
@@ -146,7 +150,7 @@ class Salle
     /**
      * Set createdat
      *
-     * @param string $createdat
+     * @param \DateTime $createdat
      *
      * @return Salle
      */
@@ -160,7 +164,7 @@ class Salle
     /**
      * Get createdat
      *
-     * @return string
+     * @return \DateTime
      */
     public function getCreatedat()
     {

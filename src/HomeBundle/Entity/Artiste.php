@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Artiste
  *
  * @ORM\Table(name="artiste")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="HomeBundle\Repository\ArtisteRepository")
  */
 class Artiste
 {
@@ -61,8 +61,12 @@ class Artiste
      *
      * @ORM\Column(name="createdat", type="datetime", nullable=true)
      */
-    private $createdat;
+    private $createdat = 'CURRENT_TIMESTAMP';
 
+    public function __construct()
+    {
+        $this->createdat = new \DateTime();
+    }
 
 
     /**

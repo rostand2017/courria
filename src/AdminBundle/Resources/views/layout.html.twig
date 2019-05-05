@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="{{ asset("bundles/admin/assets/css/main.min.css")}}"/>
         <link rel="stylesheet" href="{{ asset("bundles/admin/assets/css/themes/themes_combined.min.css")}}"/>
         <link rel="stylesheet" href="{{ asset("bundles/admin/assets/css/style.css")}}"/>
+        {% block style %}{% endblock %}
 
         <title>{% block title %}{% endblock %}</title>
     </head>
@@ -34,7 +35,7 @@
                             <li><a href="#" id="full_screen_toggle" class="user_action_icon uk-visible-large"><i class="material-icons md-24 md-light">&#xE5D0;</i></a></li>
                             <li><a href="#" id="main_search_btn" class="user_action_icon"><i class="material-icons md-24 md-light">&#xE8B6;</i></a></li>
                             <li data-uk-dropdown="{mode:'click',pos:'bottom-right'}">
-                                <a href="#" class="user_action_image"><img class="md-user-image" src="#" alt=""/></a>
+                                <a href="#" class="user_action_image"><img class="md-user-image" src="{{ asset('bundles/admin/assets/img/user.png') }}" alt=""/></a>
                                 <div class="uk-dropdown uk-dropdown-small touruser">
                                     <ul class="uk-nav js-uk-prevent">
                                         <li><a href="{{ path('admin_change_password') }}">changer de mot de passe</a></li>
@@ -63,10 +64,11 @@
                     <img class="logo_regular" src="{{asset("bundles/admin/assets//img/logo.png") }}" alt="" style="width: 100px; padding-top: 5px" />
                     </a>
                 </div>
+                <br/>
                 <div class="menu_section">
                     <ul>
                         <li class="current_section" title="Concert">
-                            <a href="{{ path('admin_concert') }}">
+                            <a href="{{ path('admin_homepage') }}">
                                 <span class="menu_icon"><i class="uk-icon-calendar-minus-o uk-icon-medium"></i></span>
                                 <span class="menu_title">Concerts</span>
                             </a>
@@ -84,6 +86,12 @@
                             </a>
                         </li>
                         <li title="Concert">
+                            <a href="{{ path('admin_artiste') }}">
+                                <span class="menu_icon"><i class="uk-icon-music uk-icon-medium"></i></span>
+                                <span class="menu_title">Artistes</span>
+                            </a>
+                        </li>
+                        <li title="Concert">
                             <a href="{{ path('admin_reservation') }}">
                                 <span class="menu_icon"><i class="uk-icon-location-arrow uk-icon-medium"></i></span>
                                 <span class="menu_title">Réservations</span>
@@ -96,14 +104,13 @@
 
         <div id="page_content">
             <div id="page_content_inner">
-                <div class="uk-alert uk-alert-success uk-text-center" data-uk-alert=""><a href="#" class="uk-alert-close uk-close"></a><span class="alertJss"></span></div>
                 {% block body%}{% endblock %}
             </div>
         </div>
-        <script src="{{ assets('bundles/admin/assets/js/common.js') }}"></script>
-        <script src="{{ assets('bundles/admin/assets/js/uikit_custom.js') }}"></script>
-        <script src="{{ assets('bundles/admin/assets/js/altair_admin_common.js') }}"></script>
-        <script src="{{ assets('bundles/admin/bower_components/enjoyhint/enjoyhint.js') }}"></script>
+        <script src="{{ asset('bundles/admin/assets/js/common.js') }}"></script>
+        <script src="{{ asset('bundles/admin/assets/js/uikit_custom.js') }}"></script>
+        <script src="{{ asset('bundles/admin/assets/js/altair_admin_common.js') }}"></script>
+        <script src="{{ asset('bundles/admin/bower_components/enjoyhint/enjoyhint.js') }}"></script>
         <script type="text/javascript">
             $(document).ready(function () {
                 if($('.alertJss').text() != ''){

@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Client
  *
  * @ORM\Table(name="client")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="HomeBundle\Repository\ClientRepository")
  */
 class Client
 {
@@ -82,9 +82,13 @@ class Client
      *
      * @ORM\Column(name="createdat", type="datetime", nullable=true)
      */
-    private $createdat;
+    private $createdat = 'CURRENT_TIMESTAMP';
 
 
+    public function __construct()
+    {
+        $this->createdat = new \DateTime();
+    }
 
     /**
      * Get id

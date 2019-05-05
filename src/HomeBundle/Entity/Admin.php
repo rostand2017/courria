@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Admin
  *
  * @ORM\Table(name="admin")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="HomeBundle\Repository\AdminRepository")
  */
 class Admin
 {
@@ -42,6 +42,10 @@ class Admin
      */
     private $createdat;
 
+    public function __construct()
+    {
+        $this->createdat = new \DateTime();
+    }
 
 
     /**

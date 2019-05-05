@@ -1,12 +1,15 @@
 {% extends "AdminBundle::layout.html.twig" %}
 {% block title %} Concerts {% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{{ asset("bundles/admin/assets/skins/dropify/css/dropify.css")}}"/>
+{% endblock %}
 {% block body %}
     <div class="md-card uk-margin-medium-bottom">
         <div class="md-card-toolbar">
             <div class="md-card-toolbar-actions">
                 <i class="md-icon material-icons md-card-fullscreen-activate">&#xE5D0;</i>
                 <i class="md-icon material-icons md-card-toggle">&#xE316;</i>
-                <a href="{{ path('admin_concert') }}"><i class="md-icon uk-icon-refresh"></i></a>
+                <a href="{{ path('admin_homepage') }}"><i class="md-icon uk-icon-refresh"></i></a>
             </div>
             <h3 class="md-card-toolbar-heading-text">
                 Nombre de concert organisé
@@ -15,7 +18,7 @@
         </div>
         <div class="md-card-content">
             <div class="">
-                <form action="{{ path('admin_concert') }}" class="contactFilter">
+                <form action="{{ path('admin_homepage') }}" class="contactFilter">
                     <div class="uk-grid" style="margin-top: 10px">
                         <div class="uk-width-medium-1-2">
                             <div class="">
@@ -48,27 +51,27 @@
                     </div>
                 </form>
                 <div class="uk-grid" data-uk-grid-margin="">
-                    {% for concert in concerts %}
+                    {% for concerne in concernes %}
                         <div class="uk-width-medium-1-3">
                             <div class="md-card md-card-hover">
                                 <div class="md-card-content" style="padding: 0">
                                     <div class="md-card md-card-fullscreen-activate">
                                         <div class="md-card-fullscreen-hide">
-                                            <img src="/uploads/thumbnails/{{ concert.affiche }}" style="width: 100%" alt="{{ concert.intitule }}">
+                                            <img src="/uploads/thumbnails/{{ concerne.concert.affiche }}" style="width: 100%" alt="{{ concerne.concert.intitule }}">
                                             <div class="md-card-content">
-                                                <strong>{{ concert.intitule }}</strong><br>
+                                                <strong>{{ concerne.concert.intitule }}</strong><br>
                                                 <span class="uk-text-muted">{{ concert.date }}</span>
-                                                <p>{{ concert.description }}</p>
+                                                <p>{{ concerne.concert.description }}</p>
                                             </div>
                                         </div>
                                         <div class="md-card-fullscreen-content">
                                             <div class="uk-article">
-                                                <h1 class="uk-article-title">{{ concert.intitule }}</h1>
+                                                <h1 class="uk-article-title">{{ concerne.concert.intitule }}</h1>
                                                 <p class="uk-article-meta">
-                                                    Date de deroulement:  {{ concert.intitule }}
+                                                    Date de deroulement:  {{ concerne.concert.intitule }}
                                                 </p>
                                                 <hr style="margin: 30px 0">
-                                                {{ concert.description }}
+                                                {{ concerne.concert.description }}
                                             </div>
                                         </div>
                                     </div>
@@ -77,10 +80,12 @@
                                     <div class="md-fab md-fab-small md-fab-warning md-fab-sheet">
                                         <i class="material-icons"></i>
                                         <div class="md-fab-sheet-actions">
-                                            <a data-id="{{ path('admin_concert_edit') }}" data-intitule="{{ concert.intitule }}"
-                                               data-description="{{ concert.description }}" href="javascript:void(0)" class="editConcert md-color-white"><i class="material-icons md-color-white"></i> Modifier</a>
-                                            <a data-id="{{ concert.id }}" href="javascript:void(0)" class="changeConcert md-color-white"><i class="material-icons md-color-white"></i> Changer l'image</a>
-                                            <a data-id="{{ concert.id }}" data-url="{{ path('admin_concert_delete') }}" href="javascript:void(0)" class="deleteConcert md-color-white"><i class="material-icons md-color-white"></i> Supprimer</a>
+                                            <a data-id="{{ concerne.concert.id }}" data-intitule="{{ concerne.concert.intitule }}"
+                                               data-description="{{ concerne.concert.description }}" data-prix="{{ concerne.concert.prix }}" data-nbPlace="{{ concerne.concert.nbPlace }}"
+                                               data-salle="{{ concerne.concert.sal.id }}" data-date="{{ concerne.concert.date }}" data-artiste="{{ concerne.artiste }}"
+                                               href="javascript:void(0)" class="editConcert md-color-white"><i class="material-icons md-color-white"></i> Modifier</a>
+                                            <a data-id="{{ concerne.concert.id }}" href="javascript:void(0)" class="changeConcert md-color-white"><i class="material-icons md-color-white"></i> Changer l'image</a>
+                                            <a data-id="{{ concerne.concert.id }}" data-url="{{ path('admin_concert_delete') }}" href="javascript:void(0)" class="deleteConcert md-color-white"><i class="material-icons md-color-white"></i> Supprimer</a>
                                         </div>
                                     </div>
                                 </div>
@@ -135,6 +140,7 @@
             <form action="{{ path('admin_concert_edit') }}" id="formConcert" method="post">
                 <div class="uk-modal-header">
                     <h3 class="heading_b uk-margin-bottom titleForm">Ajouté un nouveau concert</h3>
+                    <div class="text-center" id="messageformSalle"></div>
                 </div>
                 <div class="uk-grid" data-uk-grid-margin>
                     <input type="hidden" id="id" name="id">
@@ -149,22 +155,39 @@
                 <div class="uk-grid" data-uk-grid-margin>
                     <div class="uk-width-medium-1-1">
                         <div class="parsley-row">
-                            <h4>Description</h4>
-                            <textarea name="description" id="description" rows="3"></textarea>
+                            <label for="description">Ajouter une description pour ce concert<span class="req">*</span></label>
+                            <textarea name="description" id="description" rows="3" class="md-input"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-grid" data-uk-grid-margin>
+                    <div class="uk-width-medium-1-2">
+                        <div class="parsley-row">
+                            <label for="prix">Prix<span class="req">*</span></label>
+                            <input type="number" id="prix" name="prix" min="1000" class="md-input">
+                        </div>
+                    </div>
+                    <div class="uk-width-medium-1-2">
+                        <div class="parsley-row">
+                            <label for="nbPlace">Nombre de place<span class="req">*</span></label>
+                            <input type="number" id="nbPlace" name="nbPlace" min="100" class="md-input">
                         </div>
                     </div>
                 </div>
                 <div class="uk-grid" data-uk-grid-margin>
                     <div class="uk-width-medium-1-1">
                         <div class="parsley-row">
-                            <h4>Salle</h4>
-                            <select name="salle" class="uk-form-select" id="salle">
-                                {% for salle in salles %}
-                                    <option value="{{ salle.id }}">{{ salle.nom }} - {{ salle.lieu }} - {{ salle.capacite }} places</option>
-                                {% else %}
-                                    <option value="">Aucune salle disponible. Veuillez rajouter une salle d'abord</option>
-                                {% endfor %}
-                            </select>
+                            {% if salles is not empty %}
+                                <select name="salle" class="uk-form-select md-input" id="salle">
+                                    <option value="">Choisissez une salle</option>
+                                    {% for salle in salles %}
+                                        <option value="{{ salle.id }}">{{ salle.nom }} de {{ salle.lieu }} - {{ salle.capacite }} places</option>
+                                    {% endfor %}
+                                </select>
+                            {% else %}
+                                <span class="uk-badge-danger" style="color: white; padding: 3px"><i class="uk-icon-warning" style="color: white"></i> Aucune salle disponible. Veuillez rajouter une salle d'abord! <a
+                                            href="{{ path('admin_artiste') }}"> cliquez ici <i class="uk-icon-hand-pointer-o"></i></a></span>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -172,13 +195,17 @@
                     <div class="uk-width-medium-1-1">
                         <div class="parsley-row">
                             <h4>Artistes</h4>
-                            <select name="artiste" class="uk-form-select" id="artiste">
-                                {% for artiste in artistes %}
-                                    <option value="{{ artiste.id }}">{{ artiste.nom }}  {{ artiste.prenom }}</option>
-                                {% else %}
-                                    <option value="">Aucune artiste disponible. Veuillez rajouter une artiste!</option>
-                                {% endfor %}
-                            </select>
+                            {% if artistes is not empty %}
+                                <select name="artistes" multiple="multiple" class="uk-form-select" id="artistes">
+                                    <option value="">Choisissez les artistes pour ce concert</option>
+                                    {% for artiste in artistes %}
+                                        <option value="{{ artiste.id }}">{{ artiste.nom }}  {{ artiste.prenom }}</option>
+                                    {% endfor %}
+                                </select>
+                            {% else %}
+                                <span class="uk-badge-danger" style="color: white; padding: 3px"><i class="uk-icon-warning" style="color: white"></i> Aucun artiste disponible. Veuillez rajouter un artiste <a
+                                            href="{{ path('admin_artiste') }}"> cliquez ici <i class="uk-icon-hand-pointer-o"></i></a></span>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -186,7 +213,7 @@
                     <div class="uk-width-medium-1-1">
                         <div class="parsley-row">
                             <h4>Date et heure du concert</h4>
-                            <input type="datetime-local" name="date" class="uk-datepicker">
+                            <input type="datetime-local" name="date" id="date" class="uk-datepicker md-input">
                         </div>
                     </div>
                 </div>
@@ -242,7 +269,6 @@
     </div>
 {% endblock %}
 {% block scripts %}
-    <script src="{{ asset("bundles/admin/assets/skins/dropify/css/dropify.css") }}"></script>
     <script src="{{ asset("bundles/admin/assets/js/custom/dropify/dist/js/dropify.min.js") }}"></script>
     <script src="{{ asset("bundles/admin/assets/js/pages/forms_file_input.min.js") }}"></script>
     <script src="{{ asset("bundles/admin/bower_components/ckeditor/ckeditor.js") }}"></script>

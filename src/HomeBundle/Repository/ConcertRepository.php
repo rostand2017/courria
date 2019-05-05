@@ -36,7 +36,7 @@ class ConcertRepository extends \Doctrine\ORM\EntityRepository
     public function getSearchDateConcert($limit, $offset, $begin=null, $end=null){
         $offset = (int) $offset;
         $limit = (int) ($limit - 1) *$offset;
-        $sql="SELECT c.id, c.prix, c.intitule, c.description,c.date,c.affiche, s.nom, s.lieu FROM concert c INNER JOIN salle s ON a.sal_id = s.id";
+        $sql="SELECT c.id, c.prix, c.intitule, c.description,c.date,c.affiche, s.nom, s.lieu FROM concert c INNER JOIN salle s ON c.sal_id = s.id";
         if($begin)
             $sql .= " WHERE c.date BETWEEN :begin AND :end ";
 

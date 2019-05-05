@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Concert
  *
  * @ORM\Table(name="concert", indexes={@ORM\Index(name="fk_association2", columns={"sal_id"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="HomeBundle\Repository\ConcertRepository")
  */
 class Concert
 {
@@ -73,7 +73,21 @@ class Concert
      */
     private $sal;
 
+    public function __construct()
+    {
+        $this->date = new \DateTime();
+    }
 
+    /**
+     * Concert constructor.
+     * @param int $prix
+     * @param int $nbplace
+     * @param string $intitule
+     * @param string $description
+     * @param \DateTime $date
+     * @param string $affiche
+     * @param \Salle $sal
+     */
 
     /**
      * Get id
