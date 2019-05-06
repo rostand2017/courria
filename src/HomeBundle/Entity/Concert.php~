@@ -80,7 +80,7 @@ class Concert
 
     public function __construct()
     {
-        $this->date = new \DateTime();
+
     }
 
     /**
@@ -270,5 +270,29 @@ class Concert
     public function getSal()
     {
         return $this->sal;
+    }
+
+    /**
+     * Set heure
+     *
+     * @param \DateTime $heure
+     *
+     * @return Concert
+     */
+    public function setHeure($heure)
+    {
+        $this->heure = $heure;
+
+        return $this;
+    }
+
+    /**
+     * Get heure
+     *
+     * @return \DateTime
+     */
+    public function getHeure()
+    {
+        return $this->heure;
     }
 }

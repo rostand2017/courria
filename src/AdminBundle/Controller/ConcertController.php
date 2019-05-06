@@ -21,6 +21,8 @@ use HomeBundle\Entity\Salle;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Twig\Environment;
+use Twig\TwigFilter;
 
 class ConcertController extends Controller
 {
@@ -41,6 +43,9 @@ class ConcertController extends Controller
         $artistes = $em->getRepository(Artiste::class)->findAll();
         $salles =  $em->getRepository(Salle::class)->findAll();
 
+        foreach ($concernes[0]->getArtiste() as $artist){
+            var_dump($artist);
+        }
 
         $nbPage = ceil($nbConcert / $nbPerPage);
         return $this->render('AdminBundle:Concert:index.html.twig', array(
@@ -88,7 +93,7 @@ class ConcertController extends Controller
                 $concert->setSal($em->getRepository(Salle::class)->find($salleId));
                 $concerne = new Concerne();
                 foreach ($artistes as $artiste){
-                    $concerne->setArtiste($em->getRepository(Artiste::class)->find($artiste));
+                    $concerne->addArtiste($em->getRepository(Artiste::class)->find($artiste));
                 }
                 $concerne->setConcert($concert);
                 $em->persist($concerne);
@@ -129,7 +134,7 @@ class ConcertController extends Controller
 
                     foreach ($artistes as $artisteId){
                         $artiste = $em->getRepository(Artiste::class)->find($artisteId);
-                        $concerne->setArtiste($artiste);
+                        $concerne->addArtiste($artiste);
                     }
                     $concerne->setConcert($concert);
                     $em->persist($concerne);

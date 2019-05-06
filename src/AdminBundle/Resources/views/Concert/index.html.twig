@@ -83,7 +83,8 @@
                                         <div class="md-fab-sheet-actions">
                                             <a data-id="{{ concerne.concert.id }}" data-intitule="{{ concerne.concert.intitule }}"
                                                data-description="{{ concerne.concert.description }}" data-prix="{{ concerne.concert.prix }}" data-nbplace="{{ concerne.concert.nbPlace }}"
-                                               data-salle="{{ concerne.concert.sal.id }}" data-date="{{ concerne.concert.date | date('d-m-y') }}"  data-time="{{ concerne.concert.heure | date('h:m') }}" data-artiste="{{ concerne.artiste.id }}"
+                                               data-salle="{{ concerne.concert.sal.id }}" data-date="{{ concerne.concert.date | date('d-m-y') }}"  data-time="{{ concerne.concert.heure | date('h:m') }}"
+                                               data-artiste="[0{% for artiste_item in concerne.artiste | cast_to_array %},{{ artiste_item.id }}{% endfor %}]"
                                                href="javascript:void(0)" class="editConcert md-color-white"><i class="material-icons md-color-white"></i> Modifier</a>
                                             <a data-id="{{ concerne.concert.id }}" href="javascript:void(0)" class="changeConcert md-color-white"><i class="material-icons md-color-white"></i> Changer l'image</a>
                                             <a data-id="{{ concerne.concert.id }}" data-url="{{ path('admin_concert_delete') }}" href="javascript:void(0)" class="deleteConcert md-color-white"><i class="material-icons md-color-white"></i> Supprimer</a>

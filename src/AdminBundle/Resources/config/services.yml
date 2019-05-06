@@ -5,3 +5,7 @@ services:
             - '@router'
         tags:
             - { name: kernel.event_listener, event: kernel.request, method: isAuthenticate }
+    admin.filter_cast_to_array:
+        class: AdminBundle\Twig\AppExtension
+        tags:
+            - { name: twig.extension }
