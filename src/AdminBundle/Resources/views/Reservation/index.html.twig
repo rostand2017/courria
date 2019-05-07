@@ -14,7 +14,7 @@
             <h3 class="md-card-toolbar-heading-text">
                 <a href="{{ path('admin_homepage') }}"><i class="md-icon uk-icon-arrow-left"></i></a>
                 Réservations du concert <span class="uk-text-primary">{{ concert.intitule }}</span>
-                <span class="uk-badge uk-badge-warning">{{ nbReservation }}</span>
+                <span class="uk-badge uk-badge-warning">{{ nbReservation }} / {{ concert.nbplace }}</span>
             </h3>
         </div>
         <div class="md-card-content">

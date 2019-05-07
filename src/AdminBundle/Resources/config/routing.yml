@@ -39,6 +39,18 @@ admin_salle_delete:
     path:     /salle/delete
     defaults: { _controller: AdminBundle:Salle:delete }
 
+admin_newsletter:
+    path:     /newsletter
+    defaults: { _controller: AdminBundle:NewsLetter:index }
+admin_newsletter_sent:
+    path:     /newsletter/sent
+    defaults: { _controller: AdminBundle:NewsLetter:sent }
+admin_newsletter_delete:
+    path:     /newsletter/delete/{newsletter}
+    defaults: { _controller: AdminBundle:NewsLetter:delete }
+    requirements:
+        newsletter: \d+
+
 #ARTISTE
 admin_artiste:
     path:     /artiste

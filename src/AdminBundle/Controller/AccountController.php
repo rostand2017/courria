@@ -80,10 +80,10 @@ class AccountController extends Controller
         if($request->isMethod('POST')){
             $user = $request->getSession()->get("admin");
             $password = $request->request->get("password");
-            if($password && password_verify($password, $user->getPassword()) && $newPassword = $request->request->get("newPassword") ){
+            if($password && password_verify($password, $user->getMdp()) && $newPassword = $request->request->get("newPassword") ){
                 $em = $this->getDoctrine()->getManager();
-                $user2 = $em->getRepository("AdminBundle\Entity\Admin")->find($user->getId());
-                $user2->setPassword(password_hash($newPassword, PASSWORD_BCRYPT));
+                $user2 = $em->getRepository(Admin::class)->find($user->getId());
+                $user2->setMdp(password_hash($newPassword, PASSWORD_BCRYPT));
                 $em->persist($user2);
                 $em->flush();
                 $request->getSession()->set("admin", $user2 );

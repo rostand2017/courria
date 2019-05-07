@@ -2,6 +2,7 @@
 
 namespace HomeBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -80,15 +81,14 @@ class Concert
 
     /**
      *
-     * @ORM\OneToMany(targetEntity="Concerne", mappedBy="concert")
+     * @ORM\OneToMany(targetEntity="Concerne", mappedBy="concert", cascade={"persist", "remove"})
      */
     private $concerne;
 
 
-
     public function __construct()
     {
-
+        $this->concerne = new ArrayCollection();
     }
 
     /**
@@ -302,5 +302,39 @@ class Concert
     public function getHeure()
     {
         return $this->heure;
+    }
+
+    /**
+     * Add concerne
+     *
+     * @param \HomeBundle\Entity\Concerne $concerne
+     *
+     * @return Concert
+     */
+    public function addConcerne(\HomeBundle\Entity\Concerne $concerne)
+    {
+        $this->concerne[] = $concerne;
+
+        return $this;
+    }
+
+    /**
+     * Remove concerne
+     *
+     * @param \HomeBundle\Entity\Concerne $concerne
+     */
+    public function removeConcerne(\HomeBundle\Entity\Concerne $concerne)
+    {
+        $this->concerne->removeElement($concerne);
+    }
+
+    /**
+     * Get concerne
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getConcerne()
+    {
+        return $this->concerne;
     }
 }
