@@ -34,23 +34,18 @@ class ConcertController extends Controller
         $em = $this->getDoctrine()->getManager();
         $nbConcert = $em->getRepository(Concert::class)
                         ->countDateConcert($page, $nbPerPage, $request->query->get("begin"), $request->query->get("end"));
-        $concerts = $em->getRepository(Concert::class)
+        $concerts_temp = $em->getRepository(Concert::class)
                         ->getSearchDateConcert($page, $nbPerPage, $request->query->get("begin"), $request->query->get("end"));
-        $concernes = array();
-        foreach ($concerts as $concert){
-            array_push($concernes, $em->getRepository(Concerne::class)->findOneBy(['concert'=>$concert['id']]) );
+        $concerts = array();
+        foreach ($concerts_temp as $concert){
+            array_push($concerts, $em->getRepository(Concert::class)->find($concert['id']) );
         }
         $artistes = $em->getRepository(Artiste::class)->findAll();
         $salles =  $em->getRepository(Salle::class)->findAll();
 
-        foreach ($concernes[0]->getArtiste() as $artist){
-            var_dump($artist);
-        }
-
         $nbPage = ceil($nbConcert / $nbPerPage);
         return $this->render('AdminBundle:Concert:index.html.twig', array(
             "concerts" => $concerts,
-            "concernes" => $concernes,
             "page" => $page,
             "nbPage" => $nbPage,
             "nbConcert" => $nbConcert,
@@ -91,12 +86,17 @@ class ConcertController extends Controller
                 $concert->setHeure(new \DateTime($time));
                 $concert->setNbplace($nbPlace);
                 $concert->setSal($em->getRepository(Salle::class)->find($salleId));
-                $concerne = new Concerne();
-                foreach ($artistes as $artiste){
-                    $concerne->addArtiste($em->getRepository(Artiste::class)->find($artiste));
+                foreach ($concert->getConcerne() as $concerne){
+                    $em->remove($concerne);
+                    $em->flush();
                 }
-                $concerne->setConcert($concert);
-                $em->persist($concerne);
+                foreach ($artistes as $artiste){
+                    $concerne = new Concerne();
+                    $concerne->setConcert($concert);
+                    $concerne->setArtiste($em->getRepository(Artiste::class)->find($artiste));
+                    $concert->addConcerne($concerne);
+                }
+                $em->persist($concert);
                 $em->flush();
                 return new JsonResponse(array(
                     "status"=>0,
@@ -121,7 +121,6 @@ class ConcertController extends Controller
                     $affiche->move($imageDirectory, $filename);
                     $thumb = new Thumbnails();
                     $thumb->createThumbnail($imageDirectory."/".$filename, $thumbnailDirectory."/".$filename, 200);
-                    $concerne = new Concerne();
                     $concert = new Concert();
                     $concert->setIntitule($intitule);
                     $concert->setDescription($description);
@@ -131,13 +130,13 @@ class ConcertController extends Controller
                     $concert->setNbplace($nbPlace);
                     $concert->setAffiche($filename);
                     $concert->setSal($em->getRepository(Salle::class)->find($salleId));
-
-                    foreach ($artistes as $artisteId){
-                        $artiste = $em->getRepository(Artiste::class)->find($artisteId);
-                        $concerne->addArtiste($artiste);
+                    foreach ($artistes as $artiste){
+                        $concerne = new Concerne();
+                        $concerne->setConcert($concert);
+                        $concerne->setArtiste($em->getRepository(Artiste::class)->find($artiste));
+                        $concert->addConcerne($concerne);
                     }
-                    $concerne->setConcert($concert);
-                    $em->persist($concerne);
+                    $em->persist($concert);
                     $em->flush();
                     return new JsonResponse(array(
                         "status"=>0,

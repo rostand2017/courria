@@ -34,7 +34,7 @@ class Concerne
     /**
      * @var \Artiste
      *
-     * @ORM\OneToMany(targetEntity="Artiste", mappedBy="concerne")
+     * @ORM\ManyToOne(targetEntity="Artiste", inversedBy="artiste")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="artiste_id", referencedColumnName="id")
      * })
@@ -45,7 +45,7 @@ class Concerne
      */
     public function __construct()
     {
-        $this->artiste = new \Doctrine\Common\Collections\ArrayCollection();
+
     }
 
     /**
@@ -83,33 +83,23 @@ class Concerne
     }
 
     /**
-     * Add artiste
+     * Set artiste
      *
      * @param \HomeBundle\Entity\Artiste $artiste
      *
      * @return Concerne
      */
-    public function addArtiste(\HomeBundle\Entity\Artiste $artiste)
+    public function setArtiste(\HomeBundle\Entity\Artiste $artiste = null)
     {
-        $this->artiste[] = $artiste;
+        $this->artiste = $artiste;
 
         return $this;
     }
 
     /**
-     * Remove artiste
-     *
-     * @param \HomeBundle\Entity\Artiste $artiste
-     */
-    public function removeArtiste(\HomeBundle\Entity\Artiste $artiste)
-    {
-        $this->artiste->removeElement($artiste);
-    }
-
-    /**
      * Get artiste
      *
-     * @return \Doctrine\Common\Collections\Collection
+     * @return \HomeBundle\Entity\Artiste
      */
     public function getArtiste()
     {

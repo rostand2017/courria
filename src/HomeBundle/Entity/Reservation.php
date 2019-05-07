@@ -38,7 +38,7 @@ class Reservation
     /**
      * @var \Client
      *
-     * @ORM\ManyToOne(targetEntity="Client")
+     * @ORM\ManyToOne(targetEntity="Client", cascade={"persist", "refresh"})
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="cli_id", referencedColumnName="id")
      * })

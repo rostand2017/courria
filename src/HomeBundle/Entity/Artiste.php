@@ -63,12 +63,6 @@ class Artiste
      */
     private $createdat = 'CURRENT_TIMESTAMP';
 
-    /**
-     *
-     * @ORM\ManyToOne(targetEntity="Concerne", inversedBy="concerne")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $concerne;
 
     public function __construct()
     {

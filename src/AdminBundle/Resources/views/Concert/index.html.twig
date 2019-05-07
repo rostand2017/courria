@@ -50,29 +50,28 @@
                     </div>
                 </form>
                 <div class="uk-grid" data-uk-grid-margin="">
-                    {% for concerne in concernes %}
+                    {% for concert in concerts %}
                         <div class="uk-width-medium-1-3">
                             <div class="md-card md-card-hover">
                                 <div class="md-card-content" style="padding: 0">
                                     <div class="md-card md-card-fullscreen-activate">
                                         <div class="md-card-fullscreen-hide">
-                                            <img src="/uploads/thumbnails/{{ concerne.concert.affiche }}" style="width: 100%" alt="{{ concerne.concert.intitule }}">
+                                            <img src="/uploads/thumbnails/{{ concert.affiche }}" style="width: 100%" alt="{{ concert.intitule }}">
                                             <div class="md-card-content">
-                                                <strong>{{ concerne.concert.intitule }}</strong><br>
-                                                <span class="uk-text-muted">Le {{ concerne.concert.date | date('d-m-y')}} à {{ concerne.concert.heure | date('h:m') }}</span>
-                                                <p>{{ concerne.concert.description }}</p>
+                                                <strong>{{ concert.intitule }}</strong><br>
+                                                <span class="uk-text-muted">Le {{ concert.date | date('d-m-y')}} à {{ concert.heure | date('h:i', 'UTC') }}</span>
+                                                <p>{{ concert.description }}</p>
                                             </div>
                                         </div>
                                         <div class="md-card-fullscreen-content">
                                             <div class="uk-article">
-                                                <h1 class="uk-article-title">{{ concerne.concert.intitule }}</h1>
-                                                <img src="/uploads/thumbnails/{{ concerne.concert.affiche }}" style="width: 100%" alt="{{ concerne.concert.intitule }}">
+                                                <h1 class="uk-article-title">{{ concert.intitule }}</h1>
+                                                <img src="/uploads/thumbnails/{{ concert.affiche }}" style="width: 100%" alt="{{ concert.intitule }}">
                                                 <p class="uk-article-meta">
-                                                    Date de deroulement:  Le {{ concerne.concert.date | date('d-m-y')}}à {{ concerne.concert.heure | date('h:m') }}
-
+                                                    Date de deroulement:  Le {{ concert.date | date('d-m-y')}} à {{ concert.heure | date('h:i', 'UTC') }}
                                                 </p>
                                                 <hr style="margin: 30px 0">
-                                                {{ concerne.concert.description }}
+                                                {{ concert.description }}
                                             </div>
                                         </div>
                                     </div>
@@ -81,13 +80,14 @@
                                     <div class="md-fab md-fab-small md-fab-warning md-fab-sheet">
                                         <i class="material-icons"></i>
                                         <div class="md-fab-sheet-actions">
-                                            <a data-id="{{ concerne.concert.id }}" data-intitule="{{ concerne.concert.intitule }}"
-                                               data-description="{{ concerne.concert.description }}" data-prix="{{ concerne.concert.prix }}" data-nbplace="{{ concerne.concert.nbPlace }}"
-                                               data-salle="{{ concerne.concert.sal.id }}" data-date="{{ concerne.concert.date | date('d-m-y') }}"  data-time="{{ concerne.concert.heure | date('h:m') }}"
-                                               data-artiste="[0{% for artiste_item in concerne.artiste | cast_to_array %},{{ artiste_item.id }}{% endfor %}]"
+                                            <a data-id="{{ concert.id }}" data-intitule="{{ concert.intitule }}"
+                                               data-description="{{ concert.description }}" data-prix="{{ concert.prix }}" data-nbplace="{{ concert.nbPlace }}"
+                                               data-salle="{{ concert.sal.id }}" data-date="{{ concert.date | date('d-m-y') }}"  data-time="{{ concert.heure | date('h:m') }}"
+                                               data-artistes="[0{% for artiste_item in concert.concerne | cast_to_array %},{{ artiste_item.artiste.id }}{% endfor %}]"
                                                href="javascript:void(0)" class="editConcert md-color-white"><i class="material-icons md-color-white"></i> Modifier</a>
-                                            <a data-id="{{ concerne.concert.id }}" href="javascript:void(0)" class="changeConcert md-color-white"><i class="material-icons md-color-white"></i> Changer l'image</a>
-                                            <a data-id="{{ concerne.concert.id }}" data-url="{{ path('admin_concert_delete') }}" href="javascript:void(0)" class="deleteConcert md-color-white"><i class="material-icons md-color-white"></i> Supprimer</a>
+                                            <a data-id="{{ concert.id }}" href="javascript:void(0)" class="changeConcert md-color-white"><i class="material-icons md-color-white"></i> Changer l'image</a>
+                                            <a href="{{ path('admin_reservation', {concert: concert.id}) }}" class="md-color-white"><i class="md-color-white uk-icon-hand-o-right"></i> Réservations</a>
+                                            <a data-id="{{ concert.id }}" data-url="{{ path('admin_concert_delete') }}" href="javascript:void(0)" class="deleteConcert md-color-white"><i class="material-icons md-color-white"></i> Supprimer</a>
                                         </div>
                                     </div>
                                 </div>
@@ -216,7 +216,7 @@
                     <div class="uk-width-medium-1-2">
                         <div class="parsley-row">
                             <h4>Date du concert</h4>
-                            <input type="text" name="date" id="date" class="md-input">
+                            <input type="text" name="date" id="date" autocomplete="false" class="md-input">
                         </div>
                     </div>
                     <div class="uk-width-medium-1-2">

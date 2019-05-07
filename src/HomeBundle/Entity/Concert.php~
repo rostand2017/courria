@@ -78,6 +78,14 @@ class Concert
      */
     private $sal;
 
+    /**
+     *
+     * @ORM\OneToMany(targetEntity="Concerne", mappedBy="concert")
+     */
+    private $concerne;
+
+
+
     public function __construct()
     {
 

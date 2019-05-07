@@ -39,7 +39,7 @@
                                 <a href="#" class="user_action_image"><img class="md-user-image" src="{{ asset('bundles/admin/assets/img/user.png') }}" alt=""/></a>
                                 <div class="uk-dropdown uk-dropdown-small touruser">
                                     <ul class="uk-nav js-uk-prevent">
-                                        <li><a href="{{ path('admin_change_password') }}">changer de mot de passe</a></li>
+                                        <li><a href="{{ path('admin_change_password') }}">modifier mot de passe</a></li>
                                         <li><a href="{{ path('admin_logout') }}">Déconnexion</a></li>
                                     </ul>
                                 </div>
@@ -51,7 +51,7 @@
             <div class="header_main_search_form">
                 <i class="md-icon header_main_search_close material-icons">&#xE5CD;</i>
                 <form class="uk-form uk-autocomplete" data-uk-autocomplete="{source:'data/search_data.json'}">
-                    <input type="text" class="header_main_search_input" />
+                    <input type="text" class="header_main_search_input" name="search" />
                     <button class="header_main_search_btn uk-button-link"><i class="md-icon material-icons">&#xE8B6;</i></button>
                     <script type="text/autocomplete">
                     </script>
@@ -80,22 +80,16 @@
                                 <span class="menu_title">Salles de concert</span>
                             </a>
                         </li>
-                        <li title="Concert">
+                        <li title="Utilisateurs de l'application">
                             <a href="{{ path('admin_client') }}">
                                 <span class="menu_icon"><i class="uk-icon-user uk-icon-medium"></i></span>
                                 <span class="menu_title">Utilisateurs</span>
                             </a>
                         </li>
-                        <li title="Concert">
+                        <li title="Liste des artistes">
                             <a href="{{ path('admin_artiste') }}">
                                 <span class="menu_icon"><i class="uk-icon-music uk-icon-medium"></i></span>
                                 <span class="menu_title">Artistes</span>
-                            </a>
-                        </li>
-                        <li title="Concert">
-                            <a href="{{ path('admin_reservation') }}">
-                                <span class="menu_icon"><i class="uk-icon-location-arrow uk-icon-medium"></i></span>
-                                <span class="menu_title">Réservations</span>
                             </a>
                         </li>
                     </ul>
@@ -147,7 +141,9 @@
                 };
                 altair_form_adv.date_range();
 
-                UIkit.timepicker($('#time'));
+                UIkit.timepicker($('#time'), {
+                    format: 'hh:mm'
+                });
                 UIkit.datepicker($('#date'), {
                     format: 'DD-MM-YYYY'
                 });

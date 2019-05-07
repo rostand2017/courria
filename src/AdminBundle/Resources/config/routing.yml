@@ -16,9 +16,17 @@ admin_concert_change_affiche:
 admin_client:
     path:     /client
     defaults: { _controller: AdminBundle:Client:index }
+admin_client_reservation:
+    path:     /client/reservation/{client}
+    defaults: { _controller: AdminBundle:Client:reservation }
+    requirements:
+        client: \d+
 admin_client_edit:
     path:     /client/edit
     defaults: { _controller: AdminBundle:Client:edit }
+admin_client_delete:
+    path:     /client/delete
+    defaults: { _controller: AdminBundle:Client:delete }
 
 #SALE
 admin_salle:
@@ -44,12 +52,14 @@ admin_artiste_delete:
 
 #RESERVATION
 admin_reservation:
-    path:     /reservation
+    path:     /reservation/{concert}
     defaults: { _controller: AdminBundle:Reservation:index }
-admin_salle_edit:
+    requirements:
+        concert: \d+
+admin_reservation_edit:
     path:     /reservation/edit
     defaults: { _controller: AdminBundle:Reservation:edit }
-admin_salle_delete:
+admin_reservation_delete:
     path:     /reservation/delete
     defaults: { _controller: AdminBundle:Reservation:delete }
 

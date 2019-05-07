@@ -29,7 +29,7 @@ $(document).ready(function() {
                     datatype: 'json',
                     beforeSend: function () {},
                     success: function (json) {
-                        if (json.statuts == 0) {
+                        if (json.status == 0) {
                             UIkit.notify({message:json.mes,status:'success',timeout : 5000,pos:'top-center'});
                             window.location.reload();
                         } else {
@@ -53,9 +53,10 @@ $(document).ready(function() {
             nbPlace = $(this).data('nbplace'),
             date = $(this).data('date'),
             time = $(this).data('time'),
-            artistes = $(this).data('artistes'),
+            artistes = eval($(this).data('artistes')),
             salle = $(this).data('salle'),
             id = $(this).data('id');
+        artistes.shift();
         $('#intitule').val(intitule);
         $('#description').val(description);
         $('#prix').val(prix);
