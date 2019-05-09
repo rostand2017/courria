@@ -1,621 +1,105 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <title>{% block title%}{% endblock %}</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="{% block description %}{% endblock %}">
-    <meta name="keywords" content="{% block keywords %}{% endblock %}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="{{ asset('bundles/home/images/icons/favicon.png') }}"/>
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/home/vendor/bootstrap/css/bootstrap.min.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/home/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/home/fonts/iconic/css/material-design-iconic-font.min.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/home/fonts/linearicons-v1.0.0/icon-font.min.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/home/vendor/animate/animate.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/home/vendor/css-hamburgers/hamburgers.min.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/home/vendor/animsition/css/animsition.min.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/home/vendor/select2/select2.min.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/home/vendor/daterangepicker/daterangepicker.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/home/vendor/slick/slick.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/home/vendor/MagnificPopup/magnific-popup.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/home/vendor/perfect-scrollbar/perfect-scrollbar.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/home/css/util.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/home/css/main.css') }}">
-    <link rel="icon" type="image/png" href="{{ asset('bundles/home/images/icons/favicon.png') }}">
+    <head>
+        <title>{% block title%}{% endblock %}</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="{% block description %}{% endblock %}">
+        <meta name="keywords" content="{% block keywords %}{% endblock %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="{{ asset('bundles/home/favicon.ico') }}"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="{{ asset('bundles/home/css/base.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/home/css/layout.css') }}">
 
+        <!--[if lt IE 9]>
+        <!--<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>->
+        <![endif]-->
     </head>
-    <body class="animsition" style="animation-duration: 1500ms; opacity: 1;">
-    <!-- Header -->
-    <header class="header-v4">
-    <!-- Header desktop -->
-    <div class="container-menu-desktop">
-        <!-- Topbar -->
-        <div class="top-bar">
-            <div class="content-topbar flex-sb-m h-full container">
-                <div class="left-top-bar">
-                    Bon achat, bon prix
+    <body data-spy="scroll" data-target="#nav-wrap">>
+
+    <header class="mobile">
+        <div class="row">
+            <div class="col full">
+                <div class="logo">
+                    <a href="#"><img alt="" src="{{ asset('bundles/home/images/logo.png') }}"></a>
                 </div>
-
-                <div class="right-top-bar flex-w h-full">
-                    <a href="#" class="flex-c-m trans-04 p-lr-25">
-                        Aide & FAQs
-                    </a>
-
-                    {% if app.session.get("user") is not null %}
-                        <a href="{{ path('home_dashboard') }}" class="flex-c-m trans-04 p-lr-25"><i class="fa fa-2x fa-user-circle"></i> <pre> </pre>{{ app.session.get("user").name }}</a>
-                    {% else %}
-                        <a href="{{ path("home_login") }}" class="flex-c-m trans-04 p-lr-25">Mon compte</a>
-                    {% endif %}
-
-                    <a href="#" class="flex-c-m trans-04 p-lr-25">
-                        FR
-                    </a>
-                    {% if app.session.get("user") is not null %}
-                        <a href="{{ path("auth_logout") }}" class="flex-c-m trans-04 p-lr-25">
-                            Déconnection
-                        </a>
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-
-        <div class="wrap-menu-desktop">
-            <nav class="limiter-menu-desktop container">
-
-                <!-- Logo desktop -->
-                <a href="{{ path('home_homepage') }}" class="logo">
-                    <img src="{{ asset('bundles/home/images/icons/logo-01.png') }}" alt="IMG-LOGO">
-                </a>
-
-                <!-- Menu desktop -->
-
-                {% set uri = app.request.getRequestUri() %}
-                <div class="menu-desktop">
-                    <ul class="main-menu">
-                        <li class="{% if uri == path('home_homepage') %}active-menu{% endif %}">
-                            <a href="{{ path('home_homepage') }}">Accueil </a>
-                        <li class="{% if uri == path('home_product') %}active-menu{% endif %}">
-                            <a href="{{ path('home_product') }}">Produits</a>
-                        </li>
-
-                        <li class="label1 {% if uri == path('home_cart') %}active-menu{% endif %}" data-label1="hot">
-                            <a href="{{ path('home_cart') }}">Mes commandes</a>
-                        </li>
-
-                        <li class="{% if uri == path('home_about') %}active-menu{% endif %}">
-                            <a href="{{ path('home_about') }}">A propos</a>
-                        </li>
-
-                        <li class="{% if uri == path('home_contact') %}active-menu{% endif %}">
-                            <a href="{{ path('home_contact') }}">Contact</a>
-                        </li>
+                <nav id="nav-wrap">
+                    <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+                    <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+                    <ul id="nav" class="nav">
+                        <li><a href="#intro">Accueil</a></li>
+                        <li><a href="#portfolio">concert</a></li>
+                        <li><a href="#about">A propos</a></li>
+                        <li><a href="#contact">Newsletter</a></li>
                     </ul>
-                </div>
-
-                <!-- Icon header -->
-                <div class="wrap-icon-header flex-w flex-r-m">
-                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
-                        <i class="zmdi zmdi-search"></i>
-                    </div>
-
-                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-url="{{ path('home_show_cart') }}#"
-                         data-notify="{% if app.session.get('user') is not empty %}{{ app.session.get('cartNumber') }}{% else %}0{% endif %}">
-                        <i class="zmdi zmdi-shopping-cart"></i>
-                    </div>
-
-                    <a href="{% if app.session.get('user') is not empty %}{{ path('home_wisheslist') }}{% endif %}#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti"
-                       data-notify="{% if app.session.get('user') is not empty %}{{ app.session.get('wishesNumber') }}{% else %}0{% endif %}">
-                        <i class="zmdi zmdi-favorite-outline"></i>
-                    </a>
-                </div>
-            </nav>
-        </div>
-    </div>
-
-    <!-- Header Mobile -->
-    <div class="wrap-header-mobile">
-        <!-- Logo moblie -->
-        <div class="logo-mobile">
-            <a href="{{ path('home_homepage') }}"><img src="{{ asset('bundles/home/images/icons/logo-01.png') }}" alt="IMG-LOGO"></a>
-        </div>
-
-        <!-- Icon header -->
-        <div class="wrap-icon-header flex-w flex-r-m m-r-15">
-            <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search">
-                <i class="zmdi zmdi-search"></i>
+                </nav>
             </div>
-
-            <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart"  data-url="{% if app.session.get('user') is not empty %}{{ path('home_show_cart')}}{% endif %}#" data-notify="2">
-                <i class="zmdi zmdi-shopping-cart"></i>
-            </div>
-
-            <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="0">
-                <i class="zmdi zmdi-favorite-outline"></i>
-            </a>
         </div>
-
-        <!-- Button show menu -->
-        <div class="btn-show-menu-mobile hamburger hamburger--squeeze">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-        </div>
-    </div>
-
-    <!-- Menu Mobile -->
-    <div class="menu-mobile">
-        <ul class="topbar-mobile">
-            <li>
-                <div class="left-top-bar">
-                    Bon achat, bon prix
-                </div>
-            </li>
-
-            <li>
-                <div class="right-top-bar flex-w h-full">
-                    <a href="#" class="flex-c-m p-lr-10 trans-04">
-                        Aide & FAQs
-                    </a>
-                    {% if app.session.get("user") is not null %}
-                        <a href="{{ path('home_dashboard') }}" class="flex-c-m trans-04 p-lr-25">{{ app.session.get("user").name }}</a>
-                    {% else %}
-                        <a href="{{ path("home_login") }}" class="flex-c-m trans-04 p-lr-25">Mon compte</a>
-                    {% endif %}
-
-                    <a href="#" class="flex-c-m p-lr-10 trans-04">
-                        FR
-                    </a>
-                </div>
-            </li>
-        </ul>
-
-        <ul class="main-menu-m">
-            <li>
-                <a href="{{ path('home_homepage') }}">Accueil</a>
-                <span class="arrow-main-menu-m">
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    </span>
-            </li>
-
-            <li>
-                <a href="{{ path('home_product') }}">Produits</a>
-            </li>
-
-            <li>
-                <a href="{{ path('home_cart') }}" class="label1 rs1" data-label1="hot">Mes commandes</a>
-            </li>
-
-            <li>
-                <a href="{{ path('home_contact') }}">A propos</a>
-            </li>
-
-            <li>
-                <a href="{{ path('home_contact') }}">Contact</a>
-            </li>
-        </ul>
-    </div>
-
-    <!-- Modal Search -->
-    <div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
-        <div class="container-search-header">
-            <button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
-                <img src="{{ asset('bundles/home/images/icons/icon-close2.png') }}" alt="CLOSE">
-            </button>
-
-            <form class="wrap-search-header flex-w p-l-15">
-                <button class="flex-c-m trans-04">
-                    <i class="zmdi zmdi-search"></i>
-                </button>
-                <input class="plh3" type="text" name="search" placeholder="Search...">
-            </form>
-        </div>
-    </div>
     </header>
-
-    <!-- Cart -->
-    <div class="wrap-header-cart js-panel-cart">
-    <div class="s-full js-hide-cart"></div>
-
-    <div class="header-cart flex-col-l p-l-65 p-r-25">
-            <div class="header-cart-title flex-w flex-sb-m p-b-8">
-                    <span class="mtext-103 cl2">
-                        Mon panier
-                    </span>
-                <div class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart">
-                    <i class="zmdi zmdi-close"></i>
-                </div>
-            </div>
-
-            <div class="header-cart-content flex-w js-pscroll">
-                <ul class="header-cart-wrapitem w-full"  id="cart_list"></ul>
-
-                <div class="w-full">
-                    <div class="header-cart-total w-full p-tb-40" id="totalCart">
-                        Total: chargement...
-                    </div>
-
-                    <div class="header-cart-buttons flex-w w-full">
-                        <a href="{{ path('home_cart') }}#" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
-                            Voir plus
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     {% block body %}{% endblock %}
 
-    <!-- Footer -->
-    <footer class="bg3 p-t-75 p-b-32">
-    <div class="container">
+    <section id="contact">
+
+        <div class="row section-head">
+            <div class="col full">
+                <h2>Recevoir des news</h2>
+                <p class="desc">Entrez votre email et recevez des news à propos de nous.</p>
+            </div>
+        </div>
+
         <div class="row">
-            <div class="col-sm-6 col-lg-3 p-b-50">
-                <h4 class="stext-301 cl0 p-b-30">
-                    Catégories
-                </h4>
-
-                <ul>
-                    <li class="p-b-10">
-                        <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Femmes
-                        </a>
-                    </li>
-
-                    <li class="p-b-10">
-                        <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Hommes
-                        </a>
-                    </li>
-
-                    <li class="p-b-10">
-                        <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Ado
-                        </a>
-                    </li>
-
-                    <li class="p-b-10">
-                        <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Chaussures
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-sm-6 col-lg-3 p-b-50">
-                <h4 class="stext-301 cl0 p-b-30">
-                    Help
-                </h4>
-
-                <ul>
-                    <li class="p-b-10">
-                        <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Track Order
-                        </a>
-                    </li>
-
-                    <li class="p-b-10">
-                        <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Returns
-                        </a>
-                    </li>
-
-                    <li class="p-b-10">
-                        <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Shipping
-                        </a>
-                    </li>
-
-                    <li class="p-b-10">
-                        <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            FAQs
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-sm-6 col-lg-3 p-b-50">
-                <h4 class="stext-301 cl0 p-b-30">
-                    GET IN TOUCH
-                </h4>
-
-                <p class="stext-107 cl7 size-201">
-                    Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
-                </p>
-
-                <div class="p-t-27">
-                    <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-
-                    <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-                        <i class="fa fa-instagram"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-3 p-b-50">
-                <h4 class="stext-301 cl0 p-b-30">
-                    Newsletter
-                </h4>
-
-                <form action="{{ path('home_subscribe') }}" method="post" id="subscribeForm">
-                    <div class="wrap-input1 w-full p-b-4">
-                        <input class="input1 bg-none plh1 stext-107 cl7" type="email" name="email" placeholder="email@example.com" required>
-                        <div class="focus-input1 trans-04"></div>
-                    </div>
-
-                    <div class="p-t-18">
-                        <button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04 subscribe-btn">
-                            Souscrire
-                        </button>
-                    </div>
+            <div class="col g-12">
+                <form id="subscribeForm" method="post" action="{{ path('home_save_email') }}">
+                    <fieldset>
+                        <div>
+                            <input style="margin: 0; display: inline" type="email" name="email" placeholder="Votre adresse email" id="email">
+                            <button style="margin: 0; display: inline" class="subscribe-btn">Souscire</button>
+                            <span id="image-loader">
+                                <img src="{{ asset('bundles/home/images/loader.gif') }}" alt="loader" />
+                            </span>
+                        </div>
+                    </fieldset>
                 </form>
             </div>
         </div>
+    </section>
 
-        <div class="p-t-40">
-            <div class="flex-c-m flex-w p-b-18">
-                <a href="#" class="m-all-1">
-                    <img src="{{ asset('bundles/home/images/icons/icon-pay-01.png') }}" alt="ICON-PAY">
-                </a>
-
-                <a href="#" class="m-all-1">
-                    <img src="{{ asset('bundles/home/images/icons/icon-pay-02.png') }}" alt="ICON-PAY">
-                </a>
-
-                <a href="#" class="m-all-1">
-                    <img src="{{ asset('bundles/home/images/icons/icon-pay-03.png') }}" alt="ICON-PAY">
-                </a>
-
-                <a href="#" class="m-all-1">
-                    <img src="{{ asset('bundles/home/images/icons/icon-pay-04.png') }}" alt="ICON-PAY">
-                </a>
-
-                <a href="#" class="m-all-1">
-                    <img src="{{ asset('bundles/home/images/icons/icon-pay-05.png') }}" alt="ICON-PAY">
-                </a>
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col g-7">
+                <ul class="copyright">
+                    <li>&copy; 2019 Camer Concert</li>
+                    <li>Contactez <a href="mailto:conctact@camerconcert.com" title="Styleshout">conctact@camerconcert.com</a></li>
+                </ul>
             </div>
-
-            <p class="stext-107 cl6 txt-center">
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
-            </p>
+            <div class="col g-5 pull-right">
+                <ul class="social-links">
+                    <li><a href="#"><i class="icon-facebook"></i></a></li>
+                    <li><a href="#"><i class="icon-twitter"></i></a></li>
+                    <li><a href="#"><i class="icon-google-plus-sign"></i></a></li>
+                    <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                    <li><a href="#"><i class="icon-skype"></i></a></li>
+                    <li><a href="#"><i class="icon-rss-sign"></i></a></li>
+                </ul>
+            </div>
         </div>
-    </div>
     </footer>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ asset('bundles/home/js/jquery-1.10.2.min.js')  }}"><\/script>')</script>
+    <script type="text/javascript" src="{{ asset('bundles/home/js/jquery-migrate-1.2.1.min.js') }}"></script>
 
-    <!-- Back to top -->
-    <div class="btn-back-to-top" id="myBtn">
-        <span class="symbol-btn-back-to-top">
-            <i class="zmdi zmdi-chevron-up"></i>
-        </span>
-    </div>
+    <script src="{{ asset('bundles/home/js/scrollspy.js') }}"></script>
+    <script src="{{ asset('bundles/home/js/jquery.flexslider.js') }}"></script>
+    <script src="{{ asset('bundles/home/js/jquery.reveal.js') }}"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
+    <script src="{{ asset('bundles/home/js/gmaps.js') }}"></script>
+    <script src="{{ asset('bundles/home/js/init.js') }}"></script>
+    <script src="{{ asset('bundles/home/js/smoothscrolling.js') }}"></script>
+    <script src="{{ asset('bundles/home/js/sweetalert/sweetalert.min.js') }}"></script>
 
-
-    <!-- Modal1 -->
-    <div class="wrap-modal1 js-modal1 p-t-60 p-b-20">
-        <div class="overlay-modal1 js-hide-modal1"></div>
-
-        <div class="container">
-            <div class="bg0 p-t-60 p-b-30 p-lr-15-lg how-pos3-parent">
-                <button class="how-pos3 hov3 trans-04 js-hide-modal1">
-                    <img src="{{ asset('bundles/home/images/icons/icon-close.png') }}" alt="CLOSE">
-                </button>
-
-                <div class="row" id="container_single_product">
-
-                    <div class="col-md-6 col-lg-7 p-b-30" id="container_single_image"></div>
-                    <div class="col-md-6 col-lg-5 p-b-30">
-                        <div class="p-r-50 p-t-5 p-lr-0-lg">
-                            <h4 class="mtext-105 cl2 js-name-detail p-b-14" id="product_name"></h4>
-
-                            <span class="mtext-106 cl2" id="product_price"></span>XAF
-
-                            <p class="stext-102 cl3 p-t-23" id="product_description"></p>
-
-                            <!--  -->
-                            <div class="p-t-33">
-                                <div class="flex-w flex-r-m p-b-10">
-                                    <div class="size-203 flex-c-m respon6">
-                                        Taille
-                                    </div>
-
-                                    <div class="size-204 respon6-next">
-                                        <div class="rs1-select2 bor8 bg0">
-                                            <select class="js-select2" name="size" id="product_size">
-                                            </select>
-                                            <div class="dropDownSelect2"></div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="flex-w flex-r-m p-b-10">
-                                    <div class="size-204 flex-w flex-m respon6-next">
-                                        <div class="wrap-num-product flex-w m-r-20 m-tb-10">
-                                            <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-                                                <i class="fs-16 zmdi zmdi-minus"></i>
-                                            </div>
-
-                                            <input class="mtext-104 cl3 txt-center num-product" type="number" max="" name="number" value="1" id="product_number">
-
-                                            <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
-                                                <i class="fs-16 zmdi zmdi-plus"></i>
-                                            </div>
-                                        </div>
-
-                                        <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail" id="js-addcart-detail">
-                                            Ajouter au panier
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--  -->
-                            <div class="flex-w flex-m p-l-100 p-t-40 respon7">
-                                <div class="flex-m bor9 p-r-10 m-r-11">
-                                    <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 js-addwish-detail tooltip100" data-tooltip="Add to Wishlist">
-                                        <i class="zmdi zmdi-favorite"></i>
-                                    </a>
-                                </div>
-
-                                <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Facebook">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-
-                                <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Twitter">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--===============================================================================================-->
-    <script src="{{ asset('bundles/home/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
-    <!--===============================================================================================-->
-    <script src="{{ asset('bundles/home/vendor/animsition/js/animsition.min.js') }}"></script>
-    <!--===============================================================================================-->
-    <script src="{{ asset('bundles/home/vendor/bootstrap/js/popper.js') }}"></script>
-    <script src="{{ asset('bundles/home/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-    <!--===============================================================================================-->
-    <script src="{{ asset('bundles/home/vendor/select2/select2.min.js') }}"></script>
     <script>
-
-    //show shopping cart panel
-    $('.js-show-cart').on('click', function (e) {
-        panel = $('#cart_list');
-        url = $(this).data("url");
-        $.ajax({
-            type:"post",
-            url: url,
-            dataType: "json",
-            success: function (data) {
-                if(data.status == 1){
-                    panel.html("<li class='text-center'>"+data.mes+"</li>");
-                    $('#totalCart').text("Total: --- XAF");
-                }else{
-                    panel.html(data.mes);
-                    $('#totalCart').text("Total: "+data.total+" XAF");
-                }
-            },
-            beforeSend: function () {
-                panel.html("" +
-                    "<li class='text-center'>Chargement...</li>" +
-                    "");
-            },
-            error: function () {
-                panel.html("" +
-                    "<li class='text-center'>Une erreur est survenue</li>" +
-                    "");
-            }
-
-        })
-    });
-
-
-    $(".js-select2").each(function(){
-        $(this).select2({
-            minimumResultsForSearch: 20,
-            dropdownParent: $(this).next('.dropDownSelect2')
-        });
-    })
-    </script>
-    <!--===============================================================================================-->
-    <script src="{{ asset('bundles/home/vendor/daterangepicker/moment.min.js') }}"></script>
-    <script src="{{ asset('bundles/home/vendor/daterangepicker/daterangepicker.js') }}"></script>
-    <!--===============================================================================================-->
-    <script src="{{ asset('bundles/home/vendor/slick/slick.min.js') }}"></script>
-    <script src="{{ asset('bundles/home/js/slick-custom.js') }}"></script>
-    <!--===============================================================================================-->
-    <script src="{{ asset('bundles/home/vendor/parallax100/parallax100.js') }}"></script>
-    <script>
-    $('.parallax100').parallax100();
-    </script>
-    <!--===============================================================================================-->
-    <script src="{{ asset('bundles/home/vendor/MagnificPopup/jquery.magnific-popup.min.js') }}"></script>
-    <script>
-    $('.gallery-lb').each(function() { // the containers for all your galleries
-        $(this).magnificPopup({
-            delegate: 'a', // the selector for gallery item
-            type: 'image',
-            gallery: {
-                enabled:true
-            },
-            mainClass: 'mfp-fade'
-        });
-    });
-    </script>
-    <!--===============================================================================================-->
-    <script src="{{ asset('bundles/home/vendor/isotope/isotope.pkgd.min.js') }}"></script>
-    <!--===============================================================================================-->
-    <script src="{{ asset('bundles/home/vendor/sweetalert/sweetalert.min.js') }}"></script>
-    <script>
-    $('.js-addwish-b2').on('click', function(e){
-        e.preventDefault();
-    });
-
-    $('.js-addwish-b2').each(function(){
-        var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
-        btnWishes = $(this);
-        $(this).on('click', function(){
-            $.ajax({
-                type: 'post',
-                url: $(this).data('url'),
-                datatype: 'json',
-                beforeSend: function () {
-                    //
-                },
-                success: function (json) {
-                    if(json.status == 0){
-                        swal(nameProduct, json.mes, "success");
-                        if(!btnWishes.hasClass('js-addedwish-b2'))
-                            btnWishes.addClass('js-addedwish-b2');
-                        else
-                            btnWishes.removeClass('js-addedwish-b2');
-                        //$(this).off('click');
-                    }else{
-                        swal(nameProduct, json.mes, "warning");
-                    }
-                },
-                complete: function () {
-                },
-                error: function(jqXHR, textStatus, errorThrown){
-                }
-            });
-        });
-    });
-
-    $('.js-addwish-detail').each(function(){
-        var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
-
-        $(this).on('click', function(){
-            swal(nameProduct, "ajouté aux favoris", "success");
-            $(this).addClass('js-addedwish-detail');
-            $(this).off('click');
-        });
-    });
-
-    /*---------------------------------------------*/
-
-
     $('#subscribeForm').on("submit", function (e) {
         e.preventDefault();
         data = $(this).serialize();
@@ -629,21 +113,10 @@
             },
             success: function (json) {
                 if(json.status == 0){
-                    swal(json.message, "succès");
+                    swal(json.message);
                     alert();
                 }else{
-                    swal(json.message, "warning");
-                    /*
-                    toastr.options = {
-                        closeButton: true,
-                        progressBar: true,
-                        positionClass: "toast-top-center",
-                        showMethod: 'fadeIn',
-                        hideMethod: 'fadeOut',
-                        timeOut: 3000
-                    };
-                    toastr.error(json.mes,'Oups!');
-                    */
+                    swal("Erreur",json.message);
                 }
             },
             complete: function () {
@@ -656,24 +129,6 @@
     })
 
     </script>
-    <!--===============================================================================================-->
-    <script src="{{ asset('bundles/home/vendor/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
-    <script>
-    $('.js-pscroll').each(function(){
-        $(this).css('position','relative');
-        $(this).css('overflow','hidden');
-        var ps = new PerfectScrollbar(this, {
-            wheelSpeed: 1,
-            scrollingThreshold: 1000,
-            wheelPropagation: false,
-        });
-
-        $(window).on('resize', function(){
-            ps.update();
-        })
-    });
-    </script>
-    <!--===============================================================================================-->
     <script src="{{ asset('bundles/home/js/main.js') }}"></script>
     {% block script %}{% endblock %}
     </body>

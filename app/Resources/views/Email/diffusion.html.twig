@@ -9,9 +9,21 @@
                 <h2 style="color: white;">Concert Camer</h2>
             </div>
             <div style="margin-top: 5px">
-                <h3 style="margin: 5px;"><b>{{ salutation }}</b></h3>
+                <h3 style="margin: 5px;"><b><span id="salutation"></span> {{ nom }}</b></h3>
                 <p style="margin: 5px">{{ message }}</p>
             </div>
         </div>
+        <script>
+            var hours = new Date().getHours();
+            var result;
+            if(hours <= 12 ){
+                result = "Bonjour "
+            }else if(hours <= 14){
+                result = "Bonne après midi "
+            }else{
+                result = "Bonsoir "
+            }
+            document.getElementById("salutation").innerHTML = result;
+        </script>
     </body>
 </html>

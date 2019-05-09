@@ -35,7 +35,7 @@
                                     <td>{{ newsletter.email }}</td>
                                     <td>
                                         {{ newsletter.createdat | date('d-m-y')}}
-                                        <a class='deleteNews' data-url="{{ path('admin_newsletter_delete') }}" data-id="{{ newsletter.id }}" data-nom="{{ newsletter.nom }}"><i class='uk-icon-trash uk-icon-medium uk-text-danger'></i></a>
+                                        <a class='deleteNews' data-url="{{ path('admin_newsletter_delete', {newsletter: newsletter.id}) }}" data-id="{{ newsletter.id }}" data-nom="{{ newsletter.nom }}"><i class='uk-icon-trash uk-icon-medium uk-text-danger'></i></a>
                                     </td>
                                 </tr>
                             {% else %}

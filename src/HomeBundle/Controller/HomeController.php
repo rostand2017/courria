@@ -4,6 +4,7 @@ namespace HomeBundle\Controller;
 
 use Facebook\Facebook;
 use HomeBundle\Entity\Category;
+use HomeBundle\Entity\Concert;
 use HomeBundle\Entity\Contact;
 use HomeBundle\Entity\Image;
 use HomeBundle\Entity\NewsLetter;
@@ -18,13 +19,9 @@ class HomeController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $slides = $em->getRepository("HomeBundle\Entity\Slide")->findAll();
-        $products = $em->getRepository("HomeBundle\Entity\Product")->findBy([], ['createdAt'=>'desc'], 25, 0);
-        $categories = $em->getRepository(Category::class)->findBy([], ['id'=>'desc'], 3, 0);
+        $concerts = $em->getRepository(Concert::class)->findBy([], ['date'=>'desc'], 1, 0);
         return $this->render('HomeBundle:Home:index.html.twig', array(
-            "slides" => $slides,
-            "products" => $products,
-            "categories" => $categories
+            "concerts" => $concerts,
         ));
     }
 
@@ -66,38 +63,6 @@ class HomeController extends Controller
         return $this->render("HomeBundle:Login:forgot_password.html.twig");
     }
 
-    public function highLightAction(){}
-
-    public function productAction(Request $request){
-        $limit = 0;
-        $nbPerPage = 16;
-        //var_dump($request->getPathInfo());
-        //var_dump(mb_split("#?.+#", $this->generateUrl("home_product")));
-        //die();
-        $em = $this->getDoctrine()->getManager();
-        $categories = $em->getRepository("HomeBundle\Entity\Category")->findAll();
-        if( $search = $request->query->get("search")){
-            $products = $em->getRepository("HomeBundle\Entity\Product")
-                ->getSearchProducts($limit, $nbPerPage, $search);
-            foreach ($products as $index=>$product){
-                $products[$index]['images'] = $em->getRepository(Image::class)->findByProduct($product['id']);
-            }
-            return $this->render('HomeBundle:Home:product.html.twig', array(
-                "products" => $products,
-                "categories" => $categories,
-                "limit"=>$limit+$nbPerPage,
-            ));
-        }else{
-            $products = $em->getRepository(Product::class)
-                ->getProducts($limit, $limit + $nbPerPage);
-            return $this->render('HomeBundle:Home:product.html.twig', array(
-                "products"=>$products,
-                "categories" => $categories,
-                "limit"=>$limit+$nbPerPage,
-            ));
-        }
-    }
-
     public function aboutAction(){
         return $this->render("HomeBundle:Home:about.html.twig");
     }
@@ -125,23 +90,19 @@ class HomeController extends Controller
     public function subscribeAction(Request $request){
         $email = $request->request->get('email');
         if($email && preg_match("#[a-zA-Z0-9]{2,}@[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}#", $email)){
-            // insertion dans la table contact
             $em = $this->getDoctrine()->getManager();
-
-            // verification de l'existence de l'email
-            $isEmail = $em->getRepository("HomeBundle\Entity\NewsLetter")->findBy(['email'=>$email]);
-
+            $isEmail = $em->getRepository(NewsLetter::class)->findBy(['email'=>$email]);
             if(!$isEmail){
                 $n = new NewsLetter();
                 $n->setEmail($email);
                 $em->persist($n);
                 $em->flush();
-                return new JsonResponse(['status'=>1, 'message'=>'Souscription effectuée']);
+                return new JsonResponse(['status'=>0, 'message'=>'Souscription effectuée']);
             }else{
-                return new JsonResponse(['status'=>1, 'message'=>'Cette email existe déjà']);
+                return new JsonResponse(['status'=>1, 'message'=>'Une souscription a déjà été faite avec cette adresse']);
             }
         }else{
-            return new JsonResponse(['status'=>0, 'message'=>'Email invalide']);
+            return new JsonResponse(['status'=>1, 'message'=>'adresse invalide !']);
         }
     }
 

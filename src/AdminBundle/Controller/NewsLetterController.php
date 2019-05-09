@@ -38,14 +38,13 @@ class NewsLetterController extends Controller
             $clients = $em->getRepository(Client::class)->findAll();
             if($emails || $clients){
                 foreach ($emails as $email){
-                    $salutation = 'Salut '.$email->getNom();
                     $mes = (new \Swift_Message($message))
                             ->setFrom('contact@concert.com')
                             ->setTo($email->getEmail())
                             ->setBody(
                                 $this->renderView(
                                     'Email/diffusion.html.twig',
-                                    array('message' => $message, 'salutation'=>$salutation)
+                                    array('message' => $message, 'nom'=>$email->getNom())
                                 ),
                                 "text/html"
                             );
@@ -53,14 +52,13 @@ class NewsLetterController extends Controller
                 }
                 foreach ($clients as $client){
                     if($client->getEmail()){
-                        $salutation = 'Salut '.$client->getNom();
                         $mes = (new \Swift_Message($message))
                             ->setFrom('contact@concert.com')
                             ->setTo($client->getEmail())
                             ->setBody(
                                 $this->renderView(
                                     'Email/diffusion.html.twig',
-                                    array('message' => $message, 'salutation' => $salutation)
+                                    array('message' => $message, 'nom'=>$client->getNom())
                                 ),
                                 "text/html"
                             );
