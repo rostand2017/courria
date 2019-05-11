@@ -73,7 +73,6 @@ class ConcertController extends Controller
         $affiche = $file->get("affiche");
 
         if($action && $action == "edit" && $id && is_numeric($id) && $id > 0){
-            $concert = $em->getRepository(Concert::class)->find($id);
             if($intitule != '' && $description != '' && $prix!='' && is_numeric($prix) && $prix > 0
                 && $date != '' && $time != '' && $nbPlace!='' && is_numeric($nbPlace) && $nbPlace >0 && $salleId != ''
                 && is_numeric($salleId) && $salleId > 0 && $artistes && !empty($artistes)

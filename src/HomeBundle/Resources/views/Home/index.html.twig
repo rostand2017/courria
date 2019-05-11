@@ -2,20 +2,22 @@
 
 {% block title %}Camer Concert{% endblock %}
 {% block body %}
-    <section id="intro">
+    <section id="intro" style="background: url('/uploads/images/{% if concerts %}{{ concerts[0].affiche }}{% endif %}')">
         <!-- Flexslider Start-->
         <div id="intro-slider" class="flexslider">
-
-            <ul class="slides">
+            <ul class="slides" style="background: url('/uploads/images/{% if concerts %}{{ concerts[0].affiche }}{% endif %}')">
                 <!-- Slide -->
-                {% for concert in concerts %}
+                {% if concerts %}
+                    {% set concert = concerts[0] %}
                     <li>
                         <div class="row">
                             <div class="col full">
                                 <div class="slider-text">
                                     <h2><span>{{ concert.intitule }}</span></h2>
-                                    <p>{{ concert.description }}</p>
-                                    <p><a href="" class="btn btn-primary">Réservez votre place</a></p>
+                                    <p style="color: #fff; text-shadow: none">{{ concert.description }} <span><b><span class="" style="font-size: 30px"> le {{ concert.date | date('d/m/y') }} à {{ concert.heure | date('h:i') }}</span></b></span></p>
+                                    <form action="{{ path('home_reservation') }}" method="get" style="margin-top: 10px">
+                                        <button type="submit" style="color: white">Réservez votre place</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -31,7 +33,7 @@
                             </div>
                         </div>
                     </li>
-                {% endfor %}
+                {% endif %}
             </ul>
         </div>
         <!-- Flexslider End-->
@@ -51,13 +53,14 @@
             </div>
         </div>
 
+         {% set i = 1 %}
         {% for concert in concerts %}
             <div class="row">
                 <!-- Portfolio Wrapper -->
                 <div id="portfolio-wrapper">
                     <div class="col portfolio-item">
                         <div class="item-wrap">
-                            <a href="#" data-reveal-id="modal-01"><img src="/uploads/images/{{ concert.affiche }}" alt="{{ concert.intitule }}"/></a>
+                            <a href="#" data-reveal-id="modal-0{{ i }}"><img src="/uploads/images/{{ concert.affiche }}" alt="{{ concert.intitule }}"/></a>
                             <div class="portfolio-item-meta">
                                 <h5><a href="#">{{ concert.intitule }}</a></h5>
                             </div>
@@ -65,27 +68,24 @@
                     </div>
                 </div> <!-- Portfolio Wrapper End -->
             </div> <!-- End Row -->
+            <div id="modal-0{{ i }}" class="reveal-modal">
+                <img class="scale-with-grid" src="/uploads/images/{{ concert.affiche }}" alt="{{ concert.intitule }}" />
+                <div class="description-box">
+                    <h4>{{ concert.intitule }}</h4>
+                    <p>{{ concert.description }}</p>
+                    <span class="categories"><i class="icon-tag"></i>{{ concert.date | date('d/m/y') }} à {{ concert.heure | date('h:i') }}</span>
+                </div>
+                <div class="link-box">
+                    <a class="close-reveal-modal">Close</a>
+                </div>
+
+            </div><!-- modal-01 End -->
+            {% set i = i+1 %}
         {% else %}
             <div class="row">Aucun concert en cours</div>
         {% endfor %}
 
         <!-- modal-01 -->
-        <div id="modal-01" class="reveal-modal">
-
-            <img class="scale-with-grid" src="images/portfolio/modals/m-cosmic-sneakers.jpg" alt="" />
-
-            <div class="description-box">
-                <h4>The Cosmic Sneakers</h4>
-                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                <span class="categories"><i class="icon-tag"></i>Branding, Web Design</span>
-            </div>
-
-            <div class="link-box">
-                <a href="http://www.behance.net">Details</a>
-                <a class="close-reveal-modal">Close</a>
-            </div>
-
-        </div><!-- modal-01 End -->
     </section>
 
     <!-- About Section
@@ -220,7 +220,7 @@
 
             <div class="member-name">
             <h5>Shikamaru Nara</h5>
-            <span>Web Designer</span>
+            <span>Consultant</span>
         </div>
 
         <ul class="member-social">
@@ -237,12 +237,10 @@
 
         <!-- Testimonials -->
         <div class="row">
-
             <div class="col full section-head">
-                <h2>Testimonials</h2>
-                <p class="desc">What our clients are saying.</p>
+                <h2>Témoignanges</h2>
+                <p class="desc">Ce que les clients disent.</p>
             </div>
-
         </div>
 
         <div class="row testimonials">
@@ -252,13 +250,12 @@
                 <div class="client-author">
                     <img src="{{ asset('bundles/home/images/client-img.png') }}" alt="" />
                     <div class="name">
-                        <p>John Doe<span>Designer</span></p>
+                        <p>Mantho Doe<span>Designer</span></p>
                     </div>
                 </div>
 
                 <div class="client-cite">
-                    <p>Phasellus - ut augue at sapien bibendum bibendum amet magna. Aenean condimentum, lacus sit amet luctus lobortis,
-                        enim tellus ultrices elit, amet consequat enim elit noneas.</p>
+                    <p>J'aime beaucoup cette application web. Avec elle, plus besoin de se déplacer pour réserver sa place pour un concert.</p>
                 </div>
 
             </div>
@@ -266,22 +263,43 @@
             <div class="col half">
 
                 <div class="client-author">
-                    <img src="images/client-img.png" alt="" />
+                    <img src="{{ asset('bundles/home/images/client-img.png') }}" alt="" />
                     <div class="name">
-                        <p>Michael Smith<span>CEO</span></p>
+                        <p>Mbonjo Smith<span>CEO</span></p>
                     </div>
                 </div>
 
                 <div class="client-cite">
-                    <p>Nascetur augue hac platea enim, egestas pulvinar vut. Pulvinar cum, ac eu, tristie
-                        acus duis in dictumst non integer. Elit, sed scelerisque odio tortor, sed platea dis.
-                        Aenean condimentum, lacus sit amet luctus lobortis,
-                        enim tellus ultrices elit.</p>
+                    <p>
+                        Merveilleux, fabuleux, les mots me manquent.Avant pour faire une reservation pour un concert, j'était oubligé de
+                        me déplacer tout le temps et partir faire une queue de Ouf. Maintenant, en quelques secondes c'est possible de
+                        le faire.
+                    </p>
                 </div>
 
             </div>
-
         </div> <!--  Testimonials End-->
+        <div class="row" style="width: auto; background: #c3d3c9">
+            <div class="col-md-8 offset-2">
+                <div class="col full section-head">
+                    <h2>Commentaires</h2>
+                    <p class="desc" style="color: white">Laissez nous un commentaire.</p>
+                </div>
+                <form action="{{ path('home_commentaire') }}" method="post" id="formCommentaire">
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input type="text" value="{% if app.session.get('user') %}{{ app.session.get('user').nom }}{% endif %}" name="nom" required placeholder="Votre nom" class="btn-block" style="color: #000000;">
+                    </div>
+                    <div class="form-group">
+                        <label for="commentaire">Commentaire</label>
+                        <textarea placeholder="Saisissez votre commentaire" required name="message" id="commentaire" rows="5" class="btn-block"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" id="btn-commentaire" class="btn-block" style="color: white">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </section>
 
     <section id="call-to-action">
@@ -291,7 +309,7 @@
                 <p>Connectez vous à Camer conert et reservez vos places pour tous les concerts disponibles au Cameroun</p>
             </div>
             <div class="col one-fourth action">
-                <a href="{{ path('home_login') }}" class="button">Se connectez</a>
+                <a href="{{ path('home_login') }}" class="button">Se connecter</a>
             </div>
         </div>
     </section>
@@ -299,4 +317,34 @@
         <p class="map-error">Une erreur est survenue... Impossible de charger la carte... Vérifiez votre connexion internet</p>
     </section> <!-- Map Section End-->
 {% endblock %}
-{% block script %}{% endblock %}
+{% block script %}
+    <script>
+        $('#formCommentaire').on("submit", function (e) {
+            e.preventDefault();
+            data = $(this).serialize();
+            $.ajax({
+                type: 'post',
+                url: $(this).attr('action'),
+                data: data,
+                datatype: 'json',
+                beforeSend: function () {
+                    $('#btn-commentaire').text('Chargement ...').prop('disabled',true);
+                },
+                success: function (json) {
+                    if(json.status == 0){
+                        swal(json.message);
+                        $('#commentaire').val('');
+                    }else{
+                        swal("Erreur",json.message);
+                    }
+                },
+                complete: function () {
+                    $('#btn-commentaire').text('souscrire').prop('disabled',false);
+                },
+                error: function(jqXHR, textStatus, errorThrown){
+                }
+            });
+
+        })
+    </script>
+{% endblock %}

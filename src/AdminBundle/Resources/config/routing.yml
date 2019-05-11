@@ -75,6 +75,14 @@ admin_reservation_delete:
     path:     /reservation/delete
     defaults: { _controller: AdminBundle:Reservation:delete }
 
+#COMMENTAIRE
+admin_commentaire:
+    path:     /commentaire
+    defaults: { _controller: AdminBundle:Commentaire:index }
+admin_commentaire_delete:
+    path:     /commentaire/delete
+    defaults: { _controller: AdminBundle:Commentaire:delete }
+
 
 #CONNEXION
 admin_login:

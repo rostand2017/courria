@@ -24,7 +24,7 @@
                         <div class="uk-width-medium-1-2">
                             <div class="">
                                 <label for="uk_dp_start">Chercher par date d'ajout min</label>
-                                <input type="text" class="md-input" name="begin" {{ app.request.query.get("begin") }} id="uk_dp_start" />
+                                <input type="text" class="md-input" name="begin" value="{{ app.request.query.get("begin") }}" id="uk_dp_start" />
                             </div>
                         </div>
                         <div class="uk-width-medium-1-2">
@@ -59,6 +59,7 @@
                                 <th>Nom</th>
                                 <th>age</th>
                                 <th>email</th>
+                                <th>Code reservation</th>
                                 <th>Date de reservation</th>
                                 <th>Réservation</th>
                                 <th></th>
@@ -72,6 +73,7 @@
                                     <td>{{ client.nom }} {{ client.prenom }}</td>
                                     <td>{% if client.age is not null %} {{ client.age }} ans{% else %}- - -{% endif %}</td>
                                     <td>{% if client.email is not null %} {{ client.email }} ans{% else %}- - -{% endif %}</td>
+                                    <td>{{ client.code }}</td>
                                     <td>{{ client.date | date('d-m-y')}}</td>
                                     <td><a href="{{ path('admin_client_reservation', {client: client.cli_id}) }}"><i class='uk-icon-eye uk-icon-medium'></i></a></td>
                                     <td><a class='deleteReservation' data-uk-tooltip="{pos:'top'}" title='Annuler la reservation' data-url="{{ path('admin_client_delete') }}" data-id="{{ client.id }}" data-nom="{{ client.nom }}"><i class='uk-icon-trash uk-icon-medium uk-text-danger'></i></a></td>

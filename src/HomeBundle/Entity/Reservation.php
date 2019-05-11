@@ -36,6 +36,13 @@ class Reservation
     private $nbplace;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="code", type="string", nullable=false)
+     */
+    private $code;
+
+    /**
      * @var \Client
      *
      * @ORM\ManyToOne(targetEntity="Client", cascade={"persist", "refresh"})
@@ -165,5 +172,29 @@ class Reservation
     public function getCon()
     {
         return $this->con;
+    }
+
+    /**
+     * Set code
+     *
+     * @param \varchar $code
+     *
+     * @return Reservation
+     */
+    public function setCode($code)
+    {
+        $this->code = $code;
+
+        return $this;
+    }
+
+    /**
+     * Get code
+     *
+     * @return \varchar
+     */
+    public function getCode()
+    {
+        return $this->code;
     }
 }

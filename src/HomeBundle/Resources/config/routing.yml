@@ -21,3 +21,22 @@ home_change_password:
 home_forgot_password:
     path:     /forgot_password
     defaults: { _controller: HomeBundle:Home:forgotPassword }
+
+home_commentaire:
+    path:     /comment
+    defaults: { _controller: HomeBundle:Home:comment }
+home_reservation:
+    path:     /reservation
+    defaults: { _controller: HomeBundle:Reservation:index }
+home_reservation_directe:
+    path:     /reservation/directe
+    defaults: { _controller: HomeBundle:Reservation:reservationDirecte }
+home_reservation_normale:
+    path:     /reservation/normale
+    defaults: { _controller: HomeBundle:Reservation:reservation }
+home_reservation_edit:
+    path:     /reservation/edit
+    defaults: { _controller: HomeBundle:Reservation:edit }
+home_dashboard:
+    path:     /dashboard
+    defaults: { _controller: HomeBundle:Home:userDashBoard }

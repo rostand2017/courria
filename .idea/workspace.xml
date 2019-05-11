@@ -2,422 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f152b40-4f47-4a7b-b562-88bb7dfe4f61" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Repository/NewsLetterRepository.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/base.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/css/font-awesome-ie7.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/css/font-awesome-ie7.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/css/font-awesome.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/css/font-awesome.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/font/FontAwesome.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/font/fontawesome-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/font/fontawesome-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/font/fontawesome-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/font/fontawesome-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/less/bootstrap.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/less/core.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/less/extras.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/less/font-awesome-ie7.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/less/font-awesome.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/less/icons.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/less/mixins.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/less/path.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/less/variables.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/scss/_bootstrap.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/scss/_core.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/scss/_extras.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/scss/_icons.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/scss/_mixins.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/scss/_path.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/scss/_variables.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/scss/font-awesome-ie7.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/scss/font-awesome.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/montserrat/montserrat-bold-demo.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/montserrat/montserrat-bold-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/montserrat/montserrat-bold-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/montserrat/montserrat-bold-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/montserrat/montserrat-bold-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/montserrat/montserrat-regular-demo.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/montserrat/montserrat-regular-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/montserrat/montserrat-regular-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/montserrat/montserrat-regular-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/montserrat/montserrat-regular-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Bold-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Bold-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Bold-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Bold-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-BoldItalic-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-BoldItalic-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-BoldItalic-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-BoldItalic-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-ExtraBold-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-ExtraBold-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-ExtraBold-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-ExtraBold-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-ExtraBoldItalic-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-ExtraBoldItalic-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-ExtraBoldItalic-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-ExtraBoldItalic-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Italic-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Italic-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Italic-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Italic-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Light-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Light-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Light-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Light-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-LightItalic-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-LightItalic-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-LightItalic-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-LightItalic-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Regular-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Regular-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Regular-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Regular-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Semibold-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Semibold-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Semibold-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Semibold-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-SemiboldItalic-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-SemiboldItalic-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-SemiboldItalic-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-SemiboldItalic-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/layout.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/favicon.ico" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/author-img.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/client-img.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/direction-nav-left.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/direction-nav-right.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/intro-bg.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/k-opacity-60.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/k-opacity-70.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/loader.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/loader2.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/logo.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/patterns/grey.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/patterns/servicesbg.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/clock.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/cosmic-sneakers.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/eve.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/fields.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/judah.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/milk-splash.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/modals/m-clock.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/modals/m-cosmic-sneakers.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/modals/m-eve.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/modals/m-fields.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/modals/m-judah.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/modals/m-milk-splash.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/modals/m-sneaker-splash.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/modals/m-vector-flower.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/sneaker-splash.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/vector-flower.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/post-image/post-image-a-972x360.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/post-image/post-image-b-972x360.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/post-image/post-image-c-972x360.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/sample-image-120x120.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/team/team-img-01.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/team/team-img-02.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/team/team-img-03.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/user-01.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/user-02.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/user-03.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/gmaps.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/init.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/jquery-1.10.2.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/jquery-migrate-1.2.1.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/jquery.flexslider.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/jquery.reveal.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/scrollspy.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/smoothscrolling.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/Email/code_reservation.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/AdminBundle/Classes/CodeGenerator.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/CommentaireController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Commentaire/index.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Controller/ReservationController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Entity/Commentaire.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Repository/CommentaireRepository.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/bootstrap/css/bootstrap.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/bootstrap/fonts/glyphicons-halflings-regular.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/bootstrap/fonts/glyphicons-halflings-regular.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/bootstrap/fonts/glyphicons-halflings-regular.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/bootstrap/fonts/glyphicons-halflings-regular.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/bootstrap/fonts/glyphicons-halflings-regulard41d.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/bootstrap/js/bootstrap.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/bgconnexion.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/mobile-money.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/orange-money.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Reservation/index.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Reservation/reservation.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Reservation/reservation_directe.html.twig" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Email/diffusion.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Email/diffusion.html.twig" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/Email/new_password.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Email/new_password.html.twig" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
       <change beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Controller/NewsLetterController.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/NewsLetterController.php" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Client/newsletter.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Client/newsletter.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Controller/CommandController.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Controller/ConcertController.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/ConcertController.php" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Controller/ReservationController.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/ReservationController.php" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Reservation/index.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Reservation/index.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Controller/AccountController.php" afterPath="$PROJECT_DIR$/src/AuthenticationBundle/Controller/AccountController.php" />
       <change beforePath="$PROJECT_DIR$/src/HomeBundle/Controller/HomeController.php" afterPath="$PROJECT_DIR$/src/HomeBundle/Controller/HomeController.php" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Controller/ProductController.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Controller/WishesListController.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Entity/Reservation.php" afterPath="$PROJECT_DIR$/src/HomeBundle/Entity/Reservation.php" />
       <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/main.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/util.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Montserrat/Montserrat-Black.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Montserrat/Montserrat-BlackItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Montserrat/Montserrat-Bold.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Montserrat/Montserrat-BoldItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Montserrat/Montserrat-ExtraBold.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Montserrat/Montserrat-ExtraLight.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Montserrat/Montserrat-ExtraLightItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Montserrat/Montserrat-Italic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Montserrat/Montserrat-Light.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Montserrat/Montserrat-LightItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Montserrat/Montserrat-Medium.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Montserrat/Montserrat-MediumItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Montserrat/Montserrat-Regular.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Montserrat/Montserrat-SemiBold.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Montserrat/Montserrat-SemiBoldItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Montserrat/Montserrat-Thin.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Montserrat/Montserrat-ThinItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Montserrat/OFL.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/PlayfairDisplay/OFL.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/PlayfairDisplay/PlayfairDisplay-Black.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/PlayfairDisplay/PlayfairDisplay-BlackItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/PlayfairDisplay/PlayfairDisplay-Bold.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/PlayfairDisplay/PlayfairDisplay-BoldItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/PlayfairDisplay/PlayfairDisplay-Italic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Poppins/Poppins-Black.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Poppins/Poppins-BlackItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Poppins/Poppins-Bold.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Poppins/Poppins-BoldItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Poppins/Poppins-ExtraBold.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Poppins/Poppins-ExtraBoldItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Poppins/Poppins-ExtraLight.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Poppins/Poppins-ExtraLightItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Poppins/Poppins-Italic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Poppins/Poppins-Light.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Poppins/Poppins-LightItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Poppins/Poppins-Medium.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Poppins/Poppins-MediumItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Poppins/Poppins-Regular.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Poppins/Poppins-SemiBold.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Poppins/Poppins-SemiBoldItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Poppins/Poppins-Thin.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Poppins/Poppins-ThinItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/css/font-awesome.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/css/font-awesome.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/less/animated.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/less/bordered-pulled.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/less/core.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/less/fixed-width.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/less/font-awesome.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/less/icons.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/less/larger.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/less/list.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/less/mixins.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/less/path.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/less/rotated-flipped.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/less/screen-reader.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/less/stacked.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/less/variables.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/scss/_animated.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/scss/_core.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/scss/_icons.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/scss/_larger.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/scss/_list.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/scss/_mixins.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/scss/_path.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/scss/_stacked.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/scss/_variables.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/font-awesome-4.7.0/scss/font-awesome.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/iconic/css/material-design-iconic-font.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/iconic/css/material-design-iconic-font.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/iconic/fonts/Material-Design-Iconic-Font.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/iconic/fonts/Material-Design-Iconic-Font.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/linearicons-v1.0.0/WebFont/Linearicons-Free.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/linearicons-v1.0.0/WebFont/Linearicons-Free.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/linearicons-v1.0.0/WebFont/Linearicons-Free.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/linearicons-v1.0.0/WebFont/Linearicons-Free.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/linearicons-v1.0.0/WebFont/Linearicons-Free.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/linearicons-v1.0.0/icon-font.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/geolocation.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/about-01.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/about-02.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/avatar-01.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/banner-01.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/banner-02.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/banner-03.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/banner-04.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/banner-05.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/banner-06.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/banner-07.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/banner-08.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/banner-09.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/bg-01.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/bg-02.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/blog-01.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/blog-02.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/blog-03.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/blog-04.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/blog-05.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/blog-06.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/gallery-01.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/gallery-02.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/gallery-03.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/gallery-04.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/gallery-05.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/gallery-06.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/gallery-07.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/gallery-08.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/gallery-09.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/icons/favicon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/icons/icon-close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/icons/icon-close2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/icons/icon-email.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/icons/icon-heart-01.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/icons/icon-heart-02.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/icons/icon-next.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/icons/icon-pay-01.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/icons/icon-pay-02.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/icons/icon-pay-03.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/icons/icon-pay-04.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/icons/icon-pay-05.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/icons/icon-prev.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/icons/logo-01.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/icons/logo-02.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/icons/pin.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/item-cart-01.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/item-cart-02.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/item-cart-03.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/item-cart-04.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/item-cart-05.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-01.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-02.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-03.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-04.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-05.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-06.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-07.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-08.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-09.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-10.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-11.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-12.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-13.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-14.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-15.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-16.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-detail-01.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-detail-02.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-detail-03.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-min-01.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-min-02.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/product-min-03.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/slide-01.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/slide-02.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/slide-03.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/slide-04.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/slide-05.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/slide-06.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/slide-07.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/thumb-01.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/thumb-02.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/thumb-03.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/main.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/map-custom.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/slick-custom.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/MagnificPopup/jquery.magnific-popup.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/MagnificPopup/jquery.magnific-popup.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/MagnificPopup/magnific-popup.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/animate/animate.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/animsition/css/animsition.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/animsition/css/animsition.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/animsition/js/animsition.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/animsition/js/animsition.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/bootstrap/css/bootstrap-grid.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/bootstrap/css/bootstrap-grid.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/bootstrap/css/bootstrap-grid.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/bootstrap/css/bootstrap-reboot.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/bootstrap/css/bootstrap-reboot.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/bootstrap/css/bootstrap-reboot.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/bootstrap/css/bootstrap.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/bootstrap/css/bootstrap.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/bootstrap/css/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/bootstrap/css/bootstrap.min.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/bootstrap/js/bootstrap.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/bootstrap/js/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/bootstrap/js/popper.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/bootstrap/js/popper.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/bootstrap/js/tooltip.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/countdowntime/countdowntime.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/css-hamburgers/hamburgers.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/css-hamburgers/hamburgers.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/daterangepicker/daterangepicker.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/daterangepicker/daterangepicker.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/daterangepicker/moment.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/daterangepicker/moment.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/isotope/isotope.pkgd.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/jquery/jquery-3.2.1.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/jqueryui/external/jquery/jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/jqueryui/images/ui-icons_444444_256x240.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/jqueryui/images/ui-icons_555555_256x240.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/jqueryui/images/ui-icons_777620_256x240.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/jqueryui/images/ui-icons_777777_256x240.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/jqueryui/images/ui-icons_cc0000_256x240.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/jqueryui/images/ui-icons_ffffff_256x240.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/jqueryui/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/jqueryui/jquery-ui.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/jqueryui/jquery-ui.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/jqueryui/jquery-ui.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/jqueryui/jquery-ui.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/jqueryui/jquery-ui.structure.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/jqueryui/jquery-ui.structure.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/jqueryui/jquery-ui.theme.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/jqueryui/jquery-ui.theme.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/lightbox2/css/lightbox.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/lightbox2/css/lightbox.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/lightbox2/images/close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/lightbox2/images/loading.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/lightbox2/images/next.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/lightbox2/images/prev.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/lightbox2/js/lightbox-plus-jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/lightbox2/js/lightbox-plus-jquery.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/lightbox2/js/lightbox-plus-jquery.min.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/lightbox2/js/lightbox.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/lightbox2/js/lightbox.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/lightbox2/js/lightbox.min.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/parallax100/parallax100.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/perfect-scrollbar/perfect-scrollbar.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/perfect-scrollbar/perfect-scrollbar.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/select2/select2.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/select2/select2.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/select2/select2.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/select2/select2.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/slick/ajax-loader.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/slick/config.rb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/slick/fonts/slick.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/slick/fonts/slick.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/slick/fonts/slick.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/slick/fonts/slick.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/slick/slick-theme.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/slick/slick-theme.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/slick/slick-theme.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/slick/slick.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/slick/slick.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/slick/slick.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/slick/slick.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/slick/slick.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/vendor/sweetalert/sweetalert.min.js" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/sweetalert/sweetalert.min.js" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/about.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/command.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/contact.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/feature.html.twig" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/config/services.yml" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/base.css" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/base.css" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/layout.css" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/layout.css" />
       <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/index.html.twig" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/payment_mode.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/product.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/single_product.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/wishes_list.html.twig" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/forgot_password.html.twig" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/forgot_password.html.twig" />
       <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/login.html.twig" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/login.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/register.html.twig" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/register.html.twig" />
       <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/views/layout.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/layout2.html.twig" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -445,86 +71,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HomeBundle/Controller/HomeController.php">
+      <file leaf-file-name="ReservationController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/HomeBundle/Controller/ReservationController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="101" column="101" lean-forward="false" selection-start-line="101" selection-start-column="101" selection-end-line="101" selection-end-column="101" />
+              <caret line="68" column="33" lean-forward="false" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
               <folding>
-                <element signature="e#764#1359#0#PHP" expanded="false" />
-                <element signature="e#2287#3206#0#PHP" expanded="false" />
+                <element signature="e#5162#6096#0#PHP" expanded="false" />
+                <element signature="e#6102#6175#0#PHP" expanded="false" />
+                <element signature="e#6181#6637#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/index.html.twig">
+      <file leaf-file-name="CommentaireRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HomeBundle/Repository/CommentaireRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="220" column="23" lean-forward="false" selection-start-line="220" selection-start-column="23" selection-end-line="220" selection-end-column="23" />
+            <state relative-caret-position="221">
+              <caret line="49" column="35" lean-forward="false" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
               <folding>
-                <element signature="e#2967#3674#0#HTML" expanded="false" />
+                <marker date="1557554528893" expanded="true" signature="414:448" ph="SELECT COUNT... client" />
+                <marker date="1557554528893" expanded="true" signature="1623:1650" ph="SELECT * FRO... commentaire" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/config/routing.yml">
+      <file leaf-file-name="reservation_directe.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Reservation/reservation_directe.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/layout.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="17" column="49" lean-forward="false" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+            <state relative-caret-position="169">
+              <caret line="41" column="75" lean-forward="false" selection-start-line="41" selection-start-column="75" selection-end-line="41" selection-end-column="75" />
               <folding>
-                <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#3054#3060#0#HTML" expanded="true" />
+                <element signature="e#137#199#0#HTML" expanded="true" />
+                <element signature="e#1877#1901#0#HTML" expanded="true" />
+                <element signature="e#2112#2136#0#HTML" expanded="true" />
+                <element signature="e#2358#2378#0#HTML" expanded="true" />
+                <element signature="e#2563#2597#0#HTML" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scrollspy.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/js/scrollspy.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="113" column="5" lean-forward="false" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="smoothscrolling.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/js/smoothscrolling.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="39" column="46" lean-forward="false" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/login.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1">
-              <caret line="0" column="44" lean-forward="false" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -533,27 +118,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>statut</find>
-      <find>CONCERT</find>
-      <find>salle</find>
-      <find>uploa</find>
-      <find>news</find>
-      <find>date d'</find>
-      <find>uk_d</find>
-      <find>concert.date</find>
-      <find>changer</find>
-      <find>changeC</find>
-      <find>json</find>
-      <find>concerne.ar</find>
-      <find>twig</find>
-      <find>concerne</find>
-      <find>artistes</find>
-      <find>data-ar</find>
-      <find>Concert</find>
-      <find>searc</find>
-      <find>input</find>
-      <find>arti</find>
-      <find>concert</find>
       <find>Salle</find>
       <find>home</find>
       <find>concer</find>
@@ -563,6 +127,27 @@
       <find>delete</find>
       <find>Client</find>
       <find>client</find>
+      <find>text-color</find>
+      <find>text-danger</find>
+      <find>body</find>
+      <find>url</find>
+      <find>Entrer</find>
+      <find>row</find>
+      <find>user</find>
+      <find>sal</find>
+      <find>salu</find>
+      <find>das</find>
+      <find>slid</find>
+      <find>slider</find>
+      <find>port</find>
+      <find>portfi</find>
+      <find>portf</find>
+      <find>moda</find>
+      <find>modal</find>
+      <find>fête</find>
+      <find>html</find>
+      <find>, {concert: concert.id}</find>
+      <find>Reser</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -575,6 +160,8 @@
       <replace>Client</replace>
       <replace>reservation</replace>
       <replace>News</replace>
+      <replace>Entrez</replace>
+      <replace>Commentaire</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -583,57 +170,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/HomeBundle/Repository/SalleRepository.php" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Entity/Client.php" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Entity/Salle.php" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Entity/Admin.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/SalleController.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Concert/salle.html.twig" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/salle.js" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/artiste.js" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Classes/Authentication.php" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Repository/ConcerneRepository.php" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Repository/ConcertRepository.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/config/services.yml" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Twig/AppExtension.php" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Entity/Artiste.php" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Entity/Concerne.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/ConcertController.php" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Entity/Concert.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/concert.js" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/ArtisteController.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Concert/artiste.html.twig" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/client.js" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/ClientController.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Concert/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Entity/Reservation.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/concert_reservation.js" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/reservation.js" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/ReservationController.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Client/reservation.html.twig" />
         <option value="$PROJECT_DIR$/src/HomeBundle/Repository/ReservationRepository.php" />
         <option value="$PROJECT_DIR$/src/HomeBundle/Repository/ClientRepository.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Client/index.html.twig" />
         <option value="$PROJECT_DIR$/src/HomeBundle/Entity/NewsLetter.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/app/Resources/views/Email/new_password.html.twig" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/news.js" />
         <option value="$PROJECT_DIR$/web/bundles/admin/assets/js/news.js" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/change_password.html.twig" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Reservation/index.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/Email/diffusion.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/NewsLetterController.php" />
-        <option value="$PROJECT_DIR$/app/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/login.html.twig" />
         <option value="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/init.js" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Client/newsletter.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/config/services.yml" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Controller/HomeController.php" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/base.css" />
+        <option value="$PROJECT_DIR$/web/bundles/home/css/base.css" />
+        <option value="$PROJECT_DIR$/src/AuthenticationBundle/Resources/config/services.yml" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/ConcertController.php" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/login.html.twig" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/register.html.twig" />
+        <option value="$PROJECT_DIR$/src/AuthenticationBundle/Controller/AccountController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Email/new_password.html.twig" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/forgot_password.html.twig" />
         <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/web/bundles/home/css/layout.css" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/layout.css" />
         <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/AuthenticationBundle/Classes/Thumbnails.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Email/code_reservation.html.twig" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Entity/Reservation.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/ReservationController.php" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Reservation/reservation.html.twig" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Reservation/reservation_directe.html.twig" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Reservation/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Controller/ReservationController.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Classes/CodeGenerator.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Entity/Commentaire.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/CommentaireController.php" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Repository/CommentaireRepository.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Commentaire/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Reservation/index.html.twig" />
       </list>
     </option>
   </component>
@@ -687,6 +274,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
+    <option name="y" value="19" />
     <option name="width" value="1036" />
     <option name="height" value="735" />
   </component>
@@ -743,6 +331,27 @@
             <path>
               <item name="concert" type="b2602c69:ProjectViewProjectNode" />
               <item name="concert" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="concert" type="b2602c69:ProjectViewProjectNode" />
+              <item name="concert" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="concert" type="b2602c69:ProjectViewProjectNode" />
+              <item name="concert" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Email" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="concert" type="b2602c69:ProjectViewProjectNode" />
+              <item name="concert" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -750,6 +359,13 @@
               <item name="concert" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="AdminBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="concert" type="b2602c69:ProjectViewProjectNode" />
+              <item name="concert" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AdminBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Classes" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="concert" type="b2602c69:ProjectViewProjectNode" />
@@ -788,93 +404,16 @@
               <item name="AdminBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Client" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Commentaire" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="concert" type="b2602c69:ProjectViewProjectNode" />
               <item name="concert" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="AuthenticationBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="concert" type="b2602c69:ProjectViewProjectNode" />
-              <item name="concert" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="AuthenticationBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="concert" type="b2602c69:ProjectViewProjectNode" />
-              <item name="concert" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="AuthenticationBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="concert" type="b2602c69:ProjectViewProjectNode" />
-              <item name="concert" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="HomeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="concert" type="b2602c69:ProjectViewProjectNode" />
-              <item name="concert" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="HomeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="concert" type="b2602c69:ProjectViewProjectNode" />
-              <item name="concert" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="HomeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="concert" type="b2602c69:ProjectViewProjectNode" />
-              <item name="concert" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="HomeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="concert" type="b2602c69:ProjectViewProjectNode" />
-              <item name="concert" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="HomeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="concert" type="b2602c69:ProjectViewProjectNode" />
-              <item name="concert" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="HomeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AdminBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="concert" type="b2602c69:ProjectViewProjectNode" />
-              <item name="concert" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="HomeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="concert" type="b2602c69:ProjectViewProjectNode" />
-              <item name="concert" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="concert" type="b2602c69:ProjectViewProjectNode" />
-              <item name="concert" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="uploads" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Reservation" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -890,11 +429,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\concert\src\HomeBundle\Resources\views\Home" />
-      <recent name="C:\laragon\www\concert\src\HomeBundle\Resources\public\js" />
-      <recent name="C:\laragon\www\concert\src\HomeBundle\Resources\public" />
-      <recent name="C:\laragon\www\concert\src\AdminBundle\Resources\public\assets\js" />
-      <recent name="C:\laragon\www\concert\app\Resources\views" />
+      <recent name="C:\laragon\www\concert\src\AdminBundle\Controller" />
+      <recent name="C:\laragon\www\concert\src\AdminBundle\Resources\views\Commentaire" />
+      <recent name="C:\laragon\www\concert\app\Resources\views\Email" />
+      <recent name="C:\laragon\www\concert\web\bundles\home\images" />
+      <recent name="C:\laragon\www\concert\src\HomeBundle\Resources\public\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -943,22 +482,23 @@
       <workItem from="1557030363478" duration="39951000" />
       <workItem from="1557077684659" duration="23470000" />
       <workItem from="1557196627981" duration="19546000" />
-      <workItem from="1557241287983" duration="30001000" />
+      <workItem from="1557241287983" duration="88437000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210792000" />
+    <option name="totallyTimeSpent" value="269228000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2246596" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24810892" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -970,7 +510,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -987,430 +526,858 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/ConcertController.php">
+    <entry file="file://$PROJECT_DIR$/web/bundles/admin/assets/icons/flags/Hello.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="29" column="6" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state relative-caret-position="-357">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/admin/assets/icons/flags/flags.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AuthenticationBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="65" lean-forward="false" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AuthenticationBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AuthenticationBundle/Classes/Authentication.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/home/css/font-awesome/css/font-awesome-ie7.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="90" column="10" lean-forward="false" selection-start-line="90" selection-start-column="6" selection-end-line="90" selection-end-column="10" />
           <folding>
-            <element signature="e#660#1891#0#PHP" expanded="false" />
+            <marker date="1557374308037" expanded="true" signature="2206:2267" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="2306:2367" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="2407:2468" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="2514:2575" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="2614:2675" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="2713:2774" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="2818:2879" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="2917:2978" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="3016:3077" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="3119:3180" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="3216:3277" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="3318:3379" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="3415:3476" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="3516:3577" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="3618:3679" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="3721:3782" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="3819:3880" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="3923:3984" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="4024:4085" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="4122:4183" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="4221:4282" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="4321:4382" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="4420:4481" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="4523:4584" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="4622:4683" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="4721:4782" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="4828:4889" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="4931:4992" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="5032:5093" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="5132:5193" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="5238:5299" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="5339:5400" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="5446:5507" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="5548:5609" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="5651:5712" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="5750:5811" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="5849:5910" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="5954:6015" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="6059:6120" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="6165:6226" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="6269:6330" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="6370:6431" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="6472:6533" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="6570:6631" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="6669:6730" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="6768:6829" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="6871:6932" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="6971:7032" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="7072:7133" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="7171:7232" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="7270:7331" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="7371:7432" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="7477:7538" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="7582:7643" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="7687:7748" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="7794:7855" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="7900:7961" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="8008:8069" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="8107:8168" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="8213:8274" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="8320:8381" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="8429:8490" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="8531:8592" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="8632:8693" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="8737:8798" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="8838:8899" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="8937:8998" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="9036:9097" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="9136:9197" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="9236:9297" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="9335:9396" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="9443:9504" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="9551:9612" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="9654:9715" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="9753:9814" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="9853:9914" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="9952:10013" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="10054:10115" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="10161:10222" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="10268:10329" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="10368:10429" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="10475:10536" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="10583:10644" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="10687:10748" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="10792:10853" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="10898:10959" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="11000:11061" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="11108:11169" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="11212:11273" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="11317:11378" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="11425:11486" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="11529:11590" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="11634:11695" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="11739:11800" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="11845:11906" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="11948:12009" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="12053:12114" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="12157:12218" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="12264:12325" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="12370:12431" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="12477:12538" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="12576:12637" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="12676:12737" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="12779:12840" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="12890:12951" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="12989:13050" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="13088:13149" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="13187:13248" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="13290:13351" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="13394:13455" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="13501:13562" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="13601:13662" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="13704:13765" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="13805:13866" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="13907:13968" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="14008:14069" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="14113:14174" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="14220:14281" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="14322:14383" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="14430:14491" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="14537:14598" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="14643:14704" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="14753:14814" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="14865:14926" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="14969:15030" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="15076:15137" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="15184:15245" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="15291:15352" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="15389:15450" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="15488:15549" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="15588:15649" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="15691:15752" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="15799:15860" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="15909:15970" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="16013:16074" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="16119:16180" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="16221:16282" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="16329:16390" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="16431:16492" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="16539:16600" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="16640:16701" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="16741:16802" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="16847:16908" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="16952:17013" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="17052:17113" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="17152:17213" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="17258:17319" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="17362:17423" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="17471:17532" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="17576:17637" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="17678:17739" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="17781:17842" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="17882:17943" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="17983:18044" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="18089:18150" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="18187:18248" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="18285:18346" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="18388:18449" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="18487:18548" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="18593:18654" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="18698:18759" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="18802:18863" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="18904:18965" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="19008:19069" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="19120:19181" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="19233:19294" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="19343:19404" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="19455:19516" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="19555:19616" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="19656:19717" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="19756:19817" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="19857:19918" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="19961:20022" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="20066:20127" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="20166:20227" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="20265:20326" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="20365:20426" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="20466:20527" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="20564:20625" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="20663:20724" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="20768:20829" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="20872:20933" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="20971:21032" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="21076:21137" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="21178:21239" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="21280:21341" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="21382:21443" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="21490:21551" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="21594:21655" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="21694:21755" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="21794:21855" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="21894:21955" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="21998:22059" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="22107:22168" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="22218:22279" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="22324:22385" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="22424:22485" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="22529:22590" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="22632:22693" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="22737:22798" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="22843:22904" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="22945:23006" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="23044:23105" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="23148:23209" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="23250:23311" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="23353:23414" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="23456:23517" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="23555:23616" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="23661:23722" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="23761:23822" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="23865:23926" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="23971:24032" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="24078:24139" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="24177:24238" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="24279:24340" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="24382:24443" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="24482:24543" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="24586:24647" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="24689:24750" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="24798:24859" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="24905:24966" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="25007:25068" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="25113:25174" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="25216:25277" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="25319:25380" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="25420:25481" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="25519:25580" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="25627:25688" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="25730:25791" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="25833:25894" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="25937:25998" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="26038:26099" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="26144:26205" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="26243:26304" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="26344:26405" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="26452:26513" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="26564:26625" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="26677:26738" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="26787:26848" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="26899:26960" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="27004:27065" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="27110:27171" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="27213:27274" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="27318:27379" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="27420:27481" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="27521:27582" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="27622:27683" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="27729:27790" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="27836:27897" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="27941:28002" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="28047:28108" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="28149:28210" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="28250:28311" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="28350:28411" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="28455:28516" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="28560:28621" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="28671:28732" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="28781:28842" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="28886:28947" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="28993:29054" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="29093:29154" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="29193:29254" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="29291:29352" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="29393:29454" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="29496:29557" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="29599:29660" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="29708:29769" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="29811:29872" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="29910:29971" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="30014:30075" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="30123:30184" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="30233:30294" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="30342:30403" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="30451:30512" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="30550:30611" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="30654:30715" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="30755:30816" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="30858:30919" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="30957:31018" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="31063:31124" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="31169:31230" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="31273:31334" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="31374:31435" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="31481:31542" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="31586:31647" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="31695:31756" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="31796:31857" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="31905:31966" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="32017:32078" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="32118:32179" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="32219:32280" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="32331:32392" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="32444:32505" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="32554:32615" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="32666:32727" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="32766:32827" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="32865:32926" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="32966:33027" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="33071:33132" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="33174:33235" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="33288:33349" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="33400:33461" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="33503:33564" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="33607:33668" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="33708:33769" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="33817:33878" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="33923:33984" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="34026:34087" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="34131:34192" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="34236:34297" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="34340:34401" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="34453:34514" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="34558:34619" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="34660:34721" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="34763:34824" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="34870:34931" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="34971:35032" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="35069:35130" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="35168:35229" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="35266:35327" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="35364:35425" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="35465:35526" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="35563:35624" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="35663:35724" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="35761:35822" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="35859:35920" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="35957:36018" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="36060:36121" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="36158:36219" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="36256:36317" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="36354:36415" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="36456:36517" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="36555:36616" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="36659:36720" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="36770:36831" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="36885:36946" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="36998:37059" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="37115:37176" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="37223:37284" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="37335:37396" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="37439:37500" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="37545:37606" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="37652:37713" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="37754:37815" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="37853:37914" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="37957:38018" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="38064:38125" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="38166:38227" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="38274:38335" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="38378:38439" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="38479:38540" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="38577:38638" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="38681:38742" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="38790:38851" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="38891:38952" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="38997:39058" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="39107:39168" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="39215:39276" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="39325:39386" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="39436:39497" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="39536:39597" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="39638:39699" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="39740:39801" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="39840:39901" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="39943:40004" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="40043:40104" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="40148:40209" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="40249:40310" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="40350:40411" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="40449:40510" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="40550:40611" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="40648:40709" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="40747:40808" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="40849:40910" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="40947:41008" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="41044:41105" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="41144:41205" ph="{...}" />
+            <marker date="1557374308037" expanded="true" signature="41245:41306" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/concert.js">
+    <entry file="file://$PROJECT_DIR$/web/bundles/home/css/font-awesome/css/font-awesome.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="45" column="7" lean-forward="true" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+        <state relative-caret-position="148">
+          <caret line="400" column="10" lean-forward="false" selection-start-line="400" selection-start-column="6" selection-end-line="400" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/artiste.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="55" column="35" lean-forward="true" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="103" column="7" lean-forward="false" selection-start-line="103" selection-start-column="7" selection-end-line="103" selection-end-column="7" />
-          <folding>
-            <element signature="e#221#759#0" expanded="false" />
-            <element signature="e#817#2910#0" expanded="false" />
-            <element signature="e#2967#3257#0" expanded="false" />
-            <element signature="e#3317#4561#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/ClientController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="125" column="70" lean-forward="false" selection-start-line="125" selection-start-column="70" selection-end-line="125" selection-end-column="70" />
-          <folding>
-            <element signature="e#492#1366#0#PHP" expanded="false" />
-            <element signature="e#1373#3334#0#PHP" expanded="false" />
-            <element signature="e#3340#4248#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/categories.js" />
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/artiste.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="22" column="57" lean-forward="false" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/account.js" />
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Repository/ConcertRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="35" column="49" lean-forward="false" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
-          <folding>
-            <element signature="e#238#455#0#PHP" expanded="false" />
-            <element signature="e#460#1158#0#PHP" expanded="false" />
-            <element signature="e#1163#2173#0#PHP" expanded="false" />
-            <marker date="1557064505775" expanded="true" signature="610:640" ph="SELECT COUNT... concert" />
-            <marker date="1557064505775" expanded="true" signature="1335:1466" ph="SELECT c.id,... concert" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Entity/Reservation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="39" column="6" lean-forward="false" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Concert/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="76" column="42" lean-forward="true" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/concert_reservation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="73" column="30" lean-forward="false" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/reservation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="71" column="41" lean-forward="false" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Repository/ReservationRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-          <folding>
-            <marker date="1557216633978" expanded="true" signature="426:529" ph="SELECT COUNT... client" />
-            <marker date="1557216633978" expanded="true" signature="1934:2030" ph="SELECT * FRO... client" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Client/reservation.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="42" lean-forward="false" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Client/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="25" column="136" lean-forward="false" selection-start-line="25" selection-start-column="136" selection-end-line="25" selection-end-column="136" />
-          <folding>
-            <element signature="e#5402#7251#0#Twig" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Entity/NewsLetter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-140">
-          <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="91" column="67" lean-forward="false" selection-start-line="91" selection-start-column="67" selection-end-line="91" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/custom/ckeditor_config.min.js">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/news.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Entity/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-272">
-          <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/admin/assets/js/news.js">
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/concert.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+          <caret line="85" column="21" lean-forward="false" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Reservation/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/ConcertController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="26" column="90" lean-forward="false" selection-start-line="26" selection-start-column="90" selection-end-line="26" selection-end-column="90" />
+        <state relative-caret-position="-1429">
+          <caret line="111" column="12" lean-forward="false" selection-start-line="111" selection-start-column="12" selection-end-line="111" selection-end-column="12" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/change_password.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="33" column="96" lean-forward="false" selection-start-line="33" selection-start-column="96" selection-end-line="33" selection-end-column="96" />
-          <folding>
-            <element signature="e#224#264#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/ReservationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
-          <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-          <folding>
-            <element signature="e#6896#7830#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="86" column="37" lean-forward="false" selection-start-line="86" selection-start-column="37" selection-end-line="86" selection-end-column="37" />
+        <state relative-caret-position="352">
+          <caret line="43" column="57" lean-forward="true" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Repository/ClientRepository.php">
+    <entry file="file://$PROJECT_DIR$/src/AuthenticationBundle/Controller/AccountController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="46" column="39" lean-forward="false" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+        <state relative-caret-position="285">
+          <caret line="168" column="5" lean-forward="false" selection-start-line="168" selection-start-column="5" selection-end-line="168" selection-end-column="5" />
           <folding>
-            <marker date="1557216672885" expanded="true" signature="404:433" ph="SELECT COUNT... client" />
-            <marker date="1557216672885" expanded="true" signature="1608:1630" ph="SELECT * FRO... client" />
+            <element signature="e#135#179#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/Email/new_password.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="52" lean-forward="false" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/Email/diffusion.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="64" lean-forward="false" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+        <state relative-caret-position="204">
+          <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Controller/CommandController.php">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Email/new_password.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/layout2.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1734">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/images/about-01.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/inc/sendEmail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/home/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-816">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/js/sweetalert/sweetalert.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="170">
+          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/login.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="0" column="44" lean-forward="false" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
-          <folding />
+        <state relative-caret-position="183">
+          <caret line="38" column="66" lean-forward="false" selection-start-line="38" selection-start-column="66" selection-end-line="38" selection-end-column="66" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#h1#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#span#0;n#h1#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AuthenticationBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/images/loader.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/change_password.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/forgot_password.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+          <caret line="5" column="115" lean-forward="false" selection-start-line="5" selection-start-column="115" selection-end-line="5" selection-end-column="115" />
+          <folding>
+            <element signature="e#141#202#0#HTML" expanded="false" />
+            <element signature="e#250#320#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/home/css/layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="310" column="22" lean-forward="false" selection-start-line="310" selection-start-column="16" selection-end-line="310" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/js/init.js">
+    <entry file="file://$PROJECT_DIR$/web/bundles/home/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="72" lean-forward="false" selection-start-line="31" selection-start-column="72" selection-end-line="31" selection-end-column="72" />
+        <state relative-caret-position="148">
+          <caret line="626" column="31" lean-forward="false" selection-start-line="626" selection-start-column="27" selection-end-line="626" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/css/layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="406" column="13" lean-forward="false" selection-start-line="406" selection-start-column="8" selection-end-line="406" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="618" column="7" lean-forward="false" selection-start-line="618" selection-start-column="7" selection-end-line="618" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="75" lean-forward="false" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
           <folding>
-            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#132#228#0#HTML" expanded="false" />
+            <element signature="e#345#441#0#HTML" expanded="false" />
+            <element signature="e#856#894#0#HTML" expanded="false" />
+            <element signature="e#945#968#0#HTML" expanded="false" />
+            <element signature="e#1161#1185#0#HTML" expanded="false" />
+            <element signature="e#1249#1269#0#HTML" expanded="false" />
+            <element signature="e#11539#11579#0#HTML" expanded="false" />
+            <element signature="e#11755#11775#0#HTML" expanded="false" />
+            <element signature="e#12218#12241#0#HTML" expanded="false" />
+            <element signature="e#12697#12717#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/js/scrollspy.js">
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/register.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="74" column="57" lean-forward="false" selection-start-line="74" selection-start-column="57" selection-end-line="74" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Controller/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="32" column="57" lean-forward="false" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
+          <folding>
+            <element signature="e#1975#2894#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/gmp/gmp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/gd/gd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="1618" column="37" lean-forward="true" selection-start-line="1618" selection-start-column="37" selection-end-line="1618" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Email/code_reservation.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="42" lean-forward="false" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#1;n#b#0;n#h3#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="528" column="45" lean-forward="true" selection-start-line="528" selection-start-column="45" selection-end-line="528" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_3.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="113" column="5" lean-forward="false" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <caret line="914" column="9" lean-forward="false" selection-start-line="914" selection-start-column="9" selection-end-line="914" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_0.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="580" column="20" lean-forward="false" selection-start-line="580" selection-start-column="20" selection-end-line="580" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/NewsLetterController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="82" column="5" lean-forward="true" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
+        <state relative-caret-position="301">
+          <caret line="50" column="53" lean-forward="false" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/js/smoothscrolling.js">
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Entity/Reservation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="39" column="46" lean-forward="false" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AuthenticationBundle/Controller/AccountController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="26" column="42" lean-forward="false" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+        <state relative-caret-position="118">
+          <caret line="179" column="22" lean-forward="false" selection-start-line="179" selection-start-column="15" selection-end-line="179" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        <state relative-caret-position="217">
+          <caret line="34" column="34" lean-forward="false" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Controller/HomeController.php">
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/ReservationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="101" column="101" lean-forward="false" selection-start-line="101" selection-start-column="101" selection-end-line="101" selection-end-column="101" />
+        <state relative-caret-position="-511">
+          <caret line="134" column="57" lean-forward="false" selection-start-line="134" selection-start-column="57" selection-end-line="134" selection-end-column="57" />
           <folding>
-            <element signature="e#764#1359#0#PHP" expanded="false" />
-            <element signature="e#2287#3206#0#PHP" expanded="false" />
+            <element signature="e#124#162#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Client/newsletter.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/AuthenticationBundle/Classes/Thumbnails.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="36" column="66" lean-forward="false" selection-start-line="36" selection-start-column="66" selection-end-line="36" selection-end-column="66" />
+        <state relative-caret-position="136">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Reservation/reservation_directe.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="41" column="75" lean-forward="false" selection-start-line="41" selection-start-column="75" selection-end-line="41" selection-end-column="75" />
+          <folding>
+            <element signature="e#137#199#0#HTML" expanded="true" />
+            <element signature="e#1877#1901#0#HTML" expanded="true" />
+            <element signature="e#2112#2136#0#HTML" expanded="true" />
+            <element signature="e#2358#2378#0#HTML" expanded="true" />
+            <element signature="e#2563#2597#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Classes/CodeGenerator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="48" column="46" lean-forward="false" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/reservation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="104" column="7" lean-forward="true" selection-start-line="104" selection-start-column="7" selection-end-line="104" selection-end-column="7" />
+          <folding>
+            <element signature="e#853#2961#0" expanded="false" />
+            <element signature="e#3023#3324#0" expanded="false" />
+            <element signature="e#3390#4612#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="48" column="25" lean-forward="false" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+        <state relative-caret-position="268">
+          <caret line="83" column="30" lean-forward="false" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Entity/Commentaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="26" column="50" lean-forward="false" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="17" column="49" lean-forward="false" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+        <state relative-caret-position="306">
+          <caret line="48" column="28" lean-forward="false" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
           <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#3054#3060#0#HTML" expanded="true" />
+            <marker date="1557458822564" expanded="true" signature="946:1028" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="103" column="63" lean-forward="true" selection-start-line="103" selection-start-column="63" selection-end-line="103" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Repository/ReservationRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="74" selection-end-column="5" />
+          <folding>
+            <element signature="e#248#1578#0#PHP" expanded="false" />
+            <element signature="e#1583#3227#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Repository/CommentaireRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="49" column="35" lean-forward="false" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+          <folding>
+            <marker date="1557554528893" expanded="true" signature="414:448" ph="SELECT COUNT... client" />
+            <marker date="1557554528893" expanded="true" signature="1623:1650" ph="SELECT * FRO... commentaire" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Commentaire/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="26" column="89" lean-forward="false" selection-start-line="26" selection-start-column="89" selection-end-line="26" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Reservation/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="26" column="125" lean-forward="false" selection-start-line="26" selection-start-column="125" selection-end-line="26" selection-end-column="125" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Reservation/reservation.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="45" column="110" lean-forward="false" selection-start-line="45" selection-start-column="110" selection-end-line="45" selection-end-column="110" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#label#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#label#1;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/CommentaireController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding>
+            <element signature="e#123#157#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Reservation/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="128" lean-forward="false" selection-start-line="8" selection-start-column="128" selection-end-line="8" selection-end-column="128" />
+          <folding>
+            <element signature="e#458#492#0#HTML" expanded="true" />
+            <element signature="e#598#632#0#HTML" expanded="true" />
+            <element signature="e#751#785#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Controller/ReservationController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="220" column="23" lean-forward="false" selection-start-line="220" selection-start-column="23" selection-end-line="220" selection-end-column="23" />
+          <caret line="68" column="33" lean-forward="false" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
           <folding>
-            <element signature="e#2967#3674#0#HTML" expanded="false" />
+            <element signature="e#5162#6096#0#PHP" expanded="false" />
+            <element signature="e#6102#6175#0#PHP" expanded="false" />
+            <element signature="e#6181#6637#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

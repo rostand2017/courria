@@ -10,29 +10,47 @@
     <body>
         <div class="container-fluid m-t-lg" style="height: 100%; background: url('{{ asset('bundles/home/images/bgconnexion.jpg') }}')">
             <div class="row">
+                <div class="col-md-3">
+                    <div style="background: rgba(255,255,255,0.7);text-align: center;padding:5px; box-shadow: 2px 2px 1px 2px rgba(0,0,0,0.6);">
+                        {% if concert is not null %}
+                            <img src="/uploads/thumbnails/{{ concert[0].affiche }}" alt="{{ concert[0].intitule }}">
+                            <h3><b>{{ concert[0].intitule }}</b></h3>
+                            <p style="color: white">{{ concert[0].description }}</p>
+                            <span class="text-primary badge badge-default" style="font-size: 24px"><b>{{ concert[0].prix }} XAF</b></span>
+                        {% endif %}
+                    </div>
+                </div>
                 <div class="col-md-6" style="height: 100%; background: rgba(255,255,255,.9);">
-                    <form action="{{ path('auth_login') }}" method="post" id="loginForm">
-                        <div></div>
+                    <form action="{{ path('home_reservation_edit') }}" method="post" id="loginForm">
                         <h1 class="text-center">
-                            <span class="img-circle" style="box-shadow: #0c0c0c; background:#11ABB0;padding: 15px 30px 15px 30px "><i class="icon-user" style="color: white"></i></span><br/><br/>
-                            <span><b>Connectez vous</b></span>
+                            <span class="img-circle" style="box-shadow: #0c0c0c; background:#11ABB0;padding: 15px 30px 15px 30px "><i class="icon-location-arrow" style="color: white"></i></span><br/><br/>
+                            <span><b>Faites votre réservation</b></span>
                         </h1>
                         <div class="form-group">
-                            <input class="form-control" style="height: 50px" type="email"  required name="email" placeholder="Entrer votre adresse email">
+                            <select name="nbplace" class="form-control" id="nbplace">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" style="height: 50px" type="password" required name="password" placeholder="Entrer votre mot de passe">
+                            <h3>Moyen de paiement</h3>
+                            <label for="orangemoney"><img src="{{ asset('bundles/home/images/orange-money.jpg') }}" style="max-height: 50px" alt="orange money"></label>
+                            <input type="radio" id="orangemoney" name="payment">
+                            <label for="mobilemoney"><img  src="{{ asset('bundles/home/images/mobile-money.png') }}" style="max-height: 50px" alt="mobile money"></label>
+                            <input type="radio" id="mobilemoney" name="payment">
                         </div>
-                        <button class="btn btn-block"  style="background: #11ABB0;color: #fff;height: 50px" id="login_btn" type="submit">
-                            Connexion
-                        </button>
-                        <div class="row" style="margin-top: 10px">
-                            <div class="col-md-6 text-center"><a href="{{ path('home_forgot_password') }}">Mot de passe oublié</a></div>
-                            <div class="col-md-6 text-center"><a href="{{ path('home_register') }}" class="m-l-20">Je n'ai pas de compte</a></div>
+                        <div class="form-group">
+                            <button class="btn btn-block"  style="background: #11ABB0;color: #fff;height: 50px" id="login_btn" type="submit">
+                                Réserver
+                            </button>
+                            <br/>
+                            <a href="{{ path('home_homepage') }}" class="btn btn-block btn-danger" style="padding: 15px;color: white"><i class="icon-warning"></i> Annuler</a>
                         </div>
                     </form>
                 </div>
-                <div class="col-md-6" style="height: 100%"></div>
             </div>
         </div>
         {% block script %}
@@ -58,7 +76,6 @@
                             success: function (json) {
                                 if (json.status == 0) {
                                     swal("Succès", json.mes);
-                                    window.location.reload();
                                 }else{
                                     swal("Alerte!", json.mes);
                                 }

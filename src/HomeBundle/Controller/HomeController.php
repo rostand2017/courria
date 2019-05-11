@@ -4,6 +4,7 @@ namespace HomeBundle\Controller;
 
 use Facebook\Facebook;
 use HomeBundle\Entity\Category;
+use HomeBundle\Entity\Commentaire;
 use HomeBundle\Entity\Concert;
 use HomeBundle\Entity\Contact;
 use HomeBundle\Entity\Image;
@@ -19,7 +20,7 @@ class HomeController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $concerts = $em->getRepository(Concert::class)->findBy([], ['date'=>'desc'], 1, 0);
+        $concerts = $em->getRepository(Concert::class)->findBy([], ['date'=>'desc'], 10, 0);
         return $this->render('HomeBundle:Home:index.html.twig', array(
             "concerts" => $concerts,
         ));
@@ -29,20 +30,12 @@ class HomeController extends Controller
         if($request->getSession()->get("user")){
             return $this->redirectToRoute("home_homepage");
         }
-        $f = new Facebook([
-            'app_id' => '366830307424113',
-            'app_secret' => '3faed04e7d58085d56c8e7b1977440de',
-            'default_graph_version' => 'v3.2',
-        ]);
-        $url = $f->getRedirectLoginHelper()->getLoginUrl($this->generateUrl("home_cart"), ['email', 'public_profile']);
-        return $this->render("HomeBundle:Login:login.html.twig", array(
-            'url' => $url
-        ));
+        return $this->render("HomeBundle:Login:login.html.twig", array());
     }
 
     public function registerAction(Request $request){
         if($request->getSession()->get("user")){
-            return $this->redirectToRoute("home_product");
+            return $this->redirectToRoute("home_homepage");
         }
         return $this->render("HomeBundle:Login:register.html.twig");
     }
@@ -111,6 +104,22 @@ class HomeController extends Controller
             return $this->redirectToRoute("home_login");
         }
         return $this->render("HomeBundle:Home:user_dashboard.html.twig");
+    }
+
+    public function commentAction(Request $request){
+        $nom = $request->request->get('nom');
+        $message = $request->request->get('message');
+        if($nom && $message && $nom != '' && $message != ''){
+            $em = $this->getDoctrine()->getManager();
+            $commentaire = new Commentaire();
+            $commentaire->setNom($nom);
+            $commentaire->setMessage($message);
+            $em->persist($commentaire);
+            $em->flush();
+            return new JsonResponse(['status'=>0, 'message'=>'Commentaire envoyé avec succès']);
+        }else{
+            return new JsonResponse(['status'=>1, 'message'=>'Remplissez les différents champs']);
+        }
     }
 
 }

@@ -1,0 +1,15 @@
+{% extends "HomeBundle::layout.html.twig" %}
+
+{% block title %} Réservations {% endblock %}
+{% block body %}
+    <div class="row" style="margin: 0 auto; margin-top: 50px; margin-bottom: 50px">
+        <div class="col-md-6 col-md-offset-3" style="box-shadow: 4px 4px 4px 0px rgba(59,57,59,0.95); padding: 20px">
+            <h1 class="text-center">Réservations</h1>
+            <a href="{{ path('home_reservation_directe') }}" class="btn btn-block btn-info"  style="color: white; padding: 5px">Réservation directe</a>
+            <a href="{{ path('home_login') }}" class="btn btn-block btn-warning" style="color: white; padding: 5px">Se connecter avant de reserver</a>
+            <a href="{{ path('home_homepage') }}" class="btn btn-block btn-danger" style="color: white; padding: 5px"><i class="icon-warning-sign"></i> Annuler</a>
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+{% endblock %}

@@ -10,13 +10,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="{{ asset('bundles/home/css/base.css') }}">
         <link rel="stylesheet" href="{{ asset('bundles/home/css/layout.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/home/bootstrap/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/home/css/font-awesome/css/font-awesome.css') }}">
 
         <!--[if lt IE 9]>
         <!--<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>->
         <![endif]-->
     </head>
-    <body data-spy="scroll" data-target="#nav-wrap">>
-
+    <body data-spy="scroll" data-target="#nav-wrap">
     <header class="mobile">
         <div class="row">
             <div class="col full">
@@ -27,12 +28,32 @@
                     <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
                     <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
                     <ul id="nav" class="nav">
-                        <li><a href="#intro">Accueil</a></li>
-                        <li><a href="#portfolio">concert</a></li>
-                        <li><a href="#about">A propos</a></li>
-                        <li><a href="#contact">Newsletter</a></li>
+                        <li><a href="{{ path('home_homepage') }}#intro">Accueil</a></li>
+                        <li><a href="{{ path('home_homepage') }}#portfolio">concert</a></li>
+                        <li><a href="{{ path('home_homepage') }}#about">A propos</a></li>
+                        <li><a href="{{ path('home_homepage') }}#contact">Newsletter</a></li>
                     </ul>
                 </nav>
+                <span style="float: right;padding: 10px; margin: 0px 50px 0 0;">
+                    {% if app.session.get('user') %}
+                        <a href="{{ path('home_login') }}" title="connectez vous">
+                            {% if app.session.get('user').photo %}
+                                <img class="img-rounded img-circle" src="/uploads/thumbnails/{{ app.session.get('user').photo }}" style="max-height: 30px" alt=""/>
+                                <b>{{ app.session.get('user').nom }} {{ app.session.get('user').prenom }}</b>
+                                <small><a href="{{ path('auth_logout') }}">déconnecter</a></small>
+                            {% else %}
+                                <img class="img-rounded img-circle" src="{{ asset('bundles/home/images/client-img.png') }}" style="max-height: 30px" alt=""/>
+                                <b>{{ app.session.get('user').nom }} {{ app.session.get('user').prenom }}</b>
+                                <small><a href="{{ path('auth_logout') }}">déconnecter</a></small>
+                            {% endif %}
+                        </a>
+                    {% else %}
+                        <a href="{{ path('home_dashboard') }}" title="connectez vous">
+                            <img class="img-rounded img-circle" src="{{ asset('bundles/home/images/client-img.png') }}" style="max-height: 30px" alt=""/>
+                            <b>Se connecter</b>
+                        </a>
+                    {% endif %}
+                </span>
             </div>
         </div>
     </header>
@@ -52,8 +73,8 @@
                 <form id="subscribeForm" method="post" action="{{ path('home_save_email') }}">
                     <fieldset>
                         <div>
-                            <input style="margin: 0; display: inline" type="email" name="email" placeholder="Votre adresse email" id="email">
-                            <button style="margin: 0; display: inline" class="subscribe-btn">Souscire</button>
+                            <input style="margin: 0; display: inline;margin-top: 5px" type="email" name="email" placeholder="Votre adresse email" id="email">
+                            <button style="margin: 0; display: inline;margin-top: 5px;color: white" class="subscribe-btn">Souscire</button>
                             <span id="image-loader">
                                 <img src="{{ asset('bundles/home/images/loader.gif') }}" alt="loader" />
                             </span>
@@ -65,12 +86,12 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer style="background: #25292D; margin: 0; padding: 20px">
         <div class="row">
             <div class="col g-7">
                 <ul class="copyright">
-                    <li>&copy; 2019 Camer Concert</li>
-                    <li>Contactez <a href="mailto:conctact@camerconcert.com" title="Styleshout">conctact@camerconcert.com</a></li>
+                    <li class="text-muted">&copy; 2019 Camer Concert</li>
+                    <li class="text-muted">Contactez <a href="mailto:conctact@camerconcert.com" title="Styleshout">conctact@camerconcert.com</a></li>
                 </ul>
             </div>
             <div class="col g-5 pull-right">
@@ -98,6 +119,7 @@
     <script src="{{ asset('bundles/home/js/init.js') }}"></script>
     <script src="{{ asset('bundles/home/js/smoothscrolling.js') }}"></script>
     <script src="{{ asset('bundles/home/js/sweetalert/sweetalert.min.js') }}"></script>
+    <script src="{{ asset('bundles/home/bootstrap/js/bootstrap.min.js') }}"></script>
 
     <script>
     $('#subscribeForm').on("submit", function (e) {
@@ -114,7 +136,6 @@
             success: function (json) {
                 if(json.status == 0){
                     swal(json.message);
-                    alert();
                 }else{
                     swal("Erreur",json.message);
                 }

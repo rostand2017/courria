@@ -8,6 +8,7 @@
 
 namespace AdminBundle\Controller;
 
+use AdminBundle\Classes\CodeGenerator;
 use AdminBundle\Classes\Thumbnails;
 use HomeBundle\Entity\Artiste;
 use HomeBundle\Entity\Client;
@@ -107,11 +108,14 @@ class ReservationController extends Controller
             if($idClient && is_numeric($idClient) && is_numeric($concertId) && $concertId > 0 && is_numeric($nbPlace) && $nbPlace > 0 && $nbPlace <= 5){
                 $client = $em->getRepository(Client::class)->find($idClient);
                 $concert = $em->getRepository(Concert::class)->find($concertId);
+                $reserv = $em->getRepository(Reservation::class)->findBy([], ['date'=>'desc'], 1,0);
+                $lastId= ($reserv)?$reserv[0]->getId():1;
                 if($client && $concert){
                     $reservation = new Reservation();
                     $reservation->setCon($concert);
                     $reservation->setCli($client);
                     $reservation->setNbplace($nbPlace);
+                    $reservation->setCode(CodeGenerator::generateUniqToken($lastId+1));
                     $em->persist($reservation);
                     $em->flush();
                     return new JsonResponse(array(
@@ -127,6 +131,8 @@ class ReservationController extends Controller
             }else if( $nom != '' && $prenom != '' && is_numeric($concertId) && $concertId > 0 && is_numeric($nbPlace) && $nbPlace > 0 && $nbPlace <= 5 )
             {
                 $concert = $em->getRepository(Concert::class)->find($concertId);
+                $reserv = $em->getRepository(Reservation::class)->findBy([], ['date'=>'desc'], 1,0);
+                $lastId= ($reserv)?$reserv[0]->getId():1;
                 if($concert){
                     $reservation = new Reservation();
                     $client = new Client();
@@ -135,6 +141,7 @@ class ReservationController extends Controller
                     $reservation->setNbplace($nbPlace);
                     $reservation->setCon($concert);
                     $reservation->setCli($client);
+                    $reservation->setCode(CodeGenerator::generateUniqToken($lastId+1));
                     $em->persist($reservation);
                     $em->flush();
                     return new JsonResponse(array(

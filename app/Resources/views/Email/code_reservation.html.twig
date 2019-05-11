@@ -6,11 +6,12 @@
 <body>
 <div>
     <div style="position:relative;padding: 10px; width: 70%;background: #39f">
-        <h2 style="color: white;">Concert Camer</h2>
+        <h2 style="color: white;">Code de réservation</h2>
     </div>
+    <p>Votre code de réservation fera office de votre ticket d'entrée.</p>
     <div style="margin-top: 5px">
-        <h3 style="margin: 5px;"><b><span id="salutation"></span> {{ nom }}</b></h3>
-        <p style="margin: 5px">{{ message }}</p>
+        <h3 style="margin: 5px;"><b><span id="salutation"></span> {{ nom }}.Votre code de reservation est <span style="color: #0a6aa1; font-size: 20px">{{ code }}</span></b></h3>
+        <p style="margin: 5px">Ne supprimer surtout pas ce mail avant que la date de concert ne soit dépassée</p>
     </div>
 </div>
 <script>

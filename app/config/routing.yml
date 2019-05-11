@@ -5,3 +5,7 @@ admin:
 home:
     resource: '@HomeBundle/Resources/config/routing.yml'
     prefix: /
+
+auth:
+    resource: '@AuthenticationBundle/Resources/config/routing.yml'
+    prefix: /

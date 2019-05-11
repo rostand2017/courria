@@ -9,8 +9,10 @@
 namespace AuthenticationBundle\Controller;
 
 
+use AuthenticationBundle\Classes\Thumbnails;
 use AuthenticationBundle\Entity\User;
 use Facebook\Facebook;
+use HomeBundle\Entity\Client;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -25,17 +27,17 @@ class AccountController extends Controller
     public function loginAction(Request $request){
 
         if($request->getSession()->get("user")){
-            return $this->redirectToRoute("home_product");
+            return new JsonResponse(['status'=>1, 'mes'=>'Attention!']);
         }
         if($request->isMethod('POST')){
             $email = $request->request->get('email');
             $password = $request->request->get("password");
             if( !empty(trim($email)) && !empty($password) ){
                 $em = $this->getDoctrine()->getManager();
-                $user = $em->getRepository("AuthenticationBundle\Entity\User")->findOneBy(["email"=>$email]);
-                if($user && password_verify($password, $user->getPassword())){
+                $user = $em->getRepository(Client::class)->findOneBy(["email"=>$email]);
+                if($user && password_verify($password, $user->getMdp())){
                     $request->getSession()->set("user", $user);
-                    return new JsonResponse(['status'=>0, 'mes'=>'Bienvenue '.$user->getName()]);
+                    return new JsonResponse(['status'=>0, 'mes'=>'Bienvenue '.$user->getNom()]);
                 }else{
                     return new JsonResponse(['status'=>1, 'mes'=>'Email ou mot de passe incorrect.']);
                 }
@@ -46,26 +48,53 @@ class AccountController extends Controller
     }
 
     public function registerAction(Request $request){
+        $imageAccepted = array("jpg", "png", "jpeg");
 
         if($request->getSession()->get("user")){
-            return $this->redirectToRoute("home_product");
+            return new JsonResponse(['status'=>1, 'mes'=>'Attention!']);
         }
         if($request->isMethod('POST')){
-            $username = $request->get('username');
+            $nom = $request->get('nom');
+            $prenom = $request->get('prenom');
+            $age = $request->get('age');
+            $sexe = $request->get('sexe');
             $email = $request->get('email');
             $password = $request->get("password");
             $cpassword = $request->get("confirm_password");
-            if($username && $password && $cpassword && $email && $password == $cpassword){
-                $em = $this->getDoctrine()->getManager();
-                $user = $em->getRepository("AuthenticationBundle\Entity\User")->findOneBy(["email"=>$email]);
-                if($user != null || !preg_match("#[a-zA-Z0-9]{2,}@[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}#", $email)){
-                    return new JsonResponse(["status"=>0, "mes"=>"Entrez une adresse email valide"]);
+            $sexeArray = ['M', 'F'];
+
+            $photo = $request->files->get('photo');
+            if($nom && $nom != '' && $prenom && $prenom != '' && $age && $age!='' && in_array($sexe, $sexeArray)
+                && $password && $cpassword && $email ){
+                if(!preg_match('#.{8,}#', $password)){
+                    return new JsonResponse(["status"=>1, "mes"=>"Le mot de passe doit comprendre au moins 8 caratères"]);
                 }
-                // Enregistremment de l'utilisateur si tout est bon
-                $u = new User();
+                if($password != $cpassword){
+                    return new JsonResponse(["status"=>1, "mes"=>"Les mots de passe ne correspondent pas !"]);
+                }
+                $em = $this->getDoctrine()->getManager();
+                $user = $em->getRepository(Client::class)->findOneBy(["email"=>$email]);
+                if($user != null || !preg_match("#[a-zA-Z0-9]{2,}@[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}#", $email)){
+                    return new JsonResponse(["status"=>1, "mes"=>"Entrez une adresse email valide"]);
+                }
+                $u = new Client();
+                $u->setNom($nom);
+                $u->setPrenom($prenom);
                 $u->setEmail($email);
-                $u->setName($username);
-                $u->setPassword(password_hash($password, PASSWORD_BCRYPT));
+                $u->setAge($age);
+                $u->setSexe($sexe);
+                $u->setMdp(password_hash($password, PASSWORD_BCRYPT));
+
+                if($photo && in_array($photo->guessExtension(), $imageAccepted)) {
+                    $imageDirectory = $this->getParameter("image_directory");
+                    $thumbnailDirectory = $this->getParameter("thumbnail_directory");
+                    $filename = $this->getUniqueFileName() . "." . $photo->guessExtension();
+                    $photo->move($imageDirectory, $filename);
+                    $thumb = new Thumbnails();
+                    $thumb->createThumbnail($imageDirectory . "/" . $filename, $thumbnailDirectory . "/" . $filename, 200);
+                    $u->setPhoto($filename);
+                }
+
                 $em->persist($u);
                 $em->flush();
                 $request->getSession()->set("user", $u);
@@ -113,80 +142,33 @@ class AccountController extends Controller
         if($request->isMethod('POST')) {
             $em = $this->getDoctrine()->getManager();
             $email = $request->request->get("email");
-            $user = $em->getRepository(User::class)->findOneBy(['email'=>$email]);
+            $user = $em->getRepository(Client::class)->findOneBy(['email'=>$email]);
             if (!$user) {
                 return new JsonResponse(["status" => 1, "mes" => "Cette adresse email n'existe pas"]);
             }else{
-                if(!$user->getPassword()){
-                    return new JsonResponse(["status" => 1, "mes" => "Désolé, impossible de réinitialiser votre mot de passe puisque vous vous êtes enregistré avec votre compte \'facebook\'"]);
-                }else{
-                    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-                    $p = substr(str_shuffle($characters), 0, 6);
-                    $user->setPassword(password_hash($p, PASSWORD_BCRYPT));
-                    $em->persist($user);
-                    $em->flush();
-                    $mes = (new \Swift_Message("Nouvrau mot de passe"))
-                        ->setFrom('contact@nopermission.com')
-                        ->setTo($user->getEmail())
-                        ->setBody(
-                            $this->renderView(
-                                'Email/new_password.html.twig',
-                                array('message' => "Votre nouveau mot de passe est: ".$p)
-                            ),
-                            "text/html"
-                        );
-                    $this->get('mailer')->send($mes);
-                    return new JsonResponse( ["status"=>0, "mes"=>"Consultez vos mails pour voir votre nouveau mot de passe"] );
-                }
+                $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                $p = substr(str_shuffle($characters), 0, 8);
+                $user->setMdp(password_hash($p, PASSWORD_BCRYPT));
+                $em->persist($user);
+                $em->flush();
+                $mes = (new \Swift_Message("Nouveau mot de passe"))
+                    ->setFrom('contact@nopermission.com')
+                    ->setTo($user->getEmail())
+                    ->setBody(
+                        $this->renderView(
+                            'Email/new_password.html.twig',
+                            array('message' => "Votre nouveau mot de passe est: ".$p, 'nom'=>$user->getNom())
+                        ),
+                        "text/html"
+                    );
+                $this->get('mailer')->send($mes);
+                return new JsonResponse( ["status"=>0, "mes"=>"Consultez vos mails pour voir votre nouveau mot de passe"] );
             }
         }
         return new JsonResponse( ["status"=>1, "mes"=>"Une erreur est survenue"] );
     }
 
-    public function loginFacebookAction(Request $request){
-        $f = new Facebook([
-            'app_id' => '366830307424113',
-            'app_secret' => '3faed04e7d58085d56c8e7b1977440de',
-            'default_graph_version' => 'v3.2'
-        ]);
-
-        if( !$request->getSession()->get("user") ) {
-            $helper = $f->getRedirectLoginHelper();
-            if($state = $request->query->get("state")){
-                $helper->getPersistentDataHandler()->set("state", $state);
-            }
-            $accessToken = $helper->getAccessToken();
-            /*Step 4: Get the graph user*/
-            if(isset($accessToken)) {
-                try {
-                    $response = $f->get('/me?fields=email,id,name',$accessToken);
-                    $fb_user = $response->getGraphUser();
-                    $em = $this->getDoctrine()->getManager();
-                    $user = $em->getRepository("AuthenticationBundle\Entity\User")->findOneByFacebookId($fb_user->getId());
-
-                    if($user && !empty($user)){
-                        // si l'utilisateur existe deja dans la bd, on crée une fois sa session
-                        $request->getSession()->set("user", $user);
-                    }else{
-                        // sinon, on l'enregistre avant de créer sa session
-                        $user = new User();
-                        $user->setName($fb_user->getName());
-                        $user->setFacebookId($fb_user->getId());
-                        ($fb_user->getEmail())?$user->setEmail($fb_user->getEmail()):"";
-                        $em->persist($user);
-                        $em->flush();
-                        $request->getSession()->set("user", $user);
-                    }
-                } catch (\Facebook\Exceptions\FacebookResponseException $e) {
-                    echo  'Graph returned an error: ' . $e->getMessage();
-                } catch (\Facebook\Exceptions\FacebookSDKException $e) {
-                    // When validation fails or other local issues
-                    echo 'Facebook SDK returned an error: ' . $e->getMessage();
-                }
-                // si tout est bon, on va vers feature
-                return $this->redirectToRoute("home_feature");
-            }
-        }
-        return $this->redirectToRoute("home_homepage");
+    public function getUniqueFileName(){
+        return md5(uniqid());
     }
 }
