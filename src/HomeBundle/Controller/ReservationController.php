@@ -62,7 +62,8 @@ class ReservationController extends Controller
                 if($concert){
                     $reservation = new Reservation();
                     $reservation->setCon($concert[0]);
-                    $reservation->setCli($request->getSession()->get('user'));
+                    $cli = $em->getRepository(Client::class)->find($request->getSession()->get('user')->getId());
+                    $reservation->setCli($cli);
                     $reservation->setNbplace($nbPlace);
                     $reservation->setCode(CodeGenerator::generateUniqToken($lastId+1));
                     $em->persist($reservation);
@@ -133,12 +134,12 @@ class ReservationController extends Controller
                 $em->flush();
                 return new JsonResponse(array(
                     "status"=>0,
-                    "mes"=>"La réservation de ".$reservation->getCli()->getNom()." a été annulée avec succès."
+                    "message"=>"La réservation de ".$reservation->getCli()->getNom()." a été annulée avec succès."
                 ));
             }else{
                 return new JsonResponse(array(
                     "status"=>1,
-                    "mes"=>"Une erreur est survenue"
+                    "message"=>"Une erreur est survenue"
                 ));
             }
         }else{

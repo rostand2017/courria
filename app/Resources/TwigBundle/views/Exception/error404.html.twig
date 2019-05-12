@@ -1,0 +1,22 @@
+{% extends "HomeBundle::layout.html.twig" %}
+
+{% block body %}
+    <div class="jumbotron">
+        <h1>Page introuvable</h1>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <h4 class="text-center text-danger">
+                <i class=" fa fa-warning"></i> La ressource demandée est introuvable.
+            </h4>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 20px">
+        <div class="col-md-12 text-center">
+            <a href="{{ path('home_homepage') }}" class="btn" style="padding: 15px;color: white;background: #11ABB0;"><i class="icon-home"></i> Retour à la page d'accueil</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

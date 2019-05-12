@@ -6,7 +6,7 @@
         <meta name="description" content="{% block description %}{% endblock %}">
         <meta name="keywords" content="{% block keywords %}{% endblock %}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="{{ asset('bundles/home/favicon.ico') }}"/>
+        <link rel="shortcut icon" href="{{ asset('bundles/home/favicon.png') }}"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="{{ asset('bundles/home/css/base.css') }}">
         <link rel="stylesheet" href="{{ asset('bundles/home/css/layout.css') }}">
@@ -19,10 +19,10 @@
     </head>
     <body data-spy="scroll" data-target="#nav-wrap">
     <header class="mobile">
-        <div class="row">
+        <div class="row" style="width: auto">
             <div class="col full">
                 <div class="logo">
-                    <a href="#"><img alt="" src="{{ asset('bundles/home/images/logo.png') }}"></a>
+                    <a href="#"><img alt="" src="{{ asset('bundles/home/favicon.png') }}" style="max-height: 54px"></a>
                 </div>
                 <nav id="nav-wrap">
                     <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
@@ -36,7 +36,7 @@
                 </nav>
                 <span style="float: right;padding: 10px; margin: 0px 50px 0 0;">
                     {% if app.session.get('user') %}
-                        <a href="{{ path('home_login') }}" title="connectez vous">
+                        <a href="{{ path('home_dashboard', {user: app.session.get('user').nom }) }}" title="tableau de bord">
                             {% if app.session.get('user').photo %}
                                 <img class="img-rounded img-circle" src="/uploads/thumbnails/{{ app.session.get('user').photo }}" style="max-height: 30px" alt=""/>
                                 <b>{{ app.session.get('user').nom }} {{ app.session.get('user').prenom }}</b>
@@ -48,7 +48,7 @@
                             {% endif %}
                         </a>
                     {% else %}
-                        <a href="{{ path('home_dashboard') }}" title="connectez vous">
+                        <a href="{{ path('home_login') }}" title="connectez vous">
                             <img class="img-rounded img-circle" src="{{ asset('bundles/home/images/client-img.png') }}" style="max-height: 30px" alt=""/>
                             <b>Se connecter</b>
                         </a>
@@ -58,7 +58,6 @@
         </div>
     </header>
     {% block body %}{% endblock %}
-
     <section id="contact">
 
         <div class="row section-head">
@@ -135,7 +134,7 @@
             },
             success: function (json) {
                 if(json.status == 0){
-                    swal(json.message);
+                    swal("succès", json.message);
                 }else{
                     swal("Erreur",json.message);
                 }

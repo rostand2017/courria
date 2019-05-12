@@ -24,7 +24,7 @@ class ReservationController extends Controller
     public function indexAction(Concert $concert, Request $request){
 
         $page = ( $request->query->get("page") )?$request->query->get("page") : 1;
-        $nbPerPage = 2;
+        $nbPerPage = 10;
         $em = $this->getDoctrine()->getManager();
         $concerts = $em->getRepository(Concert::class)->findAll();
         $nbReservation = $em->getRepository(Reservation::class)

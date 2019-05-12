@@ -30,7 +30,7 @@ class ConcertController extends Controller
     public function indexAction(Request $request){
 
         $page = ( $request->query->get("page") )?$request->query->get("page") : 1;
-        $nbPerPage = 2;
+        $nbPerPage = 10;
         $em = $this->getDoctrine()->getManager();
         $nbConcert = $em->getRepository(Concert::class)
                         ->countDateConcert($page, $nbPerPage, $request->query->get("begin"), $request->query->get("end"));

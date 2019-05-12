@@ -23,7 +23,7 @@ class ClientController extends Controller
     public function indexAction(Request $request){
 
         $page = ( $request->query->get("page") )?$request->query->get("page") : 1;
-        $nbPerPage = 2;
+        $nbPerPage = 10;
         $em = $this->getDoctrine()->getManager();
         $nbClient = $em->getRepository(Client::class)
             ->countByDateAndName($page, $nbPerPage, $request->query->get("begin"), $request->query->get("end"), $request->query->get("search"));

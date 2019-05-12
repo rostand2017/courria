@@ -74,8 +74,11 @@ class AccountController extends Controller
                 }
                 $em = $this->getDoctrine()->getManager();
                 $user = $em->getRepository(Client::class)->findOneBy(["email"=>$email]);
-                if($user != null || !preg_match("#[a-zA-Z0-9]{2,}@[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}#", $email)){
+                if(!preg_match("#[a-zA-Z0-9]{2,}@[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}#", $email)){
                     return new JsonResponse(["status"=>1, "mes"=>"Entrez une adresse email valide"]);
+                }
+                if($user != null){
+                    return new JsonResponse(["status"=>1, "mes"=>"Cette adresse a déjà été utilisée"]);
                 }
                 $u = new Client();
                 $u->setNom($nom);

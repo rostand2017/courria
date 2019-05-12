@@ -272,8 +272,7 @@
                 <div class="client-cite">
                     <p>
                         Merveilleux, fabuleux, les mots me manquent.Avant pour faire une reservation pour un concert, j'était oubligé de
-                        me déplacer tout le temps et partir faire une queue de Ouf. Maintenant, en quelques secondes c'est possible de
-                        le faire.
+                        me déplacer tout le temps et partir faire une queue de Ouf.
                     </p>
                 </div>
 
@@ -305,11 +304,19 @@
     <section id="call-to-action">
         <div class="row">
             <div class="col three-fourths">
-                <h2><a href="{{ path('home_login') }}">Restez connecter sur Camer Concert</a></h2>
+                <h2><a href="{% if app.session.get('user') %}{{ path('home_dashboard', {user: app.session.get('user').nom }) }}{% else %}{{ path('home_login') }}{% endif %}">Restez connecter sur Camer Concert {% if app.session.get('user') %}
+                            {% if app.session.get('user').sexe == 'M' %}
+                                Monsieur {{ app.session.get('user').nom }}
+                            {% else %}
+                                Madame {{ app.session.get('user').nom }}
+                            {% endif %}
+                        {% endif %}</a></h2>
                 <p>Connectez vous à Camer conert et reservez vos places pour tous les concerts disponibles au Cameroun</p>
             </div>
             <div class="col one-fourth action">
-                <a href="{{ path('home_login') }}" class="button">Se connecter</a>
+                {% if app.session.get('user') is null %}
+                    <a href="{{ path('home_login') }}" class="button">Se connecter</a>
+                {% endif %}
             </div>
         </div>
     </section>

@@ -34,9 +34,14 @@ home_reservation_directe:
 home_reservation_normale:
     path:     /reservation/normale
     defaults: { _controller: HomeBundle:Reservation:reservation }
+home_dashboard:
+    path:     /{user}/dashboard
+    defaults: { _controller: HomeBundle:DashBoard:userDashBoard }
+    requirements:
+        user: \w+
 home_reservation_edit:
     path:     /reservation/edit
     defaults: { _controller: HomeBundle:Reservation:edit }
-home_dashboard:
-    path:     /dashboard
-    defaults: { _controller: HomeBundle:Home:userDashBoard }
+home_reservation_delete:
+    path:     /reservation/delete
+    defaults: { _controller: HomeBundle:Reservation:delete }

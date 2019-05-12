@@ -5,8 +5,7 @@
         <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="msapplication-tap-highlight" content="no"/>
-        <link rel="icon" type="image/png" href="{{ asset('bundles/admin/assets/img/logo.png') }}" sizes="16x16">
-        <link rel="icon" type="image/png" href="{{ asset('bundles/admin/assets/img/logo.png') }}" sizes="32x32">
+        <link rel="shortcut icon" type="image/png" href="{{ asset('bundles/home/favicon.png') }}"/>
         <link rel="stylesheet" href="{{ asset("bundles/admin/bower_components/uikit/css/uikit.almost-flat.min.css")}}"/>
         <link rel="stylesheet" href="{{ asset("bundles/admin/assets/icons/flags/flags.min.css")}}"/>
         <link rel="stylesheet" href="{{ asset("bundles/admin/assets/css/main.min.css")}}"/>
@@ -62,43 +61,44 @@
             <div class="sidebar_main_header">
                 <div class="sidebar_logo" style="height: auto;">
                     <a href="" class="sSidebar_hide sidebar_logo_large">
-                    <img class="logo_regular" src="{{asset("bundles/admin/assets//img/logo.png") }}" alt="" style="width: 100px; padding-top: 5px" />
+                    <img class="logo_regular" src="{{ asset('bundles/home/favicon.svg') }}" alt="" style="width: 100px; padding-top: 5px" />
                     </a>
                 </div>
                 <br/>
                 <div class="menu_section">
                     <ul>
-                        <li class="current_section" title="Concert">
+                        {% set uri  = app.request.getRequestUri() %}
+                        <li class="{% if  uri ==  path('admin_homepage')%}current_section{% endif %}" title="Concert">
                             <a href="{{ path('admin_homepage') }}">
                                 <span class="menu_icon"><i class="uk-icon-calendar-minus-o uk-icon-medium"></i></span>
                                 <span class="menu_title">Concerts</span>
                             </a>
                         </li>
-                        <li title="Salles concert">
-                            <a href="{{ path('admin_salle') }}">
+                        <li class="{% if  uri ==  path('admin_salle')%}current_section{% endif %}" title="Salles concert">
+                            <a href="{{ path('admin_salle') }}" >
                                 <span class="menu_icon"><i class="uk-icon-building uk-icon-medium"></i></span>
                                 <span class="menu_title">Salles de concert</span>
                             </a>
                         </li>
-                        <li title="Utilisateurs de l'application">
+                        <li class="{% if  uri ==  path('admin_client')%}current_section{% endif %}" title="Utilisateurs de l'application">
                             <a href="{{ path('admin_client') }}">
                                 <span class="menu_icon"><i class="uk-icon-user uk-icon-medium"></i></span>
                                 <span class="menu_title">Utilisateurs</span>
                             </a>
                         </li>
-                        <li title="Liste des artistes">
+                        <li class="{% if  uri ==  path('admin_artiste')%}current_section{% endif %}" title="Liste des artistes">
                             <a href="{{ path('admin_artiste') }}">
                                 <span class="menu_icon"><i class="uk-icon-music uk-icon-medium"></i></span>
                                 <span class="menu_title">Artistes</span>
                             </a>
                         </li>
-                        <li title="NewsLetter">
+                        <li class="{% if  uri ==  path('admin_newsletter')%}current_section{% endif %}" title="NewsLetter">
                             <a href="{{ path('admin_newsletter') }}">
                                 <span class="menu_icon"><i class="uk-icon-newspaper-o uk-icon-medium"></i></span>
                                 <span class="menu_title">NewsLetter</span>
                             </a>
                         </li>
-                        <li title="Commentaires">
+                        <li class="{% if  uri ==  path('admin_commentaire')%}current_section{% endif %}" title="Commentaires">
                             <a href="{{ path('admin_commentaire') }}">
                                 <span class="menu_icon"><i class="uk-icon-comment uk-icon-medium"></i></span>
                                 <span class="menu_title">Commentaires</span>
