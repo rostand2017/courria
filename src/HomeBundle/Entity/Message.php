@@ -5,12 +5,12 @@ namespace HomeBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Admin
+ * Message
  *
- * @ORM\Table(name="commentaire")
- * @ORM\Entity(repositoryClass="HomeBundle\Repository\CommentaireRepository")
+ * @ORM\Table(name="message", indexes={@ORM\Index(name="fk_envoyer", columns={"admin_id"})})
+ * @ORM\Entity
  */
-class Commentaire
+class Message
 {
     /**
      * @var integer
@@ -24,14 +24,7 @@ class Commentaire
     /**
      * @var string
      *
-     * @ORM\Column(name="nom", type="string", length=254, nullable=true)
-     */
-    private $nom;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="message", type="text", nullable=true)
+     * @ORM\Column(name="message", type="string", length=254, nullable=true)
      */
     private $message;
 
@@ -42,10 +35,17 @@ class Commentaire
      */
     private $createdat;
 
-    public function __construct()
-    {
-        $this->createdat = new \DateTime();
-    }
+    /**
+     * @var \Admin
+     *
+     * @ORM\ManyToOne(targetEntity="Admin")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="admin_id", referencedColumnName="id")
+     * })
+     */
+    private $admin;
+
+
 
     /**
      * Get id
@@ -58,35 +58,11 @@ class Commentaire
     }
 
     /**
-     * Set nom
-     *
-     * @param string $nom
-     *
-     * @return Commentaire
-     */
-    public function setNom($nom)
-    {
-        $this->nom = $nom;
-
-        return $this;
-    }
-
-    /**
-     * Get nom
-     *
-     * @return string
-     */
-    public function getNom()
-    {
-        return $this->nom;
-    }
-
-    /**
      * Set message
      *
      * @param string $message
      *
-     * @return Commentaire
+     * @return Message
      */
     public function setMessage($message)
     {
@@ -110,7 +86,7 @@ class Commentaire
      *
      * @param \DateTime $createdat
      *
-     * @return Commentaire
+     * @return Message
      */
     public function setCreatedat($createdat)
     {
@@ -127,5 +103,29 @@ class Commentaire
     public function getCreatedat()
     {
         return $this->createdat;
+    }
+
+    /**
+     * Set admin
+     *
+     * @param \HomeBundle\Entity\Admin $admin
+     *
+     * @return Message
+     */
+    public function setAdmin(\HomeBundle\Entity\Admin $admin = null)
+    {
+        $this->admin = $admin;
+
+        return $this;
+    }
+
+    /**
+     * Get admin
+     *
+     * @return \HomeBundle\Entity\Admin
+     */
+    public function getAdmin()
+    {
+        return $this->admin;
     }
 }

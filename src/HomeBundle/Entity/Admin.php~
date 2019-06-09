@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Admin
  *
  * @ORM\Table(name="admin")
- * @ORM\Entity(repositoryClass="HomeBundle\Repository\AdminRepository")
+ * @ORM\Entity
  */
 class Admin
 {
@@ -24,16 +24,16 @@ class Admin
     /**
      * @var string
      *
-     * @ORM\Column(name="login", type="string", length=254, nullable=true)
+     * @ORM\Column(name="username", type="string", length=254, nullable=true)
      */
-    private $login;
+    private $username;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="mdp", type="string", length=254, nullable=true)
+     * @ORM\Column(name="password", type="string", length=254, nullable=true)
      */
-    private $mdp;
+    private $password;
 
     /**
      * @var \DateTime
@@ -42,91 +42,13 @@ class Admin
      */
     private $createdat;
 
-    public function __construct()
-    {
-        $this->createdat = new \DateTime();
-    }
-
-
     /**
-     * Get id
+     * @var \DateTime
      *
-     * @return integer
+     * @ORM\Column(name="updatedat", type="datetime", nullable=true)
      */
-    public function getId()
-    {
-        return $this->id;
-    }
+    private $updatedat;
 
-    /**
-     * Set login
-     *
-     * @param string $login
-     *
-     * @return Admin
-     */
-    public function setLogin($login)
-    {
-        $this->login = $login;
 
-        return $this;
-    }
-
-    /**
-     * Get login
-     *
-     * @return string
-     */
-    public function getLogin()
-    {
-        return $this->login;
-    }
-
-    /**
-     * Set mdp
-     *
-     * @param string $mdp
-     *
-     * @return Admin
-     */
-    public function setMdp($mdp)
-    {
-        $this->mdp = $mdp;
-
-        return $this;
-    }
-
-    /**
-     * Get mdp
-     *
-     * @return string
-     */
-    public function getMdp()
-    {
-        return $this->mdp;
-    }
-
-    /**
-     * Set createdat
-     *
-     * @param \DateTime $createdat
-     *
-     * @return Admin
-     */
-    public function setCreatedat($createdat)
-    {
-        $this->createdat = $createdat;
-
-        return $this;
-    }
-
-    /**
-     * Get createdat
-     *
-     * @return \DateTime
-     */
-    public function getCreatedat()
-    {
-        return $this->createdat;
-    }
 }
+

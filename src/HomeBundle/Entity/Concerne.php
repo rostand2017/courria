@@ -7,51 +7,46 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Concerne
  *
- * @ORM\Table(name="concerne", indexes={@ORM\Index(name="fk_concerne", columns={"concert_id"}), @ORM\Index(name="fk_effectue", columns={"artiste_id"})})
- * @ORM\Entity(repositoryClass="HomeBundle\Repository\ConcerneRepository")
+ * @ORM\Table(name="concerne", indexes={@ORM\Index(name="fk_concerne", columns={"activity_id"}), @ORM\Index(name="fk_concernee", columns={"influencer_id"})})
+ * @ORM\Entity
  */
 class Concerne
 {
     /**
-     * @var integer
+     * @var string
      *
-     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Column(name="id", type="string", length=10, nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
 
     /**
-     * @var \Concert
+     * @var \Activity
      *
-     * @ORM\ManyToOne(targetEntity="Concert", cascade="persist")
+     * @ORM\ManyToOne(targetEntity="Activity")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="concert_id", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="activity_id", referencedColumnName="id")
      * })
      */
-    private $concert;
+    private $activity;
 
     /**
-     * @var \Artiste
+     * @var \Influencer
      *
-     * @ORM\ManyToOne(targetEntity="Artiste", inversedBy="artiste")
+     * @ORM\ManyToOne(targetEntity="Influencer")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="artiste_id", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="influencer_id", referencedColumnName="id")
      * })
      */
-    private $artiste;
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
+    private $influencer;
 
-    }
+
 
     /**
      * Get id
      *
-     * @return integer
+     * @return string
      */
     public function getId()
     {
@@ -59,50 +54,50 @@ class Concerne
     }
 
     /**
-     * Set concert
+     * Set activity
      *
-     * @param \HomeBundle\Entity\Concert $concert
+     * @param \HomeBundle\Entity\Activity $activity
      *
      * @return Concerne
      */
-    public function setConcert(\HomeBundle\Entity\Concert $concert = null)
+    public function setActivity(\HomeBundle\Entity\Activity $activity = null)
     {
-        $this->concert = $concert;
+        $this->activity = $activity;
 
         return $this;
     }
 
     /**
-     * Get concert
+     * Get activity
      *
-     * @return \HomeBundle\Entity\Concert
+     * @return \HomeBundle\Entity\Activity
      */
-    public function getConcert()
+    public function getActivity()
     {
-        return $this->concert;
+        return $this->activity;
     }
 
     /**
-     * Set artiste
+     * Set influencer
      *
-     * @param \HomeBundle\Entity\Artiste $artiste
+     * @param \HomeBundle\Entity\Influencer $influencer
      *
      * @return Concerne
      */
-    public function setArtiste(\HomeBundle\Entity\Artiste $artiste = null)
+    public function setInfluencer(\HomeBundle\Entity\Influencer $influencer = null)
     {
-        $this->artiste = $artiste;
+        $this->influencer = $influencer;
 
         return $this;
     }
 
     /**
-     * Get artiste
+     * Get influencer
      *
-     * @return \HomeBundle\Entity\Artiste
+     * @return \HomeBundle\Entity\Influencer
      */
-    public function getArtiste()
+    public function getInfluencer()
     {
-        return $this->artiste;
+        return $this->influencer;
     }
 }

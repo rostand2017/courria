@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Admin
  *
  * @ORM\Table(name="admin")
- * @ORM\Entity(repositoryClass="HomeBundle\Repository\AdminRepository")
+ * @ORM\Entity
  */
 class Admin
 {
@@ -24,16 +24,16 @@ class Admin
     /**
      * @var string
      *
-     * @ORM\Column(name="login", type="string", length=254, nullable=true)
+     * @ORM\Column(name="username", type="string", length=254, nullable=true)
      */
-    private $login;
+    private $username;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="mdp", type="string", length=254, nullable=true)
+     * @ORM\Column(name="password", type="string", length=254, nullable=true)
      */
-    private $mdp;
+    private $password;
 
     /**
      * @var \DateTime
@@ -42,10 +42,13 @@ class Admin
      */
     private $createdat;
 
-    public function __construct()
-    {
-        $this->createdat = new \DateTime();
-    }
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="updatedat", type="datetime", nullable=true)
+     */
+    private $updatedat;
+
 
 
     /**
@@ -59,51 +62,51 @@ class Admin
     }
 
     /**
-     * Set login
+     * Set username
      *
-     * @param string $login
+     * @param string $username
      *
      * @return Admin
      */
-    public function setLogin($login)
+    public function setUsername($username)
     {
-        $this->login = $login;
+        $this->username = $username;
 
         return $this;
     }
 
     /**
-     * Get login
+     * Get username
      *
      * @return string
      */
-    public function getLogin()
+    public function getUsername()
     {
-        return $this->login;
+        return $this->username;
     }
 
     /**
-     * Set mdp
+     * Set password
      *
-     * @param string $mdp
+     * @param string $password
      *
      * @return Admin
      */
-    public function setMdp($mdp)
+    public function setPassword($password)
     {
-        $this->mdp = $mdp;
+        $this->password = $password;
 
         return $this;
     }
 
     /**
-     * Get mdp
+     * Get password
      *
      * @return string
      */
-    public function getMdp()
+    public function getPassword()
     {
-        return $this->mdp;
+        return $this->password;
     }
 
     /**
@@ -128,5 +131,29 @@ class Admin
     public function getCreatedat()
     {
         return $this->createdat;
+    }
+
+    /**
+     * Set updatedat
+     *
+     * @param \DateTime $updatedat
+     *
+     * @return Admin
+     */
+    public function setUpdatedat($updatedat)
+    {
+        $this->updatedat = $updatedat;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedat
+     *
+     * @return \DateTime
+     */
+    public function getUpdatedat()
+    {
+        return $this->updatedat;
     }
 }
