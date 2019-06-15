@@ -2,53 +2,264 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f152b40-4f47-4a7b-b562-88bb7dfe4f61" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Entity/Activity.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Entity/Influencer.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Entity/Message.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Entity/Partnershiptype.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/images/1d0c04c5162fbc11b1060e4db6492cc0.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/images/335f68c182dd907e353367dcac4976d9.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/images/396777aadf16ffd1c5902d8f0fa18f3a.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/images/3e64f449b8887506b30a4e77a625634a.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/images/4b59f3d6b4b87cc0609dd534b59837be.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/images/548d9a7336f8d030ebb75589aa7c9655.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/images/5534abb52b0279f787430097f85f1c1a.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/images/7172ab5e7605e9597cf5534757761052.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/images/767ee4a1aa8a65d1757ac415f6bcdec8.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/images/79e6cb66f3f90e5fec826f780f8e169d.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/images/842ed555b9f225980e02150a85ee4d26.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/images/8d53008d02d12da36fdbe1486e1f0f96.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/images/9c9db1a10a6762100e4d2dae6f7ecbe9.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/images/af406631ae2f3910c51bb979bc6169df.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/images/b7d845e6086c03b9afb206b4df80820d.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/images/b8277a2991fcdca91f287f41fb1d6f68.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/images/d7549939364f5d2070e313947e0b8440.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/images/e0b7263509b93bfc279fc07b33efedca.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/images/e381d6962af4ef3815d1f538a773a299.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/images/f1d9100422c0b5177a9e846c45de0bcd.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/images/ffc5a141c3d33363f65d44effcb16b64.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/thumbnails/3e64f449b8887506b30a4e77a625634a.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/thumbnails/767ee4a1aa8a65d1757ac415f6bcdec8.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/thumbnails/79e6cb66f3f90e5fec826f780f8e169d.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/thumbnails/8d53008d02d12da36fdbe1486e1f0f96.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/thumbnails/e381d6962af4ef3815d1f538a773a299.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/thumbnails/ffc5a141c3d33363f65d44effcb16b64.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Controller/AccountController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Entity/Contact.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Entity/Photo.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Repository/ActivityRepository.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Repository/AdminRepository.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Repository/ConcerneRepository.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Repository/ContactRepository.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Repository/InfluencerRepository.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Repository/MessageRepository.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Repository/PartnershiptypeRepository.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Repository/PhotoRepository.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/Source/Flaticon.zip" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/Source/OwlCarousel2-2.3.4_2.zip" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/Source/bootstrap-4.3.1-dist.zip" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/Source/font-awesome-4.7.0.zip" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/Source/jquery-circle-progress-1.2.2.tar.gz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/Source/photo credits - yoga.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/Source/sass/ready.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/Source/sass/style.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/animate.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/bootstrap.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/flaticon.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/owl.carousel.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/slicknav.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/style.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Roboto-Black.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Roboto-Bold.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Roboto-Regular.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/fonts/Roboto-Thin.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/icon-fonts/Flaticon.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/icon-fonts/Flaticon.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/icon-fonts/Flaticon.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/icon-fonts/Flaticon.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/icon-fonts/fontawesome-webfont.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/icon-fonts/fontawesome-webfont.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/icon-fonts/fontawesome-webfont.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/icon-fonts/fontawesome-webfont.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/about-img.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/appointment-bg.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/appointment-icon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/blog-widget/1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/blog-widget/2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/blog-widget/3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/blog/1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/blog/2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/blog/3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/check-icon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/courses-icons/1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/courses-icons/2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/courses-icons/3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/courses-icons/c2-1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/courses-icons/c2-2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/courses-icons/c2-3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/favicon.ico" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/feature-icon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/footer-icon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/gallery/1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/gallery/2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/gallery/3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/gallery/4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/gallery/5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/header-overlay.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/hero-bg.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/hero-icon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/hero-img.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/logo.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/meditation-bg.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/meditation-img.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/page-top-bg/1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/page-top-bg/2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/page-top-bg/3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/page-top-bg/4.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/page-top-bg/5.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/page-top-bg/page-info-img.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/plans-icon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/quota.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/search-icon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/testimonial-bg.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/testimonial-img-1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/testimonial-img-2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/timetable-icon/1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/timetable-icon/2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/timetable-icon/3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/img/timetable-icon/4.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/bootstrap.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/circle-progress.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/jquery-3.2.1.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/jquery.slicknav.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/main.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/material-kit.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/nouislider.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/owl.carousel.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/popper.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/plugins/bootstrap-material/bootstrap-material-design.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/plugins/bootstrap-material/material-kit.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/about.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/contact.html.twig" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Controller/HomeController.php" afterPath="$PROJECT_DIR$/src/HomeBundle/Controller/HomeController.php" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Entity/Activity.php" afterPath="$PROJECT_DIR$/src/HomeBundle/Entity/Activity.php" />
       <change beforePath="$PROJECT_DIR$/src/HomeBundle/Entity/Admin.php" afterPath="$PROJECT_DIR$/src/HomeBundle/Entity/Admin.php" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Entity/Artiste.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Entity/Client.php" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/HomeBundle/Entity/Concerne.php" afterPath="$PROJECT_DIR$/src/HomeBundle/Entity/Concerne.php" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Entity/Concert.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Entity/Salle.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Repository/AdminRepository.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Repository/ArtisteRepository.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Repository/CommentaireRepository.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Repository/ConcerneRepository.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Repository/ConcertRepository.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Repository/NewsLetterRepository.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Repository/ReservationRepository.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Repository/SalleRepository.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Entity/Influencer.php" afterPath="$PROJECT_DIR$/src/HomeBundle/Entity/Influencer.php" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Entity/Message.php" afterPath="$PROJECT_DIR$/src/HomeBundle/Entity/Message.php" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Entity/Partnershiptype.php" afterPath="$PROJECT_DIR$/src/HomeBundle/Entity/Partnershiptype.php" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/config/routing.yml" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/bootstrap/fonts/glyphicons-halflings-regular.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/bootstrap/fonts/glyphicons-halflings-regulard41d.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/base.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/css/font-awesome-ie7.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/css/font-awesome-ie7.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/css/font-awesome.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/css/font-awesome.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/font/FontAwesome.otf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/font/fontawesome-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/font/fontawesome-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/font/fontawesome-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/font/fontawesome-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/less/bootstrap.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/less/core.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/less/extras.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/less/font-awesome-ie7.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/less/font-awesome.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/less/icons.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/less/mixins.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/less/path.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/less/variables.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/scss/_bootstrap.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/scss/_core.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/scss/_extras.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/scss/_icons.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/scss/_mixins.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/scss/_path.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/scss/_variables.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/scss/font-awesome-ie7.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/font-awesome/scss/font-awesome.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/montserrat/montserrat-bold-demo.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/montserrat/montserrat-bold-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/montserrat/montserrat-bold-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/montserrat/montserrat-bold-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/montserrat/montserrat-bold-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/montserrat/montserrat-regular-demo.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/montserrat/montserrat-regular-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/montserrat/montserrat-regular-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/montserrat/montserrat-regular-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/montserrat/montserrat-regular-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Bold-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Bold-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Bold-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Bold-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-BoldItalic-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-BoldItalic-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-BoldItalic-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-BoldItalic-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-ExtraBold-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-ExtraBold-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-ExtraBold-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-ExtraBold-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-ExtraBoldItalic-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-ExtraBoldItalic-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-ExtraBoldItalic-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-ExtraBoldItalic-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Italic-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Italic-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Italic-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Italic-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Light-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Light-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Light-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Light-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-LightItalic-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-LightItalic-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-LightItalic-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-LightItalic-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Regular-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Regular-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Regular-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Regular-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Semibold-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Semibold-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Semibold-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-Semibold-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-SemiboldItalic-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-SemiboldItalic-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-SemiboldItalic-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/fonts/opensans/OpenSans-SemiboldItalic-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/layout.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/favicon.ico" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/favicon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/favicon.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/author-img.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/bgconnexion.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/client-img.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/direction-nav-left.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/direction-nav-right.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/intro-bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/k-opacity-60.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/k-opacity-70.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/loader.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/loader2.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/mobile-money.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/orange-money.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/patterns/grey.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/patterns/servicesbg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/clock.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/cosmic-sneakers.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/eve.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/fields.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/judah.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/milk-splash.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/modals/m-clock.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/modals/m-cosmic-sneakers.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/modals/m-eve.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/modals/m-fields.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/modals/m-judah.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/modals/m-milk-splash.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/modals/m-sneaker-splash.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/modals/m-vector-flower.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/sneaker-splash.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/portfolio/vector-flower.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/post-image/post-image-a-972x360.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/post-image/post-image-b-972x360.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/post-image/post-image-c-972x360.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/sample-image-120x120.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/team/team-img-01.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/team/team-img-02.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/team/team-img-03.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/user-01.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/user-02.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/images/user-03.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/gmaps.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/init.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/jquery-1.10.2.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/jquery-migrate-1.2.1.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/jquery.flexslider.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/jquery.reveal.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/scrollspy.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/smoothscrolling.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/sweetalert/sweetalert.min.js" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/sweetalert.min.js" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/index.html.twig" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/index.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/change_password.html.twig" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/forgot_password.html.twig" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/login.html.twig" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/login.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/register.html.twig" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/register.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Reservation/index.html.twig" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Reservation/reservation.html.twig" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/Reservation/reservation_directe.html.twig" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/HomeBundle/Resources/views/layout.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -71,37 +282,95 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="influencer@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="influencer@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="influencer@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="influencer: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="influencer@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="influencer: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="admin: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig">
+        <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="162" column="17" lean-forward="false" selection-start-line="162" selection-start-column="17" selection-end-line="162" selection-end-column="17" />
+            <state relative-caret-position="374">
+              <caret line="22" column="58" lean-forward="false" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/config/services.yml">
+      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HomeBundle/Controller/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="595">
+              <caret line="64" column="5" lean-forward="false" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+              <folding>
+                <element signature="e#1002#1921#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/HomeBundle/Controller/AccountController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="105" column="43" lean-forward="false" selection-start-line="105" selection-start-column="43" selection-end-line="105" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Concert/index.html.twig">
+      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+            <state relative-caret-position="510">
+              <caret line="30" column="64" lean-forward="false" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/login.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1190">
+              <caret line="70" column="18" lean-forward="false" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/register.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4114">
+              <caret line="242" column="117" lean-forward="false" selection-start-line="242" selection-start-column="111" selection-end-line="242" selection-end-column="117" />
+              <folding>
+                <marker date="1560582088199" expanded="true" signature="22881:22898" ph="..." />
+                <marker date="1560582088199" expanded="true" signature="23457:23474" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,18 +379,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>utilisateur</find>
-      <find>UTILISATEUR</find>
-      <find>delete</find>
-      <find>Client</find>
-      <find>client</find>
-      <find>text-color</find>
-      <find>text-danger</find>
-      <find>body</find>
-      <find>url</find>
-      <find>Entrer</find>
-      <find>row</find>
-      <find>user</find>
       <find>sal</find>
       <find>salu</find>
       <find>das</find>
@@ -140,6 +397,18 @@
       <find>Res</find>
       <find>col</find>
       <find>logo</find>
+      <find>{{ asset('</find>
+      <find>timetable</find>
+      <find>Check</find>
+      <find>url</find>
+      <find>password</find>
+      <find>sect</find>
+      <find>custo</find>
+      <find>activi</find>
+      <find>sex</find>
+      <find>lan</find>
+      <find>act</find>
+      <find>paym</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -162,57 +431,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/HomeBundle/Entity/NewsLetter.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/news.js" />
-        <option value="$PROJECT_DIR$/web/bundles/admin/assets/js/news.js" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/change_password.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/Email/diffusion.html.twig" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/NewsLetterController.php" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/public/js/init.js" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Client/newsletter.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/config/services.yml" />
-        <option value="$PROJECT_DIR$/app/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/base.css" />
-        <option value="$PROJECT_DIR$/web/bundles/home/css/base.css" />
-        <option value="$PROJECT_DIR$/src/AuthenticationBundle/Resources/config/services.yml" />
-        <option value="$PROJECT_DIR$/app/Resources/views/Email/new_password.html.twig" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/forgot_password.html.twig" />
-        <option value="$PROJECT_DIR$/src/AuthenticationBundle/Classes/Thumbnails.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/Email/code_reservation.html.twig" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Entity/Reservation.php" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Reservation/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Classes/CodeGenerator.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/HomeBundle/Entity/Commentaire.php" />
         <option value="$PROJECT_DIR$/src/HomeBundle/Repository/CommentaireRepository.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Commentaire/index.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Reservation/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/src/HomeBundle/Controller/DashBoardController.php" />
         <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Reservation/reservation_directe.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/CommentaireController.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/ConcertController.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/ClientController.php" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/user_dashboard.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/ReservationController.php" />
         <option value="$PROJECT_DIR$/src/HomeBundle/Controller/ReservationController.php" />
         <option value="$PROJECT_DIR$/src/AuthenticationBundle/Controller/AccountController.php" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/index.html.twig" />
         <option value="$PROJECT_DIR$/src/HomeBundle/Resources/public/favicon.svg" />
         <option value="$PROJECT_DIR$/web/bundles/home/favicon.svg" />
         <option value="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/layout.css" />
         <option value="$PROJECT_DIR$/web/bundles/home/css/layout.css" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/login.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig" />
         <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Reservation/reservation.html.twig" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/login.html.twig" />
-        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/register.html.twig" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/about.html.twig" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/login.html.twig" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/contact.html.twig" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Repository/ActivityRepository.php" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Entity/Activity.php" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Entity/Admin.php" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Entity/Concerne.php" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Entity/Contact.php" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Entity/Influencer.php" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Entity/Message.php" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Entity/Partnershiptype.php" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Entity/Photo.php" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Repository/AdminRepository.php" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Repository/ConcerneRepository.php" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Repository/ContactRepository.php" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Repository/InfluencerRepository.php" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Repository/MessageRepository.php" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Repository/PhotoRepository.php" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Repository/PartnershiptypeRepository.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d6833e0c-ba5e-47e4-8a96-52e770320f1c/console.sql" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/public/css/style.css" />
+        <option value="$PROJECT_DIR$/web/bundles/home/css/style.css" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/login.html.twig" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Controller/HomeController.php" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/register.html.twig" />
+        <option value="$PROJECT_DIR$/src/HomeBundle/Controller/AccountController.php" />
       </list>
     </option>
   </component>
@@ -305,8 +574,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -335,14 +602,7 @@
               <item name="influencer" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="HomeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="influencer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="influencer" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="HomeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Repository" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="influencer" type="b2602c69:ProjectViewProjectNode" />
@@ -351,10 +611,63 @@
               <item name="HomeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="influencer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="influencer" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="HomeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="influencer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="influencer" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="HomeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Login" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="influencer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="influencer" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="influencer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="influencer" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="influencer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="influencer" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="home" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="influencer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="influencer" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="influencer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="influencer" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="fonts" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -362,14 +675,18 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\concert\app\Resources" />
-      <recent name="C:\laragon\www\concert\web\bundles\home" />
-      <recent name="C:\laragon\www\concert\src\HomeBundle\Resources\public" />
-      <recent name="C:\laragon\www\concert\src\HomeBundle\Controller" />
-      <recent name="C:\laragon\www\concert\src\AdminBundle\Controller" />
+      <recent name="C:\laragon\www\influencer\src\HomeBundle\Controller" />
+      <recent name="C:\laragon\www\influencer\src\HomeBundle\Resources\public\fonts" />
+      <recent name="C:\laragon\www\influencer\web\bundles\home\fonts" />
+      <recent name="C:\laragon\www\influencer\web\bundles\home" />
+      <recent name="C:\laragon\www\influencer\src\HomeBundle\Repository" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\influencer\src\HomeBundle\Resources\views\Login" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -421,31 +738,38 @@
       <workItem from="1557241287983" duration="108414000" />
       <workItem from="1559389023584" duration="4700000" />
       <workItem from="1560053263595" duration="256000" />
-      <workItem from="1560078404189" duration="2926000" />
+      <workItem from="1560078404189" duration="3078000" />
+      <workItem from="1560168623797" duration="597000" />
+      <workItem from="1560398893854" duration="3482000" />
+      <workItem from="1560451178041" duration="25976000" />
+      <workItem from="1560514997056" duration="25285000" />
+      <workItem from="1560616117225" duration="396000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="297087000" />
+    <option name="totallyTimeSpent" value="352975000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20272315" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22012103" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27932099" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -459,369 +783,378 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AuthenticationBundle/Classes/Thumbnails.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Classes/CodeGenerator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="48" column="46" lean-forward="false" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/reservation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="104" column="7" lean-forward="true" selection-start-line="104" selection-start-column="7" selection-end-line="104" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Entity/Commentaire.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="26" column="50" lean-forward="false" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Repository/ReservationRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="74" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Repository/CommentaireRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="49" column="35" lean-forward="false" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Reservation/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="26" column="125" lean-forward="false" selection-start-line="26" selection-start-column="125" selection-end-line="26" selection-end-column="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Reservation/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="128" lean-forward="false" selection-start-line="8" selection-start-column="128" selection-end-line="8" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Controller/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="21" column="49" lean-forward="true" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Controller/DashBoardController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/CommentaireController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/NewsLetterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="50" column="53" lean-forward="false" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/ArtisteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="43" column="57" lean-forward="true" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/ClientController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/ConcertController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="32" column="23" lean-forward="false" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Commentaire/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="112" column="23" lean-forward="false" selection-start-line="112" selection-start-column="23" selection-end-line="112" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/js/sweetalert/sweetalert.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="0" column="177" lean-forward="false" selection-start-line="0" selection-start-column="177" selection-end-line="0" selection-end-column="177" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/ReservationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-330">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Controller/ReservationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="64" column="66" lean-forward="false" selection-start-line="64" selection-start-column="66" selection-end-line="64" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AuthenticationBundle/Controller/AccountController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="80" column="84" lean-forward="false" selection-start-line="80" selection-start-column="84" selection-end-line="80" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Reservation/reservation_directe.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="45" column="36" lean-forward="true" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="36" column="15" lean-forward="false" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/user_dashboard.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="183" column="38" lean-forward="false" selection-start-line="183" selection-start-column="38" selection-end-line="183" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/favicon.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/favicon.svg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="681" column="21" lean-forward="false" selection-start-line="681" selection-start-column="18" selection-end-line="681" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/css/layout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/home/css/layout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/home/favicon.svg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" column="107" lean-forward="false" selection-start-line="24" selection-start-column="107" selection-end-line="24" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Entity/Reservation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="52" column="17" lean-forward="false" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Reservation/reservation.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/forgot_password.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="115" lean-forward="false" selection-start-line="5" selection-start-column="115" selection-end-line="5" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/change_password.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/register.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="70" lean-forward="false" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/login.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="74" lean-forward="false" selection-start-line="6" selection-start-column="74" selection-end-line="6" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/login.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Entity/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/AdminBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Twig/AppExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-106">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="83" column="30" lean-forward="false" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="162" column="17" lean-forward="false" selection-start-line="162" selection-start-column="17" selection-end-line="162" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/AppBundle/Controller/DefaultControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/config/doctrine/Activity.orm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/config/doctrine/Activity.orm.xml" />
     <entry file="file://$PROJECT_DIR$/src/HomeBundle/Repository/ClientRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-956">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1557216672885" expanded="true" signature="404:433" ph="SELECT COUNT... client" />
-            <marker date="1557216672885" expanded="true" signature="1608:1630" ph="SELECT * FRO... client" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Concert/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="73" lean-forward="true" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/admin/assets/skins/jtable/close.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/js/sweetalert.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-856">
+          <caret line="4" column="54" lean-forward="true" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="56" lean-forward="true" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/plugins/bootstrap-material/material-kit.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/plugins/bootstrap-material/bootstrap-material-design.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/home/plugins/bootstrap-material/material-kit.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/user_dashboard.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+          <caret line="16" column="66" lean-forward="true" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Controller/DashBoardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/about.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="126" column="32" lean-forward="false" selection-start-line="126" selection-start-column="32" selection-end-line="126" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/contact.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-629">
+          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/js/popper.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/home/js/popper.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/home/js/nouislider.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/js/nouislider.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/js/material-kit.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/home/js/material-kit.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/template/material-kit-master/material-kit-master/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="210" column="26" lean-forward="false" selection-start-line="210" selection-start-column="26" selection-end-line="210" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Entity/Activity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Entity/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="10" column="59" lean-forward="false" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Entity/Concerne.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="62" lean-forward="false" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Entity/Contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="61" lean-forward="false" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Entity/Influencer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="64" lean-forward="false" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Entity/Message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="61" lean-forward="false" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Entity/Partnershiptype.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="69" lean-forward="false" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Entity/Photo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="59" lean-forward="false" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Repository/AdminRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Repository/ConcerneRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Repository/ContactRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Repository/InfluencerRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Repository/MessageRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Repository/PhotoRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Repository/PartnershiptypeRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Home/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://src:table:/99413821/d6833e0c-ba5e-47e4-8a96-52e770320f1c/influencer.admin">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/d6833e0c-ba5e-47e4-8a96-52e770320f1c.TABLE:influencer.admin">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>d6833e0c-ba5e-47e4-8a96-52e770320f1c.TABLE:influencer.admin</OriginalElement>
+          <nodes>
+            <node x="" y="">d6833e0c-ba5e-47e4-8a96-52e770320f1c.TABLE:influencer.admin</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="88.0" y="70.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d6833e0c-ba5e-47e4-8a96-52e770320f1c/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Repository/ActivityRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/icon-fonts/Flaticon.svg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/home/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="58" lean-forward="false" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="64" lean-forward="false" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Controller/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="64" column="5" lean-forward="false" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+          <folding>
+            <element signature="e#1002#1921#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="70" column="18" lean-forward="false" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Resources/views/Login/register.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4114">
+          <caret line="242" column="117" lean-forward="false" selection-start-line="242" selection-start-column="111" selection-end-line="242" selection-end-column="117" />
+          <folding>
+            <marker date="1560582088199" expanded="true" signature="22881:22898" ph="..." />
+            <marker date="1560582088199" expanded="true" signature="23457:23474" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeBundle/Controller/AccountController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="105" column="43" lean-forward="false" selection-start-line="105" selection-start-column="43" selection-end-line="105" selection-end-column="43" />
           <folding />
         </state>
       </provider>

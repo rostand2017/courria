@@ -7,8 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Influencer
  *
- * @ORM\Table(name="influencer", indexes={@ORM\Index(name="fk_avoir", columns={"par_id"})})
- * @ORM\Entity
+ * @ORM\Table(name="influencer", indexes={@ORM\Index(name="fk_association2", columns={"partnership"})})
+ * @ORM\Entity(repositoryClass="HomeBundle\Repository\InfluencerRepository")
  */
 class Influencer
 {
@@ -64,6 +64,13 @@ class Influencer
     private $gender;
 
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="old", type="integer", nullable=true)
+     */
+    private $old;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="facebooklink", type="string", length=254, nullable=true)
@@ -117,10 +124,10 @@ class Influencer
      *
      * @ORM\ManyToOne(targetEntity="Partnershiptype")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="par_id", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="partnership", referencedColumnName="id")
      * })
      */
-    private $par;
+    private $partnership;
 
 
 
@@ -276,6 +283,30 @@ class Influencer
     public function getGender()
     {
         return $this->gender;
+    }
+
+    /**
+     * Set old
+     *
+     * @param integer $old
+     *
+     * @return Influencer
+     */
+    public function setOld($old)
+    {
+        $this->old = $old;
+
+        return $this;
+    }
+
+    /**
+     * Get old
+     *
+     * @return integer
+     */
+    public function getOld()
+    {
+        return $this->old;
     }
 
     /**
@@ -447,26 +478,26 @@ class Influencer
     }
 
     /**
-     * Set par
+     * Set partnership
      *
-     * @param \HomeBundle\Entity\Partnershiptype $par
+     * @param \HomeBundle\Entity\Partnershiptype $partnership
      *
      * @return Influencer
      */
-    public function setPar(\HomeBundle\Entity\Partnershiptype $par = null)
+    public function setPartnership(\HomeBundle\Entity\Partnershiptype $partnership = null)
     {
-        $this->par = $par;
+        $this->partnership = $partnership;
 
         return $this;
     }
 
     /**
-     * Get par
+     * Get partnership
      *
      * @return \HomeBundle\Entity\Partnershiptype
      */
-    public function getPar()
+    public function getPartnership()
     {
-        return $this->par;
+        return $this->partnership;
     }
 }

@@ -2,46 +2,30 @@ home_homepage:
     path:     /
     defaults: { _controller: HomeBundle:Home:index }
 
+home_about:
+    path:     /about
+    defaults: { _controller: HomeBundle:Home:about }
+
+home_contact:
+    path:     /contact
+    defaults: { _controller: HomeBundle:Home:contact }
+
+home_influencer:
+    path:     /influencer
+    defaults: { _controller: HomeBundle:Home:influencer }
+
 home_login:
     path:     /login
-    defaults: { _controller: HomeBundle:Home:login }
-
-home_save_email:
-    path:     /save_email
-    defaults: { _controller: HomeBundle:Home:subscribe }
+    defaults: { _controller: HomeBundle:Account:login }
 
 home_register:
     path:     /register
-    defaults: { _controller: HomeBundle:Home:register }
+    defaults: { _controller: HomeBundle:Account:register }
 
 home_change_password:
     path:     /change_password
-    defaults: { _controller: HomeBundle:Home:changePassword }
+    defaults: { _controller: HomeBundle:Account:changePassword }
 
 home_forgot_password:
     path:     /forgot_password
-    defaults: { _controller: HomeBundle:Home:forgotPassword }
-
-home_commentaire:
-    path:     /comment
-    defaults: { _controller: HomeBundle:Home:comment }
-home_reservation:
-    path:     /reservation
-    defaults: { _controller: HomeBundle:Reservation:index }
-home_reservation_directe:
-    path:     /reservation/directe
-    defaults: { _controller: HomeBundle:Reservation:reservationDirecte }
-home_reservation_normale:
-    path:     /reservation/normale
-    defaults: { _controller: HomeBundle:Reservation:reservation }
-home_dashboard:
-    path:     /{user}/dashboard
-    defaults: { _controller: HomeBundle:DashBoard:userDashBoard }
-    requirements:
-        user: \w+
-home_reservation_edit:
-    path:     /reservation/edit
-    defaults: { _controller: HomeBundle:Reservation:edit }
-home_reservation_delete:
-    path:     /reservation/delete
-    defaults: { _controller: HomeBundle:Reservation:delete }
+    defaults: { _controller: HomeBundle:Account:forgotPassword }

@@ -1,328 +1,149 @@
 {% extends "HomeBundle::layout.html.twig" %}
 
-{% block title %}Camer Concert{% endblock %}
+{% block title %}Nop Agency{% endblock %}
 {% block body %}
-    <section id="intro" style="background: url('/uploads/images/{% if concerts %}{{ concerts[0].affiche }}{% endif %}')">
-        <!-- Flexslider Start-->
-        <div id="intro-slider" class="flexslider">
-            <ul class="slides" style="background: url('/uploads/images/{% if concerts %}{{ concerts[0].affiche }}{% endif %}')">
-                <!-- Slide -->
-                {% if concerts %}
-                    {% set concert = concerts[0] %}
-                    <li>
-                        <div class="row">
-                            <div class="col full">
-                                <div class="slider-text">
-                                    <h2><span>{{ concert.intitule }}</span></h2>
-                                    <p style="color: #fff; text-shadow: none">{{ concert.description }} <span><b><span class="" style="font-size: 30px"> le {{ concert.date | date('d/m/y') }} à {{ concert.heure | date('h:i') }}</span></b></span></p>
-                                    <form action="{{ path('home_reservation') }}" method="get" style="margin-top: 10px">
-                                        <button type="submit" style="color: white">Réservez votre place</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                {% else %}
-                    <li>
-                        <div class="row">
-                            <div class="col full">
-                                <div class="slider-text">
-                                    <h2>Salut Bienvenu sur <span>Camer Concer</span>.Services de réservations en ligne</h2>
-                                    <p>Aucun concert en cours. Souscrivez au newsletter et recevez les derniers concert en cours.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                {% endif %}
-            </ul>
-        </div>
-        <!-- Flexslider End-->
-    </section> <!-- Intro Section End-->
-
-    <!-- Portfolio Section
-    ================================================== -->
-    <section id="portfolio">
-
-        <div class="row section-head">
-            <div class="col full">
-                <h2>Concert</h2>
-                <p class="desc">Concert en cours</p>
-                <p class="intro">
-                    Liste des derniers concerts en cours. Commencez déjà à faire vos réservations(nombre de place limité)
-                </p>
+    <section class="hero-section set-bg" data-setbg="{{ asset('bundles/home/img/hero-bg.png') }}" style="background-image: url('{{ asset('bundles/home/img/hero-icon.png') }}');">
+        <div class="hero-content-warp">
+            <div class="container">
+                <div class="hero-content">
+                    <img src="{{ asset('bundles/home/img/hero-icon.png') }}" alt="">
+                    <h2>Find your inner <span>CHI</span></h2>
+                    <p>Fusce erat dui, venenatis et erat in, vulputate dignissim lacus. Donec vitae tempus dolor, sit amet elementum lorem. Ut cursus tempor turpis.</p>
+                    <a href="#" class="site-btn">S'inscrire en tant qu'influenceur</a>
+                </div>
             </div>
+            <img src="{{ asset('bundles/home/img/hero-img.png') }}" class="hero-img" alt="">
         </div>
+    </section>
 
-         {% set i = 1 %}
-        {% for concert in concerts %}
+    <!-- Services-->
+    <section class="courses-section">
+        <div class="container">
             <div class="row">
-                <!-- Portfolio Wrapper -->
-                <div id="portfolio-wrapper">
-                    <div class="col portfolio-item">
-                        <div class="item-wrap">
-                            <a href="#" data-reveal-id="modal-0{{ i }}"><img src="/uploads/images/{{ concert.affiche }}" alt="{{ concert.intitule }}"/></a>
-                            <div class="portfolio-item-meta">
-                                <h5><a href="#">{{ concert.intitule }}</a></h5>
+                <div class="col-md-4">
+                    <div class="course-item">
+                        <div class="ci-icon">
+                            <i class="flaticon-002-yin-yang"></i>
+                        </div>
+                        <span>Begginer &amp; Advanced</span>
+                        <h4>Yoga</h4>
+                        <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="course-item">
+                        <div class="ci-icon">
+                            <i class="flaticon-001-meditation i-fix"></i>
+                        </div>
+                        <span>Begginer &amp; Advanced</span>
+                        <h4>Hatha</h4>
+                        <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="course-item">
+                        <div class="ci-icon">
+                            <i class="flaticon-021-yoga-mat"></i>
+                        </div>
+                        <span>Begginer &amp; Advanced</span>
+                        <h4>Pilates</h4>
+                        <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="meditation-section set-bg" data-setbg="{{ asset('bundles/home/img/meditation-bg.png') }}" style="background-image: url('{{ asset('bundles/home/img/meditation-bg.png') }}');">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="meditation-content">
+                        <div class="sp-title text-white">
+                            <span>Begginer &amp; Advanced</span>
+                            <h4>Meditation Sessions</h4>
+                        </div>
+                        <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor. Ut pellentesque auctor lorem, at maximus lacus faucibus nec. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris auctor nunc non nulla euismod consequat. Pellentesque non mattis nulla. Fusce quis tempor risus, non elementum dui. Curabitur et mattis ex, a ultrices lorem. </p>
+                        <a href="#" class="site-btn">discover</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="{{ asset('bundles/home/img/meditation-img.png') }}" class="meditation-img" alt="">
+    </section>
+
+    <!-- work time-->
+    <section class="timetable-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-9">
+                    <div class="timetable-box">
+                        <div class="sp-title">
+                            <h4>Heure de travail</h4>
+                        </div>
+                        <ul>
+                            <li><span>Lundi</span>08:00 - 22:00</li>
+                            <li><span>Mardi</span>08:00 - 22:00</li>
+                            <li><span>Mercredi</span>08:00 - 22:00</li>
+                            <li><span>Jeudi</span>08:00 - 22:00</li>
+                            <li><span>Vendredi</span>08:00 - 22:00</li>
+                            <li><span>Samedi</span>08:00 - 22:00</li>
+                            <li><span>Dimanche</span>Indisponible</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="timetable-text">
+                        <div class="sp-title">
+                            <h4>Meditation Sessions</h4>
+                        </div>
+                        <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor. Ut pellentesque auctor lorem, at maximus lacus faucibus nec. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris auctor nunc non nulla euismod consequat. Pellentesque non mattis nulla. Fusce quis tempor risus, non elementum dui. Curabitur et mattis ex, a ultrices lorem. </p>
+                        <div class="site-progress-bars">
+                            <div class="progress-item">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"><span>60%</span></div>
+                                </div>
+                                <p>Breathing</p>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 87%;" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"><span>87%</span></div>
+                                </div>
+                                <p>Meditation</p>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><span>70%</span></div>
+                                </div>
+                                <p>Flexibility</p>
                             </div>
                         </div>
                     </div>
-                </div> <!-- Portfolio Wrapper End -->
-            </div> <!-- End Row -->
-            <div id="modal-0{{ i }}" class="reveal-modal">
-                <img class="scale-with-grid" src="/uploads/images/{{ concert.affiche }}" alt="{{ concert.intitule }}" />
-                <div class="description-box">
-                    <h4>{{ concert.intitule }}</h4>
-                    <p>{{ concert.description }}</p>
-                    <span class="categories"><i class="icon-tag"></i>{{ concert.date | date('d/m/y') }} à {{ concert.heure | date('h:i') }}</span>
                 </div>
-                <div class="link-box">
-                    <a class="close-reveal-modal">Close</a>
-                </div>
-
-            </div><!-- modal-01 End -->
-            {% set i = i+1 %}
-        {% else %}
-            <div class="row">Aucun concert en cours</div>
-        {% endfor %}
-
-        <!-- modal-01 -->
-    </section>
-
-    <!-- About Section
-    ================================================== -->
-    <section id="about">
-
-        <div class="row section-head">
-
-            <div class="col one-fourth">
-                <h2>A propos de nous</h2>
-                <p class="desc">This is what we are.</p>
-            </div>
-
-            <div class="col three-fourths">
-                <p class="intro">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,
-                    nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate
-                    cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a
-                    ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. </p>
-            </div>
-
-        </div>
-
-        <div class="row">
-            <div class="col full"><h3>Our Work Process.</h3></div>
-        </div>
-
-        <div class="row process-wrap">
-
-            <div class="col">
-                <h4>Explore.</h4>
-
-                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,
-                    nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate
-                    cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
-            </div>
-
-            <div class="col">
-                <h4>Design.</h4>
-
-                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,
-                    nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate
-                    cursus a sit amet mauris. Morbi accumsan ipsum velit. Duis sed odio sit.
-                </p>
-            </div>
-
-            <div class="col m-first">
-                <h4>Develop.</h4>
-
-                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,
-                    nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate
-                    cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
-            </div>
-
-            <div class="col">
-                <h4>Deliver.</h4>
-
-                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,
-                    nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate
-                    cursus a sit amet mauris. Morbi accumsan ipsum velit. Duis sed odio sit.
-                </p>
-            </div>
-
-        </div> <!-- Process Wrap End -->
-
-        <div class="row">
-            <div class="col full"><h3>Notre équipe.</h3></div>
-        </div>
-
-
-        <!-- Team Wrap End -->
-        <div class="row team-wrap">
-
-            <div class="col one-fourth">
-
-                <img src="{{ asset('bundles/home/images/team/team-img-01.jpg') }}" alt=""/>
-
-                <div class="member-name">
-                <h5>Kamgang Cyrille</h5>
-                <span>Directeur</span>
-            </div>
-
-            <ul class="member-social">
-                <li><a href="#"><i class="icon-facebook"></i></a></li>
-                <li><a href="#"><i class="icon-twitter"></i></a></li>
-                <li><a href="#"><i class="icon-google-plus-sign"></i></a></li>
-                <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                <li><a href="#"><i class="icon-skype"></i></a></li>
-            </ul>
-        </div>
-
-        <div class="col one-fourth">
-
-            <img src="{{ asset('bundles/home/images/team/team-img-02.jpg') }}" alt=""/>
-
-            <div class="member-name">
-            <h5>Ndjousse Samantha</h5>
-            <span>Directrice marketing</span>
-        </div>
-
-        <ul class="member-social">
-            <li><a href="#"><i class="icon-facebook"></i></a></li>
-            <li><a href="#"><i class="icon-twitter"></i></a></li>
-            <li><a href="#"><i class="icon-google-plus-sign"></i></a></li>
-            <li><a href="#"><i class="icon-linkedin"></i></a></li>
-            <li><a href="#"><i class="icon-skype"></i></a></li>
-        </ul>
-
-        </div>
-
-        <div class="col one-fourth">
-
-            <img src="{{ asset('bundles/home/images/team/team-img-03.jpg') }}" alt=""/>
-
-            <div class="member-name">
-            <h5>Kengne Franck</h5>
-            <span>Développeur web</span>
-        </div>
-
-        <ul class="member-social">
-            <li><a href="#"><i class="icon-facebook"></i></a></li>
-            <li><a href="#"><i class="icon-twitter"></i></a></li>
-            <li><a href="#"><i class="icon-google-plus-sign"></i></a></li>
-            <li><a href="#"><i class="icon-linkedin"></i></a></li>
-            <li><a href="#"><i class="icon-skype"></i></a></li>
-        </ul>
-
-        </div>
-
-        <div class="col one-fourth">
-
-            <img src="{{ asset('bundles/home/images/team/team-img-03.jpg') }}" alt=""/>
-
-            <div class="member-name">
-            <h5>Shikamaru Nara</h5>
-            <span>Consultant</span>
-        </div>
-
-        <ul class="member-social">
-            <li><a href="#"><i class="icon-facebook"></i></a></li>
-            <li><a href="#"><i class="icon-twitter"></i></a></li>
-            <li><a href="#"><i class="icon-google-plus-sign"></i></a></li>
-            <li><a href="#"><i class="icon-linkedin"></i></a></li>
-            <li><a href="#"><i class="icon-skype"></i></a></li>
-        </ul>
-
-        </div>
-
-        </div> <!-- Team Wrap End -->
-
-        <!-- Testimonials -->
-        <div class="row">
-            <div class="col full section-head">
-                <h2>Témoignanges</h2>
-                <p class="desc">Ce que les clients disent.</p>
-            </div>
-        </div>
-
-        <div class="row testimonials">
-
-            <div class="col half">
-
-                <div class="client-author">
-                    <img src="{{ asset('bundles/home/images/client-img.png') }}" alt="" />
-                    <div class="name">
-                        <p>Mantho Doe<span>Designer</span></p>
-                    </div>
-                </div>
-
-                <div class="client-cite">
-                    <p>J'aime beaucoup cette application web. Avec elle, plus besoin de se déplacer pour réserver sa place pour un concert.</p>
-                </div>
-
-            </div>
-
-            <div class="col half">
-
-                <div class="client-author">
-                    <img src="{{ asset('bundles/home/images/client-img.png') }}" alt="" />
-                    <div class="name">
-                        <p>Mbonjo Smith<span>CEO</span></p>
-                    </div>
-                </div>
-
-                <div class="client-cite">
-                    <p>
-                        Merveilleux, fabuleux, les mots me manquent.Avant pour faire une reservation pour un concert, j'était oubligé de
-                        me déplacer tout le temps et partir faire une queue de Ouf.
-                    </p>
-                </div>
-
-            </div>
-        </div> <!--  Testimonials End-->
-        <div class="row" style="width: auto; background: #c3d3c9">
-            <div class="col-md-8 offset-2">
-                <div class="col full section-head">
-                    <h2>Commentaires</h2>
-                    <p class="desc" style="color: white">Laissez nous un commentaire.</p>
-                </div>
-                <form action="{{ path('home_commentaire') }}" method="post" id="formCommentaire">
-                    <div class="form-group">
-                        <label for="nom">Nom</label>
-                        <input type="text" value="{% if app.session.get('user') %}{{ app.session.get('user').nom }}{% endif %}" name="nom" required placeholder="Votre nom" class="btn-block" style="color: #000000;">
-                    </div>
-                    <div class="form-group">
-                        <label for="commentaire">Commentaire</label>
-                        <textarea placeholder="Saisissez votre commentaire" required name="message" id="commentaire" rows="5" class="btn-block"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" id="btn-commentaire" class="btn-block" style="color: white">Envoyer</button>
-                    </div>
-                </form>
             </div>
         </div>
     </section>
 
-    <section id="call-to-action">
-        <div class="row">
-            <div class="col three-fourths">
-                <h2><a href="{% if app.session.get('user') %}{{ path('home_dashboard', {user: app.session.get('user').nom }) }}{% else %}{{ path('home_login') }}{% endif %}">Restez connecter sur Camer Concert {% if app.session.get('user') %}
-                            {% if app.session.get('user').sexe == 'M' %}
-                                Monsieur {{ app.session.get('user').nom }}
-                            {% else %}
-                                Madame {{ app.session.get('user').nom }}
-                            {% endif %}
-                        {% endif %}</a></h2>
-                <p>Connectez vous à Camer conert et reservez vos places pour tous les concerts disponibles au Cameroun</p>
+    <!-- Gallery section -->
+    <div class="gallery-section">
+        <div class="gallery-slider owl-carousel">
+            <div class="gallery-item">
+                <img src="{{ asset('bundles/home/img/gallery/1.jpg') }}" alt="">
             </div>
-            <div class="col one-fourth action">
-                {% if app.session.get('user') is null %}
-                    <a href="{{ path('home_login') }}" class="button">Se connecter</a>
-                {% endif %}
+            <div class="gallery-item">
+                <img src="{{ asset('bundles/home/img/gallery/2.jpg') }}" alt="">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ asset('bundles/home/img/gallery/3.jpg') }}" alt="">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ asset('bundles/home/img/gallery/4.jpg') }}" alt="">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ asset('bundles/home/img/gallery/5.jpg') }}" alt="">
             </div>
         </div>
-    </section>
-    <section id="map">
-        <p class="map-error">Une erreur est survenue... Impossible de charger la carte... Vérifiez votre connexion internet</p>
-    </section> <!-- Map Section End-->
+    </div>
 {% endblock %}
 {% block script %}
     <script>

@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Partnershiptype
  *
  * @ORM\Table(name="partnershiptype")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="HomeBundle\Repository\PartnershiptypeRepository")
  */
 class Partnershiptype
 {
