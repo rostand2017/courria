@@ -32,9 +32,9 @@ class Concerne
     private $activity;
 
     /**
-     * @var \Influencer
+     * @var Influencer
      *
-     * @ORM\ManyToOne(targetEntity="Influencer")
+     * @ORM\ManyToOne(targetEntity="Influencer", cascade={"persist"})
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="influencer", referencedColumnName="id")
      * })

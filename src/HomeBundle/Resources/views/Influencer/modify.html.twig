@@ -23,11 +23,12 @@
             <div class="row">
                 <div class="col-lg-10 col-md-8 ml-auto mr-auto">
                     <div class="card card-login">
-                        <form class="form" id="registerForm" method="post" enctype="multipart/form-data" action="{{ path('home_register') }}">
+                        <form class="form" id="registerForm" method="post" action="{{ path('home_modify_profil_done') }}">
                             <div class="card-header card-header-primary text-center">
-                                <h4 class="card-title">Devenir influenceur</h4>
+                                <h4 class="card-title">Modifier mon profil</h4>
                             </div>
                             <p class="description text-center">Nop Agency</p>
+                            <p class="description text-center"><a href="{{ path('home_profile') }}"><i class="fa fa-home"></i> retour à l'accueil</a></p>
                             <div class="card-body">
                                 <div class="tim-typo">
                                     <h2 class="title">
@@ -41,7 +42,7 @@
                                             <i class="material-icons fa fa-user-circle"></i>
                                           </span>
                                         </div>
-                                        <input type="text" name="name" class="form-control" placeholder="Votre nom et prénom" required>
+                                        <input type="text" name="name" class="form-control" value="{{ user.name }}" placeholder="Votre nom et prénom" required>
                                     </div>
                                 </span>
 
@@ -54,7 +55,7 @@
                                                     <i class="material-icons fa fa-envelope"></i>
                                                   </span>
                                                 </div>
-                                                <input type="email" name="email" class="form-control" placeholder="Renseignez votre email" required>
+                                                <input type="email" name="email" class="form-control" value="{{ user.email }}" placeholder="Renseignez votre email" required>
                                             </div>
                                         </span>
                                     </div>
@@ -66,7 +67,7 @@
                                                     <i class="material-icons fa fa-phone-square"></i>
                                                   </span>
                                                 </div>
-                                                <input type="tel" name="tel" class="form-control" placeholder="Numéro de téléphone(orange money, mobile money...)" required>
+                                                <input type="tel" name="tel" value="{{ user.tel }}" class="form-control" placeholder="Numéro de téléphone(orange money, mobile money...)" required>
                                             </div>
                                         </span>
                                     </div>
@@ -79,7 +80,7 @@
                                             <i class="material-icons fa fa-child"></i>
                                           </span>
                                         </div>
-                                        <input type="number" name="old" max="55" min="10" class="form-control" required placeholder="Votre âge">
+                                        <input type="number" name="old" max="55" min="10" value="{{ user.old }}" class="form-control" required placeholder="Votre âge">
                                     </div>
                                 </span>
 
@@ -92,7 +93,7 @@
                                         </div>
                                         <div class="form-check">
                                             <label class="form-check-label">
-                                              <input class="form-check-input" type="radio" name="gender"  value="masculin"><i class="material-icons fa fa-male"></i> Masculin
+                                              <input class="form-check-input" type="radio" name="gender"  value="masculin" {% if user.gender == "masculin" %} checked {% endif %}><i class="material-icons fa fa-male"></i> Masculin
                                               <span class="circle">
                                                 <span class="check"></span>
                                               </span>
@@ -100,7 +101,7 @@
                                         </div>
                                         <div class="form-check">
                                             <label class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="gender" value="feminin" checked><i class="material-icons fa fa-female"></i> Féminin
+                                                <input class="form-check-input" type="radio" name="gender" value="feminin" {% if user.gender == "feminin" %} checked {% endif %}><i class="material-icons fa fa-female"></i> Féminin
                                                 <span class="circle">
                                                     <span class="check"></span>
                                                 </span>
@@ -129,11 +130,11 @@
                                         </div>
                                         <div class="custom-control">
                                             <select name="language" class="custom-select" id="language">
-                                                <option value="français">Français</option>
-                                                <option value="anglais">Anglais</option>
-                                                <option value="espanol">Espagnol</option>
-                                                <option value="allemand">Allemand</option>
-                                                <option value="chinois">Chinois</option>
+                                                <option value="français" {% if user.language == "français" %} selected {% endif %}>Français</option>
+                                                <option value="anglais" {% if user.language == "anglais" %} selected {% endif %}>Anglais</option>
+                                                <option value="espanol" {% if user.language == "espagnol" %} selected {% endif %}>Espagnol</option>
+                                                <option value="allemand" {% if user.language == "allemand" %} selected {% endif %}>Allemand</option>
+                                                <option value="chinois" {% if user.language == "chinois" %} selected {% endif %}>Chinois</option>
                                             </select>
                                         </div>
                                     </div>
@@ -149,7 +150,7 @@
                                         <div class="custom-control">
                                             <select name="country" class="custom-select" id="language">
                                                 {% for country in countries %}
-                                                    <option value="{{ country }}">{{ country }}</option>
+                                                    <option value="{{ country }}"  {% if user.country == country %} selected {% endif %} >{{ country }}</option>
                                                 {% endfor %}
                                             </select>
                                         </div>
@@ -174,7 +175,7 @@
                                                 <i class="fa fa-instagram"></i>
                                               </span>
                                             </div>
-                                            <input type="text" name="instagram" class="form-control" placeholder="lien de votre page instagram">
+                                            <input type="text" value="{{ user.instagramlink }}" name="instagram" class="form-control" placeholder="lien de votre page instagram">
                                         </div>
                                     </span>
                                     <span class="bmd-form-group" id="facebookContainer" style="display: none">
@@ -184,7 +185,7 @@
                                                 <i class="fa fa-facebook"></i>
                                               </span>
                                             </div>
-                                            <input type="text" name="facebook" class="form-control" placeholder="lien de votre page facebook">
+                                            <input type="text" value="{{ user.facebooklink }}" name="facebook" class="form-control" placeholder="lien de votre page facebook">
                                         </div>
                                     </span>
                                     <span class="bmd-form-group" id="twitterContainer" style="display: none">
@@ -194,7 +195,7 @@
                                                 <i class="fa fa-twitter"></i>
                                               </span>
                                             </div>
-                                            <input type="text" name="twitter" class="form-control" placeholder="lien de votre page twitter">
+                                            <input type="text" value="{{ user.twitterlink }}" name="twitter" class="form-control" placeholder="lien de votre page twitter">
                                         </div>
                                     </span>
                                     <span class="bmd-form-group" id="snapchatContainer" style="display: none">
@@ -204,7 +205,7 @@
                                                 <i class="fa fa-snapchat"></i>
                                               </span>
                                             </div>
-                                            <input type="text" name="snapchat" class="form-control" placeholder="lien de votre page snapchat">
+                                            <input type="text" value="{{ user.snapchatlink }}" name="snapchat" class="form-control" placeholder="lien de votre page snapchat">
                                         </div>
                                     </span>
                                 </div>
@@ -220,7 +221,7 @@
                                         {% for activity in activities %}
                                             <div class="form-check">
                                                 <label class="form-check-label">
-                                                    <input class="form-check-input" name="activities[]" type="checkbox" value="{{ activity.id }}"> {{ activity.description }}
+                                                    <input {% if activity.id == concerne.activity.id %} checked {% endif %} class="form-check-input" name="activities[]" type="checkbox" value="{{ activity.id }}"> {{ activity.description }}
                                                     <span class="form-check-sign">
                                                         <span class="check"></span>
                                                     </span>
@@ -243,7 +244,7 @@
                                         {% for partnerShipType in partnerShipTypes %}
                                             <div class="form-check">
                                                 <label class="form-check-label">
-                                                  <input class="form-check-input" type="radio" name="partner"  value="{{ partnerShipType.id }}"> {{ partnerShipType.description }}
+                                                  <input {% if partnerShipType.id == user.partnership.id %} checked {% endif %} class="form-check-input" type="radio" name="partner"  value="{{ partnerShipType.id }}"> {{ partnerShipType.description }}
                                                   <span class="circle">
                                                     <span class="check"></span>
                                                   </span>
@@ -264,7 +265,7 @@
                                 <div class="input-group justify-content-center mt-0">
                                     <div class="form-check">
                                         <label class="form-check-label">
-                                          <input class="form-check-input" type="radio" name="payment"  value="Orange Money"> Orange Money
+                                          <input class="form-check-input" {% if user.paymenttype == "Orange Money" %} checked {% endif %} type="radio" name="payment"  value="Orange Money"> Orange Money
                                           <span class="circle">
                                             <span class="check"></span>
                                           </span>
@@ -272,7 +273,7 @@
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label">
-                                            <input class="form-check-input" type="radio" name="payment" value="Mobile Money" checked> Mobile Money
+                                            <input class="form-check-input" {% if user.paymenttype == "Mobile Money" %} checked {% endif %} type="radio" name="payment" value="Mobile Money" checked> Mobile Money
                                             <span class="circle">
                                                 <span class="check"></span>
                                             </span>
@@ -280,7 +281,7 @@
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label">
-                                            <input class="form-check-input" type="radio" name="payment" value="Autres" checked> Autres
+                                            <input class="form-check-input" {% if user.paymenttype == "Autres" %} checked {% endif %}  type="radio" name="payment" value="Autres"> Autres
                                             <span class="circle">
                                                 <span class="check"></span>
                                             </span>
@@ -295,26 +296,14 @@
                                 </h3>
                                 <span class="description">Ajoutez quelques photos pertinente de vous(la qualité de l'image est exigé)</span>
                             </div>
-                            <span class="bmd-form-group">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                      <span class="input-group-text">
-                                      </span>
-                                    </div>
-                                    <div class="custom-control">
-                                        <input type="file" accept="image/*" multiple id="photos" name="photos[]" class="custom-file" required>
-                                    </div>
-                                </div>
-                                <div id="containerPhotos" class="m-3"></div>
-                            </span>
-
                             <div class="footer text-center mb-5">
-                                <button type="submit" class="login_btn btn btn-primary btn-wd ">Enregistrer</button>
+                                <button type="submit" class="login_btn btn btn-primary btn-wd ">Modifier</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
+            <p class="description text-center"><a href="{{ path('home_profile') }}"><i class="fa fa-home"></i> retour à l'accueil</a></p>
         </div>
 
         <script src="{{ asset('bundles/home/js/jquery-3.2.1.min.js') }}"></script>
@@ -359,8 +348,6 @@
                 });
             });
 
-
-
             $(document).ready(function() {
                 // Sliders Init
                 //materialKit.initSliders();
@@ -404,36 +391,6 @@
                     }else{
                         $(this).addClass("btn-info");
                         $('#twitterContainer').slideToggle();
-                    }
-                });
-
-                function imagePreview2(files) {
-                    var files = files.get()[0].files;
-                    $('#containerPhotos').html('');
-                    for(var i=0; i < files.length; i++){
-                        if(!files[0].type.match('image')) continue;
-                        var reader = new FileReader();
-                        reader.onload = function (e) {
-                            $('#containerPhotos').html($('#containerPhotos').html()+'<img src="'+reader.result+'" style="max-width: 128px;" alt="Photos" class="m-1 img-raised rounded img-fluid">');
-                        };
-                        reader.readAsDataURL(files[i]);
-                    }
-                }
-
-                function imagePreview(file) {
-                    $('#containerPhotos').html('');
-                    if(!file.type.match('image')) return;
-                    var reader = new FileReader();
-                    reader.onload = function (e) {
-                        $('#containerPhotos').html($('#containerPhotos').html()+'<img src="'+reader.result+'" style="max-width: 256px;" alt="Photos" class="">');
-                    };
-                    reader.readAsDataURL(file);
-                }
-
-                $('#photos').on('change', function (e) {
-                    var files = $(this).get()[0].files;
-                    for(var i=0; i < files.length; i++){
-                        imagePreview(files[i]);
                     }
                 });
             });

@@ -7,9 +7,9 @@
             <div class="container">
                 <div class="hero-content">
                     <img src="{{ asset('bundles/home/img/hero-icon.png') }}" alt="">
-                    <h2>Find your inner <span>CHI</span></h2>
-                    <p>Fusce erat dui, venenatis et erat in, vulputate dignissim lacus. Donec vitae tempus dolor, sit amet elementum lorem. Ut cursus tempor turpis.</p>
-                    <a href="#" class="site-btn">S'inscrire en tant qu'influenceur</a>
+                    <h2>Welcome to <span>Nop Agency</span></h2>
+                    <p>Agence d'influenceur basé à Douala. Devenez dès à présent un influenceur</p>
+                    <a href="{{ path('home_register') }}" class="site-btn">S'inscrire</a>
                 </div>
             </div>
             <img src="{{ asset('bundles/home/img/hero-img.png') }}" class="hero-img" alt="">
@@ -25,9 +25,8 @@
                         <div class="ci-icon">
                             <i class="flaticon-002-yin-yang"></i>
                         </div>
-                        <span>Begginer &amp; Advanced</span>
-                        <h4>Yoga</h4>
-                        <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor</p>
+                        <h4>Enfants &amp; Adultes</h4>
+                        <p>Plateforme ouverte aussi bien aux enfants qu'au adultes ayant de la notoriété sur les réseaux sociaux</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -35,9 +34,8 @@
                         <div class="ci-icon">
                             <i class="flaticon-001-meditation i-fix"></i>
                         </div>
-                        <span>Begginer &amp; Advanced</span>
-                        <h4>Hatha</h4>
-                        <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor</p>
+                        <h4>Règles et consignes</h4>
+                        <p>Consignes et règles établies avec clarté afin de vous accompagnez dans l'exercice de vos fonctions au sein de notre structure</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -45,9 +43,8 @@
                         <div class="ci-icon">
                             <i class="flaticon-021-yoga-mat"></i>
                         </div>
-                        <span>Begginer &amp; Advanced</span>
-                        <h4>Pilates</h4>
-                        <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor</p>
+                        <h4>Suivi &amp; Formation</h4>
+                        <p>Notre équipe suit chaque influenceur afin d'augmenter davantage leur côte sur les réseaux sociaux</p>
                     </div>
                 </div>
             </div>
@@ -60,11 +57,11 @@
                 <div class="col-lg-7">
                     <div class="meditation-content">
                         <div class="sp-title text-white">
-                            <span>Begginer &amp; Advanced</span>
-                            <h4>Meditation Sessions</h4>
+                            <span>Now starting</span>
+                            <h4>Commencer dès maintenant</h4>
                         </div>
-                        <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor. Ut pellentesque auctor lorem, at maximus lacus faucibus nec. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris auctor nunc non nulla euismod consequat. Pellentesque non mattis nulla. Fusce quis tempor risus, non elementum dui. Curabitur et mattis ex, a ultrices lorem. </p>
-                        <a href="#" class="site-btn">discover</a>
+                        <p>Découvrez la large gamme d'influenceur dont l'on dispose. Des influenceurs les plus haut top et les plus vu sur les réseaux. Rejoignez nous et vous en deviendriez un</p>
+                        <a href="{{ path('home_influencer') }}" class="site-btn">Découvrir</a>
                     </div>
                 </div>
             </div>
@@ -95,27 +92,29 @@
                 <div class="col-lg-7">
                     <div class="timetable-text">
                         <div class="sp-title">
-                            <h4>Meditation Sessions</h4>
+                            <h4>Nos heures de travail</h4>
                         </div>
-                        <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor. Ut pellentesque auctor lorem, at maximus lacus faucibus nec. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris auctor nunc non nulla euismod consequat. Pellentesque non mattis nulla. Fusce quis tempor risus, non elementum dui. Curabitur et mattis ex, a ultrices lorem. </p>
+                        <p>
+                            Nous sommmes disponibles de lundi à samedi. Pour l'encadremment et le suivi de nos influenceurs ainsi que l'attribution de leur différentes tâches.
+                        </p>
                         <div class="site-progress-bars">
                             <div class="progress-item">
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"><span>60%</span></div>
                                 </div>
-                                <p>Breathing</p>
+                                <p>Suivi</p>
                             </div>
                             <div class="progress-item">
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar" style="width: 87%;" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"><span>87%</span></div>
                                 </div>
-                                <p>Meditation</p>
+                                <p>Travail</p>
                             </div>
                             <div class="progress-item">
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><span>70%</span></div>
                                 </div>
-                                <p>Flexibility</p>
+                                <p>Formation</p>
                             </div>
                         </div>
                     </div>
@@ -123,27 +122,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Gallery section -->
-    <div class="gallery-section">
-        <div class="gallery-slider owl-carousel">
-            <div class="gallery-item">
-                <img src="{{ asset('bundles/home/img/gallery/1.jpg') }}" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="{{ asset('bundles/home/img/gallery/2.jpg') }}" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="{{ asset('bundles/home/img/gallery/3.jpg') }}" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="{{ asset('bundles/home/img/gallery/4.jpg') }}" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="{{ asset('bundles/home/img/gallery/5.jpg') }}" alt="">
-            </div>
-        </div>
-    </div>
 {% endblock %}
 {% block script %}
     <script>

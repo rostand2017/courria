@@ -12,33 +12,7 @@ admin_concert_change_affiche:
     path:     /concert/change_affiche
     defaults: { _controller: AdminBundle:Concert:changeAffiche }
 
-#CLIENT
-admin_client:
-    path:     /client
-    defaults: { _controller: AdminBundle:Client:index }
-admin_client_reservation:
-    path:     /client/reservation/{client}
-    defaults: { _controller: AdminBundle:Client:reservation }
-    requirements:
-        client: \d+
-admin_client_edit:
-    path:     /client/edit
-    defaults: { _controller: AdminBundle:Client:edit }
-admin_client_delete:
-    path:     /client/delete
-    defaults: { _controller: AdminBundle:Client:delete }
-
-#SALE
-admin_salle:
-    path:     /salle
-    defaults: { _controller: AdminBundle:Salle:index }
-admin_salle_edit:
-    path:     /salle/edit
-    defaults: { _controller: AdminBundle:Salle:edit }
-admin_salle_delete:
-    path:     /salle/delete
-    defaults: { _controller: AdminBundle:Salle:delete }
-
+#news letter
 admin_newsletter:
     path:     /newsletter
     defaults: { _controller: AdminBundle:NewsLetter:index }
@@ -61,19 +35,6 @@ admin_artiste_edit:
 admin_artiste_delete:
     path:     /artiste/delete
     defaults: { _controller: AdminBundle:Artiste:delete }
-
-#RESERVATION
-admin_reservation:
-    path:     /reservation/{concert}
-    defaults: { _controller: AdminBundle:Reservation:index }
-    requirements:
-        concert: \d+
-admin_reservation_edit:
-    path:     /reservation/edit
-    defaults: { _controller: AdminBundle:Reservation:edit }
-admin_reservation_delete:
-    path:     /reservation/delete
-    defaults: { _controller: AdminBundle:Reservation:delete }
 
 #COMMENTAIRE
 admin_commentaire:

@@ -106,6 +106,13 @@ class Influencer
     private $paymenttype;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=254, nullable=true)
+     */
+    private $password;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="createdat", type="datetime", nullable=true)
@@ -120,7 +127,7 @@ class Influencer
     private $updatedat;
 
     /**
-     * @var \Partnershiptype
+     * @var Partnershiptype
      *
      * @ORM\ManyToOne(targetEntity="Partnershiptype")
      * @ORM\JoinColumns({
@@ -130,6 +137,10 @@ class Influencer
     private $partnership;
 
 
+    public function __construct()
+    {
+        $this->createdat = new \DateTime();
+    }
 
     /**
      * Get id
@@ -211,6 +222,22 @@ class Influencer
     public function getEmail()
     {
         return $this->email;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param string $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
     }
 
     /**

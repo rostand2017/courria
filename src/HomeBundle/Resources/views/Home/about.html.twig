@@ -6,9 +6,9 @@
     <section class="page-info-section set-bg" data-setbg="{{ asset('bundles/home/img/page-top-bg/1.png') }}">
         <img src="{{ asset('bundles/home/img/page-top-bg/page-info-img.png') }}" alt="" class="page-info-img">
         <div class="container">
-            <h2>About us</h2>
+            <h2>A propos</h2>
             <div class="site-breadcrumb">
-                <a href="">Home</a> /
+                <a href="{{ path('home_homepage') }}">Accueil</a> /
                 <span>A propos</span>
             </div>
         </div>
@@ -22,11 +22,11 @@
             <div class="row">
                 <div class="col-lg-6 order-2 order-lg-1 about-text">
                     <div class="sp-title">
-                        <span>Begginer & Advanced</span>
+                        <span>Nop Agency</span>
                         <h4>Description</h4>
                     </div>
-                    <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor. Ut pellentesque auctor lorem, at maximus lacus faucibus nec. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris auctor nunc non nulla euismod consequat. Pellentesque non mattis nulla. Fusce quis tempor risus, non elementum dui. Curabitur et mattis ex, a ultrices lorem. </p>
-                    <a href="#" class="site-btn">lear more</a>
+                    <p>Nop Agency, la nouvelle agence d'influenceur basé au Cameroun dans la ville de Douala. Nop Agency vous accompagne, vous les influenceurs à travers le monde dans l'exercice de vos activité.</p>
+                    <a href="#" class="site-btn" target="_blank">En savoir plus</a>
                 </div>
                 <div class="col-lg-6  order-1 order-lg-2">
                     <img src="{{ asset('bundles/home/img/about-img.jpg') }}" alt="">
@@ -42,39 +42,30 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="ap-course-item">
+                    <div class="course-item">
                         <div class="ci-icon">
                             <i class="flaticon-002-yin-yang"></i>
                         </div>
-                        <div class="ci-content">
-                            <span>Begginer & Advanced</span>
-                            <h4>Yoga</h4>
-                            <p>Etiam pretium, nibh vitae varius ultr icies, tellus diam gravida elit.</p>
-                        </div>
+                        <h4>Enfants &amp; Adultes</h4>
+                        <p>Plateforme ouverte aussi bien aux enfants qu'au adultes ayant de la notoriété sur les réseaux sociaux</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="ap-course-item">
+                    <div class="course-item">
                         <div class="ci-icon">
-                            <i class="flaticon-001-meditation"></i>
+                            <i class="flaticon-001-meditation i-fix"></i>
                         </div>
-                        <div class="ci-content">
-                            <span>Begginer & Advanced</span>
-                            <h4>Hatha</h4>
-                            <p>Etiam pretium, nibh vitae varius ultr icies, tellus diam gravida elit.</p>
-                        </div>
+                        <h4>Règles et consignes</h4>
+                        <p>Consignes et règles établies avec clarté afin de vous accompagnez dans l'exercice de vos fonctions au sein de notre structure</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="ap-course-item">
+                    <div class="course-item">
                         <div class="ci-icon">
                             <i class="flaticon-021-yoga-mat"></i>
                         </div>
-                        <div class="ci-content">
-                            <span>Begginer & Advanced</span>
-                            <h4>Pilates</h4>
-                            <p>Etiam pretium, nibh vitae varius ultr icies, tellus diam gravida elit.</p>
-                        </div>
+                        <h4>Suivi &amp; Formation</h4>
+                        <p>Notre équipe suit chaque influenceur afin d'augmenter davantage leur côte sur les réseaux sociaux</p>
                     </div>
                 </div>
             </div>
@@ -84,7 +75,7 @@
 
 
     <!-- Appointment section -->
-    <section class="appointment-section set-bg" data-setbg="img/appointment-bg.jpg">
+    <section class="appointment-section set-bg" data-setbg="{{ asset('bundles/home/img/appointment-bg.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5">
@@ -94,37 +85,14 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="appointment-text text-white">
-                        <span>Begginer & Advanced</span>
-                        <h2>Make an appointment</h2>
-                        <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor. Ut pellentesque auctor lorem, at maximus lacus faucibus nec. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris auctor nunc non nulla euismod consequat. Pellentesque non mattis nulla. Fusce quis tempor risus, non elementum dui. Curabitur et mattis ex, a ultrices lorem.</p>
+                        <span>Nop Agency</span>
+                        <h2>Gain et Popularité</h2>
+                        <p>Faites un max de gain et devenez de plus en plus populaire grâce à Nop Agency. Rencontrez des stars et travaillez avec des entreprises de partout dans le monde par le biais de Nop Agency.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Appointment section -->
-
-    <!-- Gallery section -->
-    <div class="gallery-section">
-        <div class="gallery-slider owl-carousel">
-            <div class="gallery-item">
-                <img src="img/gallery/1.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/gallery/2.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/gallery/3.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/gallery/4.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/gallery/5.jpg" alt="">
-            </div>
-        </div>
-    </div>
-    <!-- Gallery section end -->
 {% endblock %}
 {% block script %}
 

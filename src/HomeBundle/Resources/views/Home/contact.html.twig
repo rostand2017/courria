@@ -8,8 +8,8 @@
         <div class="container">
             <h2>Contact</h2>
             <div class="site-breadcrumb">
-                <a href="">Accueil</a> /
-                <span>Blog</span>
+                <a href="{{ path('home_homepage') }}">Accueil</a> /
+                <span>Contact</span>
             </div>
         </div>
     </section>
@@ -26,7 +26,7 @@
                             <span>Contact info</span>
                             <h4>A propos de nous</h4>
                         </div>
-                        <p>Etiam pretium, nibh vitae varius ultricies, tellus diam gravida elit, vel rhoncus eros eros sit amet ipsum. Cras cursus pellentesque tortor. Ut pellentesque auctor lorem, at maximus lacus faucibus nec. Interdum et malesuada.</p>
+                        <p>Dites nous un mot. Envoyez nous vos remarques et vos incomprehension. Nous sommes là pour vous et destiné à vous répondre</p>
                         <h6>Information</h6>
                         <ul>
                             <li>Douala-Cameroun</li>
@@ -44,8 +44,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <input type="email" name="email" placeholder="Votre email">
-                                <textarea name="message" placeholder="Message"></textarea>
-                                <button id="btn-commentaire" class="site-btn">send</button>
+                                <textarea name="message" id="commentaire" placeholder="Message"></textarea>
+                                <button id="btn-commentaire" class="site-btn">envoyer</button>
                             </div>
                         </div>
                     </form>
@@ -53,29 +53,6 @@
             </div>
         </div>
     </section>
-    <!-- Contact page section end -->
-
-    <!-- Gallery section -->
-    <div class="gallery-section">
-        <div class="gallery-slider owl-carousel">
-            <div class="gallery-item">
-                <img src="img/gallery/1.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/gallery/2.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/gallery/3.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/gallery/4.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img src="img/gallery/5.jpg" alt="">
-            </div>
-        </div>
-    </div>
-    <!-- Gallery section end -->
 {% endblock %}
 {% block script %}
     <script src="{{ asset('bundles/home/js/sweetalert.min.js') }}"></script>
@@ -100,7 +77,7 @@
                     }
                 },
                 complete: function () {
-                    $('#btn-commentaire').text('souscrire').prop('disabled',false);
+                    $('#btn-commentaire').text('ENVOYER').prop('disabled',false);
                 },
                 error: function(jqXHR, textStatus, errorThrown){
                 }

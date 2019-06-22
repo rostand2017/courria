@@ -22,6 +22,10 @@ home_register:
     path:     /register
     defaults: { _controller: HomeBundle:Account:register }
 
+home_logout:
+    path:     /logout
+    defaults: { _controller: HomeBundle:Account:logout }
+
 home_change_password:
     path:     /change_password
     defaults: { _controller: HomeBundle:Account:changePassword }
@@ -29,3 +33,27 @@ home_change_password:
 home_forgot_password:
     path:     /forgot_password
     defaults: { _controller: HomeBundle:Account:forgotPassword }
+
+home_profile:
+    path:     /profile
+    defaults: { _controller: HomeBundle:DashBoard:profile }
+
+home_add_photo:
+    path:     /add_photo/{influencer}
+    defaults: { _controller: HomeBundle:DashBoard:addPhoto }
+    requirements:
+        photo: \d+
+
+home_remove_photo:
+    path:     /remove_photo/{photo}
+    defaults: { _controller: HomeBundle:DashBoard:removePhoto }
+    requirements:
+        photo: \d+
+
+home_modify_profil:
+    path:     /profile/modify
+    defaults: { _controller: HomeBundle:DashBoard:modify }
+
+home_modify_profil_done:
+    path:     /profile/modify/done
+    defaults: { _controller: HomeBundle:DashBoard:modifyProfile }

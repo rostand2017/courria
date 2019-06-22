@@ -22,9 +22,9 @@ class Partnershiptype
     private $id;
 
     /**
-     * @var integer
+     * @var string
      *
-     * @ORM\Column(name="description", type="integer", nullable=true)
+     * @ORM\Column(name="description", type="string", nullable=true)
      */
     private $description;
 
@@ -50,7 +50,7 @@ class Partnershiptype
     /**
      * Set description
      *
-     * @param integer $description
+     * @param string $description
      *
      * @return Partnershiptype
      */
@@ -64,7 +64,7 @@ class Partnershiptype
     /**
      * Get description
      *
-     * @return integer
+     * @return string
      */
     public function getDescription()
     {

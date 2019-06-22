@@ -1,0 +1,157 @@
+{% extends "HomeBundle::layout.html.twig" %}
+
+{% block title %}Nop Agency{% endblock %}
+{% block body %}
+    <section class="hero-section set-bg" data-setbg="{{ asset('bundles/home/img/hero-bg.png') }}" style="background-image: url('{{ asset('bundles/home/img/hero-icon.png') }}');">
+        <div class="hero-content-warp">
+            <div class="container">
+                <div class="hero-content">
+                    <img src="{{ asset('bundles/home/img/hero-icon.png') }}" alt="">
+                    <h2>le top des <span>influenceurs</span></h2>
+                    <p>Listing de quelques influenceurs de Nop Agency.</p>
+                    <a href="#listInfluencer" class="site-btn">Voir <i class="fa fa-arrow-down"></i></a>
+                </div>
+            </div>
+            <img src="{{ asset('bundles/home/img/hero-img.png') }}" class="hero-img" alt="">
+        </div>
+    </section>
+
+    <!-- work time-->
+    <section class="timetable-section spad">
+        <div class="container" id="listInfluencer">
+            <div class="row">
+                {% set i = 0 %}
+                {% for photo in photos %}
+                    {% if i==0 %}
+                        {% set i=1 %}
+                        <div class="col-lg-5 col-md-9">
+                            <div class="timetable-box">
+                                <div class="sp-title">
+                                    <h4>{{ photo.influencer.name }}</h4>
+                                </div>
+                                <div>
+                                    <img src="/uploads/images/{{ photo.link }}" alt="influencer">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="timetable-text">
+                                <div class="sp-title">
+                                    <h4>{{ photo.influencer.country }}</h4>
+                                </div>
+                                <p>
+                                    {{ photo.influencer.name }} âgé de {{ photo.influencer.old }} ans. Influenceur chez Nop Agency et fier de l'être
+                                </p>
+                                <div class="site-progress-bars">
+                                    <div class="progress-item">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"><span>60%</span></div>
+                                        </div>
+                                        <p>Suivi</p>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 87%;" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"><span>87%</span></div>
+                                        </div>
+                                        <p>Travail</p>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><span>70%</span></div>
+                                        </div>
+                                        <p>Formation</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    {% if photo.influencer.instagramLink != '' %}<a href="{{ photo.influencer.instagramLink }}" target="_blank" class="btn btn-warning "><i class="fa fa-instagram"></i> instagram</a>{% endif %}
+                                    {% if photo.influencer.facebookLink != '' %}<a href="{{ photo.influencer.facebookLink }}" target="_blank" class="btn text-light" style="background: #2866c6"><i class="fa fa-facebook"></i> facebook</a>{% endif %}
+                                    {% if photo.influencer.snapchatLink != '' %}<a href="{{ photo.influencer.snapchatLink }}" target="_blank" class="btn" style="background: #fffe23"><i class="fa fa-snapchat-ghost"></i> snapchat</a>{% endif %}
+                                    {% if photo.influencer.twitterLink != '' %}<a href="{{ photo.influencer.twitterLink }}" target="_blank" class="btn btn-info"><i class="fa fa-twitter"></i> twitter</a>{% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% else %}
+                        {% set i=0 %}
+                        <div class="col-lg-7">
+                            <div class="timetable-text">
+                                <div class="sp-title">
+                                    <h4>{{ photo.influencer.country }}</h4>
+                                </div>
+                                <p>
+                                    Nous sommmes disponibles de lundi à samedi. Pour l'encadremment et le suivi de nos influenceurs ainsi que l'attribution de leur différentes tâches.
+                                </p>
+                                <div class="site-progress-bars">
+                                    <div class="progress-item">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"><span>60%</span></div>
+                                        </div>
+                                        <p>Suivi</p>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 87%;" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"><span>87%</span></div>
+                                        </div>
+                                        <p>Travail</p>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><span>70%</span></div>
+                                        </div>
+                                        <p>Formation</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    {% if photo.influencer.instagramLink != '' %}<a href="{{ photo.influencer.instagramLink }}" target="_blank" class="btn btn-warning "><i class="fa fa-instagram"></i> instagram</a>{% endif %}
+                                    {% if photo.influencer.facebookLink != '' %}<a href="{{ photo.influencer.facebookLink }}" target="_blank" class="btn text-light" style="background: #2866c6"><i class="fa fa-facebook"></i> facebook</a>{% endif %}
+                                    {% if photo.influencer.snapchatLink != '' %}<a href="{{ photo.influencer.snapchatLink }}" target="_blank" class="btn" style="background: #fffe23"><i class="fa fa-snapchat-ghost"></i> snapchat</a>{% endif %}
+                                    {% if photo.influencer.twitterLink != '' %}<a href="{{ photo.influencer.twitterLink }}" target="_blank" class="btn btn-info"><i class="fa fa-twitter"></i> twitter</a>{% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-9">
+                            <div class="timetable-box">
+                                <div class="sp-title">
+                                    <h4>{{ photo.influencer.name }}</h4>
+                                </div>
+                                <div>
+                                    <img src="/uploads/images/{{ photo.link }}" alt="influencer">
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block script %}
+    <script>
+        $('#formCommentaire').on("submit", function (e) {
+            e.preventDefault();
+            data = $(this).serialize();
+            $.ajax({
+                type: 'post',
+                url: $(this).attr('action'),
+                data: data,
+                datatype: 'json',
+                beforeSend: function () {
+                    $('#btn-commentaire').text('Chargement ...').prop('disabled',true);
+                },
+                success: function (json) {
+                    if(json.status == 0){
+                        swal(json.message);
+                        $('#commentaire').val('');
+                    }else{
+                        swal("Erreur",json.message);
+                    }
+                },
+                complete: function () {
+                    $('#btn-commentaire').text('souscrire').prop('disabled',false);
+                },
+                error: function(jqXHR, textStatus, errorThrown){
+                }
+            });
+
+        })
+    </script>
+{% endblock %}

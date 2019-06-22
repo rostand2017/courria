@@ -2,14 +2,15 @@
 
 namespace HomeBundle\Controller;
 
-use Facebook\Facebook;
 use HomeBundle\Entity\Activity;
 use HomeBundle\Entity\Category;
 use HomeBundle\Entity\Commentaire;
 use HomeBundle\Entity\Concert;
 use HomeBundle\Entity\Contact;
 use HomeBundle\Entity\Image;
+use HomeBundle\Entity\Influencer;
 use HomeBundle\Entity\NewsLetter;
+use HomeBundle\Entity\Photo;
 use HomeBundle\Entity\Product;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -20,21 +21,35 @@ class HomeController extends Controller
 
     public function indexAction()
     {
-        //$em = $this->getDoctrine()->getManager();
+        $em = $this->getDoctrine()->getManager();
+        $photos = $em->getRepository(Photo::class)->findBy([], [], 5, 0);
         return $this->render('HomeBundle:Home:index.html.twig', array(
-
+            "photos" => $photos
         ));
     }
     public function influencerAction()
     {
         $em = $this->getDoctrine()->getManager();
+        $influencers = $em->getRepository(Influencer::class)->findBy([], [], 4, 0);
+        $photos = array();
+        foreach ($influencers as $influencer){
+            $photo = $em->getRepository(Photo::class)->findOneByInfluencer($influencer->getId());
+            if(!$photo)
+                continue;
+            array_push($photos, $photo);
+        }
         return $this->render('HomeBundle:Home:influencer.html.twig', array(
-
+            "influencers" => $influencers,
+            "photos" => $photos
         ));
     }
 
     public function aboutAction(){
-        return $this->render("HomeBundle:Home:about.html.twig");
+        $em = $this->getDoctrine()->getManager();
+        $photos = $em->getRepository(Photo::class)->findBy([], [], 5, 0);
+        return $this->render("HomeBundle:Home:about.html.twig", array(
+            "photos" => $photos
+        ));
     }
 
     public function contactAction(Request $request){
@@ -49,19 +64,16 @@ class HomeController extends Controller
                 $c->setMessage($message);
                 $em->persist($c);
                 $em->flush();
-                return new JsonResponse(['status'=>1, 'message'=>'Message envoyé avec succès']);
+                return new JsonResponse(['status'=>0, 'mes'=>'Message envoyé avec succès']);
             }else{
-                return new JsonResponse(['status'=>0, 'message'=>'Remplir les champs avec conformité']);
+                return new JsonResponse(['status'=>1, 'mes'=>'Remplissez les champs avec conformité']);
             }
         }
-        return $this->render("HomeBundle:Home:contact.html.twig");
-    }
-
-    public function loginAction(Request $request){
-        if($request->getSession()->get("user")){
-            return $this->redirectToRoute("home_homepage");
-        }
-        return $this->render("HomeBundle:Login:login.html.twig", array());
+        $em = $this->getDoctrine()->getManager();
+        $photos = $em->getRepository(Photo::class)->findBy([], [], 5, 0);
+        return $this->render("HomeBundle:Home:contact.html.twig", array(
+            "photos" => $photos
+        ));
     }
 
 }

@@ -29,7 +29,7 @@ class Photo
     private $link;
 
     /**
-     * @var \Influencer
+     * @var Influencer
      *
      * @ORM\ManyToOne(targetEntity="Influencer")
      * @ORM\JoinColumns({

@@ -44,7 +44,14 @@
                 <a href=""><i class="fa fa-facebook"></i></a>
                 <a href=""><i class="fa fa-instagram"></i></a>
                 <a href=""><i class="fa fa-twitter"></i></a>
-                <a href="{{ path('home_login') }}">Se connecter</a>
+                {% if app.session.get('user') %}
+                    <a class="dropdown" href="{{ path('home_profile') }}">
+                        <i class="fa fa-2x fa-user-circle"></i> {{ app.session.get('user').name }}
+                    </a>
+                    <a href="{{ path('home_logout') }}">Déconnexion</a>
+                {% else %}
+                    <a class="btn btn-secondary" href="{{ path('home_login') }}">Se connecter</a>
+                {% endif %}
             </div>
             <ul class="main-menu">
                 <li class="active"><a href="{{ path('home_homepage') }}">Accueil</a></li>
@@ -56,21 +63,35 @@
 
         {% block body %}{% endblock %}
 
+        <div class="gallery-section">
+            <div class="gallery-slider owl-carousel">
+                {% for photo in photos %}
+                    <div class="gallery-item " style="max-height: 200px">
+                        <img src="/uploads/thumbnails/{{ photo.link }}" alt="">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
         <footer class="footer-section">
             <div class="contaienr text-center">
-                <p><img src="img/footer-icon.png" alt="">
-                    Copyright ©<script>document.write(new Date().getFullYear());</script>2019 All rights reserved | Influencer agency <i class="fa fa-heart-o" aria-hidden="true"></i> <a href="mailto:contact@nopagency.com">contact@nopagency.com</a>
+                <p><img src="{{ asset('bundles/home/img/footer-icon.png') }}" alt="">
+                    Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved | Nop Agency <i class="fa fa-heart-o" aria-hidden="true"></i> <a href="mailto:contact@nopagency.com">contact@nopagency.com</a>
                 </p>
             </div>
         </footer>
 
         <script src="{{ asset('bundles/home/js/jquery-3.2.1.min.js') }}"></script>
+        <script src="{{ asset('bundles/home/js/popper.min.js') }}"></script>
         <script src="{{ asset('bundles/home/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('bundles/home/js/jquery.slicknav.min.js') }}"></script>
         <script src="{{ asset('bundles/home/js/owl.carousel.min.js') }}"></script>
         <script src="{{ asset('bundles/home/js/circle-progress.min.js') }}"></script>
         <script src="{{ asset('bundles/home/js/main.js') }}"></script>
         <script src="{{ asset('bundles/home/js/sweetalert.min.js') }}"></script>
+        <script>
+            //$('popper')
+        </script>
         {% block script %}{% endblock %}
     </body>
 </html>
