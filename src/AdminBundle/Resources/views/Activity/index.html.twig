@@ -1,0 +1,118 @@
+{% extends "AdminBundle::layout.html.twig" %}
+{% block title %} Activités {% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{{ asset("bundles/admin/assets/skins/dropify/css/dropify.css")}}"/>
+{% endblock %}
+{% block body %}
+    <div class="md-card uk-margin-medium-bottom">
+        <div class="md-card-toolbar">
+            <div class="md-card-toolbar-actions">
+                <i class="md-icon material-icons md-card-fullscreen-activate">&#xE5D0;</i>
+                <i class="md-icon material-icons md-card-toggle">&#xE316;</i>
+                <a href="{{ path('admin_activity') }}"><i class="md-icon uk-icon-refresh"></i></a>
+            </div>
+            <h3 class="md-card-toolbar-heading-text">
+                <a href="{{ path('admin_homepage') }}"><i class="md-icon uk-icon-arrow-left"></i></a>
+                Activités
+                <span class="uk-badge uk-badge-warning">{{ nbActivity }}</span>
+            </h3>
+        </div>
+        <div class="md-card-content">
+            <div>
+                <div class="uk-grid" data-uk-grid-margin="">
+                    <div class="uk-width-medium-1-1">
+                        <table class="uk-table uk-table-nowrap table_check">
+                            <thead>
+                            <tr>
+                                <th>Activité</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                {% for activity in activities %}
+                                    <tr>
+                                        <td>{{ activity.description }}</td>
+                                        <td>
+                                            <a class='editActivity' data-uk-tooltip="{pos:'top'}" title="Modifier l'activité" data-id="{{ activity.id }}" data-description="{{ activity.description }}"><i class='uk-icon-edit uk-icon-medium'></i></a>
+                                            <a class='deleteActivity' data-uk-tooltip="{pos:'top'}" title="Supprimer l'activité" data-url="{{ path('admin_activity_delete') }}" data-id="{{ activity.id }}" data-description="{{ activity.description }}"><i class='uk-icon-trash uk-icon-medium uk-text-danger'></i></a>
+                                        </td>
+                                    </tr>
+                                {% else %}
+                                    <tr><td colspan="4" class="uk-text-danger uk-text-center">Aucune activité</td></tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="md-fab-wrapper">
+        <a class="md-fab md-fab-accent md-fab-wave" id="addActivity" href="#" data-uk-modal="{center:true}">
+            <i class="material-icons"></i>
+        </a>
+    </div>
+
+    <div class="uk-modal" id="modalActivity">
+        <div class="uk-modal-dialog" style="width: 75%;">
+            <button class="uk-modal-close uk-close" type="button"></button>
+            <form action="{{ path('admin_activity_add') }}" id="formActivity" method="post">
+                <div class="uk-modal-header">
+                    <h3 class="heading_b uk-margin-bottom titleForm">Ajoutez une activité</h3>
+                    <div class="text-center" id="messageformSalle"></div>
+                </div>
+                <div class="uk-grid" data-uk-grid-margin>
+                    <div class="uk-width-medium-1-1">
+                        <div class="parsley-row">
+                            <h4>Activité</h4>
+                            <input type="hidden" id="id" name="id">
+                            <textarea name="description" id="description" rows="1" class="md-input"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-modal-footer">
+                    <a href="#" class="md-icon-btn"><i class="md-icon uk-icon-save"></i></a>
+                    <button type="submit" class="sendBtn uk-float-right md-btn md-btn-flat md-btn-flat-primary">Ajouter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script src="{{ asset("bundles/admin/assets/js/custom/dropify/dist/js/dropify.min.js") }}"></script>
+    <script src="{{ asset("bundles/admin/assets/js/pages/forms_file_input.min.js") }}"></script>
+    <script src="{{ asset("bundles/admin/bower_components/ckeditor/ckeditor.js") }}"></script>
+    <script src="{{ asset("bundles/admin/bower_components/ckeditor/adapters/jquery.js") }}"></script>
+    <script src="{{ asset("bundles/admin/assets/js/activity.js") }}"></script>
+    <script>
+        $(document).on('click','.deleteActivity', function (e) {
+            e.preventDefault();
+            var url = $(this).data('url'),
+                id = $(this).data('id');
+            mess = "Êtes vous sûr de vouloir supprimer l'activité "+$(this).data('description')+"?";
+            UIkit.modal.confirm(mess, function(){
+                if(url!='' && id!=''){
+                    $.ajax({
+                        type: 'post',
+                        url: url,
+                        data: 'id='+id,
+                        datatype: 'json',
+                        beforeSend: function () {},
+                        success: function (json) {
+                            if (json.status == 0) {
+                                UIkit.notify({message:json.mes,status:'success',timeout : 5000,pos:'top-center'});
+                                window.location.reload();
+                            } else {
+                                UIkit.notify({message:json.mes,status:'danger',timeout : 5000,pos:'top-center'});
+                            }
+                        },
+                        complete: function () {},
+                        error: function (jqXHR, textStatus, errorThrown) {}
+                    });
+                }else{
+                    UIkit.notify({message:"Une erreur est survenue",status:'danger',timeout : 5000,pos:'top-center'});
+                }
+            });
+        });
+    </script>
+{% endblock %}

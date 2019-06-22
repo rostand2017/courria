@@ -14,7 +14,7 @@
             <h3 class="md-card-toolbar-heading-text">
                 <a href="{{ path('admin_homepage') }}"><i class="md-icon uk-icon-arrow-left"></i></a>
                 Liste des commentaires
-                <span class="uk-badge uk-badge-warning">{{ nbCommentaire }}</span>
+                <span class="uk-badge uk-badge-warning">{{ nbContact }}</span>
             </h3>
         </div>
         <div class="md-card-content">
@@ -55,27 +55,25 @@
                         <table class="uk-table uk-table-nowrap table_check">
                             <thead>
                             <tr>
-                                <th>Nom</th>
-                                <th>commentaire</th>
-                                <th>date</th>
+                                <th>Email</th>
+                                <th>Commentaire</th>
+                                <th>Date</th>
                                 <th></th>
                             </tr>
                             </thead>
                             <tbody>
-                            {% for commentaire in commentaires %}
+                            {% for contact in contacts %}
                                 <tr>
-                                    <td>{{ commentaire.nom }}</td>
-                                    <td>{{ commentaire.message }}</td>
-                                    <td>{{ commentaire.createdat | date('d-m-y')}}</td>
-                                    <td><a class='deleteCommentaire' data-uk-tooltip="{pos:'top'}" title='Supprimer le commentaire' data-url="{{ path('admin_commentaire_delete') }}" data-id="{{ commentaire.id }}" data-nom="{{ commentaire.nom }}"><i class='uk-icon-trash uk-icon-medium uk-text-danger'></i></a></td>
+                                    <td>{{ contact.email }}</td>
+                                    <td>{{ contact.message }}</td>
+                                    <td>{{ contact.createdat | date('d M Y')}}</td>
+                                    <td><a class='deleteCommentaire' data-uk-tooltip="{pos:'top'}" title='Supprimer le commentaire' data-url="{{ path('admin_commentaire_delete') }}" data-id="{{ contact.id }}" data-nom="{{ contact.email }}"><i class='uk-icon-trash uk-icon-medium uk-text-danger'></i></a></td>
                                 </tr>
                             {% else %}
                                 <tr><td colspan="4" class="uk-text-danger uk-text-center">Aucun commentaire</td></tr>
                             {% endfor %}
                             </tbody>
-                        </table>
-
-                        <tfoot class="uk-width-medium-1-1">
+                            <tfoot class="uk-width-medium-1-1">
                             <tr>
                                 {% if nbPage > 1 %}
                                     <td colspan="8">
@@ -99,7 +97,8 @@
                                     </td>
                                 {% endif %}
                             </tr>
-                        </tfoot>
+                            </tfoot>
+                        </table>
                     </div>
                 </div>
             </div>

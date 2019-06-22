@@ -1,48 +1,58 @@
-#CONCERT
+#Influenceur
 admin_homepage:
-    path:     /concert
-    defaults: { _controller: AdminBundle:Concert:index }
-admin_concert_delete:
-    path:     /concert/delete
-    defaults: { _controller: AdminBundle:Concert:delete }
-admin_concert_edit:
-    path:     /concert/edit
-    defaults: { _controller: AdminBundle:Concert:edit }
-admin_concert_change_affiche:
-    path:     /concert/change_affiche
-    defaults: { _controller: AdminBundle:Concert:changeAffiche }
+    path:     /influencer
+    defaults: { _controller: AdminBundle:Influencer:index }
+admin_influencer_delete:
+    path:     /influencer/delete
+    defaults: { _controller: AdminBundle:Influencer:delete }
+admin_influencer_see:
+    path:     /influencer/{influencer}
+    defaults: { _controller: AdminBundle:Influencer:see }
+    requirements:
+        influencer: \d+
 
 #news letter
-admin_newsletter:
-    path:     /newsletter
+admin_message:
+    path:     /message
     defaults: { _controller: AdminBundle:NewsLetter:index }
-admin_newsletter_sent:
-    path:     /newsletter/sent
+admin_message_sent:
+    path:     /message/sent
     defaults: { _controller: AdminBundle:NewsLetter:sent }
-admin_newsletter_delete:
-    path:     /newsletter/delete/{newsletter}
+admin_message_delete:
+    path:     /message/delete/{message}
     defaults: { _controller: AdminBundle:NewsLetter:delete }
     requirements:
-        newsletter: \d+
-
-#ARTISTE
-admin_artiste:
-    path:     /artiste
-    defaults: { _controller: AdminBundle:Artiste:index }
-admin_artiste_edit:
-    path:     /artiste/edit
-    defaults: { _controller: AdminBundle:Artiste:edit }
-admin_artiste_delete:
-    path:     /artiste/delete
-    defaults: { _controller: AdminBundle:Artiste:delete }
+        message: \d+
 
 #COMMENTAIRE
 admin_commentaire:
     path:     /commentaire
-    defaults: { _controller: AdminBundle:Commentaire:index }
+    defaults: { _controller: AdminBundle:Contact:index }
 admin_commentaire_delete:
     path:     /commentaire/delete
-    defaults: { _controller: AdminBundle:Commentaire:delete }
+    defaults: { _controller: AdminBundle:Contact:delete }
+
+#ACTIVITY
+admin_activity:
+    path:     /activity
+    defaults: { _controller: AdminBundle:Activity:index }
+admin_activity_add:
+    path:     /activity/add
+    defaults: { _controller: AdminBundle:Activity:add }
+admin_activity_delete:
+    path:     /activity/delete
+    defaults: { _controller: AdminBundle:Activity:delete }
+
+#PARTNERSHIP TYPE
+admin_partnership_type:
+    path:     /partnership_type
+    defaults: { _controller: AdminBundle:PartnershipType:index }
+admin_partnership_type_add:
+    path:     /partnership_type/add
+    defaults: { _controller: AdminBundle:PartnershipType:add }
+admin_partnership_type_delete:
+    path:     /partnership_type/delete
+    defaults: { _controller: AdminBundle:PartnershipType:delete }
 
 
 #CONNEXION

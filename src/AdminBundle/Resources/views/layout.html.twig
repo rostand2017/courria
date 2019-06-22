@@ -17,9 +17,9 @@
         <title>{% block title %}{% endblock %}</title>
     </head>
 
-    <body class=" sidebar_main_open sidebar_main_swipe">
+    <body class=" sidebar_main_open sidebar_main_swipe"  style="background: rgba(79,42,161,0.05)">
     <!-- main header -->
-        <header id="header_main">
+        <header id="header_main"  style="background: #4f2aa1">
             <div class="header_main_content">
                 <nav class="uk-navbar">
                     <!-- main sidebar switch -->
@@ -61,47 +61,41 @@
             <div class="sidebar_main_header">
                 <div class="sidebar_logo" style="height: auto;">
                     <a href="" class="sSidebar_hide sidebar_logo_large">
-                    <img class="logo_regular" src="{{ asset('bundles/home/favicon.svg') }}" alt="" style="width: 100px; padding-top: 5px" />
+                    <img class="logo_regular" src="{{ asset('bundles/home/favicon.svg') }}" alt="Nop Agency" style="width: 100px; padding-top: 5px" />
                     </a>
                 </div>
                 <br/>
                 <div class="menu_section">
                     <ul>
                         {% set uri  = app.request.getRequestUri() %}
-                        <li class="{% if  uri ==  path('admin_homepage')%}current_section{% endif %}" title="Concert">
+                        <li class="{% if  uri ==  path('admin_homepage')%}current_section{% endif %}" title="Influencer">
                             <a href="{{ path('admin_homepage') }}">
-                                <span class="menu_icon"><i class="uk-icon-calendar-minus-o uk-icon-medium"></i></span>
-                                <span class="menu_title">Concerts</span>
-                            </a>
-                        </li>
-                        <li class="{% if  uri ==  path('admin_salle')%}current_section{% endif %}" title="Salles concert">
-                            <a href="{{ path('admin_salle') }}" >
-                                <span class="menu_icon"><i class="uk-icon-building uk-icon-medium"></i></span>
-                                <span class="menu_title">Salles de concert</span>
-                            </a>
-                        </li>
-                        <li class="{% if  uri ==  path('admin_client')%}current_section{% endif %}" title="Utilisateurs de l'application">
-                            <a href="{{ path('admin_client') }}">
                                 <span class="menu_icon"><i class="uk-icon-user uk-icon-medium"></i></span>
-                                <span class="menu_title">Utilisateurs</span>
+                                <span class="menu_title">Influenceurs</span>
                             </a>
                         </li>
-                        <li class="{% if  uri ==  path('admin_artiste')%}current_section{% endif %}" title="Liste des artistes">
-                            <a href="{{ path('admin_artiste') }}">
-                                <span class="menu_icon"><i class="uk-icon-music uk-icon-medium"></i></span>
-                                <span class="menu_title">Artistes</span>
-                            </a>
-                        </li>
-                        <li class="{% if  uri ==  path('admin_newsletter')%}current_section{% endif %}" title="NewsLetter">
-                            <a href="{{ path('admin_newsletter') }}">
+                        <li class="{% if  uri ==  path('admin_message')%}current_section{% endif %}" title="Message aux influencers">
+                            <a href="{{ path('admin_message') }}" >
                                 <span class="menu_icon"><i class="uk-icon-newspaper-o uk-icon-medium"></i></span>
-                                <span class="menu_title">NewsLetter</span>
+                                <span class="menu_title">Messages</span>
                             </a>
                         </li>
                         <li class="{% if  uri ==  path('admin_commentaire')%}current_section{% endif %}" title="Commentaires">
                             <a href="{{ path('admin_commentaire') }}">
                                 <span class="menu_icon"><i class="uk-icon-comment uk-icon-medium"></i></span>
                                 <span class="menu_title">Commentaires</span>
+                            </a>
+                        </li>
+                        <li class="{% if  uri ==  path('admin_activity')%}current_section{% endif %}" title="Activités">
+                            <a href="{{ path('admin_activity') }}">
+                                <span class="menu_icon"><i class="uk-icon-bicycle uk-icon-medium"></i></span>
+                                <span class="menu_title">Activités</span>
+                            </a>
+                        </li>
+                        <li class="{% if  uri ==  path('admin_partnership_type')%}current_section{% endif %}" title="Type de partenariat">
+                            <a href="{{ path('admin_partnership_type') }}">
+                                <span class="menu_icon"><i class="uk-icon-link uk-icon-medium"></i></span>
+                                <span class="menu_title">Type de partenariat</span>
                             </a>
                         </li>
                     </ul>

@@ -24,7 +24,7 @@ class Photo
     /**
      * @var string
      *
-     * @ORM\Column(name="link", type="string", length=254, nullable=true)
+     * @ORM\Column(name="link", type="string", length=254, nullable=false)
      */
     private $link;
 

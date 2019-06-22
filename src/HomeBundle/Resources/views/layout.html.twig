@@ -54,10 +54,11 @@
                 {% endif %}
             </div>
             <ul class="main-menu">
-                <li class="active"><a href="{{ path('home_homepage') }}">Accueil</a></li>
-                <li><a href="{{ path('home_influencer') }}">Influenceurs</a></li>
-                <li><a href="{{ path('home_about') }}">A propos</a></li>
-                <li><a href="{{ path('home_contact') }}">Contact</a></li>
+                {% set uri  = app.request.getRequestUri() %}
+                <li class="{% if  uri ==  path('home_homepage')%}active{% endif %}"><a href="{{ path('home_homepage') }}">Accueil</a></li>
+                <li class="{% if  uri ==  path('home_influencer')%}active{% endif %}"><a href="{{ path('home_influencer') }}">Influenceurs</a></li>
+                <li class="{% if  uri ==  path('home_about')%}active{% endif %}"><a href="{{ path('home_about') }}">A propos</a></li>
+                <li class="{% if  uri ==  path('home_contact')%}active{% endif %}"><a href="{{ path('home_contact') }}">Contact</a></li>
             </ul>
     </header>
 

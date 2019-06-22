@@ -24,49 +24,49 @@ class Influencer
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=254, nullable=true)
+     * @ORM\Column(name="name", type="string", length=254, nullable=false)
      */
     private $name;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="tel", type="string", length=254, nullable=true)
+     * @ORM\Column(name="tel", type="string", length=254, nullable=false)
      */
     private $tel;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="email", type="string", length=254, nullable=true)
+     * @ORM\Column(name="email", type="string", length=254, nullable=false)
      */
     private $email;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="language", type="string", length=254, nullable=true)
+     * @ORM\Column(name="language", type="string", length=254, nullable=false)
      */
     private $language;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="country", type="string", length=254, nullable=true)
+     * @ORM\Column(name="country", type="string", length=254, nullable=false)
      */
     private $country;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="gender", type="string", length=254, nullable=true)
+     * @ORM\Column(name="gender", type="string", length=254, nullable=false)
      */
     private $gender;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="old", type="integer", nullable=true)
+     * @ORM\Column(name="old", type="integer", nullable=false)
      */
     private $old;
 
@@ -101,14 +101,14 @@ class Influencer
     /**
      * @var string
      *
-     * @ORM\Column(name="paymenttype", type="string", length=254, nullable=true)
+     * @ORM\Column(name="paymenttype", type="string", length=254, nullable=false)
      */
     private $paymenttype;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="password", type="string", length=254, nullable=true)
+     * @ORM\Column(name="password", type="string", length=254, nullable=false)
      */
     private $password;
 
@@ -131,7 +131,7 @@ class Influencer
      *
      * @ORM\ManyToOne(targetEntity="Partnershiptype")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="partnership", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="partnership", referencedColumnName="id", nullable=false)
      * })
      */
     private $partnership;

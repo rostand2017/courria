@@ -24,17 +24,32 @@ class Contact
     /**
      * @var string
      *
-     * @ORM\Column(name="email", type="string", length=254, nullable=true)
+     * @ORM\Column(name="email", type="string", length=254, nullable=false)
      */
     private $email;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="message", type="string", length=254, nullable=true)
+     * @ORM\Column(name="message", type="string", length=254, nullable=false)
      */
     private $message;
 
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="createdat", type="datetime")
+     */
+    private $createdat;
+
+    /**
+     * Contact constructor.
+     * @param \DateTime $createdat
+     */
+    public function __construct()
+    {
+        $this->createdat = new \DateTime();
+    }
 
 
     /**
@@ -93,5 +108,21 @@ class Contact
     public function getMessage()
     {
         return $this->message;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCreatedat()
+    {
+        return $this->createdat;
+    }
+
+    /**
+     * @param \DateTime $createdat
+     */
+    public function setCreatedat($createdat)
+    {
+        $this->createdat = $createdat;
     }
 }

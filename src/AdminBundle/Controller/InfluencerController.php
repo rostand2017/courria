@@ -8,11 +8,9 @@
 
 namespace AdminBundle\Controller;
 
-use AdminBundle\Classes\Thumbnails;
-use HomeBundle\Entity\Artiste;
-use HomeBundle\Entity\Client;
-use HomeBundle\Entity\Concert;
-use HomeBundle\Entity\Reservation;
+use HomeBundle\Entity\Concerne;
+use HomeBundle\Entity\Influencer;
+use HomeBundle\Entity\Photo;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -25,87 +23,31 @@ class InfluencerController extends Controller
         $page = ( $request->query->get("page") )?$request->query->get("page") : 1;
         $nbPerPage = 10;
         $em = $this->getDoctrine()->getManager();
-        $nbClient = $em->getRepository(Client::class)
+        $nbInfluencer = $em->getRepository(Influencer::class)
             ->countByDateAndName($page, $nbPerPage, $request->query->get("begin"), $request->query->get("end"), $request->query->get("search"));
-        $clients = $em->getRepository(Client::class)
+        $influencers = $em->getRepository(Influencer::class)
             ->getByDateAndName($page, $nbPerPage, $request->query->get("begin"), $request->query->get("end"), $request->query->get("search"));
 
-        $nbPage = ceil($nbClient / $nbPerPage);
-        return $this->render('AdminBundle:Client:index.html.twig', array(
-            "clients" => $clients,
+        $nbPage = ceil($nbInfluencer / $nbPerPage);
+        return $this->render('AdminBundle:Influencer:index.html.twig', array(
+            "influencers" => $influencers,
             "page" => $page,
             "nbPage" => $nbPage,
-            "nbClient" => $nbClient,
+            "nbInfluencer" => $nbInfluencer,
         ));
-    }
-
-
-    public function editAction(Request $request){
-
-        $em = $this->getDoctrine()->getManager();
-        $post = $request->request;
-        $action = $post->get("action");
-        $id = $post->get("id");
-        $nom = $post->get("nom");
-        $prenom = $post->get("prenom");
-
-        if($action && $action == "edit"){
-            if( is_numeric($id) && $id >0 && $nom != '' && $prenom != '' )
-            {
-                $client = $em->getRepository(Client::class)->find($id);
-                if($client){
-                    $client->setNom($nom);
-                    $client->setPrenom($prenom);
-                    $em->persist($client);
-                    $em->flush();
-                    return new JsonResponse(array(
-                        "status"=>0,
-                        "mes"=>"Les informations de".$nom." ont été modifiée avec succès"
-                    ));
-                }else{
-                    return new JsonResponse(array(
-                        "status"=>1,
-                        "mes"=>"Une erreur est survenue"
-                    ));
-                }
-            }else{
-                return new JsonResponse(array(
-                    "status"=>1,
-                    "mes"=>"Renseignez les champs requis avec conformité"
-                ));
-            }
-        }else{
-            if( $nom != '' && $prenom != '')
-            {
-                $client = new Client();
-                $client->setNom($nom);
-                $client->setPrenom($prenom);
-                $em->persist($client);
-                $em->flush();
-                return new JsonResponse(array(
-                    "status"=>0,
-                    "mes"=> "Le client".$nom." a été ajouté avec succès"
-                ));
-            }else{
-                return new JsonResponse(array(
-                    "status"=>1,
-                    "mes"=>"Renseignez les champs requis avec conformité"
-                ));
-            }
-        }
     }
 
     public function deleteAction(Request $request){
         $id = $request->request->get('id');
         $em = $this->getDoctrine()->getManager();
         if($id && is_numeric($id) && $id > 0){
-            $client = $em->getRepository(Client::class)->find($id);
-            if($client){
-                $em->remove($client);
+            $influencer = $em->getRepository(Influencer::class)->find($id);
+            if($influencer){
+                $em->remove($influencer);
                 $em->flush();
                 return new JsonResponse(array(
                     "status"=>0,
-                    "mes"=>"L'utilisateur ".$client->getNom()." a supprimé de la liste des utilisateurs"
+                    "mes"=>"L'utilisateur ".$influencer->getName()." a supprimé du catalogue des influenceurs"
                 ));
             }else{
                 return new JsonResponse(array(
@@ -121,17 +63,14 @@ class InfluencerController extends Controller
         }
     }
 
-    public function reservationAction(Client $client){
+    public function seeAction(Influencer $influencer){
         $em = $this->getDoctrine();
-        $reservations = $em->getRepository(Reservation::class)->findBy(['cli'=>$client], ['date'=>'desc']);
-        // temporaire: rechercher les concerts disponibles
-        $concerts = $em->getRepository(Concert::class)->findAll();
-        $nbReservations = count($reservations);
-        return $this->render("AdminBundle:Client:reservation.html.twig", array(
-            "reservations" => $reservations,
-            "nbReservations" => $nbReservations,
-            "client" => $client,
-            "concerts" => $concerts,
+        $photos = $em->getRepository(Photo::class)->findByInfluencer($influencer->getId());
+        $concernes = $em->getRepository(Concerne::class)->findByInfluencer($influencer->getId());
+        return $this->render('AdminBundle:Influencer:single_influencer.html.twig', array(
+            "influencer" => $influencer,
+            "concernes" => $concernes,
+            "photos" => $photos,
         ));
     }
 

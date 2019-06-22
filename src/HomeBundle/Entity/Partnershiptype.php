@@ -31,11 +31,14 @@ class Partnershiptype
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="createdat", type="datetime", nullable=true)
+     * @ORM\Column(name="createdat", type="datetime", nullable=false)
      */
     private $createdat;
 
-
+    public function __construct()
+    {
+        $this->createdat = new \DateTime();
+    }
 
     /**
      * Get id

@@ -36,15 +36,19 @@ class Message
     private $createdat;
 
     /**
-     * @var \Admin
+     * @var Admin
      *
      * @ORM\ManyToOne(targetEntity="Admin")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="admin", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="admin", referencedColumnName="id", nullable=false)
      * })
      */
     private $admin;
 
+    public function __construct()
+    {
+        $this->createdat = new \DateTime();
+    }
 
 
     /**

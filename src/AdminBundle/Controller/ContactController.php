@@ -7,12 +7,12 @@
  */
 namespace AdminBundle\Controller;
 
-use HomeBundle\Entity\Commentaire;
+use HomeBundle\Entity\Contact;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
-class CommentaireController extends Controller
+class ContactController extends Controller
 {
 
     public function indexAction(Request $request){
@@ -20,17 +20,17 @@ class CommentaireController extends Controller
         $page = ( $request->query->get("page") )?$request->query->get("page") : 1;
         $nbPerPage = 10;
         $em = $this->getDoctrine()->getManager();
-        $nbCommentaire = $em->getRepository(Commentaire::class)
+        $nbContact = $em->getRepository(Contact::class)
             ->countByDateAndName($page, $nbPerPage, $request->query->get("begin"), $request->query->get("end"), $request->query->get("search"));
-        $commentaires = $em->getRepository(Commentaire::class)
+        $contacts = $em->getRepository(Contact::class)
             ->getByDateAndName($page, $nbPerPage, $request->query->get("begin"), $request->query->get("end"), $request->query->get("search"));
 
-        $nbPage = ceil($nbCommentaire / $nbPerPage);
+        $nbPage = ceil($nbContact / $nbPerPage);
         return $this->render('AdminBundle:Commentaire:index.html.twig', array(
-            "commentaires" => $commentaires,
+            "contacts" => $contacts,
             "page" => $page,
             "nbPage" => $nbPage,
-            "nbCommentaire" => $nbCommentaire,
+            "nbContact" => $nbContact,
         ));
     }
 
@@ -38,13 +38,13 @@ class CommentaireController extends Controller
         $id = $request->request->get('id');
         $em = $this->getDoctrine()->getManager();
         if($id && is_numeric($id) && $id > 0){
-            $commentaire = $em->getRepository(Commentaire::class)->find($id);
-            if($commentaire){
-                $em->remove($commentaire);
+            $contact = $em->getRepository(Contact::class)->find($id);
+            if($contact){
+                $em->remove($contact);
                 $em->flush();
                 return new JsonResponse(array(
                     "status"=>0,
-                    "mes"=>"Le commentaire ".$commentaire->getMessage()." a été supprimé succès."
+                    "mes"=>"Le commentaire ".$contact->getMessage()." a été supprimé succès."
                 ));
             }else{
                 return new JsonResponse(array(

@@ -24,7 +24,7 @@ class Activity
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="string", length=254, nullable=true)
+     * @ORM\Column(name="description", type="string", length=254, nullable=false)
      */
     private $description;
 

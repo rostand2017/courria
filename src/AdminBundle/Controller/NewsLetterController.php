@@ -9,7 +9,10 @@
 namespace AdminBundle\Controller;
 
 
+use HomeBundle\Entity\Admin;
 use HomeBundle\Entity\Client;
+use HomeBundle\Entity\Influencer;
+use HomeBundle\Entity\Message;
 use HomeBundle\Entity\NewsLetter;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -20,11 +23,11 @@ class NewsLetterController extends Controller
 
     public function indexAction(){
         $em = $this->getDoctrine()->getManager();
-        $newsletter = $em->getRepository(NewsLetter::class)->findAll();
-        $nbNewsletter = count($newsletter);
-        return $this->render("AdminBundle:Client:newsletter.html.twig", array(
-            "newsletter" => $newsletter,
-            "nbNewsletter" => $nbNewsletter,
+        $messages = $em->getRepository(Message::class)->findAll();
+        $nbMessage = count($messages);
+        return $this->render("AdminBundle:Influencer:newsletter.html.twig", array(
+            "messages" => $messages,
+            "nbMessage" => $nbMessage,
         ));
     }
 
@@ -34,37 +37,29 @@ class NewsLetterController extends Controller
         if( !empty( trim($message) ) )
         {
             $em = $this->getDoctrine()->getManager();
-            $emails = $em->getRepository(NewsLetter::class)->findAll();
-            $clients = $em->getRepository(Client::class)->findAll();
-            if($emails || $clients){
-                foreach ($emails as $email){
-                    $mes = (new \Swift_Message($message))
-                            ->setFrom('contact@concert.com')
-                            ->setTo($email->getEmail())
-                            ->setBody(
-                                $this->renderView(
-                                    'Email/diffusion.html.twig',
-                                    array('message' => $message, 'nom'=>$email->getNom())
-                                ),
-                                "text/html"
-                            );
-                    $this->get('mailer')->send($mes);
-                }
-                foreach ($clients as $client){
-                    if($client->getEmail()){
+            $influencers = $em->getRepository(Influencer::class)->findAll();
+            if($influencers){
+                foreach ($influencers as $influencer){
+                    if($influencer->getEmail()){
                         $mes = (new \Swift_Message($message))
                             ->setFrom('contact@concert.com')
-                            ->setTo($client->getEmail())
+                            ->setTo($influencer->getEmail())
                             ->setBody(
                                 $this->renderView(
                                     'Email/diffusion.html.twig',
-                                    array('message' => $message, 'nom'=>$client->getNom())
+                                    array('message' => $message, 'nom'=>$influencer->getName())
                                 ),
                                 "text/html"
                             );
                         $this->get('mailer')->send($mes);
                     }
                 }
+                $em = $this->getDoctrine()->getManager();
+                $message_n = new Message();
+                $message_n->setMessage($message);
+                $message_n->setAdmin($em->getRepository(Admin::class)->find($request->getSession()->get('admin')->getId()) );
+                $em->persist($message_n);
+                $em->flush();
                 return new JsonResponse(array(
                     "status"=>0,
                     "mes"=>"Message envoyé avec succès"
@@ -72,7 +67,7 @@ class NewsLetterController extends Controller
             }else{
                 return new JsonResponse(array(
                     "status"=>1,
-                    "mes"=>"Aucune souscription aux newsletters !"
+                    "mes"=>"Aucun influenceur enregistré."
                 ));
             }
         }

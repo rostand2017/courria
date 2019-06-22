@@ -1,0 +1,59 @@
+{% extends "AdminBundle::layout.html.twig" %}
+{% block title %} Influencers {% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{{ asset("bundles/admin/assets/skins/dropify/css/dropify.css")}}"/>
+{% endblock %}
+{% block body %}
+    <div class="md-card uk-margin-medium-bottom">
+        <div class="md-card-toolbar">
+            <div class="md-card-toolbar-actions">
+                <i class="md-icon material-icons md-card-fullscreen-activate">&#xE5D0;</i>
+                <i class="md-icon material-icons md-card-toggle">&#xE316;</i>
+                <a href="{{ path('admin_influencer_see', {influencer: influencer.id}) }}"><i class="md-icon uk-icon-refresh"></i></a>
+            </div>
+            <h3 class="md-card-toolbar-heading-text">
+                <a href="{{ path('admin_homepage') }}"><i class="md-icon uk-icon-arrow-left"></i></a>
+                {{ influencer.name }}
+            </h3>
+        </div>
+        <div class="md-card-content">
+            <div class="">
+                <div class="uk-grid" data-uk-grid-margin="">
+                    <div class="uk-width-medium-1-2">
+                        {% for photo in photos %}
+                            <img src="/uploads/images/{{ photo.link }}" alt="influencer">
+                        {% endfor %}
+                    </div>
+                    <div class="uk-width-medium-1-2">
+                        <h1 style="color: #0a6aa1">{{ influencer.name | upper }}</h1>
+                        <h4><i class="uk-icon-envelope"></i> {{ influencer.email }}</h4>
+                        <h4>Age: {{ influencer.old }} ans</h4>
+                        <h4>Sexe: {{ influencer.gender }}</h4>
+                        <h4><i class="uk-icon-globe"></i> {{ influencer.country }}</h4>
+                        <p>
+                            {% if influencer.instagramlink != '' %}<a href="{{ influencer.instagramlink }}" target="_blank" class="uk-button"><i class="uk-icon-instagram"></i></a>{% endif %}
+                            {% if influencer.facebooklink != '' %}<a href="{{ influencer.facebooklink }}" target="_blank" class="uk-button"><i class="uk-icon-facebook"></i></a>{% endif %}
+                            {% if influencer.snapchatlink != '' %}<a href="{{ influencer.snapchatlink }}" target="_blank" class="uk-button"><i class="uk-icon-snapchat"></i></a>{% endif %}
+                            {% if influencer.twitterlink != '' %}<a href="{{ influencer.twitterlink }}" target="_blank" class="uk-button"><i class="uk-icon-twitter"></i></a>{% endif %}
+                        </p>
+                        <h1 style="color: #0a6aa1">Activité(s)</h1>
+                        {% for concerne in concernes %}
+                            <h5><i class="uk-icon-check"></i> {{ concerne.activity.description }}</h5>
+                        {% endfor %}
+                        <h1 style="color: #0a6aa1">Autres infos</h1>
+                        <h5>Type de partenariat: {{ influencer.partnership.description }}</h5>
+                        <h5>Paiement: {{ influencer.paymenttype }}</h5>
+                        <h5>Compte créé le : {{ influencer.createdat | date('d M Y') }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script src="{{ asset("bundles/admin/assets/js/custom/dropify/dist/js/dropify.min.js") }}"></script>
+    <script src="{{ asset("bundles/admin/assets/js/pages/forms_file_input.min.js") }}"></script>
+    <script src="{{ asset("bundles/admin/bower_components/ckeditor/ckeditor.js") }}"></script>
+    <script src="{{ asset("bundles/admin/bower_components/ckeditor/adapters/jquery.js") }}"></script>
+    <script src="{{ asset("bundles/admin/assets/js/influencer.js") }}"></script>
+{% endblock %}

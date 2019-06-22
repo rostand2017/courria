@@ -22,11 +22,11 @@ class Concerne
     private $id;
 
     /**
-     * @var \Activity
+     * @var Activity
      *
      * @ORM\ManyToOne(targetEntity="Activity")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="activity", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="activity", referencedColumnName="id", nullable=false)
      * })
      */
     private $activity;
@@ -36,7 +36,7 @@ class Concerne
      *
      * @ORM\ManyToOne(targetEntity="Influencer", cascade={"persist"})
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="influencer", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="influencer", referencedColumnName="id", nullable=false)
      * })
      */
     private $influencer;

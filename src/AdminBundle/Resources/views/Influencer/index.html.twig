@@ -1,5 +1,5 @@
 {% extends "AdminBundle::layout.html.twig" %}
-{% block title %} Clients {% endblock %}
+{% block title %} Influencers {% endblock %}
 {% block style %}
     <link rel="stylesheet" href="{{ asset("bundles/admin/assets/skins/dropify/css/dropify.css")}}"/>
 {% endblock %}
@@ -9,16 +9,16 @@
             <div class="md-card-toolbar-actions">
                 <i class="md-icon material-icons md-card-fullscreen-activate">&#xE5D0;</i>
                 <i class="md-icon material-icons md-card-toggle">&#xE316;</i>
-                <a href="{{ path('admin_client') }}"><i class="md-icon uk-icon-refresh"></i></a>
+                <a href="{{ path('admin_homepage') }}"><i class="md-icon uk-icon-refresh"></i></a>
             </div>
             <h3 class="md-card-toolbar-heading-text">
-                Liste des utilisateurs
-                <span class="uk-badge uk-badge-warning">{{ nbClient }}</span>
+                Catalogues influenceurs
+                <span class="uk-badge uk-badge-warning">{{ nbInfluencer }}</span>
             </h3>
         </div>
         <div class="md-card-content">
             <div class="">
-                <form action="{{ path('admin_client') }}" class="contactFilter">
+                <form action="{{ path('admin_homepage') }}" class="contactFilter">
                     <div class="uk-grid" style="margin-top: 10px">
                         <div class="uk-width-medium-1-2">
                             <div class="">
@@ -36,7 +36,7 @@
                     <div class="uk-grid" style="margin-top: 10px">
                         <div class="uk-width-medium-1-1">
                             <div class="">
-                                <label for="mail_new_to">Recherche par le nom ou prenom de l'utilisateur</label>
+                                <label for="mail_new_to">Recherche par le nom ou email de l'influenceur</label>
                                 <input type="text" class="md-input" name="search" value="{{ app.request.query.get("search") }}" />
                             </div>
                         </div>
@@ -54,30 +54,27 @@
                         <table class="uk-table uk-table-nowrap table_check">
                             <thead>
                             <tr>
-                                <th></th>
                                 <th>Nom</th>
-                                <th>age</th>
-                                <th>email</th>
+                                <th>Âge</th>
+                                <th>Sexe</th>
+                                <th>Email</th>
                                 <th>Date de création</th>
-                                <th>Réservation</th>
                                 <th></th>
                                 <th></th>
                             </tr>
                             </thead>
                             <tbody>
-                            {% for client in clients %}
+                            {% for influencer in influencers %}
                                 <tr>
-                                    <td><img src="uploads/thumbnails/{{ client.photo }}" alt=""></td>
-                                    <td>{{ client.nom }} {{ client.prenom }}</td>
-                                    <td>{% if client.age is not null %} {{ client.age }} ans{% else %}- - -{% endif %}</td>
-                                    <td>{% if client.email is not null %} {{ client.email }} ans{% else %}- - -{% endif %}</td>
-                                    <td>{{ client.createdat | date('d-m-y')}}</td>
-                                    <td><a href="{{ path('admin_client_reservation', {client: client.id}) }}"><i class='uk-icon-eye uk-icon-medium'></i></a></td>
-                                    <td><a class='deleteClient' data-url="{{ path('admin_client_delete') }}" data-id="{{ client.id }}" data-nom="{{ client.nom }}"><i class='uk-icon-trash uk-icon-medium uk-text-danger'></i></a></td>
-                                    <td> <a data-uk-tooltip="{pos:'top'}" title='Modifier les infos de ce client' class='editClient' data-id="{{ client.id }}" data-nom="{{ client.nom }}" data-prenom="{{ client.prenom }}"><i class="uk-icon-edit uk-icon-medium uk-text-warning"></i></a></td>
+                                    <td>{{ influencer.name }}</td>
+                                    <td>{% if influencer.old is not null %} {{ influencer.old }} ans{% else %}- - -{% endif %}</td>
+                                    <td>{% if influencer.email is not null %} {{ influencer.email }} ans{% else %}- - -{% endif %}</td>
+                                    <td>{{ influencer.createdat | date('d M Y')}}</td>
+                                    <td><a href="{{ path('admin_influencer_see', {influencer: influencer.id}) }}"><i class='uk-icon-eye uk-icon-medium'></i> voir le profil</a></td>
+                                    <td><a class='deleteClient' data-url="{{ path('admin_influencer_delete') }}" data-id="{{ influencer.id }}" data-name="{{ influencer.name }}"><i class='uk-icon-trash uk-icon-medium uk-text-danger'></i></a></td>
                                 </tr>
                             {% else %}
-                                <tr><td colspan="6" class="uk-text-danger uk-text-center">Aucun utilisateur</td></tr>
+                                <tr><td colspan="6" class="uk-text-danger uk-text-center">Aucun influencer</td></tr>
                             {% endfor %}
                             </tbody>
                         </table>
@@ -90,19 +87,19 @@
                                 <td colspan="5">
                                     <ul class="uk-pagination uk-margin-medium-top">
                                         <li class="{% if page <= 1 %}disabled{% endif %}">
-                                            <a href="{% if page > 1 %}{{ path("admin_client") }}?page={{ page-1 }}&begin={{ app.request.query.get("begin") }}&end={{ app.request.query.get("end") }}&search={{ app.request.query.get("search") }}
+                                            <a href="{% if page > 1 %}{{ path("admin_homepage") }}?page={{ page-1 }}&begin={{ app.request.query.get("begin") }}&end={{ app.request.query.get("end") }}&search={{ app.request.query.get("search") }}
                                             {% else %}#{% endif %}">précédent</a>
                                         </li>
                                         {% for nb in range(1, nbPage) %}
                                             <li class="{% if page == nb %}active{% endif %}">
-                                                <a href="{% if page != nb %} {{ path("admin_client") }}?page={{ nb }}&begin={{ app.request.query.get("begin") }}&end={{ app.request.query.get("end")}}&search={{ app.request.query.get("search") }}
+                                                <a href="{% if page != nb %} {{ path("admin_homepage") }}?page={{ nb }}&begin={{ app.request.query.get("begin") }}&end={{ app.request.query.get("end")}}&search={{ app.request.query.get("search") }}
                                                  {% endif %}">
                                                     {{ nb }}
                                                 </a>
                                             </li>
                                         {% endfor %}
                                         <li class="{% if page >= nbPage %}disabled{% endif %}">
-                                            <a href="{% if page < nbPage  %}{{ path("admin_client") }}?page={{ page+1 }}&begin={{ app.request.query.get("begin") }}&end={{ app.request.query.get("end") }}&search={{ app.request.query.get("search") }}{% else %}#{% endif %}">suivant</a>
+                                            <a href="{% if page < nbPage  %}{{ path("admin_homepage") }}?page={{ page+1 }}&begin={{ app.request.query.get("begin") }}&end={{ app.request.query.get("end") }}&search={{ app.request.query.get("search") }}{% else %}#{% endif %}">suivant</a>
                                         </li>
                                     </ul>
                                 </td>
@@ -113,51 +110,11 @@
             </div>
         </div>
     </div>
-
-    <div class="md-fab-wrapper">
-        <a class="md-fab md-fab-accent md-fab-wave" id="addClient" href="#" data-uk-modal="{center:true}">
-            <i class="material-icons"></i>
-        </a>
-    </div>
-
-    <div class="uk-modal" id="modalClient">
-        <div class="uk-modal-dialog" style="width: 75%;">
-            <button class="uk-modal-close uk-close" type="button"></button>
-            <form action="{{ path('admin_client_edit') }}" id="formClient" method="post">
-                <div class="uk-modal-header">
-                    <h3 class="heading_b uk-margin-bottom titleForm">Ajoutez un nouvel utilisateur</h3>
-                    <div class="text-center" id="messageformSalle"></div>
-                </div>
-                <div class="uk-grid" data-uk-grid-margin>
-                    <input type="hidden" id="id" name="id">
-                    <input type="hidden" name="action" id="action">
-                    <div class="uk-width-medium-1-1">
-                        <div class="parsley-row">
-                            <label for="nom">Nom<span class="req">*</span></label>
-                            <input type="text" name="nom" id="nom" required class="md-input" />
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-grid" data-uk-grid-margin>
-                    <div class="uk-width-medium-1-1">
-                        <div class="parsley-row">
-                            <label for="prenom">Prénom<span class="req">*</span></label>
-                            <input type="text" id="prenom" name="prenom" class="md-input">
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-modal-footer">
-                    <a href="#" class="md-icon-btn"><i class="md-icon uk-icon-save"></i></a>
-                    <button type="submit" class="sendBtn uk-float-right md-btn md-btn-flat md-btn-flat-primary">AJOUTER</button>
-                </div>
-            </form>
-        </div>
-    </div>
 {% endblock %}
 {% block scripts %}
     <script src="{{ asset("bundles/admin/assets/js/custom/dropify/dist/js/dropify.min.js") }}"></script>
     <script src="{{ asset("bundles/admin/assets/js/pages/forms_file_input.min.js") }}"></script>
     <script src="{{ asset("bundles/admin/bower_components/ckeditor/ckeditor.js") }}"></script>
     <script src="{{ asset("bundles/admin/bower_components/ckeditor/adapters/jquery.js") }}"></script>
-    <script src="{{ asset("bundles/admin/assets/js/client.js") }}"></script>
+    <script src="{{ asset("bundles/admin/assets/js/influencer.js") }}"></script>
 {% endblock %}

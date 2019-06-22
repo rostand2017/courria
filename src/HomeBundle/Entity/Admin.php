@@ -24,14 +24,14 @@ class Admin
     /**
      * @var string
      *
-     * @ORM\Column(name="username", type="string", length=254, nullable=true)
+     * @ORM\Column(name="username", type="string", length=254, nullable=false)
      */
     private $username;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="password", type="string", length=254, nullable=true)
+     * @ORM\Column(name="password", type="string", length=254, nullable=false)
      */
     private $password;
 
@@ -49,6 +49,11 @@ class Admin
      */
     private $updatedat;
 
+
+    public function __construct()
+    {
+        $this->createdat = new \DateTime();
+    }
 
 
     /**
