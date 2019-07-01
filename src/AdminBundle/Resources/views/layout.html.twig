@@ -61,41 +61,29 @@
             <div class="sidebar_main_header">
                 <div class="sidebar_logo" style="height: auto;">
                     <a href="" class="sSidebar_hide sidebar_logo_large">
-                    <img class="logo_regular" src="{{ asset('bundles/home/favicon.svg') }}" alt="Nop Agency" style="width: 100px; padding-top: 5px" />
+                    <img class="logo_regular" src="{{ asset('bundles/home/favicon.svg') }}" alt="Stock" style="width: 100px; padding-top: 5px" />
                     </a>
                 </div>
                 <br/>
                 <div class="menu_section">
                     <ul>
                         {% set uri  = app.request.getRequestUri() %}
-                        <li class="{% if  uri ==  path('admin_homepage')%}current_section{% endif %}" title="Influencer">
+                        <li class="{% if  uri ==  path('admin_homepage')%}current_section{% endif %}" title="dashboard">
                             <a href="{{ path('admin_homepage') }}">
-                                <span class="menu_icon"><i class="uk-icon-user uk-icon-medium"></i></span>
-                                <span class="menu_title">Influenceurs</span>
+                                <span class="menu_icon"><i class="uk-icon-hashtag uk-icon-medium"></i></span>
+                                <span class="menu_title">Dashboard</span>
                             </a>
                         </li>
-                        <li class="{% if  uri ==  path('admin_message')%}current_section{% endif %}" title="Message aux influencers">
-                            <a href="{{ path('admin_message') }}" >
-                                <span class="menu_icon"><i class="uk-icon-newspaper-o uk-icon-medium"></i></span>
-                                <span class="menu_title">Messages</span>
+                        <li class="{% if  uri ==  path('admin_homepage')%}current_section{% endif %}" title="produits">
+                            <a href="{{ path('admin_homepage') }}">
+                                <span class="menu_icon"><i class="uk-icon-product-hunt uk-icon-medium"></i></span>
+                                <span class="menu_title">Produits</span>
                             </a>
                         </li>
-                        <li class="{% if  uri ==  path('admin_commentaire')%}current_section{% endif %}" title="Commentaires">
-                            <a href="{{ path('admin_commentaire') }}">
-                                <span class="menu_icon"><i class="uk-icon-comment uk-icon-medium"></i></span>
-                                <span class="menu_title">Commentaires</span>
-                            </a>
-                        </li>
-                        <li class="{% if  uri ==  path('admin_activity')%}current_section{% endif %}" title="Activités">
-                            <a href="{{ path('admin_activity') }}">
-                                <span class="menu_icon"><i class="uk-icon-bicycle uk-icon-medium"></i></span>
-                                <span class="menu_title">Activités</span>
-                            </a>
-                        </li>
-                        <li class="{% if  uri ==  path('admin_partnership_type')%}current_section{% endif %}" title="Type de partenariat">
-                            <a href="{{ path('admin_partnership_type') }}">
-                                <span class="menu_icon"><i class="uk-icon-link uk-icon-medium"></i></span>
-                                <span class="menu_title">Type de partenariat</span>
+                        <li class="{% if  uri ==  path('admin_stock')%}current_section{% endif %}" title="stocks">
+                            <a href="{{ path('admin_stock') }}">
+                                <span class="menu_icon"><i class="uk-icon-archive uk-icon-medium"></i></span>
+                                <span class="menu_title">Stocks</span>
                             </a>
                         </li>
                     </ul>

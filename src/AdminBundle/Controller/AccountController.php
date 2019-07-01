@@ -9,7 +9,7 @@
 namespace AdminBundle\Controller;
 
 
-use HomeBundle\Entity\Admin;
+use AdminBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -42,7 +42,7 @@ class AccountController extends Controller
             $password = $request->get("password");
             if($username && $password){
                 $em = $this->getDoctrine()->getManager();
-                $user = $em->getRepository(Admin::class)->findOneBy(["username"=>$username]);
+                $user = $em->getRepository(User::class)->findOneBy(["username"=>$username]);
                 if( $user && password_verify($password, $user->getPassword()) ){
                     $request->getSession()->set("admin", $user);
                     return new JsonResponse(["status"=>1, "mes"=>"Good", "url"=>$this->generateUrl("admin_homepage")]);
@@ -63,10 +63,9 @@ class AccountController extends Controller
 
     // create default account
 
-
     /*
     public function createAction(){
-        $admin = new Admin();
+        $admin = new User();
         $admin->setPassword(password_hash("admin", PASSWORD_BCRYPT));
         $admin->setUsername("admin");
         $em = $this->getDoctrine()->getManager();
@@ -76,14 +75,13 @@ class AccountController extends Controller
     */
 
 
-
     public function changePasswordAction(Request $request){
         if($request->isMethod('POST')){
             $user = $request->getSession()->get("admin");
             $password = $request->request->get("password");
             if($password && password_verify($password, $user->getPassword()) && $newPassword = $request->request->get("newPassword") ){
                 $em = $this->getDoctrine()->getManager();
-                $user2 = $em->getRepository(Admin::class)->find($user->getId());
+                $user2 = $em->getRepository(User::class)->find($user->getId());
                 $user2->setPassword(password_hash($newPassword, PASSWORD_BCRYPT));
                 $em->persist($user2);
                 $em->flush();

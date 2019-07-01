@@ -1,63 +1,33 @@
-#Influenceur
+#Product
 admin_homepage:
-    path:     /influencer
-    defaults: { _controller: AdminBundle:Influencer:index }
-admin_influencer_delete:
-    path:     /influencer/delete
-    defaults: { _controller: AdminBundle:Influencer:delete }
-admin_influencer_see:
-    path:     /influencer/{influencer}
-    defaults: { _controller: AdminBundle:Influencer:see }
-    requirements:
-        influencer: \d+
+    path:     /product
+    defaults: { _controller: AdminBundle:Product:index }
+admin_product_delete:
+    path:     /product/delete
+    defaults: { _controller: AdminBundle:Product:delete }
+admin_product_add:
+    path:     /product/add
+    defaults: { _controller: AdminBundle:Product:add }
 
-#news letter
-admin_message:
-    path:     /message
-    defaults: { _controller: AdminBundle:NewsLetter:index }
-admin_message_sent:
-    path:     /message/sent
-    defaults: { _controller: AdminBundle:NewsLetter:sent }
-admin_message_delete:
-    path:     /message/delete/{message}
-    defaults: { _controller: AdminBundle:NewsLetter:delete }
-    requirements:
-        message: \d+
+#Stock
+admin_stock:
+    path:     /stock
+    defaults: { _controller: AdminBundle:Stock:index }
+admin_stock_delete:
+    path:     /stock/delete
+    defaults: { _controller: AdminBundle:Stock:delete }
+admin_stock_add:
+    path:     /stock/add
+    defaults: { _controller: AdminBundle:Stock:add }
 
-#COMMENTAIRE
-admin_commentaire:
-    path:     /commentaire
-    defaults: { _controller: AdminBundle:Contact:index }
-admin_commentaire_delete:
-    path:     /commentaire/delete
-    defaults: { _controller: AdminBundle:Contact:delete }
-
-#ACTIVITY
-admin_activity:
-    path:     /activity
-    defaults: { _controller: AdminBundle:Activity:index }
-admin_activity_add:
-    path:     /activity/add
-    defaults: { _controller: AdminBundle:Activity:add }
-admin_activity_delete:
-    path:     /activity/delete
-    defaults: { _controller: AdminBundle:Activity:delete }
-
-#PARTNERSHIP TYPE
-admin_partnership_type:
-    path:     /partnership_type
-    defaults: { _controller: AdminBundle:PartnershipType:index }
-admin_partnership_type_add:
-    path:     /partnership_type/add
-    defaults: { _controller: AdminBundle:PartnershipType:add }
-admin_partnership_type_delete:
-    path:     /partnership_type/delete
-    defaults: { _controller: AdminBundle:PartnershipType:delete }
-
+#Dashboard
+admin_dashboard:
+    path:     /dashboard
+    defaults: { _controller: AdminBundle:Dashboard:index }
 
 #CONNEXION
 admin_login:
-    path:     /login
+    path:     /
     defaults: { _controller: AdminBundle:Account:login }
 
 admin_change_password:
