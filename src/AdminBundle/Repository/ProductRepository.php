@@ -75,4 +75,11 @@ class ProductRepository extends \Doctrine\ORM\EntityRepository
         $state->execute();
         return $state->fetchAll();
     }
+
+    public function getTodayProduct(){
+        $sql="SELECT COUNT(*) AS total FROM product WHERE DATE(createdat) = CURRENT_DATE";
+        $state = $this->_em->getConnection()->prepare($sql);
+        $state->execute();
+        return $state->fetchColumn();
+    }
 }

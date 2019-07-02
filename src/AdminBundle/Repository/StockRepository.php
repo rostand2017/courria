@@ -71,4 +71,18 @@ class StockRepository extends \Doctrine\ORM\EntityRepository
         $state->execute();
         return $state->fetchAll();
     }
+
+    public function getTodayStock(){
+        $sql="SELECT COUNT(*) AS total FROM stock s WHERE DATE(s.date) = CURRENT_DATE";
+        $state = $this->_em->getConnection()->prepare($sql);
+        $state->execute();
+        return $state->fetchColumn();
+    }
+
+    public function getStockProduct(){
+        $sql="SELECT s.id, s.date, s.product, s.quantity, p.name, p.description FROM stock s INNER JOIN product p ON s.product = p.id LIMIT 0,10 ";
+        $state = $this->_em->getConnection()->prepare($sql);
+        $state->execute();
+        return $state->fetchAll();
+    }
 }

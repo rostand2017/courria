@@ -5,7 +5,7 @@
         <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="msapplication-tap-highlight" content="no"/>
-        <link rel="shortcut icon" type="image/png" href="{{ asset('bundles/home/favicon.png') }}"/>
+        <link rel="shortcut icon" type="image/png" href="{{ asset('bundles/admin/favicon.svg') }}"/>
         <link rel="stylesheet" href="{{ asset("bundles/admin/bower_components/uikit/css/uikit.almost-flat.min.css")}}"/>
         <link rel="stylesheet" href="{{ asset("bundles/admin/assets/icons/flags/flags.min.css")}}"/>
         <link rel="stylesheet" href="{{ asset("bundles/admin/assets/css/main.min.css")}}"/>
@@ -61,15 +61,15 @@
             <div class="sidebar_main_header">
                 <div class="sidebar_logo" style="height: auto;">
                     <a href="" class="sSidebar_hide sidebar_logo_large">
-                    <img class="logo_regular" src="{{ asset('bundles/home/favicon.svg') }}" alt="Stock" style="width: 100px; padding-top: 5px" />
+                        <img class="logo_regular" src="{{ asset('bundles/admin/favicon.svg') }}" alt="Stock" style="width: 90px; padding-top: 5px" />
                     </a>
                 </div>
                 <br/>
                 <div class="menu_section">
                     <ul>
                         {% set uri  = app.request.getRequestUri() %}
-                        <li class="{% if  uri ==  path('admin_homepage')%}current_section{% endif %}" title="dashboard">
-                            <a href="{{ path('admin_homepage') }}">
+                        <li class="{% if  uri ==  path('admin_dashboard')%}current_section{% endif %}" title="dashboard">
+                            <a href="{{ path('admin_dashboard') }}">
                                 <span class="menu_icon"><i class="uk-icon-hashtag uk-icon-medium"></i></span>
                                 <span class="menu_title">Dashboard</span>
                             </a>
