@@ -45,7 +45,7 @@ class AccountController extends Controller
                 $user = $em->getRepository(User::class)->findOneBy(["username"=>$username]);
                 if( $user && password_verify($password, $user->getPassword()) ){
                     $request->getSession()->set("admin", $user);
-                    return new JsonResponse(["status"=>1, "mes"=>"Good", "url"=>$this->generateUrl("admin_homepage")]);
+                    return new JsonResponse(["status"=>1, "mes"=>"Good", "url"=>$this->generateUrl("admin_dashboard")]);
                 }else{
                     return new JsonResponse(['status'=>0, 'mes'=>'Nom ou mot de passe incorrect.']);
                 }
