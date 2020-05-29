@@ -23,10 +23,12 @@ class DashboardController extends Controller
         $nbProduct = $em->getRepository(Produit::class)->getTodayProduct();
         $nbStock = $em->getRepository(Stock::class)->getTodayStock();
         $stocks = $em->getRepository(Stock::class)->getStockProduct();
+        $produits = $em->getRepository(Produit::class)->findAll();
         return $this->render('AdminBundle:Produit:dashboard.html.twig', array(
             "nbProduct" => $nbProduct,
             "nbStock" => $nbStock,
             "stocks" => $stocks,
+            "produits"=>$produits
         ));
     }
 

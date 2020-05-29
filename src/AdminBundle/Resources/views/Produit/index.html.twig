@@ -73,7 +73,7 @@
                                     <td>{{ produit.fabricant }}</td>
                                     <td>{{ produit.prix }}</td>
                                     <td>{{ produit.createdat | date('d M Y')}}</td>
-                                    <td><a href="{{ path('admin_stock_add', {id: produit.id}) }}" class="uk-badge uk-badge-primary">Stocks</a></td>
+                                    <td><a href="{{ path('admin_stock', {id: produit.id}) }}" class="uk-badge uk-badge-primary">Stocks</a></td>
                                     <td>
                                         <a class='editProduit' data-uk-tooltip="{pos:'top'}" title="Modifier le produit" data-id="{{ produit.id }}" data-description="{{ produit.description }}"
                                            data-nom="{{ produit.nom }}" data-type="{{ produit.type }}"  data-fabricant="{{ produit.fabricant }}"

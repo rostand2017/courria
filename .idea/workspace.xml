@@ -2,38 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f152b40-4f47-4a7b-b562-88bb7dfe4f61" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/AdminBundle/Entity/Facture.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/AdminBundle/Entity/Factureproduit.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/AdminBundle/Entity/Produit.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/AdminBundle/Repository/FactureRepository.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/users.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/index.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/AuthenticationBundle/Entity/Utilisateur.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/AuthenticationBundle/Repository/UtilisateurRepository.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/FactureController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/facture.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/factures.html.twig" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Classes/Authentication.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Classes/Authentication.php" />
       <change beforePath="$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php" />
       <change beforePath="$PROJECT_DIR$/src/AdminBundle/Controller/DashboardController.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/DashboardController.php" />
       <change beforePath="$PROJECT_DIR$/src/AdminBundle/Controller/ProductController.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/ProductController.php" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Controller/StockController.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/StockController.php" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Entity/Product.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Entity/Stock.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Entity/Stock.php" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Entity/User.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Repository/ProductRepository.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Repository/ProduitRepository.php" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Repository/StockRepository.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Repository/StockRepository.php" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Repository/UserRepository.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Repository/UtilisateurRepository.php" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Entity/Facture.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Entity/Facture.php" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Entity/Factureproduit.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Entity/Factureproduit.php" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Repository/FactureRepository.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Repository/FactureRepository.php" />
       <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/login.js" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/login.js" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/product.js" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/produit.js" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/stock.js" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/stock.js" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/login.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/login.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Product/dashboard.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/dashboard.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Product/index.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Product/stock.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/stock.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/dashboard.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/dashboard.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/index.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/index.html.twig" />
       <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Entity/User.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/src/HomeBundle/Entity/Client.php~" afterPath="$PROJECT_DIR$/src/AdminBundle/Entity/Utilisateur.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -94,52 +77,48 @@
       <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="69" column="15" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="15" />
+            <state relative-caret-position="118">
+              <caret line="64" column="11" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig">
+      <file leaf-file-name="dashboard.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/dashboard.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="81" column="29" lean-forward="false" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="82" column="33" lean-forward="true" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StockController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/StockController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="112" column="42" lean-forward="false" selection-start-line="112" selection-start-column="42" selection-end-line="112" selection-end-column="42" />
+            <state relative-caret-position="230">
+              <caret line="65" column="78" lean-forward="false" selection-start-line="65" selection-start-column="78" selection-end-line="65" selection-end-column="78" />
               <folding>
-                <element signature="e#124#155#0#PHP" expanded="true" />
+                <element signature="e#1563#1954#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stock.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/stock.html.twig">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="32" column="100" lean-forward="false" selection-start-line="32" selection-start-column="100" selection-end-line="32" selection-end-column="100" />
+            <state relative-caret-position="119">
+              <caret line="37" column="42" lean-forward="false" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
               <folding>
-                <element signature="e#3130#3149#0#HTML" expanded="true" />
+                <element signature="e#2927#5406#0#HTML" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StockRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Repository/StockRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="39" column="70" lean-forward="false" selection-start-line="39" selection-start-column="70" selection-end-line="39" selection-end-column="70" />
+              <folding>
+                <element signature="e#238#1392#0#PHP" expanded="false" />
+                <element signature="e#1398#2812#0#PHP" expanded="false" />
+                <element signature="e#2818#3075#0#PHP" expanded="false" />
+                <marker date="1590581747749" expanded="true" signature="3130:3264" ph="SELECT s.id,... stock" />
+                <marker date="1590581747749" expanded="true" signature="3245:3264" ph="SELECT s.id,... stock" />
               </folding>
             </state>
           </provider>
@@ -149,20 +128,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>date</find>
-      <find>product</find>
-      <find>.type</find>
-      <find>type</find>
-      <find>id=&quot;type</find>
-      <find>$user-&gt;get</find>
-      <find>Renseignez le nom du produit</find>
-      <find>Blo</find>
-      <find>getBloque</find>
-      <find>mot</find>
-      <find>bloc</find>
-      <find>Renseignez correctement les champs</find>
-      <find>user</find>
-      <find>form</find>
       <find>messageformSalle</find>
       <find>id</find>
       <find>.image</find>
@@ -174,18 +139,27 @@
       <find>$quantity</find>
       <find>admin_produit_add</find>
       <find>sto</find>
-      <find>admin_stock</find>
       <find>quantity</find>
       <find>admin_stock_delete</find>
       <find>sup</find>
       <find>admin_produit_s</find>
+      <find>admin_stock</find>
+      <find>produit</find>
+      <find>admin_homepage</find>
+      <find>i</find>
+      <find>Stock</find>
+      <find>$fatureProduit</find>
+      <find>10</find>
+      <find>p</find>
+      <find>2</find>
+      <find>Password</find>
+      <find>se</find>
+      <find>s</find>
+      <find>se pr</find>
+      <find>Voir</find>
+      <find>stock</find>
     </findStrings>
     <replaceStrings>
-      <replace>Influencer</replace>
-      <replace>influencer</replace>
-      <replace>contact</replace>
-      <replace>nbContact</replace>
-      <replace>Message</replace>
       <replace>message</replace>
       <replace>activities</replace>
       <replace>activity</replace>
@@ -196,7 +170,6 @@
       <replace>stock</replace>
       <replace>Stock</replace>
       <replace>deleted</replace>
-      <replace>facture</replace>
       <replace>utilisateur</replace>
       <replace>modalUtilisateur</replace>
       <replace>formUtilisateur</replace>
@@ -211,6 +184,12 @@
       <replace>effectuer</replace>
       <replace>Produit</replace>
       <replace>quantite</replace>
+      <replace>admin_facture</replace>
+      <replace>facture</replace>
+      <replace>Facture</replace>
+      <replace>2</replace>
+      <replace>10</replace>
+      <replace>Mdp</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -219,11 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/activity.js" />
-        <option value="$PROJECT_DIR$/web/bundles/admin/assets/js/activity.js" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/ActivityController.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Activity/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/PartnershipTypeController.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/partner.js" />
         <option value="$PROJECT_DIR$/web/bundles/admin/assets/js/partner.js" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Partner/index.html.twig" />
@@ -241,17 +215,13 @@
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Product/dashboard.html.twig" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Repository/UtilisateurRepository.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Entity/Factureproduit.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Repository/FactureRepository.php" />
         <option value="$PROJECT_DIR$/src/AuthenticationBundle/Entity/Utilisateur.php" />
         <option value="$PROJECT_DIR$/src/AuthenticationBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/product.js" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/login.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Entity/Utilisateur.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Entity/Stock.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Entity/Facture.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Repository/StockRepository.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/DashboardController.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/login.js" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/index.html.twig" />
         <option value="$PROJECT_DIR$/web/bundles/admin/assets/js/users.js" />
@@ -259,17 +229,26 @@
         <option value="$PROJECT_DIR$/web/bundles/admin/assets/js/produit.js" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/produit.js" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Entity/Produit.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Repository/ProduitRepository.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/ProductController.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/stock.js" />
         <option value="$PROJECT_DIR$/web/bundles/admin/assets/js/stock.js" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/StockController.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/stock.html.twig" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/stock.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Repository/FactureRepository.php" />
+        <option value="$PROJECT_DIR$/web/bundles/admin/assets/js/facture.js" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Entity/Facture.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/ProductController.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Entity/Factureproduit.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/factures.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Classes/Authentication.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/DashboardController.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/FactureController.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/dashboard.html.twig" />
       </list>
     </option>
   </component>
@@ -363,7 +342,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -452,26 +431,26 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nopermission" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../virtual_space" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\influencer\src\HomeBundle\Resources\views\Login" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\laragon\www\stock\src\AdminBundle\Resources\public\assets\js" />
+      <recent name="C:\laragon\www\stock\web\bundles\admin\assets\js" />
+      <recent name="C:\laragon\www\stock\src\AdminBundle\Resources\views\Produit" />
+      <recent name="C:\laragon\www\stock\src\AdminBundle\Controller" />
       <recent name="C:\laragon\www\stock\src\AdminBundle\Resources\views\Account" />
-      <recent name="C:\laragon\www\stock\src\AuthenticationBundle\Repository" />
-      <recent name="C:\laragon\www\stock\src\AuthenticationBundle\Entity" />
-      <recent name="C:\laragon\www\stock\src\AdminBundle\Repository" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\influencer\src\HomeBundle\Resources\views\Login" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -539,6 +518,7 @@
       <workItem from="1590402365815" duration="30270000" />
       <workItem from="1590664756876" duration="9192000" />
       <workItem from="1590677084661" duration="8478000" />
+      <workItem from="1590734965663" duration="19379000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout de produit et ajout de stock operationnel">
       <created>1562023449735</created>
@@ -572,33 +552,55 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="513941000" />
+    <option name="totallyTimeSpent" value="533320000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18910742" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19213313" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22087745" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22087745" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33487654" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33487654" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="SQL Generator" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948717" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33487654" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19213313" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="SQL Generator" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22087745" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948717" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -611,7 +613,8 @@
     <MESSAGE value="Dashboard terminé" />
     <MESSAGE value="Ajout du logo sur le login" />
     <MESSAGE value="changement de la page de redirection apres authentification" />
-    <option name="LAST_COMMIT_MESSAGE" value="changement de la page de redirection apres authentification" />
+    <MESSAGE value="Dashboard added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dashboard added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -620,42 +623,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://table:/76818c92/104bc581-f0a7-4159-863f-f182fd50d067/stock.product">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/plugins/morris/morris.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/favicon.svg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/dashboard.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="15" lean-forward="false" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Entity/Product.php" />
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Repository/UtilisateurRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Entity/User.php" />
     <entry file="file://$PROJECT_DIR$/src/AuthenticationBundle/Entity/User.php" />
     <entry file="file://$PROJECT_DIR$/src/AuthenticationBundle/Entity/Utilisateur.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -707,14 +674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Repository/FactureRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="55" lean-forward="false" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/kendoui_custom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -754,21 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="100" lean-forward="false" selection-start-line="4" selection-start-column="100" selection-end-line="4" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Repository/StockRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="4" />
-          <folding>
-            <marker date="1590581747749" expanded="true" signature="326:366" ph="SELECT COUNT... stock" />
-            <marker date="1590581747749" expanded="true" signature="326:395" ph="SELECT COUNT... stock" />
-            <marker date="1590581747749" expanded="true" signature="1580:1670" ph="SELECT s.id,... stock" />
-            <marker date="1590581747749" expanded="true" signature="2865:2941" ph="SELECT COUNT... stock" />
-            <marker date="1590581747749" expanded="true" signature="3130:3264" ph="SELECT s.id,... stock" />
-            <marker date="1590581747749" expanded="true" signature="3245:3264" ph="SELECT s.id,... stock" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -864,35 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Entity/Factureproduit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180">
-          <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/DashboardController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Repository/ProduitRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="4" />
-          <folding>
-            <marker date="1590727568248" expanded="true" signature="407:437" ph="SELECT COUNT... produit" />
-            <marker date="1590727568248" expanded="true" signature="1621:1644" ph="SELECT * FRO... produit" />
-            <marker date="1590727568248" expanded="true" signature="2840:2914" ph="SELECT COUNT... produit" />
-            <marker date="1590727568248" expanded="true" signature="2876:2914" ph="SELECT COUNT... product" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Entity/Stock.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -901,35 +816,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Entity/Facture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/stock.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="45" column="29" lean-forward="false" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Entity/Produit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="98" column="20" lean-forward="false" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="81" column="29" lean-forward="false" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -937,69 +827,202 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="44" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="86" column="32" lean-forward="false" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/ProductController.php">
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Repository/FactureRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/StockController.php">
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Entity/Produit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="112" column="42" lean-forward="false" selection-start-line="112" selection-start-column="42" selection-end-line="112" selection-end-column="42" />
-          <folding>
-            <element signature="e#124#155#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#543#1845#0#PHP" expanded="false" />
-            <element signature="e#1851#2006#0#PHP" expanded="false" />
-            <element signature="e#2043#2444#0#PHP" expanded="false" />
-            <element signature="e#2512#4309#0#PHP" expanded="false" />
-            <element signature="e#4752#6497#0#PHP" expanded="false" />
-            <element signature="e#6503#7488#0#PHP" expanded="false" />
-            <element signature="e#7494#8336#0#PHP" expanded="false" />
-            <element signature="e#8342#9300#0#PHP" expanded="false" />
-            <element signature="e#9306#10328#0#PHP" expanded="false" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="87" column="20" lean-forward="false" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/stock.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="32" column="100" lean-forward="false" selection-start-line="32" selection-start-column="100" selection-end-line="32" selection-end-column="100" />
+        <state relative-caret-position="272">
+          <caret line="33" column="55" lean-forward="false" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/facture.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Repository/ProduitRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="72" column="5" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
           <folding>
-            <element signature="e#3130#3149#0#HTML" expanded="true" />
+            <element signature="e#241#1433#0#PHP" expanded="false" />
+            <element signature="e#1439#2785#0#PHP" expanded="false" />
+            <marker date="1590727568248" expanded="true" signature="407:437" ph="SELECT COUNT... produit" />
+            <marker date="1590727568248" expanded="true" signature="1621:1644" ph="SELECT * FRO... produit" />
+            <marker date="1590727568248" expanded="true" signature="2840:2914" ph="SELECT COUNT... produit" />
+            <marker date="1590727568248" expanded="true" signature="2876:2914" ph="SELECT COUNT... product" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml">
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="69" column="15" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="15" />
+        <state relative-caret-position="221">
+          <caret line="145" column="60" lean-forward="false" selection-start-line="145" selection-start-column="60" selection-end-line="145" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/admin/assets/js/facture.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Entity/Factureproduit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="33" column="65" lean-forward="false" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/factures.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="67" column="81" lean-forward="false" selection-start-line="67" selection-start-column="81" selection-end-line="67" selection-end-column="81" />
+          <folding>
+            <element signature="e#5011#5030#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Entity/Facture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="101" column="31" lean-forward="false" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Classes/Authentication.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="228" column="49" lean-forward="false" selection-start-line="228" selection-start-column="49" selection-end-line="228" selection-end-column="49" />
+          <folding>
+            <element signature="e#719#1772#0#PHP" expanded="false" />
+            <element signature="e#1854#2009#0#PHP" expanded="false" />
+            <element signature="e#2046#2447#0#PHP" expanded="false" />
+            <element signature="e#2515#4312#0#PHP" expanded="false" />
+            <element signature="e#4755#6500#0#PHP" expanded="false" />
+            <element signature="e#6506#7491#0#PHP" expanded="false" />
+            <element signature="e#7497#8339#0#PHP" expanded="false" />
+            <element signature="e#8345#9303#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/StockController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="2" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Repository/StockRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="39" column="70" lean-forward="false" selection-start-line="39" selection-start-column="70" selection-end-line="39" selection-end-column="70" />
+          <folding>
+            <element signature="e#238#1392#0#PHP" expanded="false" />
+            <element signature="e#1398#2812#0#PHP" expanded="false" />
+            <element signature="e#2818#3075#0#PHP" expanded="false" />
+            <marker date="1590581747749" expanded="true" signature="3130:3264" ph="SELECT s.id,... stock" />
+            <marker date="1590581747749" expanded="true" signature="3245:3264" ph="SELECT s.id,... stock" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/DashboardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/FactureController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="58" column="52" lean-forward="true" selection-start-line="58" selection-start-column="52" selection-end-line="58" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="82" column="33" lean-forward="true" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
+        <state relative-caret-position="119">
+          <caret line="37" column="42" lean-forward="false" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
+          <folding>
+            <element signature="e#2927#5406#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="64" column="11" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="11" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/dashboard.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="65" column="78" lean-forward="false" selection-start-line="65" selection-start-column="78" selection-end-line="65" selection-end-column="78" />
+          <folding>
+            <element signature="e#1563#1954#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

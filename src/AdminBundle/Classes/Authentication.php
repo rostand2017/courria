@@ -26,18 +26,18 @@ class Authentication
     public function isAuthenticate(GetResponseEvent $event){
 
         $this->request = $event->getRequest();
-        $admin = $this->request->getSession()->get("admin");
-        if( !$admin && $this->isAdmin() ){
+        $user = $this->request->getSession()->get("user");
+        if(!$user && !$this->isLoginPage()){
             $event->setResponse(new RedirectResponse( $this->router->generate("admin_login")));
         }
     }
 
-    public function isAdmin(){
+    public function isLoginPage(){
         $request = $this->request;
         $url = $request->getUri();
-        if( preg_match("#/admin#", $url) && !preg_match("#/admin/login#", $url) && !preg_match("#/admin/create#", $url) ){
+        if( preg_match("#/login#", $url) || preg_match("#/create#", $url) )
             return true;
-        }else
+        else
             return false;
     }
 

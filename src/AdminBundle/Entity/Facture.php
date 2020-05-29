@@ -35,6 +35,12 @@ class Facture
      */
     private $createdat;
 
+    /**
+     * @var array
+     *
+     * @ORM\OneToMany(targetEntity="Factureproduit", mappedBy="facture", cascade={"remove"})
+     */
+    private $fatureProduit;
 
     public function __construct()
     {
@@ -89,5 +95,22 @@ class Facture
     {
         $this->createdat = $createdat;
     }
+
+    /**
+     * @return array
+     */
+    public function getFatureProduit()
+    {
+        return $this->fatureProduit;
+    }
+
+    /**
+     * @param array $fatureProduit
+     */
+    public function setFatureProduit($fatureProduit)
+    {
+        $this->fatureProduit = $fatureProduit;
+    }
+
 }
 

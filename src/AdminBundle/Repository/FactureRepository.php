@@ -10,7 +10,4 @@ namespace AdminBundle\Repository;
  */
 class FactureRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function countByDateAndName($nbPage, $page){
-        return ;
-    }
 }

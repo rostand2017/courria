@@ -1,0 +1,135 @@
+{% extends "AdminBundle::layout.html.twig" %}
+{% block title %} Factures {% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{{ asset("bundles/admin/assets/skins/dropify/css/dropify.css")}}"/>
+{% endblock %}
+{% block body %}
+    <div class="md-card uk-margin-medium-bottom">
+        <div class="md-card-toolbar">
+            <div class="md-card-toolbar-actions">
+                <i class="md-icon material-icons md-card-fullscreen-activate">&#xE5D0;</i>
+                <i class="md-icon material-icons md-card-toggle">&#xE316;</i>
+                <a href="{{ path('admin_facture') }}"><i class="md-icon uk-icon-refresh"></i></a>
+            </div>
+            <h3 class="md-card-toolbar-heading-text">
+                Factures
+                <span class="uk-badge uk-badge-warning">{{ factures | length }}</span>
+            </h3>
+        </div>
+        <div class="md-card-content">
+            <div class="">
+                <div class="uk-grid" data-uk-grid-margin="">
+                    <div class="uk-width-medium-1-1">
+                        <table class="uk-table uk-table-nowrap table_check">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nom du client</th>
+                                <th>Date de la facture</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for facture in factures %}
+                                <tr>
+                                    <td>{{ loop.index }}</td>
+                                    <td>{{ facture.nomClient }}</td>
+                                    <td>
+                                        {{ facture.createdat | date('d M Y')}}
+                                        <p>
+                                            {% for produit in facture.getFatureProduit() %}
+                                                <span class="uk-badge">{{ produit.produit.nom }}</span>
+                                                <span class="uk-badge uk-badge-danger">PU: {{ produit.produit.prix }} XAF</span>
+                                                <span class="uk-badge">Quantité: {{ produit.quantite }}</span>
+                                            {% endfor %}
+                                        </p>
+                                    </td>
+                                    <td>
+                                        {% if loop.index == 1 %}
+                                            <a class='deleteFacture' data-url="{{ path('admin_facture_delete', {id: facture.id}) }}"><i class='uk-icon-trash uk-icon-medium uk-text-danger'></i></a>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                            {% else %}
+                                <tr><td colspan="4" class="uk-text-danger uk-text-center">Aucune facture</td></tr>
+                            {% endfor %}
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="4" class="uk-text-center">
+                                        {% if app.request.get('page') %}
+                                            <a href="{{path("admin_facture")}}?page={% if app.request.get('page') > 1 %}{{app.request.get('page') - 1}}{% endif %}"
+                                               class="uk-button uk-button-primary {% if app.request.get('page') <= 1 %} uk-disabled {% endif %}">précédent</a>
+                                            <a href="{{path("admin_facture")}}{% if factures | length == 10 %}?page={{app.request.get('page') + 1}}{% endif %}" class="uk-button
+                                                     {% if factures | length < 10 %} disabled {% endif %}">suivant</a>
+                                        {% else %}
+                                            <a href="#" class="uk-button uk-button-primary uk-disabled">précédent</a>
+                                            <a href="{{path("admin_facture")}}{% if factures | length == 10 %}?page=1{% else %}#{% endif %}" class="uk-button
+                                                     {% if factures | length < 10 %} uk-disabled {% endif %}">suivant</a>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="md-fab-wrapper">
+        <a class="md-fab md-fab-accent md-fab-wave" id="addFacture" href="#" data-uk-modal="{center:true}">
+            <i class="material-icons"></i>
+        </a>
+    </div>
+
+    <div class="uk-modal" id="modalFacture">
+        <div class="uk-modal-dialog" style="width: 50%;">
+            <button class="uk-modal-close uk-close" type="button"></button>
+            <form action="{{ path('admin_facture_add') }}" id="formFacture" method="post" enctype="multipart/form-data">
+                <div class="uk-modal-header">
+                    <h3 class="heading_b uk-margin-bottom titleForm">Ajoutez un nouvelle facture</h3>
+                    <div class="text-center" id="messageformSalle"></div>
+                </div>
+                <div class="uk-grid" data-uk-grid-margin>
+                    <div class="uk-width-medium-1-1">
+                        <div class="parsley-row">
+                            <input type="text" placeholder="Nom du client" required name="nomClient" id="nomClient" class="md-input">
+                        </div>
+                    </div>
+                </div>
+                <div id="produitCol">
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-medium-1-1">
+                            <div class="parsley-row">
+                                <input type="number" placeholder="Quantité" required name="quantite" id="quantite" class="md-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-medium-1-1">
+                            <div class="parsley-row">
+                                <select name="produit" id="produit" class="md-input">
+                                    {% for produit in produits %}
+                                        <option value="{{ produit.id }}">{{ produit.nom }} - {{ produit.prix }} XAF</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-modal-footer">
+                    <a href="#" class="md-icon-btn"><i class="md-icon uk-icon-save"></i></a>
+                    <button type="submit" class="sendBtn uk-float-right md-btn md-btn-flat md-btn-flat-primary">Ajouter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
+{% block scripts %}
+    <script src="{{ asset("bundles/admin/assets/js/custom/dropify/dist/js/dropify.min.js") }}"></script>
+    <script src="{{ asset("bundles/admin/assets/js/pages/forms_file_input.min.js") }}"></script>
+    <script src="{{ asset("bundles/admin/bower_components/ckeditor/ckeditor.js") }}"></script>
+    <script src="{{ asset("bundles/admin/bower_components/ckeditor/adapters/jquery.js") }}"></script>
+    <script src="{{ asset("bundles/admin/assets/js/facture.js") }}"></script>
+{% endblock %}

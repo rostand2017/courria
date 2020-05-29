@@ -142,6 +142,8 @@ class ProductController extends Controller
             $em->remove($produit);
             try{
                 $em->flush();
+                if($produit->getImage())
+                    $this->deleteFile($produit->getImage());
                 return new JsonResponse(array(
                     "status"=>0,
                     "mes"=>"Le produit ".$produit->getNom()." a été supprimée"

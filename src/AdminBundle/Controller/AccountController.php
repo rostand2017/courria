@@ -31,7 +31,7 @@ class AccountController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 $user = $em->getRepository(Utilisateur::class)->findOneBy(["username"=>$username]);
                 if( $user && password_verify($password, $user->getMdp()) ){
-                    if($user->bloque())
+                    if($user->isBloque())
                         return new JsonResponse(['status'=>0, 'mes'=>'Votre compte a été bloqué. Veuillez contacter l\'administrateur']);
                     $request->getSession()->set("user", $user);
                     return new JsonResponse(["status"=>1, "mes"=>"Good", "url"=>$this->generateUrl("admin_dashboard")]);
@@ -42,6 +42,7 @@ class AccountController extends Controller
                 return new JsonResponse(['status'=>0, 'mes'=>'Nom ou mot de passe incorrect']);
             }
         }
+
         return $this->render("AdminBundle:Account:login.html.twig");
     }
 
@@ -217,15 +218,15 @@ class AccountController extends Controller
 
     public function changePasswordAction(Request $request){
         if($request->isMethod('POST')){
-            $user = $request->getSession()->get("admin");
+            $user = $request->getSession()->get("user");
             $password = $request->request->get("password");
-            if($password && password_verify($password, $user->getPassword()) && $newPassword = $request->request->get("newPassword") ){
+            if($password && password_verify($password, $user->getMdp()) && $newPassword = $request->request->get("newPassword") ){
                 $em = $this->getDoctrine()->getManager();
-                $user2 = $em->getRepository(User::class)->find($user->getId());
-                $user2->setPassword(password_hash($newPassword, PASSWORD_BCRYPT));
+                $user2 = $em->getRepository(Utilisateur::class)->find($user->getId());
+                $user2->setMdp(password_hash($newPassword, PASSWORD_BCRYPT));
                 $em->persist($user2);
                 $em->flush();
-                $request->getSession()->set("admin", $user2 );
+                $request->getSession()->set("user", $user2 );
                 return new JsonResponse( ["status"=>0, "mes"=>"Mot de passe modifié avec succès"] );
             }else{
                 return new JsonResponse( ["status"=>1, "mes"=>"Mot de passe incorrect"] );

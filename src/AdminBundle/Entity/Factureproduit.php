@@ -31,7 +31,7 @@ class Factureproduit
     /**
      * @var Facture
      *
-     * @ORM\ManyToOne(targetEntity="Facture")
+     * @ORM\ManyToOne(targetEntity="Facture", cascade={"persist"})
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="facture", referencedColumnName="id")
      * })
@@ -41,7 +41,7 @@ class Factureproduit
     /**
      * @var Produit
      *
-     * @ORM\ManyToOne(targetEntity="Produit")
+     * @ORM\ManyToOne(targetEntity="Produit", cascade={"persist"})
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="produit", referencedColumnName="id")
      * })
