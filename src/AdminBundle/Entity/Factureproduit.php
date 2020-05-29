@@ -5,12 +5,12 @@ namespace AdminBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Stock
+ * Factureproduit
  *
- * @ORM\Table(name="stock", indexes={@ORM\Index(name="FK_ASSOCIATION2", columns={"produit"})})
- * @ORM\Entity(repositoryClass="AdminBundle\Repository\StockRepository")
+ * @ORM\Table(name="factureproduit", indexes={@ORM\Index(name="FK_ASSOCIATION3", columns={"facture"}), @ORM\Index(name="FK_ASSOCIATION4", columns={"produit"})})
+ * @ORM\Entity
  */
-class Stock
+class Factureproduit
 {
     /**
      * @var integer
@@ -29,11 +29,14 @@ class Stock
     private $quantite;
 
     /**
-     * @var \DateTime
+     * @var Facture
      *
-     * @ORM\Column(name="createdat", type="datetime", nullable=false)
+     * @ORM\ManyToOne(targetEntity="Facture")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="facture", referencedColumnName="id")
+     * })
      */
-    private $createdat;
+    private $facture;
 
     /**
      * @var Produit
@@ -44,11 +47,6 @@ class Stock
      * })
      */
     private $produit;
-
-    public function __construct()
-    {
-        $this->createdat = new \DateTime();
-    }
 
     /**
      * @return int
@@ -83,19 +81,19 @@ class Stock
     }
 
     /**
-     * @return \DateTime
+     * @return Facture
      */
-    public function getCreatedat()
+    public function getFacture()
     {
-        return $this->createdat;
+        return $this->facture;
     }
 
     /**
-     * @param \DateTime $createdat
+     * @param Facture $facture
      */
-    public function setCreatedat($createdat)
+    public function setFacture($facture)
     {
-        $this->createdat = $createdat;
+        $this->facture = $facture;
     }
 
     /**

@@ -4,17 +4,15 @@ $(document).ready(function() {
         {
             customConfig: '../../assets/js/custom/ckeditor_config.js'
         });
-    $(document).on('click','.deleteProduct', function (e) {
+    $(document).on('click','.deleteProduit', function (e) {
         e.preventDefault();
         var url = $(this).data('url'),
-            id = $(this).data('id');
-        mess = "Êtes vous sûr de vouloir supprimer le producit "+$(this).data('name')+" ?";
+            mess = "Êtes vous sûr de vouloir supprimer le produit "+$(this).data('nom')+" ?";
         UIkit.modal.confirm(mess, function(){
-            if(url!=''&&id!=''){
+            if(url!==''){
                 $.ajax({
                     type: 'post',
                     url: url,
-                    data: 'id='+id,
                     datatype: 'json',
                     beforeSend: function () {},
                     success: function (json) {
@@ -34,19 +32,21 @@ $(document).ready(function() {
         });
     });
 
-    $(document).on('submit', '#formProduct', function (e) {
+    $(document).on('submit', '#formProduit', function (e) {
         e.preventDefault();
         var url = $(this).attr('action');
-        var $form = $(this);
-        var data = $form.serialize();
-        var name = $('#name').val(),
+        var form = $(this);
+        var data = new FormData(form[0]);
+        var nom = $('#nom').val(),
             act = $('.sendBtn').text();
-        if (name != '') {
+        if (nom != '') {
             $.ajax({
                 type: 'post',
                 url: url,
                 data: data,
                 datatype: 'json',
+                contentType: false,
+                processData: false,
                 beforeSend: function () {
                     $('.sendBtn').text('CHARGEMENT ...').prop('disabled', true);
                 },
@@ -63,7 +63,7 @@ $(document).ready(function() {
                     $('.sendBtn').prop('disabled', false).text(act);
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
-
+                    $('#messageformSalle').html("<div class='uk-alert uk-alert-danger uk-text-center' data-uk-alert=''><a href='' class='uk-alert-close uk-close'></a><span class='alertJss'>Une erreur est survenue</span></div>");
                 }
             });
 
@@ -73,27 +73,38 @@ $(document).ready(function() {
         }
     });
 
-    $(document).on('click','#addProduct', function (e) {
+    $(document).on('click','#addProduit', function (e) {
         e.preventDefault();
-        $('#name').val('');
+        $('#messageformSalle').html("");
+        $('#nom').val('');
+        $('#fabricant').val('');
+        $('#prix').val('');
         $('#description').val('');
+        $('#image').val('');
         $('#id').val('');
         $('.sendBtn').text("Ajouter");
         $('.titleForm').text("Ajouter un nouveau produit");
-        UIkit.modal('#modalProduct').show();
+        UIkit.modal('#modalProduit').show();
     });
 
-    $(document).on('click','.editProduct', function (e) {
+    $(document).on('click','.editProduit', function (e) {
         e.preventDefault();
         var description = $(this).data('description'),
-            name = $(this).data('name'),
+            nom = $(this).data('nom'),
+            fabricant = $(this).data('fabricant'),
+            prix = $(this).data('prix'),
+            type = $(this).data('type'),
             id = $(this).data('id');
+        $('#messageformSalle').html("");
         $('#description').val(description);
-        $('#name').val(name);
+        $('#nom').val(nom);
+        $('#fabricant').val(fabricant);
+        $('#prix').val(prix);
+        $('#type').val(type);
         $('#id').val(id);
         $('.md-input-wrapper').addClass('md-input-focus');
         $('.titleForm').text("Modifier le produit");
         $('.sendBtn').text("Modifier");
-        UIkit.modal('#modalProduct').show();
+        UIkit.modal('#modalProduit').show();
     });
 });

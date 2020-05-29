@@ -5,12 +5,12 @@ namespace AdminBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Stock
+ * Facture
  *
- * @ORM\Table(name="stock", indexes={@ORM\Index(name="FK_ASSOCIATION2", columns={"produit"})})
- * @ORM\Entity(repositoryClass="AdminBundle\Repository\StockRepository")
+ * @ORM\Table(name="facture")
+ * @ORM\Entity(repositoryClass="AdminBundle\Repository\FactureRepository")
  */
-class Stock
+class Facture
 {
     /**
      * @var integer
@@ -22,11 +22,11 @@ class Stock
     private $id;
 
     /**
-     * @var integer
+     * @var string
      *
-     * @ORM\Column(name="quantite", type="integer", nullable=false)
+     * @ORM\Column(name="nomclient", type="string", length=254, nullable=false)
      */
-    private $quantite;
+    private $nomclient;
 
     /**
      * @var \DateTime
@@ -35,20 +35,12 @@ class Stock
      */
     private $createdat;
 
-    /**
-     * @var Produit
-     *
-     * @ORM\ManyToOne(targetEntity="Produit")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="produit", referencedColumnName="id")
-     * })
-     */
-    private $produit;
 
     public function __construct()
     {
         $this->createdat = new \DateTime();
     }
+
 
     /**
      * @return int
@@ -67,19 +59,19 @@ class Stock
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getQuantite()
+    public function getNomclient()
     {
-        return $this->quantite;
+        return $this->nomclient;
     }
 
     /**
-     * @param int $quantite
+     * @param string $nomclient
      */
-    public function setQuantite($quantite)
+    public function setNomclient($nomclient)
     {
-        $this->quantite = $quantite;
+        $this->nomclient = $nomclient;
     }
 
     /**
@@ -97,22 +89,5 @@ class Stock
     {
         $this->createdat = $createdat;
     }
-
-    /**
-     * @return Produit
-     */
-    public function getProduit()
-    {
-        return $this->produit;
-    }
-
-    /**
-     * @param Produit $produit
-     */
-    public function setProduit($produit)
-    {
-        $this->produit = $produit;
-    }
-
 }
 

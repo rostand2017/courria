@@ -1,24 +1,15 @@
 #Product
 admin_homepage:
-    path:     /product
+    path:     /produit
     defaults: { _controller: AdminBundle:Product:index }
-admin_product_delete:
-    path:     /product/delete
+admin_produit_delete:
+    path:     /produit/delete/{id}
     defaults: { _controller: AdminBundle:Product:delete }
-admin_product_add:
-    path:     /product/add
+    requirements:
+        id: \d+
+admin_produit_add:
+    path:     /produit/add
     defaults: { _controller: AdminBundle:Product:add }
-
-#Stock
-admin_stock:
-    path:     /stock
-    defaults: { _controller: AdminBundle:Stock:index }
-admin_stock_delete:
-    path:     /stock/delete
-    defaults: { _controller: AdminBundle:Stock:delete }
-admin_stock_add:
-    path:     /stock/add
-    defaults: { _controller: AdminBundle:Stock:add }
 
 #Dashboard
 admin_dashboard:
@@ -38,6 +29,56 @@ admin_logout:
     path:     /logout
     defaults: { _controller: AdminBundle:Account:logout }
 
+# USER
 admin_create:
     path:     /create
     defaults: { _controller: AdminBundle:Account:create }
+
+admin_user:
+    path:     /user
+    defaults: { _controller: AdminBundle:Account:createUser }
+
+admin_modify_user:
+    path:     /user/modify/{id}
+    defaults: { _controller: AdminBundle:Account:modifyUser }
+    requirements:
+        id: \d+
+
+admin_delete_user:
+    path:     /user/delete/{id}
+    defaults: { _controller: AdminBundle:Account:deleteUser }
+    requirements:
+        id: \d+
+
+admin_block_user:
+    path:     /user/block/{id}
+    defaults: { _controller: AdminBundle:Account:blockUser }
+    requirements:
+        id: \d+
+
+admin_unblock_user:
+    path:     /user/unblock/{id}
+    defaults: { _controller: AdminBundle:Account:unblockUser }
+    requirements:
+        id: \d+
+# STOCK
+admin_stock:
+    path:     /produit/{id}
+    defaults: { _controller: AdminBundle:Stock:index }
+    requirements:
+        id: \d+
+admin_stock_add:
+    path:     /produit/{id}/add
+    defaults: { _controller: AdminBundle:Stock:add }
+    requirements:
+        id: \d+
+admin_stock_modify:
+    path:     /produit/modify_stock/{id}
+    defaults: { _controller: AdminBundle:Stock:modify }
+    requirements:
+        id: \d+
+admin_stock_delete:
+    path:     /produit/delete_stock/{id}
+    defaults: { _controller: AdminBundle:Stock:delete }
+    requirements:
+        id: \d+

@@ -2,10 +2,6 @@ auth_login:
     path:     /login/done
     defaults: { _controller: AuthenticationBundle:Account:login }
 
-auth_login_facebook:
-    path:     /facebook_login
-    defaults: { _controller: AuthenticationBundle:Account:loginFacebook }
-
 auth_register:
     path:     /register/done
     defaults: { _controller: AuthenticationBundle:Account:register }

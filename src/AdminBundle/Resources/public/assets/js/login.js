@@ -16,7 +16,7 @@ $(document).ready(function(){
 					$('.sendBtn').text('Loading ...').prop('disabled',true);
 				},
 				success: function (json) {
-					if(json.statuts == 0){
+					if(json.status == 0){
 						window.location.assign(json.direct);
 					}else{
 						$('#password').val('');

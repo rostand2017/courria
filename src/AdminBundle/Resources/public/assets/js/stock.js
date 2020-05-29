@@ -7,14 +7,12 @@ $(document).ready(function() {
     $(document).on('click','.deleteStock', function (e) {
         e.preventDefault();
         var url = $(this).data('url'),
-            id = $(this).data('id');
-        mess = "Êtes vous sûr de vouloir supprimer ce stock ?";
+            mess = "Êtes vous sûr de vouloir supprimer ce stock ?";
         UIkit.modal.confirm(mess, function(){
-            if(url!=''&&id!=''){
+            if(url!==''){
                 $.ajax({
-                    type: 'post',
+                    type: 'get',
                     url: url,
-                    data: 'id='+id,
                     datatype: 'json',
                     beforeSend: function () {},
                     success: function (json) {
@@ -26,7 +24,9 @@ $(document).ready(function() {
                         }
                     },
                     complete: function () {},
-                    error: function (jqXHR, textStatus, errorThrown) {}
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        UIkit.notify({message:"Une erreur est survenue",status:'danger',timeout : 5000,pos:'top-center'});
+                    }
                 });
             }else{
                 UIkit.notify({message:"Une erreur est survenue",status:'danger',timeout : 5000,pos:'top-center'});
@@ -39,9 +39,9 @@ $(document).ready(function() {
         var url = $(this).attr('action');
         var $form = $(this);
         var data = $form.serialize();
-        var quantity = $('#quantity').val(),
+        var quantite = $('#quantite').val(),
             act = $('.sendBtn').text();
-        if (quantity > 0) {
+        if (quantite > 0) {
             $.ajax({
                 type: 'post',
                 url: url,
@@ -63,7 +63,8 @@ $(document).ready(function() {
                     $('.sendBtn').prop('disabled', false).text(act);
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
-
+                    $('#messageformSalle').html("<div class='uk-alert uk-alert-danger uk-text-center' data-uk-alert=''><a href='' class='uk-alert-close uk-close'></a><span class='alertJss'>Une erreur est survenue</span></div>");
+                    UIkit.notify({message:json.mes,status:'danger',timeout : 5000,pos:'bottom-center'});
                 }
             });
 
@@ -75,8 +76,8 @@ $(document).ready(function() {
 
     $(document).on('click','#addStock', function (e) {
         e.preventDefault();
-        $('#quantity').val('');
-        $('#id').val('');
+        $("#formStock").attr('action', $(this).data('url'));
+        $('#quantite').val('');
         $('.sendBtn').text("Ajouter");
         $('.titleForm').text("Ajouter un nouveau stock");
         UIkit.modal('#modalStock').show();
@@ -84,12 +85,10 @@ $(document).ready(function() {
 
     $(document).on('click','.editStock', function (e) {
         e.preventDefault();
-        var product = $(this).data('product'),
-            quantity = $(this).data('quantity'),
-            id = $(this).data('id');
-        $('#quantity').val(quantity);
-        $('#product').val(product);
-        $('#id').val(id);
+        var quantite = $(this).data('quantite'),
+            url = $(this).data('url');
+        $('#quantite').val(quantite);
+        $("#formStock").attr('action', url);
         $('.md-input-wrapper').addClass('md-input-focus');
         $('.titleForm').text("Modifier le stock");
         $('.sendBtn').text("Modifier");

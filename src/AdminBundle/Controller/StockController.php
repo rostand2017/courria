@@ -8,7 +8,7 @@
 
 namespace AdminBundle\Controller;
 
-use AdminBundle\Entity\Product;
+use AdminBundle\Entity\Produit;
 use AdminBundle\Entity\Stock;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -17,92 +17,103 @@ use Symfony\Component\HttpFoundation\Request;
 class StockController extends Controller
 {
 
-    public function indexAction(Request $request){
+    public function indexAction(Produit $produit){
 
-        $page = ( $request->query->get("page") )?$request->query->get("page") : 1;
-        $nbPerPage = 10;
-        $em = $this->getDoctrine()->getManager();
-        $nbStock = $em->getRepository(Stock::class)
-            ->countByDateAndName($page, $nbPerPage, $request->query->get("begin"), $request->query->get("end"), $request->query->get("search"));
-        $stocks = $em->getRepository(Stock::class)
-            ->getByDateAndName($page, $nbPerPage, $request->query->get("begin"), $request->query->get("end"), $request->query->get("search"));
-        $products = $em->getRepository(Product::class)->findAll();
-        $nbPage = ceil($nbStock / $nbPerPage);
-        return $this->render('AdminBundle:Product:stock.html.twig', array(
-            "stocks" => $stocks,
-            "products" => $products,
-            "page" => $page,
-            "nbPage" => $nbPage,
-            "nbStock" => $nbStock,
+        $produit->setStocks(array_reverse(iterator_to_array($produit->getStocks())));
+        return $this->render('AdminBundle:Produit:stock.html.twig', array(
+            "produit" => $produit
         ));
     }
 
-    public function addAction(Request $request){
-        $productId = $request->get("product");
-        $quantity = $request->get("quantity");
-        $id = $request->request->get('id');
+    public function addAction(Request $request, Produit $produit){
+        $user = $request->getSession()->get("user");
+        if($user->getFonction() == AccountController::$USER_TYPE["SECRETAIRE_TYPE"] || $user->isBloque())
+            return new JsonResponse(array("status"=>1, "mes"=>"Vous ne pouvez pas effectuer cette opération"), 403);
+
+        $quantite = $request->get("quantite");
         $em = $this->getDoctrine()->getManager();
-        if(!$quantity && $quantity == ''){
+
+        if(!$quantite || $quantite < 0){
             return new JsonResponse(array(
                 "status"=>1,
-                "mes"=>"Renseignez une quantité"
+                "mes"=>"Renseignez une quantité supérieure à 0"
             ));
         }
-        $product = $em->getRepository(Product::class)->find($productId);
-        if(!$product){
+        if(!$produit){
             return new JsonResponse(array(
                 "status"=>1,
                 "mes"=>"Une erreur est survenue"
             ));
         }
-        if($id && $id != '' && is_numeric($id) && $id >0){
-            $stock = $em->getRepository(Stock::class)->find($id);
-            if($stock){
-                $stock->setProduct($product);
-                $stock->setQuantity($quantity);
-                $em->persist($stock);
-                $em->flush();
-                return new JsonResponse(array(
-                    "status" => 0,
-                    "mes" => "Le stock du produit " . $product->getName() . " a été modifiée avec succès."
-                ));
-            }else{
-                return new JsonResponse(array(
-                    "status"=>1,
-                    "mes"=>"Une erreur est survenue."
-                ));
-            }
-        }else {
-            $stock = new Stock();
-            $stock->setProduct($product);
-            $stock->setQuantity($quantity);
+        $stock = new Stock();
+        $stock->setProduit($produit);
+        $stock->setQuantite($quantite);
+        $em->persist($stock);
+        $em->flush();
+        return new JsonResponse(array(
+            "status" => 0,
+            "mes" => "Nouveau stock ajouté avec succès."
+        ));
+    }
+
+    public function modifyAction(Request $request, Stock $stock){
+        $user = $request->getSession()->get("user");
+        if($user->getFonction() == AccountController::$USER_TYPE["SECRETAIRE_TYPE"] || $user->isBloque())
+            return new JsonResponse(array("status"=>1, "mes"=>"Vous ne pouvez pas effectuer cette opération"), 403);
+
+        $quantite = $request->get("quantite");
+        $em = $this->getDoctrine()->getManager();
+
+        if(!$quantite || $quantite < 0){
+            return new JsonResponse(array(
+                "status"=>1,
+                "mes"=>"Renseignez une quantité supérieure à 0"
+            ));
+        }
+
+        if($stock->getQuantite() < 0){
+            return new JsonResponse(array(
+                "status"=>1,
+                "mes"=>"Vous ne pouvez pas modifier ce stock"
+            ));
+        }
+
+        if($stock){
+            $stock->setQuantite($quantite);
             $em->persist($stock);
             $em->flush();
             return new JsonResponse(array(
                 "status" => 0,
-                "mes" => "Le stock du produit '" . $product->getName() . "' a été ajoutée avec succès."
+                "mes" => "Le stock a été modifié avec succès."
+            ));
+        }else{
+            return new JsonResponse(array(
+                "status"=>1,
+                "mes"=>"Une erreur est survenue."
             ));
         }
     }
 
-    public function deleteAction(Request $request){
-        $id = $request->request->get('id');
+    public function deleteAction(Request $request, Stock $stock){
+        $user = $request->getSession()->get("user");
+        if($user->getFonction() == AccountController::$USER_TYPE["SECRETAIRE_TYPE"] || $user->isBloque())
+            return new JsonResponse(array("status"=>1, "mes"=>"Vous ne pouvez pas effectuer cette opération"), 403);
+
+        if($stock->getQuantite() < 0){
+            return new JsonResponse(array(
+                "status"=>1,
+                "mes"=>"Vous ne pouvez pas supprimer ce stock"
+            ));
+        }
+
         $em = $this->getDoctrine()->getManager();
-        if($id && is_numeric($id) && $id > 0){
-            $stock = $em->getRepository(Stock::class)->find($id);
-            if($stock){
-                $em->remove($stock);
-                $em->flush();
-                return new JsonResponse(array(
-                    "status"=>0,
-                    "mes"=>"Le stock du produit ".$stock->getProduct()->getName()." a été retiré avec succès."
-                ));
-            }else{
-                return new JsonResponse(array(
-                    "status"=>1,
-                    "mes"=>"Une erreur est survenue"
-                ));
-            }
+        if($stock){
+            $em->remove($stock);
+            $em->flush();
+            return new JsonResponse(array(
+                "status"=>0,
+                "mes"=>"Le stock du produit a été supprimé avec succès."
+            ));
         }else{
             return new JsonResponse(array(
                 "status"=>1,
@@ -110,9 +121,4 @@ class StockController extends Controller
             ));
         }
     }
-
-    private function getUniqueFileName(){
-        return md5(uniqid());
-    }
-
 }

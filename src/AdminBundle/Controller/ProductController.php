@@ -8,54 +8,98 @@
 
 namespace AdminBundle\Controller;
 
-use AdminBundle\Entity\Product;
+use AdminBundle\Entity\Produit;
+use AdminBundle\Entity\Utilisateur;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
 class ProductController extends Controller
 {
+    public static $PRODUCT_TYPES = ["Equipements réseaux", "Câbles", "Connecteurs", "Routeurs", "Autres"];
+    public static $ACCEPTED_FILES = ["png", "jpg", "jpeg"];
 
     public function indexAction(Request $request){
 
         $page = ( $request->query->get("page") )?$request->query->get("page") : 1;
         $nbPerPage = 10;
         $em = $this->getDoctrine()->getManager();
-        $nbProduct = $em->getRepository(Product::class)
+        $nbProduit = $em->getRepository(Produit::class)
             ->countByDateAndName($page, $nbPerPage, $request->query->get("begin"), $request->query->get("end"), $request->query->get("search"));
-        $products = $em->getRepository(Product::class)
+        $produits = $em->getRepository(Produit::class)
             ->getByDateAndName($page, $nbPerPage, $request->query->get("begin"), $request->query->get("end"), $request->query->get("search"));
 
-        $nbPage = ceil($nbProduct / $nbPerPage);
-        return $this->render('AdminBundle:Product:index.html.twig', array(
-            "products" => $products,
+        $nbPage = ceil($nbProduit / $nbPerPage);
+        return $this->render('AdminBundle:Produit:index.html.twig', array(
+            "produits" => $produits,
             "page" => $page,
             "nbPage" => $nbPage,
-            "nbProduct" => $nbProduct,
+            "nbProduit" => $nbProduit,
         ));
     }
 
     public function addAction(Request $request){
-        $name = $request->get("name");
-        $description = $request->get("description");
+        $user = $request->getSession()->get("user");
+        if($user->getFonction() == AccountController::$USER_TYPE["SECRETAIRE_TYPE"] || $user->isBloque())
+            return new JsonResponse(array("status"=>1, "mes"=>"Vous ne pouvez pas effectuer cette opération"), 403);
+
+        $nom = $request->request->get("nom");
+        $description = $request->request->get("description");
+        $type = $request->request->get("type");
+        $fabricant = $request->request->get("fabricant");
+        $prix = $request->request->get("prix");
         $id = $request->request->get('id');
+        $image = $request->files->get("image");
+
         $em = $this->getDoctrine()->getManager();
-        if(!$name && $name == ''){
+
+        if(!$nom && $nom == ''){
             return new JsonResponse(array(
                 "status"=>1,
                 "mes"=>"Renseignez le nom du produit"
             ));
         }
-        if($id && $id != '' && is_numeric($id) && $id >0){
-            $product = $em->getRepository(Product::class)->find($id);
-            if($product){
-                $product->setName($name);
-                $product->setDescription($description);
-                $em->persist($product);
+
+        if($prix < 0){
+            return new JsonResponse(array(
+                "status"=>1,
+                "mes"=>"Renseignez le prix du produit"
+            ));
+        }
+
+        if(!in_array($type, self::$PRODUCT_TYPES)){
+            return new JsonResponse(array(
+                "status"=>1,
+                "mes"=>"Renseignez le type du produit"
+            ));
+        }
+
+        if($id > 0){
+            $produit = $em->getRepository(Produit::class)->find($id);
+            if($produit){
+                $produit->setNom($nom);
+                $produit->setPrix($prix);
+                $produit->setType($type);
+                $produit->setFabricant($fabricant);
+                $produit->setDescription($description);
+
+                if($image){
+                    if(!$produit->getImage() || $this->deleteFile($produit->getImage())){
+                        try{
+                            $produit->setImage($this->saveImage($image));
+                        }catch (\Exception $e){
+                            return new JsonResponse(array("status" => 1, "mes" => $e->getMessage()));
+                        }
+                    }else{
+                        return new JsonResponse(array("status" => 1, "mes" => "Une erreur est survenue, veuillez reessayer"));
+                    }
+                }
+                $em->persist($produit);
                 $em->flush();
                 return new JsonResponse(array(
                     "status" => 0,
-                    "mes" => "Le produit " . $product->getName() . " a été modifiée avec succès."
+                    "mes" => "Le produit " . $produit->getNom() . " a été modifié avec succès."
                 ));
             }else{
                 return new JsonResponse(array(
@@ -64,32 +108,45 @@ class ProductController extends Controller
                 ));
             }
         }else {
-            $product = new Product();
-            $product->setName($name);
-            $product->setDescription($description);
-            $em->persist($product);
+            $user = $em->getRepository(Utilisateur::class)->find($user->getId());
+            $produit = new Produit();
+            $produit->setNom($nom);
+            $produit->setPrix($prix);
+            $produit->setType($type);
+            $produit->setFabricant($fabricant);
+            $produit->setDescription($description);
+            $produit->setUtilisateur($user);
+            if($image){
+                try{
+                    $produit->setImage($this->saveImage($image));
+                }catch (\Exception $e){
+                    return new JsonResponse(array("status" => 1, "mes" => $e->getMessage()));
+                }
+            }
+            $em->persist($produit);
             $em->flush();
             return new JsonResponse(array(
                 "status" => 0,
-                "mes" => "Le produit " . $product->getName() . " a été ajoutée avec succès."
+                "mes" => "Le produit " . $produit->getNom() . " a été ajouté avec succès."
             ));
         }
     }
 
-    public function deleteAction(Request $request){
-        $id = $request->request->get('id');
+    public function deleteAction(Request $request, Produit $produit){
+        $user = $request->getSession()->get("user");
+        if($user->getFonction() == AccountController::$USER_TYPE["SECRETAIRE_TYPE"] || $user->isBloque())
+            return new JsonResponse(array("status"=>1, "mes"=>"Vous ne pouvez pas effectuer cette opération"), 403);
+
         $em = $this->getDoctrine()->getManager();
-        if($id && is_numeric($id) && $id > 0){
-            $product = $em->getRepository(Product::class)->find($id);
-            if($product){
-                $product->setIsdeleted(true);
-                $em->persist($product);
+        if($produit){
+            $em->remove($produit);
+            try{
                 $em->flush();
                 return new JsonResponse(array(
                     "status"=>0,
-                    "mes"=>"Le produit ".$product->getName()." a été supprimée"
+                    "mes"=>"Le produit ".$produit->getNom()." a été supprimée"
                 ));
-            }else{
+            }catch (\Exception $e){
                 return new JsonResponse(array(
                     "status"=>1,
                     "mes"=>"Une erreur est survenue"
@@ -103,19 +160,27 @@ class ProductController extends Controller
         }
     }
 
-    public function seeAction(Product $product){
-        $em = $this->getDoctrine();
-        $photos = $em->getRepository(Photo::class)->findByProduct($product->getId());
-        $concernes = $em->getRepository(Concerne::class)->findByProduct($product->getId());
-        return $this->render('AdminBundle:Product:single_product.html.twig', array(
-            "product" => $product,
-            "concernes" => $concernes,
-            "photos" => $photos,
-        ));
-    }
 
     private function getUniqueFileName(){
         return md5(uniqid());
+    }
+
+    /**
+     *
+     * @throws \Exception
+     */
+    private function saveImage(UploadedFile $uploadedFile){
+        if( !in_array($uploadedFile->guessExtension(), self::$ACCEPTED_FILES ) )
+            throw new \Exception("Format d'image invalide.", 111);
+
+        $directory = $this->getParameter("image_product");
+        $filename = $this->getUniqueFileName().".".$uploadedFile->guessExtension();
+        $uploadedFile->move($directory, $filename);
+        return $filename;
+    }
+
+    private function deleteFile($fileName){
+        return unlink($this->getParameter("image_product").$fileName);
     }
 
 }

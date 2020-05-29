@@ -80,12 +80,14 @@
                                 <span class="menu_title">Produits</span>
                             </a>
                         </li>
-                        <li class="{% if  uri ==  path('admin_stock')%}current_section{% endif %}" title="stocks">
-                            <a href="{{ path('admin_stock') }}">
-                                <span class="menu_icon"><i class="uk-icon-archive uk-icon-medium"></i></span>
-                                <span class="menu_title">Stocks</span>
-                            </a>
-                        </li>
+                        {% if app.session.get("user").fonction != "SECRETAIRE_TYPE" %}
+                            <li class="{% if  uri ==  path('admin_user')%}current_section{% endif %}" title="stocks">
+                                <a href="{{ path('admin_user') }}">
+                                    <span class="menu_icon"><i class="uk-icon-archive uk-icon-medium"></i></span>
+                                    <span class="menu_title">Utilisateurs</span>
+                                </a>
+                            </li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>

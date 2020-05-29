@@ -10,15 +10,13 @@ namespace AdminBundle\Repository;
  */
 class StockRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function countByDateAndName($nbPage, $page, $begin=null, $end=null, $search=null){
-        $page = (int) $page;
-        $nbPage = (int) $nbPage;
-        $sql="SELECT COUNT(*) FROM stock s INNER JOIN product p ON s.product = p.id";
+    public function countByDateAndName($begin=null, $end=null, $search=null){
+        $sql="SELECT COUNT(*) FROM stock s INNER JOIN Produit p ON s.produit = p.id";
 
         if($search && !$begin)
-            $sql .= " WHERE p.name LIKE :search OR p.description LIKE :search ";
+            $sql .= " WHERE p.nom LIKE :search OR p.description LIKE :search ";
         else if($search && $begin)
-            $sql .= " WHERE p.createdat BETWEEN :begin AND :end AND (p.name LIKE :search OR p.description LIKE :search)";
+            $sql .= " WHERE p.createdat BETWEEN :begin AND :end AND (p.nom LIKE :search OR p.description LIKE :search)";
         else if(!$search && $begin)
             $sql .= " WHERE p.createdat BETWEEN :begin AND :end ";
 
@@ -42,12 +40,12 @@ class StockRepository extends \Doctrine\ORM\EntityRepository
     public function getByDateAndName($limit, $offset, $begin=null, $end=null, $search=null){
         $offset = (int) $offset;
         $limit = (int) ($limit - 1) *$offset;
-        $sql="SELECT s.id, s.date, s.product, s.quantity, p.name, p.description FROM stock s INNER JOIN product p ON s.product = p.id";
+        $sql="SELECT s.id, s.createdat, s.quantite FROM stock s INNER JOIN produit p ON s.produit = p.id";
 
         if($search && !$begin)
-            $sql .= " WHERE p.name LIKE :search OR p.description LIKE :search ";
+            $sql .= " WHERE p.nom LIKE :search OR p.description LIKE :search ";
         else if($search && $begin)
-            $sql .= " WHERE p.createdat BETWEEN :begin AND :end AND (p.name LIKE :search OR p.description LIKE :search )";
+            $sql .= " WHERE p.createdat BETWEEN :begin AND :end AND (p.nom LIKE :search OR p.description LIKE :search )";
         else if(!$search && $begin)
             $sql .= " WHERE p.createdat BETWEEN :begin AND :end ";
 
@@ -73,14 +71,14 @@ class StockRepository extends \Doctrine\ORM\EntityRepository
     }
 
     public function getTodayStock(){
-        $sql="SELECT COUNT(*) AS total FROM stock s WHERE DATE(s.date) = CURRENT_DATE";
+        $sql="SELECT COUNT(*) AS total FROM stock s WHERE DATE(s.createdat) = CURRENT_DATE";
         $state = $this->_em->getConnection()->prepare($sql);
         $state->execute();
         return $state->fetchColumn();
     }
 
     public function getStockProduct(){
-        $sql="SELECT s.id, s.date, s.product, s.quantity, p.name, p.description FROM stock s INNER JOIN product p ON s.product = p.id LIMIT 0,10 ";
+        $sql="SELECT s.id, s.createdat, s.produit, s.quantite, p.nom, p.description FROM stock s INNER JOIN produit p ON s.produit = p.id LIMIT 0,10 ";
         $state = $this->_em->getConnection()->prepare($sql);
         $state->execute();
         return $state->fetchAll();
