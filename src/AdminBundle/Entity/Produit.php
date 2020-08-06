@@ -57,6 +57,13 @@ class Produit
     private $fabricant;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="model", type="string", length=254, nullable=true)
+     */
+    private $model;
+
+    /**
      * @var integer
      *
      * @ORM\Column(name="prix", type="integer", nullable=false)
@@ -187,6 +194,22 @@ class Produit
     public function setDescription($description)
     {
         $this->description = $description;
+    }
+
+    /**
+     * @return string
+     */
+    public function getModel()
+    {
+        return $this->model;
+    }
+
+    /**
+     * @param string $model
+     */
+    public function setModel($model)
+    {
+        $this->model = $model;
     }
 
     /**

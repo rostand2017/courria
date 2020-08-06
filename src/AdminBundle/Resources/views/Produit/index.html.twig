@@ -55,6 +55,7 @@
                             <thead>
                             <tr>
                                 <th></th>
+                                <th>Modèle</th>
                                 <th>Nom</th>
                                 <th>Type</th>
                                 <th>Fabricant</th>
@@ -68,6 +69,7 @@
                             {% for produit in produits %}
                                 <tr>
                                     <td><img src="/uploads/products_images/{{ produit.image }}" class="md-user-image"></td>
+                                    <td>{{ produit.model }}</td>
                                     <td>{{ produit.nom }}</td>
                                     <td>{{ produit.type }}</td>
                                     <td>{{ produit.fabricant }}</td>
@@ -76,7 +78,7 @@
                                     <td><a href="{{ path('admin_stock', {id: produit.id}) }}" class="uk-badge uk-badge-primary">Stocks</a></td>
                                     <td>
                                         <a class='editProduit' data-uk-tooltip="{pos:'top'}" title="Modifier le produit" data-id="{{ produit.id }}" data-description="{{ produit.description }}"
-                                           data-nom="{{ produit.nom }}" data-type="{{ produit.type }}"  data-fabricant="{{ produit.fabricant }}"
+                                           data-nom="{{ produit.nom }}" data-type="{{ produit.type }}"  data-fabricant="{{ produit.fabricant }}"  data-modele="{{ produit.model }}"
                                         data-prix="{{ produit.prix }}"><i class='uk-icon-edit uk-icon-medium'></i></a>
                                         <a class='deleteProduit' data-url="{{ path('admin_produit_delete', {id: produit.id}) }}" data-id="{{ produit.id }}" data-nom="{{ produit.nom }}"><i class='uk-icon-trash uk-icon-medium uk-text-danger'></i></a>
                                     </td>
@@ -135,6 +137,13 @@
                 <div class="uk-grid" data-uk-grid-margin>
                     <div class="uk-width-medium-1-1">
                         <div class="parsley-row">
+                            <input type="text" placeholder="Modèle" required name="modele" id="modele" class="md-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-grid" data-uk-grid-margin>
+                    <div class="uk-width-medium-1-1">
+                        <div class="parsley-row">
                             <input type="hidden" id="id" name="id">
                             <input type="text" placeholder="Nom du produit" required name="nom" id="nom" class="md-input">
                         </div>
@@ -159,6 +168,7 @@
                         <div class="parsley-row">
                             <h4>Type du produit</h4>
                             <select name="type" id="type" class="md-input">
+                                <option value="PC">PC</option>
                                 <option value="Equipements réseaux">Equipements réseaux</option>
                                 <option value="Câbles">Câbles</option>
                                 <option value="Connecteurs">Connecteurs</option>

@@ -16,7 +16,7 @@ $(document).ready(function() {
                     datatype: 'json',
                     beforeSend: function () {},
                     success: function (json) {
-                        if (json.status == 0) {
+                        if (json.status === 0) {
                             UIkit.notify({message:json.mes,status:'success',timeout : 5000,pos:'top-center'});
                             window.location.reload();
                         } else {
@@ -39,7 +39,7 @@ $(document).ready(function() {
         var data = new FormData(form[0]);
         var nom = $('#nom').val(),
             act = $('.sendBtn').text();
-        if (nom != '') {
+        if (nom !== '') {
             $.ajax({
                 type: 'post',
                 url: url,
@@ -51,7 +51,7 @@ $(document).ready(function() {
                     $('.sendBtn').text('CHARGEMENT ...').prop('disabled', true);
                 },
                 success: function (json) {
-                    if (json.status == 0) {
+                    if (json.status === 0) {
                         $('#messageformSalle').html("<div class='uk-alert uk-alert-success uk-text-center' data-uk-alert=''><a href='' class='uk-alert-close uk-close'></a><span class='alertJss'>"+json.mes+"</span></div>");
                         window.location.reload();
                     } else {
@@ -77,6 +77,7 @@ $(document).ready(function() {
         e.preventDefault();
         $('#messageformSalle').html("");
         $('#nom').val('');
+        $('#modele').val('');
         $('#fabricant').val('');
         $('#prix').val('');
         $('#description').val('');
@@ -92,6 +93,7 @@ $(document).ready(function() {
         var description = $(this).data('description'),
             nom = $(this).data('nom'),
             fabricant = $(this).data('fabricant'),
+            modele = $(this).data('modele'),
             prix = $(this).data('prix'),
             type = $(this).data('type'),
             id = $(this).data('id');
@@ -99,6 +101,7 @@ $(document).ready(function() {
         $('#description').val(description);
         $('#nom').val(nom);
         $('#fabricant').val(fabricant);
+        $('#modele').val(modele);
         $('#prix').val(prix);
         $('#type').val(type);
         $('#id').val(id);

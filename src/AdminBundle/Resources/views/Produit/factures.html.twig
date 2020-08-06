@@ -45,9 +45,10 @@
                                         </p>
                                     </td>
                                     <td>
-                                        {% if loop.index == 1 %}
-                                            <a class='deleteFacture' data-url="{{ path('admin_facture_delete', {id: facture.id}) }}"><i class='uk-icon-trash uk-icon-medium uk-text-danger'></i></a>
-                                        {% endif %}
+                                        <a class='editFacture' data-id="{{ facture.id }}" data-nom="{{ facture.nomClient }}"
+                                        data-date="{{ facture.createdat | date('d-m-Y') }}" data-quantite="{{ facture.getFatureProduit()[0].quantite }}"
+                                        data-produit="{{ facture.getFatureProduit()[0].produit.id }}"><i class='uk-icon-edit uk-icon-medium uk-text-primary'></i></a>
+                                        <a class='deleteFacture' data-url="{{ path('admin_facture_delete', {id: facture.id}) }}"><i class='uk-icon-trash uk-icon-medium uk-text-danger'></i></a>
                                     </td>
                                 </tr>
                             {% else %}
@@ -87,7 +88,7 @@
             <button class="uk-modal-close uk-close" type="button"></button>
             <form action="{{ path('admin_facture_add') }}" id="formFacture" method="post" enctype="multipart/form-data">
                 <div class="uk-modal-header">
-                    <h3 class="heading_b uk-margin-bottom titleForm">Ajoutez un nouvelle facture</h3>
+                    <h3 class="heading_b uk-margin-bottom titleForm">Ajoutez une nouvelle facture</h3>
                     <div class="text-center" id="messageformSalle"></div>
                 </div>
                 <div class="uk-grid" data-uk-grid-margin>
@@ -101,7 +102,8 @@
                     <div class="uk-grid" data-uk-grid-margin>
                         <div class="uk-width-medium-1-1">
                             <div class="parsley-row">
-                                <input type="number" placeholder="Quantité" required name="quantite" id="quantite" class="md-input">
+                                <input type="hidden" name="id" id="id" class="md-input">
+                                <input type="number" min="1" placeholder="Quantité" required name="quantite" id="quantite" class="md-input">
                             </div>
                         </div>
                     </div>
@@ -114,6 +116,13 @@
                                     {% endfor %}
                                 </select>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-grid" data-uk-grid-margin id="dateContainer">
+                    <div class="uk-width-medium-1-1">
+                        <div class="parsley-row">
+                            <input type="text" placeholder="Date d'ajout de la facture" name="date" id="date" class="md-input">
                         </div>
                     </div>
                 </div>
@@ -132,4 +141,9 @@
     <script src="{{ asset("bundles/admin/bower_components/ckeditor/ckeditor.js") }}"></script>
     <script src="{{ asset("bundles/admin/bower_components/ckeditor/adapters/jquery.js") }}"></script>
     <script src="{{ asset("bundles/admin/assets/js/facture.js") }}"></script>
+    <script>
+        var end_date = UIkit.datepicker($("#date"), {
+            format: 'DD-MM-YYYY'
+        });
+    </script>
 {% endblock %}

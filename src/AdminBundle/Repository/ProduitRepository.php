@@ -33,6 +33,7 @@ class ProduitRepository extends \Doctrine\ORM\EntityRepository
             $state->bindValue(":end", $end, \PDO::PARAM_STR);
         }
         if($search) {
+            $search = '%'.$search.'%';
             $state->bindValue(":search", $search, \PDO::PARAM_STR);
         }
         $state->execute();

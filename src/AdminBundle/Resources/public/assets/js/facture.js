@@ -69,9 +69,34 @@ $(document).ready(function() {
 
     $(document).on('click','#addFacture', function (e) {
         e.preventDefault();
+        $('#dateContainer').hide('fade');
+        $('.titleForm').text("Ajoutez une facture");
         $('#quantite').val('');
         $('#nomClient').val('');
+        $('#produit').val('');
+        $('#id').val('');
         $('.sendBtn').text("Ajouter");
+        UIkit.modal('#modalFacture').show();
+    });
+
+
+    $(document).on('click','.editFacture', function (e) {
+        e.preventDefault();
+        var produit = $(this).data('produit'),
+            id = $(this).data('id'),
+            nom = $(this).data('nom'),
+            quantite = $(this).data('quantite'),
+            date = $(this).data('date');
+        $('#dateContainer').show('fade');
+        $('#messageformSalle').html("");
+        $('#date').val(date);
+        $('#nomClient').val(nom);
+        $('#quantite').val(quantite);
+        $('#produit').val(produit);
+        $('#id').val(id);
+        $('.md-input-wrapper').addClass('md-input-focus');
+        $('.titleForm').text("Modifiez la facture");
+        $('.sendBtn').text("Modifier");
         UIkit.modal('#modalFacture').show();
     });
 });

@@ -1,4 +1,7 @@
-Symphony
+STOCK
 ========
 
-A Symfony project created on July 29, 2018, 10:56 pm.
+Stock management application.
+We can manage product, managed stock and see alerts abouts stocks quantities
+
+_coded by Ross_

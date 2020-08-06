@@ -60,7 +60,6 @@
                 {% for stock in produit.stocks %}
                     {% set i = i + stock.quantite %}
                 {% endfor %}
-                {{ i }}
                 {% if i < 5 %}
                     <tr>
                         <td><img src="/uploads/products_images/{{ produit.image }}" class="md-user-image"></td>

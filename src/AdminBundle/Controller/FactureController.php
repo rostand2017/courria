@@ -36,8 +36,16 @@ class FactureController extends Controller
         $quantite = $request->get("quantite");
         $nomClient = $request->get("nomClient");
         $produitId = $request->get("produit");
-        
+        $factureId = $request->get("id");
+        $factureDate = $request->get("date");
+
         $em = $this->getDoctrine()->getManager();
+
+        if($factureId != ''){
+            $facture = $em->getRepository(Facture::class)->find($factureId);
+            $facture->setCreatedat(new \DateTime($factureDate));
+            $factureProduit = $facture->getFatureProduit()[0];
+        }
 
         if(!$quantite || $quantite < 0){
             return new JsonResponse(array(
@@ -45,6 +53,7 @@ class FactureController extends Controller
                 "mes"=>"Renseignez une quantité supérieure à 0"
             ));
         }
+
         $produit = $em->getRepository(Produit::class)->find($produitId);
         if(!$produit){
             return new JsonResponse(array(
@@ -59,10 +68,24 @@ class FactureController extends Controller
             $quantiteDispo += $stock->getQuantite();
         }
 
-        if($quantite > $quantiteDispo){
+        if($factureId != ''){
+            if($produit->getId() != $factureProduit->getProduit()->getId() && $quantite > $quantiteDispo){
+                return new JsonResponse(array(
+                    "status"=>1,
+                    "mes"=>"La quantité restante pour ce produit est ".($quantiteDispo)
+                ));
+            }
+            if($quantite > $quantiteDispo + $factureProduit->getQuantite()){
+                return new JsonResponse(array(
+                    "status"=>1,
+                    "mes"=>"La quantité restante pour ce produit est ".($quantiteDispo + $factureProduit->getQuantite())
+                ));
+            }
+        }
+        if($factureId == '' && $quantite > $quantiteDispo){
             return new JsonResponse(array(
                 "status"=>1,
-                "mes"=>"La quantité restante pour ce produit est : ".$quantiteDispo
+                "mes"=>"La quantité restante pour ce produit est ".$quantiteDispo
             ));
         }
 
@@ -72,24 +95,44 @@ class FactureController extends Controller
                 "mes"=>"Renseignez correctement le nom du client"
             ));
         }
-        $facture = new Facture();
+        if($factureId != ''){
+            if($produit->getId() != $factureProduit->getProduit()->getId()){
+                $oldStock = $em->getRepository(Stock::class)->findOneBy(["quantite"=>(-$factureProduit->getQuantite()), "produit"=>$factureProduit->getProduit()->getId()]);
+                $stock = new Stock();
+                $stock->setProduit($produit);
+                $stock->setQuantite(-$quantite);
+                $em->remove($oldStock);
+            }else{
+                //$stock = new Stock();
+                $stock = $em->getRepository(Stock::class)->findOneBy(["quantite"=> (-$factureProduit->getQuantite()),
+                    "produit"=>$produit->getId()]);
+                $stock = $em->getRepository(Stock::class)->find($stock->getId());
+                $stock->setProduit($produit);
+                $stock->setQuantite(-$quantite);
+                //$stock->setQuantite($quantite - $stock->getQuantite());
+            }
+        }else{
+            $facture = new Facture();
+            $factureProduit = new Factureproduit();
+            $stock = new Stock();
+            $stock->setProduit($produit);
+            $stock->setQuantite(-$quantite);
+        }
+
         $facture->setNomclient($nomClient);
-        $factureProduit = new Factureproduit();
         $factureProduit->setQuantite($quantite);
         $factureProduit->setFacture($facture);
         $factureProduit->setProduit($produit);
 
-        $stock = new Stock();
-        $stock->setProduit($produit);
-        $stock->setQuantite(-$quantite);
-
         $em->persist($factureProduit);
         $em->persist($stock);
+
+        $message = $factureId == ''? "Facture ajoutée avec succès" : "Facture modifiée avec succès";
         try{
             $em->flush();
             return new JsonResponse(array(
                 "status" => 0,
-                "mes" => "Facture ajoutée avec succès."
+                "mes" => $message
             ));
         }catch (\Exception $e){
             return new JsonResponse(array(
@@ -115,7 +158,7 @@ class FactureController extends Controller
             $em->flush();
             return new JsonResponse(array(
                 "status"=>0,
-                "mes"=>"Le facture a été supprimée avec succès."
+                "mes"=>"La facture a été supprimée avec succès."
             ));
         }else{
             return new JsonResponse(array(

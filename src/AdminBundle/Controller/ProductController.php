@@ -17,7 +17,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class ProductController extends Controller
 {
-    public static $PRODUCT_TYPES = ["Equipements réseaux", "Câbles", "Connecteurs", "Routeurs", "Autres"];
+    public static $PRODUCT_TYPES = ["PC", "Equipements réseaux", "Câbles", "Connecteurs", "Routeurs", "Autres"];
     public static $ACCEPTED_FILES = ["png", "jpg", "jpeg"];
 
     public function indexAction(Request $request){
@@ -45,6 +45,7 @@ class ProductController extends Controller
             return new JsonResponse(array("status"=>1, "mes"=>"Vous ne pouvez pas effectuer cette opération"), 403);
 
         $nom = $request->request->get("nom");
+        $modele = $request->request->get("modele");
         $description = $request->request->get("description");
         $type = $request->request->get("type");
         $fabricant = $request->request->get("fabricant");
@@ -53,6 +54,13 @@ class ProductController extends Controller
         $image = $request->files->get("image");
 
         $em = $this->getDoctrine()->getManager();
+
+        if($modele == ''){
+            return new JsonResponse(array(
+                "status"=>1,
+                "mes"=>"Renseignez le modèle"
+            ));
+        }
 
         if(!$nom && $nom == ''){
             return new JsonResponse(array(
@@ -78,6 +86,7 @@ class ProductController extends Controller
         if($id > 0){
             $produit = $em->getRepository(Produit::class)->find($id);
             if($produit){
+                $produit->setModel($modele);
                 $produit->setNom($nom);
                 $produit->setPrix($prix);
                 $produit->setType($type);
@@ -111,6 +120,7 @@ class ProductController extends Controller
             $user = $em->getRepository(Utilisateur::class)->find($user->getId());
             $produit = new Produit();
             $produit->setNom($nom);
+            $produit->setModel($modele);
             $produit->setPrix($prix);
             $produit->setType($type);
             $produit->setFabricant($fabricant);
