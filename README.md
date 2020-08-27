@@ -1,7 +1,6 @@
-STOCK
+COURRIA
 ========
 
-Stock management application.
-We can manage product, managed stock and see alerts abouts stocks quantities
+We can manage mail in the enterprise. See notification went a mail is treated. And look all archives yet complete.
 
 _coded by Ross_
