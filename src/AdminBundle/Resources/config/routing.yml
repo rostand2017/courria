@@ -1,15 +1,21 @@
-#Product
+#Courrier
 admin_homepage:
-    path:     /produit
-    defaults: { _controller: AdminBundle:Product:index }
-admin_produit_delete:
-    path:     /produit/delete/{id}
-    defaults: { _controller: AdminBundle:Product:delete }
+    path:     /
+    defaults: { _controller: AdminBundle:Courrier:index }
+admin_courrier_delete:
+    path:     /courrier/delete/{id}
+    defaults: { _controller: AdminBundle:Courrier:delete }
     requirements:
         id: \d+
-admin_produit_add:
-    path:     /produit/add
-    defaults: { _controller: AdminBundle:Product:add }
+admin_courrier_add:
+    path:     /courrier/add
+    defaults: { _controller: AdminBundle:Courrier:add }
+admin_courrier_nottreat:
+    path:     /courrier/nottreat
+    defaults: { _controller: AdminBundle:Courrier:nottreat }
+admin_courrier_archives:
+    path:     /courrier/archives
+    defaults: { _controller: AdminBundle:Courrier:archives }
 
 #Dashboard
 admin_dashboard:
@@ -36,7 +42,7 @@ admin_create:
 
 admin_user:
     path:     /user
-    defaults: { _controller: AdminBundle:Account:createUser }
+    defaults: { _controller:    AdminBundle:Account:createUser }
 
 admin_modify_user:
     path:     /user/modify/{id}
@@ -47,53 +53,5 @@ admin_modify_user:
 admin_delete_user:
     path:     /user/delete/{id}
     defaults: { _controller: AdminBundle:Account:deleteUser }
-    requirements:
-        id: \d+
-
-admin_block_user:
-    path:     /user/block/{id}
-    defaults: { _controller: AdminBundle:Account:blockUser }
-    requirements:
-        id: \d+
-
-admin_unblock_user:
-    path:     /user/unblock/{id}
-    defaults: { _controller: AdminBundle:Account:unblockUser }
-    requirements:
-        id: \d+
-# STOCK
-admin_stock:
-    path:     /produit/{id}
-    defaults: { _controller: AdminBundle:Stock:index }
-    requirements:
-        id: \d+
-admin_stock_add:
-    path:     /produit/{id}/add
-    defaults: { _controller: AdminBundle:Stock:add }
-    requirements:
-        id: \d+
-admin_stock_modify:
-    path:     /produit/modify_stock/{id}
-    defaults: { _controller: AdminBundle:Stock:modify }
-    requirements:
-        id: \d+
-admin_stock_delete:
-    path:     /produit/delete_stock/{id}
-    defaults: { _controller: AdminBundle:Stock:delete }
-    requirements:
-        id: \d+
-
-# FACTURES
-admin_facture:
-    path: /factures
-    defaults: {_controller: AdminBundle:Facture:index}
-admin_facture_add:
-    path:     /factures/add
-    defaults: { _controller: AdminBundle:Facture:add }
-    requirements:
-        id: \d+
-admin_facture_delete:
-    path:     /factures/delete/{id}
-    defaults: { _controller: AdminBundle:Facture:delete }
     requirements:
         id: \d+

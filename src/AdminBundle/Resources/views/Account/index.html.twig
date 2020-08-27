@@ -23,38 +23,32 @@
                         <table class="uk-table uk-table-nowrap table_check">
                             <thead>
                                 <tr>
-                                    <th>Username</th>
+                                    <th>Email</th>
                                     <th>Nom</th>
-                                    <th>Prenom</th>
                                     <th>Fonction</th>
-                                    <th>Sexe</th>
+                                    <th>Service</th>
                                     <th>Date d'ajout</th>
                                     <th></th>
                                 </tr>
                             </thead>
                             <tbody>
                             {% for user in users %}
-                                <tr {% if  user.bloque %}style="background: #7F007F; color: #fff;" {% endif %}>
-                                    <td>{{ user.username }}</td>
+                                <tr>
+                                    <td>{{ user.email }}</td>
                                     <td>{{ user.nom }}</td>
-                                    <td>{{ user.prenom }}</td>
                                     <td>{{ user.fonction }}</td>
-                                    <td>{{ user.sexe }}</td>
-                                    <td>{{ user.createdat | date('d M Y')}}</td>
+                                    <td>{{ user.service }}</td>
+                                    <td>{{ user.dateajout | date('d M Y')}}</td>
                                     <td>
                                         <a class='editUser' data-uk-tooltip="{pos:'top'}" title="Modifier le produit" data-url="{{ path('admin_modify_user', {id: user.id}) }}"
-                                           data-username="{{ user.username }}" data-nom="{{ user.nom }}" data-prenom="{{ user.prenom }}" data-fonction="{{ user.fonction }}"
-                                           data-sexe="{{ user.sexe }}"><i class='uk-icon-edit uk-icon-medium'></i></a>
+                                           data-email="{{ user.email }}" data-nom="{{ user.nom }}" data-service="{{ user.service }}" data-fonction="{{ user.fonction }}">
+                                            <i class='uk-icon-edit uk-icon-medium'></i>
+                                        </a>
                                         <a class='deleteUser' data-url="{{ path('admin_delete_user', {id: user.id}) }}" data-nom="{{ user.nom }}"><i class='uk-icon-trash uk-icon-medium uk-text-danger'></i></a>
-                                        {% if user.bloque %}
-                                            <a class='blockUser' title="Débloquer" data-type="unblock" data-url="{{ path('admin_unblock_user', {id: user.id}) }}" data-nom="{{ user.nom }}"><i class='uk-icon-unlock uk-icon-medium uk-text-danger'></i></a>
-                                        {% else %}
-                                            <a class='blockUser' title="Bloquer" data-type="block" data-url="{{ path('admin_block_user', {id: user.id}) }}" data-nom="{{ user.nom }}"><i class='uk-icon-lock uk-icon-medium uk-text-danger'></i></a>
-                                        {% endif %}
                                     </td>
                                 </tr>
                             {% else %}
-                                <tr><td colspan="7" class="uk-text-danger uk-text-center">Aucun utilisateur</td></tr>
+                                <tr><td colspan="6" class="uk-text-danger uk-text-center">Aucun utilisateur</td></tr>
                             {% endfor %}
                             </tbody>
                         </table>
@@ -80,21 +74,14 @@
                 <div class="uk-grid" data-uk-grid-margin>
                     <div class="uk-width-medium-1-1">
                         <div class="parsley-row">
-                            <input placeholder="Nom" type="text" name="nom" id="nom" required class="md-input">
+                            <input placeholder="Nom de l'utilisateur" type="text" name="nom" id="nom" required class="md-input">
                         </div>
                     </div>
                 </div>
                 <div class="uk-grid" data-uk-grid-margin>
                     <div class="uk-width-medium-1-1">
                         <div class="parsley-row">
-                            <input placeholder="Prénom" type="text" name="prenom" id="prenom" class="md-input">
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-grid" data-uk-grid-margin>
-                    <div class="uk-width-medium-1-1">
-                        <div class="parsley-row">
-                            <input type="text" placeholder="Nom d'utilisateur" name="username" id="username" required class="md-input">
+                            <input type="email" placeholder="Email de l'utilisateur" name="email" id="email" required class="md-input">
                         </div>
                     </div>
                 </div>
@@ -109,9 +96,12 @@
                 <div class="uk-grid" data-uk-grid-margin>
                     <div class="uk-width-medium-1-1">
                         <div class="parsley-row">
-                            <h4>Sexe</h4>
-                            H<input type="radio" name="sexe" value="Homme" id="homme">
-                            F<input type="radio" name="sexe" value="Femme" id="femme">
+                            <h4>Service</h4>
+                            <select name="service" id="service" class="md-input">
+                                <option value="secretariat">Secretariat</option>
+                                <option value="controlleur">Controlleur</option>
+                                <option value="traitement">traitement</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -120,8 +110,8 @@
                         <div class="parsley-row">
                             <h4>Fonction</h4>
                             <select name="fonction" id="fonction" class="md-input">
-                                <option value="DG_TYPE">DG</option>
-                                <option value="CHEF_TYPE">Chef d'agence</option>
+                                <option value="CONTROLLER_TYPE">Controlleur</option>
+                                <option value="CHEF_TYPE">Chef de service</option>
                                 <option value="SECRETAIRE_TYPE">Sécrétaire</option>
                             </select>
                         </div>

@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class AccountController extends Controller
 {
-    public static $USER_TYPE = ["DG_TYPE"=>"DG_TYPE", "CHEF_TYPE"=>"CHEF_TYPE", "SECRETAIRE_TYPE"=>"SECRETAIRE_TYPE"];
+    public static $USER_TYPE = ["CHEF_TYPE"=>"CHEF_TYPE", "CONTROLLER_TYPE"=>"CONTROLLER_TYPE", "SECRETAIRE_TYPE"=>"SECRETAIRE_TYPE"];
     public static $SEXE = ["F"=>"Femme", "M"=>"Homme"];
 
     public function loginAction(Request $request){
@@ -25,21 +25,19 @@ class AccountController extends Controller
             return $this->redirectToRoute("admin_homepage");
         }
         if($request->isMethod('POST')){
-            $username = $request->get('username');
-            $password = $request->get("password");
-            if($username && $password){
+            $email = $request->get('email');
+            $mdp = $request->get("mdp");
+            if($email && $mdp){
                 $em = $this->getDoctrine()->getManager();
-                $user = $em->getRepository(Utilisateur::class)->findOneBy(["username"=>$username]);
-                if( $user && password_verify($password, $user->getMdp()) ){
-                    if($user->isBloque())
-                        return new JsonResponse(['status'=>0, 'mes'=>'Votre compte a été bloqué. Veuillez contacter l\'administrateur']);
+                $user = $em->getRepository(Utilisateur::class)->findOneBy(["email"=>$email]);
+                if( $user && password_verify($mdp, $user->getMdp()) ){
                     $request->getSession()->set("user", $user);
                     return new JsonResponse(["status"=>1, "mes"=>"Good", "url"=>$this->generateUrl("admin_dashboard")]);
                 }else{
-                    return new JsonResponse(['status'=>0, 'mes'=>'Nom ou mot de passe incorrect.']);
+                    return new JsonResponse(['status'=>0, 'mes'=>'Email ou mot de passe incorrect.']);
                 }
             }else{
-                return new JsonResponse(['status'=>0, 'mes'=>'Nom ou mot de passe incorrect']);
+                return new JsonResponse(['status'=>0, 'mes'=>'Email ou mot de passe incorrect']);
             }
         }
 
@@ -56,10 +54,10 @@ class AccountController extends Controller
     public function createAction(){
         $admin = new Utilisateur();
         $admin->setMdp(password_hash("admin", PASSWORD_BCRYPT));
-        $admin->setUsername("admin");
-        $admin->setNom("DG Name");
-        $admin->setFonction(self::$USER_TYPE["DG_TYPE"]);
-        $admin->setSexe("M");
+        $admin->setNom("admin");
+        $admin->setEmail("admin@admin.com");
+        $admin->setFonction(self::$USER_TYPE["SECRETAIRE_TYPE"]);
+        $admin->setService("secretariat");
         $em = $this->getDoctrine()->getManager();
         $em->persist($admin);
         $em->flush();
@@ -70,29 +68,27 @@ class AccountController extends Controller
 
         if($request->isMethod('POST')){
             $me = $request->getSession()->get("user");
-            if($me->getFonction() == self::$USER_TYPE["SECRETAIRE_TYPE"] || $me->isBloque())
+            if($me->getFonction() != self::$USER_TYPE["SECRETAIRE_TYPE"])
                 return new JsonResponse( ["status"=>1, "mes"=>"Vous n'avez pas le droit d'effectuer cette opération"] );
 
-            $username = $request->request->get("username");
+            $nom = $request->request->get("nom");
             $mdp = $request->request->get("mdp");
             $fonction = $request->request->get("fonction");
-            $nom = $request->request->get("nom");
-            $prenom = $request->request->get("prenom");
-            $sexe = $request->request->get("sexe");
+            $email = $request->request->get("email");
+            $service = $request->request->get("service");
 
             $em = $this->getDoctrine()->getManager();
-            $u = $em->getRepository(Utilisateur::class)->findOneBy(["username"=>$username]);
+            $u = $em->getRepository(Utilisateur::class)->findOneBy(["email"=>$email]);
             if($u)
-                return new JsonResponse( ["status"=>1, "mes"=>"Ce nom d'utilisateur est déjà utilisé"] );
+                return new JsonResponse( ["status"=>1, "mes"=>"Cette adresse email est déjà utilisée"] );
             if(strlen($mdp)<8)
                 return new JsonResponse( ["status"=>1, "mes"=>"Le mot de passe doit contenir au moins 8 caractères"] );
-            if(strlen($nom) > 2 && in_array($sexe, self::$SEXE) && in_array($fonction, self::$USER_TYPE)){
+            if(strlen($nom) > 2 && in_array($fonction, self::$USER_TYPE) && $service && $email){
                 $user = new Utilisateur();
-                $user->setSexe($sexe);
+                $user->setService($service);
                 $user->setFonction($fonction);
                 $user->setNom($nom);
-                $user->setPrenom($prenom);
-                $user->setUsername($username);
+                $user->setEmail($email);
                 $user->setMdp(password_hash($mdp, PASSWORD_BCRYPT));
                 $em->persist($user);
                 $em->flush();
@@ -103,39 +99,38 @@ class AccountController extends Controller
         }
 
         $me = $request->getSession()->get("user");
-        if($me->getFonction() == self::$USER_TYPE["SECRETAIRE_TYPE"])
+        if($me->getFonction() != self::$USER_TYPE["SECRETAIRE_TYPE"])
             return $this->redirectToRoute("admin_homepage");
 
         $em = $this->getDoctrine()->getManager();
-        $users = $em->getRepository(Utilisateur::class)->findBy([], ["bloque"=>"asc", "createdat"=>"desc"]);
+        $users = $em->getRepository(Utilisateur::class)->findBy([], ["dateajout"=>"desc"]);
         return $this->render("AdminBundle:Account:index.html.twig", ["users"=>$users]);
     }
 
     public function modifyUserAction(Request $request, Utilisateur $user){
 
         $me = $request->getSession()->get("user");
-        if($me->getFonction() == self::$USER_TYPE["SECRETAIRE_TYPE"] || $me->isBloque())
+        if($me->getFonction() != self::$USER_TYPE["SECRETAIRE_TYPE"])
             return new JsonResponse( ["status"=>1, "mes"=>"Vous n'avez pas le droit d'effectuer cette opération"] );
 
-        $username = $request->request->get("username");
+        $nom = $request->request->get("nom");
         $mdp = $request->request->get("mdp");
         $fonction = $request->request->get("fonction");
-        $nom = $request->request->get("nom");
-        $prenom = $request->request->get("prenom");
-        $sexe = $request->request->get("sexe");
+        $email = $request->request->get("email");
+        $service = $request->request->get("service");
 
         $em = $this->getDoctrine()->getManager();
-        $u = $em->getRepository(Utilisateur::class)->findOneBy(["username"=>$username]);
+        $u = $em->getRepository(Utilisateur::class)->findOneBy(["email"=>$email]);
         if($u && $user->getId() != $u->getId())
-            return new JsonResponse( ["status"=>1, "mes"=>"Ce nom d'utilisateur est déjà utilisé"] );
+            return new JsonResponse( ["status"=>1, "mes"=>"Cette adresse email est déjà utilisé"] );
         if($mdp && strlen($mdp)<8)
             return new JsonResponse( ["status"=>1, "mes"=>"Le mot de passe doit contenir au moins 8 caractères"] );
-        if(strlen($nom) > 2 && in_array($sexe, self::$SEXE) && in_array($fonction, self::$USER_TYPE)){
-            $user->setSexe($sexe);
+        if(strlen($nom) > 2 && in_array($fonction, self::$USER_TYPE) && $service && $email){
+            $user->setService($service);
             $user->setFonction($fonction);
             $user->setNom($nom);
-            $user->setPrenom($prenom);
-            $user->setUsername($username);
+            $user->setEmail($email);
+            $user->setMdp(password_hash($mdp, PASSWORD_BCRYPT));
             if($mdp)
                 $user->setMdp(password_hash($mdp, PASSWORD_BCRYPT));
             $em->persist($user);
@@ -146,56 +141,9 @@ class AccountController extends Controller
         }
     }
 
-    public function blockUserAction(Request $request, Utilisateur $user){
-        $me = $request->getSession()->get("user");
-        if($me->getFonction() == self::$USER_TYPE["SECRETAIRE_TYPE"] || $me->isBloque())
-            return new JsonResponse( ["status"=>1, "mes"=>"Vous n'avez pas le droit d'effectuer cette opération"] );
-        if($me->getId() == $user->getId())
-            return new JsonResponse( ["status"=>1, "mes"=>"Vous ne pouvez pas vous bloquer vous même"] );
-
-        $em = $this->getDoctrine()->getManager();
-        if($user){
-            $user->setBloque(true);
-            $em->persist($user);
-            $em->flush();
-            return new JsonResponse(array(
-                "status"=>0,
-                "mes"=>"L'utilisateur ".$user->getUsername()." a été bloqué avec succès"
-            ));
-        }else{
-            return new JsonResponse(array(
-                "status"=>1,
-                "mes"=>"Une erreur est survenue"
-            ));
-        }
-    }
-
-    public function unblockUserAction(Request $request, Utilisateur $user){
-
-        $me = $request->getSession()->get("user");
-        if($me->getFonction() == self::$USER_TYPE["SECRETAIRE_TYPE"] || $me->isBloque())
-            return new JsonResponse( ["status"=>1, "mes"=>"Vous n'avez pas le droit d'effectuer cette opération"] );
-
-        $em = $this->getDoctrine()->getManager();
-        if($user){
-            $user->setBloque(false);
-            $em->persist($user);
-            $em->flush();
-            return new JsonResponse(array(
-                "status"=>0,
-                "mes"=>"L'utilisateur ".$user->getUsername()." a été débloqué avec succès"
-            ));
-        }else{
-            return new JsonResponse(array(
-                "status"=>1,
-                "mes"=>"Une erreur est survenue"
-            ));
-        }
-    }
-
     public function deleteUserAction(Request $request, Utilisateur $user){
         $me = $request->getSession()->get("user");
-        if($me->getFonction() == self::$USER_TYPE["SECRETAIRE_TYPE"] || $me->isBloque())
+        if($me->getFonction() != self::$USER_TYPE["SECRETAIRE_TYPE"])
             return new JsonResponse( ["status"=>1, "mes"=>"Vous n'avez pas le droit d'effectuer cette opération"] );
         if($me->getId() == $user->getId())
             return new JsonResponse( ["status"=>1, "mes"=>"Vous ne pouvez pas supprimer votre propre compte"] );
@@ -206,7 +154,7 @@ class AccountController extends Controller
             $em->flush();
             return new JsonResponse(array(
                 "status"=>0,
-                "mes"=>"L'utilisateur ".$user->getUsername()." a été supprimé avec succès"
+                "mes"=>"L'utilisateur ".$user->getNom()." a été supprimé avec succès"
             ));
         }else{
             return new JsonResponse(array(
@@ -219,8 +167,8 @@ class AccountController extends Controller
     public function changePasswordAction(Request $request){
         if($request->isMethod('POST')){
             $user = $request->getSession()->get("user");
-            $password = $request->request->get("password");
-            if($password && password_verify($password, $user->getMdp()) && $newPassword = $request->request->get("newPassword") ){
+            $mdp = $request->request->get("mdp");
+            if($mdp && password_verify($mdp, $user->getMdp()) && $newPassword = $request->request->get("newPassword") ){
                 $em = $this->getDoctrine()->getManager();
                 $user2 = $em->getRepository(Utilisateur::class)->find($user->getId());
                 $user2->setMdp(password_hash($newPassword, PASSWORD_BCRYPT));

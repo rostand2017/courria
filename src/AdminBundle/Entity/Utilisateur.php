@@ -24,62 +24,49 @@ class Utilisateur
     /**
      * @var string
      *
-     * @ORM\Column(name="nom", type="string", length=254, nullable=false)
+     * @ORM\Column(name="nom", type="string", length=254, nullable=true)
      */
     private $nom;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="prenom", type="string", length=254, nullable=true)
-     */
-    private $prenom;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="username", type="string", length=254, nullable=false)
-     */
-    private $username;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="mdp", type="string", length=254, nullable=false)
-     */
-    private $mdp;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="sexe", type="string", length=254, nullable=false)
-     */
-    private $sexe;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="fonction", type="string", length=254, nullable=false)
+     * @ORM\Column(name="fonction", type="string", length=254, nullable=true)
      */
     private $fonction;
 
     /**
-     * @var boolean
+     * @var string
      *
-     * @ORM\Column(name="bloque", type="boolean", nullable=false)
+     * @ORM\Column(name="service", type="string", length=254, nullable=true)
      */
-    private $bloque = false;
+    private $service;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=254, nullable=true)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mdp", type="string", length=254, nullable=true)
+     */
+    private $mdp;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="createdat", type="datetime", nullable=false)
+     * @ORM\Column(name="dateajout", type="datetime", nullable=true)
      */
-    private $createdat;
+    private $dateajout;
+
 
     public function __construct()
     {
-        $this->createdat = new \DateTime();
+        $this->dateajout = new \DateTime();
     }
 
     /**
@@ -117,33 +104,49 @@ class Utilisateur
     /**
      * @return string
      */
-    public function getPrenom()
+    public function getFonction()
     {
-        return $this->prenom;
+        return $this->fonction;
     }
 
     /**
-     * @param string $prenom
+     * @param string $fonction
      */
-    public function setPrenom($prenom)
+    public function setFonction($fonction)
     {
-        $this->prenom = $prenom;
+        $this->fonction = $fonction;
     }
 
     /**
      * @return string
      */
-    public function getUsername()
+    public function getService()
     {
-        return $this->username;
+        return $this->service;
     }
 
     /**
-     * @param string $username
+     * @param string $service
      */
-    public function setUsername($username)
+    public function setService($service)
     {
-        $this->username = $username;
+        $this->service = $service;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $email
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
     }
 
     /**
@@ -163,67 +166,19 @@ class Utilisateur
     }
 
     /**
-     * @return string
-     */
-    public function getSexe()
-    {
-        return $this->sexe;
-    }
-
-    /**
-     * @param string $sexe
-     */
-    public function setSexe($sexe)
-    {
-        $this->sexe = $sexe;
-    }
-
-    /**
-     * @return string
-     */
-    public function getFonction()
-    {
-        return $this->fonction;
-    }
-
-    /**
-     * @param string $fonction
-     */
-    public function setFonction($fonction)
-    {
-        $this->fonction = $fonction;
-    }
-
-    /**
-     * @return bool
-     */
-    public function isBloque()
-    {
-        return $this->bloque;
-    }
-
-    /**
-     * @param bool $bloque
-     */
-    public function setBloque($bloque)
-    {
-        $this->bloque = $bloque;
-    }
-
-    /**
      * @return \DateTime
      */
-    public function getCreatedat()
+    public function getDateajout()
     {
-        return $this->createdat;
+        return $this->dateajout;
     }
 
     /**
-     * @param \DateTime $createdat
+     * @param \DateTime $dateajout
      */
-    public function setCreatedat($createdat)
+    public function setDateajout($dateajout)
     {
-        $this->createdat = $createdat;
+        $this->dateajout = $dateajout;
     }
 
 

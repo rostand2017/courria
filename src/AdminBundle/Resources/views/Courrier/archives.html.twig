@@ -1,0 +1,65 @@
+{% extends "AdminBundle::layout.html.twig" %}
+{% block title %} Courriers {% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{{ asset("bundles/admin/assets/skins/dropify/css/dropify.css")}}"/>
+{% endblock %}
+{% block body %}
+    <div class="md-card uk-margin-medium-bottom">
+        <div class="md-card-toolbar">
+            <div class="md-card-toolbar-actions">
+                <i class="md-icon material-icons md-card-fullscreen-activate">&#xE5D0;</i>
+                <i class="md-icon material-icons md-card-toggle">&#xE316;</i>
+                <a href="{{ path('admin_homepage') }}"><i class="md-icon uk-icon-refresh"></i></a>
+            </div>
+            <h3 class="md-card-toolbar-heading-text">
+                Archives
+                <span class="uk-badge uk-badge-warning">{{ courriers | length }}</span>
+            </h3>
+        </div>
+        <div class="md-card-content">
+            <div class="">
+                <div class="uk-grid" data-uk-grid-margin="">
+                    <div class="uk-width-medium-1-1">
+                        <table class="uk-table uk-table-nowrap table_check">
+                            <thead>
+                            <tr>
+                                <th>Expediteur</th>
+                                <th>Objet</th>
+                                <th>Service</th>
+                                <th>Date d'ajout</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for courrier in courriers %}
+                                <tr>
+                                    <td>{{ courrier.expediteur }}</td>
+                                    <td>{{ courrier.objet }}</td>
+                                    <td>{{ courrier.service }}</td>
+                                    <td>{{ courrier.dateexpedition | date('d M Y')}}</td>
+                                    <td><a href="path('admin_stock', {id: courrier.id})" class="uk-badge uk-badge-primary">Détails</a></td>
+                                    <td>
+                                        <a class='editCourrier' data-uk-tooltip="{pos:'top'}" title="Modifier le courrier" data-id="{{ courrier.id }}" data-expediteur="{{ courrier.expediteur }}"
+                                           data-objet="{{ courrier.objet }}" data-service="{{ courrier.service }}"><i class='uk-icon-edit uk-icon-medium'></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% else %}
+                                <tr><td colspan="7" class="uk-text-danger uk-text-center">Aucune archive</td></tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script src="{{ asset("bundles/admin/assets/js/custom/dropify/dist/js/dropify.min.js") }}"></script>
+    <script src="{{ asset("bundles/admin/assets/js/pages/forms_file_input.min.js") }}"></script>
+    <script src="{{ asset("bundles/admin/bower_components/ckeditor/ckeditor.js") }}"></script>
+    <script src="{{ asset("bundles/admin/bower_components/ckeditor/adapters/jquery.js") }}"></script>
+    <script src="{{ asset("bundles/admin/assets/js/courrier.js") }}"></script>
+{% endblock %}
