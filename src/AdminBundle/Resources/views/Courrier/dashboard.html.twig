@@ -12,99 +12,40 @@
                     <div class="uk-float-right uk-margin-top uk-margin-small-right">
                         <a class="md-btn md-btn-primary md-btn-mini md-btn-wave-light waves-effect waves-button waves-light dashtransaction" href="{{ path('admin_homepage') }}">Voir</a>
                     </div>
-                    <span class="uk-text-muted uk-text-small">Produits</span>
-                    <h2 class="uk-margin-remove"><span class="countUpMe">{{ nbProduct }}</span> <small>Aujourd'hui</small></h2>
+                    <span class="uk-text-muted uk-text-small">Controlleurs</span>
+                    <h2 class="uk-margin-remove"><span class="countUpMe">{{ controller }}</span> <small>dossier au niveau du controlleur</small></h2>
                 </div>
             </div>
         </div>
         <div>
             <div class="md-card pantransaction">
                 <div class="md-card-content">
-                    <span class="uk-text-muted uk-text-small">Stock</span>
-                    <h2 class="uk-margin-remove"><span class="countUpMe">{{ nbStock }}</span> <small>Aujourd'hui</small></h2>
+                    <span class="uk-text-muted uk-text-small">Courriers</span>
+                    <h2 class="uk-margin-remove"><span class="countUpMe">{{ contSec }}</span> <small>Courriers validés par le controlleur</small></h2>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="uk-grid" data-uk-grid-margin>
-        <div class="uk-width-medium-1-1">
-            <div class="md-card pancredit">
+        <div>
+            <div class="md-card pantransaction">
                 <div class="md-card-content">
-                    <div id="mg_chart_currency2" class="mGraph">
-                        <div id="morris-bar-chart"></div>
-                    </div>
+                    <span class="uk-text-muted uk-text-small">Services</span>
+                    <h2 class="uk-margin-remove"><span class="countUpMe">{{ service }}</span> <small>Courriers en cours de traitement</small></h2>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="md-card pantransaction">
+                <div class="md-card-content">
+                    <span class="uk-text-muted uk-text-small">Courriers traité</span>
+                    <h2 class="uk-margin-remove"><span class="countUpMe">{{ finished }}</span> <small>Courriers totalement traités</small></h2>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="md-card uk-width-medium-1-1">
-        <table class="uk-table uk-table-nowrap table_check">
-            <thead>
-                <tr>
-                    <th colspan="6"><h2 class="uk-text-center">Stock alerte</h2></th>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>Nom</th>
-                    <th>Type</th>
-                    <th>Fabricant</th>
-                    <th>Prix</th>
-                    <th>Quantite restante</th>
-                </tr>
-            </thead>
-            <tbody>
-            {% for produit in produits %}
-                {% set i = 0 %}
-                {% for stock in produit.stocks %}
-                    {% set i = i + stock.quantite %}
-                {% endfor %}
-                {% if i < 5 %}
-                    <tr>
-                        <td><img src="/uploads/products_images/{{ produit.image }}" class="md-user-image"></td>
-                        <td><a href="{{ path('admin_stock', {id: produit.id}) }}">{{ produit.nom }}</a></td>
-                        <td>{{ produit.type }}</td>
-                        <td>{{ produit.fabricant }}</td>
-                        <td>{{ produit.prix }}</td>
-                        <td> <span class="uk-badge uk-badge-danger">{{ i }}</span></td>
-                    </tr>
-                {% endif %}
-            {% else %}
-                <tr><td colspan="6" class="uk-text-danger uk-text-center">Aucun produit</td></tr>
-            {% endfor %}
-            </tbody>
-        </table>
-    </div>
-
 {% endblock %}
 {% block scripts %}
     <script src="{{ asset("bundles/admin/assets/js/custom/dropify/dist/js/dropify.min.js") }}"></script>
     <script src="{{ asset("bundles/admin/assets/js/pages/forms_file_input.min.js") }}"></script>
     <script src="{{ asset("bundles/admin/bower_components/ckeditor/ckeditor.js") }}"></script>
     <script src="{{ asset("bundles/admin/bower_components/ckeditor/adapters/jquery.js") }}"></script>
-    <script src="{{ asset('bundles/admin/assets/plugins/morris/raphael.min.js') }}"></script>
-    <script src="{{ asset('bundles/admin/assets/plugins/morris/morris.min.js') }}"></script>
-    <script>
-        $(function() {
-            Morris.Bar({
-                element: 'morris-bar-chart',
-                data: [
-                    {% for stock in stocks %}
-                    {
-                        y: '{{ stock.createdat | date('d M Y') }}, {{ stock.nom }}',
-                        a: {{ stock.quantite }},
-                        b: 90
-                    },
-                    {% endfor %}
-                ],
-                xkey: 'y',
-                ykeys: 'a',
-                labels: ['Quantité: ', 'Series B'],
-                hideHover: 'auto',
-                resize: true
-            });
-
-        });
-    </script>
 {% endblock %}

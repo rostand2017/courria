@@ -2,262 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f152b40-4f47-4a7b-b562-88bb7dfe4f61" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/CourrierController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/AdminBundle/Entity/Courrier.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/AdminBundle/Entity/Observation.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/stock.js___jb_tmp___" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/archives.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/nottreat.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/products_images/0d94a8c9bc82590092b9fba5d8e40f17.jpeg" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d6833e0c-ba5e-47e4-8a96-52e770320f1c.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Controller/ProductController.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Entity/Facture.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Entity/Factureproduit.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Entity/Produit.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Entity/Stock.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Entity/Utilisateur.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Entity/Utilisateur.php" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Repository/FactureRepository.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Repository/CourrierRepository.php" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Repository/ProduitRepository.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Repository/StockRepository.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Repository/UtilisateurRepository.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Repository/UtilisateurRepository.php" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Controller/CourrierController.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/CourrierController.php" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Controller/DashboardController.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/DashboardController.php" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Controller/FactureController.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Controller/StockController.php" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/produit.js" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/courrier.js" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/users.js" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/users.js" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/courrier.js" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/courrier.js" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/change_password.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/change_password.html.twig" />
       <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/index.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/login.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/login.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/dashboard.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/dashboard.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/factures.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/index.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/stock.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/stock.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/archives.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/archives.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/dashboard.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/dashboard.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/index.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/index.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/nottreat.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/nottreat.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/stock.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/details.html.twig" />
       <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/AuthenticationBundle.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Classes/Authentication.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Classes/Thumbnails.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Controller/AccountController.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Controller/AuthController.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Repository/UserRepository.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Repository/UtilisateurRepository.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Repository/ObservationRepository.php" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/config/routing.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/config/services.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/css/alertify.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/css/bootstrap-multiselect.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/css/custom.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/css/editable/editable.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/css/modern.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/css/modern.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/css/multi-select.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/css/sweetalert.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/css/themes/green.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/alertify.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/bootstrap-multiselect.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/commande.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/editable/editable.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/generate.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/jquery.multi-select.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/license.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/login.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/maison.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/modern.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/modern.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/news.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/calendar.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/charts-chartjs.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/charts-flot.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/charts-morris.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/charts-rickshaw.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/charts-sparkline.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/coming-soon.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/compose.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/contact.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/dashboard.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/form-elements.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/form-image-crop.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/form-image-zoom.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/form-plupload.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/form-select2.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/form-wizard.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/form-x-editable.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/gallery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/inbox-alt.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/inbox.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/jstree.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/maps-google.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/maps-vector.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/nestable.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/notifications.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/profile.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/shop.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/table-data.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/timeline.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/todo.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/pages/ui-sliders.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/password.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/js/sweetalert.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/3d-bold-navigation/css/style.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/3d-bold-navigation/js/main.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/3d-bold-navigation/js/modernizr.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/bootstrap-colorpicker/css/colorpicker.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/bootstrap-colorpicker/img/alpha.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/bootstrap-colorpicker/img/hue.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/bootstrap-colorpicker/img/saturation.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/bootstrap-datepicker/css/datepicker3.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/bootstrap-timepicker/css/bootstrap-timepicker.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/bootstrap/css/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/bootstrap/fonts/glyphicons-halflings-regulard41d.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/bootstrap/js/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/chartsjs/Chart.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/checkoutconcepts/css/checkout-cornerflat.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/curvedlines/curvedLines.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/d3/d3.layout.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/d3/d3.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/datatables/css/jquery.datatables.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/datatables/css/jquery.datatables_themeroller.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/datatables/images/sort_asc.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/datatables/images/sort_asc_disabled.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/datatables/images/sort_both.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/datatables/images/sort_desc.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/datatables/images/sort_desc_disabled.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/datatables/js/jquery.datatables.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/dropzone/dropzone.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/dropzone/dropzone.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/elevatezoom/jquery.elevatezoom-3.0.8.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/flot/jquery.flot.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/flot/jquery.flot.pie.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/flot/jquery.flot.resize.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/flot/jquery.flot.symbol.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/flot/jquery.flot.time.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/flot/jquery.flot.tooltip.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/fontawesome/css/font-awesome.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/fontawesome/fonts/fontawesome-webfontd41d.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/fontawesome/fonts/fontawesome-webfonte0a5.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/fontawesome/fonts/fontawesome-webfonte0a5.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/fontawesome/fonts/fontawesome-webfonte0a5.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/fontawesome/fonts/fontawesome-webfonte0a5.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/fontawesome/fonts/fontawesome-webfonte0a5.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/fullcalendar/fullcalendar.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/fullcalendar/fullcalendar.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/fullcalendar/lib/moment.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/gridgallery/css/component.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/gridgallery/js/cbpgridgallery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/gridgallery/js/classie.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/gridgallery/js/imagesloaded.pkgd.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/gridgallery/js/masonry.pkgd.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/image-cropper/cropper.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/image-cropper/cropper.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/ion.rangeslider/css/ion.rangeSlider.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/ion.rangeslider/css/ion.rangeSlider.skinFlat.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/ion.rangeslider/img/sprite-skin-flat.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/ion.rangeslider/js/ion-rangeSlider/ion.rangeSlider.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/jquery-blockui/jquery.blockui.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/jquery-countdown/jquery.countdown.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/jquery-counterup/jquery.counterup.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/jquery-mockjax-master/jquery.mockjax.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/jquery-sparkline/jquery.sparkline.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/jquery-ui/jquery-ui.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/jquery-validation/jquery.validate.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/jquery/jquery-2.1.4.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/jqvmap/data/jquery.vmap.sampledata.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/jqvmap/jquery.vmap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/jqvmap/jqvmap.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/jqvmap/maps/jquery.vmap.world.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/jstree/jstree.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/jstree/themes/default/style.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/line-icons/fonts/Simple-Line-Icons.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/line-icons/fonts/Simple-Line-Icons.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/line-icons/fonts/Simple-Line-Icons.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/line-icons/fonts/Simple-Line-Icons.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/line-icons/fonts/Simple-Line-Iconsd41d.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/line-icons/simple-line-icons.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/metrojs/MetroJs.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/metrojs/MetroJs.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/metrojs/images/metroIcons.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/metrojs/images/metroIcons_light.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/moment/moment.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/morris/morris.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/morris/morris.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/morris/raphael.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/nestable/jquery.nestable.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/nestable/nestable.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/offcanvasmenueffects/css/menu_cornerbox.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/offcanvasmenueffects/js/classie.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/offcanvasmenueffects/js/main.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/offcanvasmenueffects/js/snap.svg-min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/pace-master/pace.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/pace-master/themes/blue/pace-theme-flash.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/plupload/js/jquery.plupload.queue/css/jquery.plupload.queue.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/plupload/js/jquery.plupload.queue/img/backgrounds.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/plupload/js/jquery.plupload.queue/img/delete.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/plupload/js/jquery.plupload.queue/img/done.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/plupload/js/jquery.plupload.queue/img/error.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/plupload/js/jquery.plupload.queue/jquery.plupload.queue.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/plupload/js/plupload.full.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/pricing-tables/css/style.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/pricing-tables/img/cd-icon-small-arrow.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/pricing-tables/js/main.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/product-preview-slider/css/style.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/product-preview-slider/js/jquery.mobile.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/product-preview-slider/js/main.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/rickshaw/rickshaw.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/rickshaw/rickshaw.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/select2-3.4.8/select2-spinner.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/select2-3.4.8/select2.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/select2-3.4.8/select2.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/select2-3.4.8/select2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/select2-3.4.8/select2x2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/select2/css/select2.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/select2/js/select2.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/slidepushmenus/css/component.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/summernote-master/summernote.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/summernote-master/summernote.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/switchery/switchery.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/switchery/switchery.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/toastr/toastr.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/toastr/toastr.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/uniform/css/uniform.default.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/uniform/images/bg-input-focus.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/uniform/images/bg-input.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/uniform/images/sprite.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/uniform/jquery.uniform.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/vertical-timeline/css/style.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/vertical-timeline/js/main.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/waves/waves.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/waves/waves.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/waypoints/jquery.waypoints.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/weather-icons-master/css/weather-icons.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/weather-icons-master/font/weathericons-regular-webfont.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/weather-icons-master/font/weathericons-regular-webfont.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/weather-icons-master/font/weathericons-regular-webfont.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/weather-icons-master/font/weathericons-regular-webfont.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/weather-icons-master/font/weathericons-regular-webfontd41d.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/x-editable/bootstrap3-editable/css/bootstrap-editable.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/x-editable/bootstrap3-editable/img/clear.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/x-editable/bootstrap3-editable/img/loading.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/x-editable/bootstrap3-editable/js/bootstrap-editable.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/x-editable/inputs-ext/address/address.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/x-editable/inputs-ext/address/address.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/x-editable/inputs-ext/typeaheadjs/lib/typeahead.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/x-editable/inputs-ext/typeaheadjs/lib/typeahead.js-bootstrap.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationBundle/Resources/public/assets/plugins/x-editable/inputs-ext/typeaheadjs/typeaheadjs.js" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -296,13 +55,6 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="courria: schema" type="c314c289:MysqlImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="courria@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="courria: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="observation: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -311,84 +63,44 @@
       <file leaf-file-name="CourrierController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/CourrierController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="50" column="25" lean-forward="false" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+            <state relative-caret-position="295">
+              <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
               <folding>
                 <element signature="e#6#87#0#PHP" expanded="true" />
                 <element signature="e#124#156#0#PHP" expanded="true" />
-                <element signature="e#7899#8918#0#PHP" expanded="false" />
+                <element signature="e#1435#2142#0#PHP" expanded="false" />
+                <element signature="e#2148#2490#0#PHP" expanded="false" />
+                <element signature="e#2496#2837#0#PHP" expanded="false" />
+                <element signature="e#2843#3350#0#PHP" expanded="false" />
+                <element signature="e#3356#3538#0#PHP" expanded="false" />
+                <element signature="e#3544#5765#0#PHP" expanded="false" />
+                <element signature="e#5771#6699#0#PHP" expanded="false" />
+                <element signature="e#6705#7523#0#PHP" expanded="false" />
+                <element signature="e#7529#8965#0#PHP" expanded="false" />
+                <element signature="e#8971#9990#0#PHP" expanded="false" />
+                <element signature="e#9996#11370#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Courrier.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Entity/Courrier.php">
+      <file leaf-file-name="DashboardController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/DashboardController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-258">
-              <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+            <state relative-caret-position="272">
+              <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
               <folding>
-                <element signature="e#38#86#0#PHP" expanded="true" />
+                <element signature="e#124#156#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Observation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Entity/Observation.php">
+      <file leaf-file-name="dashboard.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/dashboard.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="152" column="28" lean-forward="false" selection-start-line="152" selection-start-column="20" selection-end-line="152" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nottreat.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/nottreat.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="48" column="52" lean-forward="false" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="archives.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/archives.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="courrier.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/courrier.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="91" lean-forward="false" selection-start-line="9" selection-start-column="91" selection-end-line="9" selection-end-column="91" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="courrier.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/bundles/admin/assets/js/courrier.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
-              <caret line="88" column="52" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="101" selection-end-column="3" />
+            <state relative-caret-position="443">
+              <caret line="39" column="130" lean-forward="false" selection-start-line="39" selection-start-column="130" selection-end-line="39" selection-end-column="130" />
               <folding />
             </state>
           </provider>
@@ -397,22 +109,12 @@
       <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+            <state relative-caret-position="340">
+              <caret line="35" column="56" lean-forward="false" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
               <folding>
-                <marker date="1598538955774" expanded="true" signature="100:106" ph="admin_produit_delete: &lt;3 keys&gt;" />
-                <marker date="1598538955774" expanded="true" signature="295:299" ph="/produit/add" />
+                <marker date="1598570670793" expanded="true" signature="100:106" ph="admin_produit_delete: &lt;3 keys&gt;" />
+                <marker date="1598570670793" expanded="true" signature="442:446" ph="/produit/add" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="83" column="83" lean-forward="false" selection-start-line="83" selection-start-column="83" selection-end-line="83" selection-end-column="83" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -421,12 +123,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>admin_produit_s</find>
-      <find>admin_stock</find>
-      <find>admin_homepage</find>
-      <find>i</find>
-      <find>Stock</find>
-      <find>$fatureProduit</find>
       <find>10</find>
       <find>p</find>
       <find>2</find>
@@ -449,11 +145,16 @@
       <find>$produit</find>
       <find>nom</find>
       <find>description</find>
-      <find>produit</find>
       <find>Produit</find>
+      <find>produit</find>
+      <find>stocks</find>
+      <find>st</find>
+      <find>setService</find>
+      <find>sendBtnObservation</find>
+      <find>pass</find>
+      <find>self::SEC</find>
     </findStrings>
     <replaceStrings>
-      <replace>Product</replace>
       <replace>product</replace>
       <replace>stock</replace>
       <replace>Stock</replace>
@@ -483,6 +184,7 @@
       <replace>service</replace>
       <replace>Courrier</replace>
       <replace>courrier</replace>
+      <replace>observation</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -491,9 +193,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Product/dashboard.html.twig" />
-        <option value="$PROJECT_DIR$/src/AuthenticationBundle/Entity/Utilisateur.php" />
-        <option value="$PROJECT_DIR$/src/AuthenticationBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/product.js" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Entity/Stock.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Repository/StockRepository.php" />
@@ -506,8 +205,6 @@
         <option value="$PROJECT_DIR$/src/AdminBundle/Entity/Facture.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Entity/Factureproduit.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Classes/Authentication.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/DashboardController.php" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/stock.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Entity/Produit.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Produit/dashboard.html.twig" />
@@ -529,19 +226,24 @@
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/users.js" />
         <option value="$PROJECT_DIR$/web/bundles/admin/assets/js/users.js" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/ProductController.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Entity/Observation.php" />
-        <option value="$PROJECT_DIR$/web/bundles/admin/assets/js/courrier.js" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/courrier.js" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Entity/Courrier.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/CourrierController.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/nottreat.html.twig" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/archives.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/nottreat.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/courrier.js" />
+        <option value="$PROJECT_DIR$/web/bundles/admin/assets/js/courrier.js" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/change_password.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/details.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/CourrierController.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/DashboardController.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/dashboard.html.twig" />
       </list>
     </option>
   </component>
@@ -636,7 +338,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -675,33 +376,6 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="AdminBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="courria" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courria" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="AdminBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="courria" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courria" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="AdminBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="courria" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courria" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="AdminBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="courria" type="b2602c69:ProjectViewProjectNode" />
@@ -768,6 +442,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -871,7 +546,8 @@
       <workItem from="1598497915042" duration="4631000" />
       <workItem from="1598502763285" duration="1157000" />
       <workItem from="1598504781862" duration="2135000" />
-      <workItem from="1598537691559" duration="3765000" />
+      <workItem from="1598537691559" duration="7065000" />
+      <workItem from="1598553859584" duration="23710000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout de produit et ajout de stock operationnel">
       <created>1562023449735</created>
@@ -915,24 +591,39 @@
       <option name="project" value="LOCAL" />
       <updated>1596753375299</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add view: courrier, archives and current courrier">
+      <created>1598541742659</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1598541742659</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add description in README">
+      <created>1598541888282</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1598541888283</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="619993000" />
+    <option name="totallyTimeSpent" value="647003000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1608" y="-8" width="1616" height="916" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17095116" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17287917" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22043702" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1722365" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20128205" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20128205" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -954,13 +645,13 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33487654" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20128205" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19213313" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17287917" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="SQL Generator" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22087745" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1722365" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948717" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -981,70 +672,18 @@
     <MESSAGE value="changement de la page de redirection apres authentification" />
     <MESSAGE value="Dashboard added" />
     <MESSAGE value="Bug fixed in Facture module. An user can modify now information about a bill" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fixed in Facture module. An user can modify now information about a bill" />
+    <MESSAGE value="Add view: courrier, archives and current courrier" />
+    <MESSAGE value="add description in README" />
+    <option name="LAST_COMMIT_MESSAGE" value="add description in README" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/AdminBundle/Controller/FactureController.php</url>
-          <line>98</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/AdminBundle/Controller/FactureController.php</url>
-          <line>105</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/AdminBundle/Controller/FactureController.php</url>
-          <line>114</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="14" />
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/stock.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="38" column="45" lean-forward="false" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/dashboard.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="53" column="46" lean-forward="false" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/StockController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="2" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Repository/FactureRepository.php" />
-    <entry file="das://table:/59b00627/104bc581-f0a7-4159-863f-f182fd50d067/stock.stock" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e417d806-2695-4606-b20e-026ba0e2615d/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/admin/assets/js/produit.js" />
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/factures.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1887">
-          <caret line="111" column="53" lean-forward="false" selection-start-line="111" selection-start-column="53" selection-end-line="111" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/factures.html.twig" />
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/facture.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1649">
@@ -1093,13 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/DashboardController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1173,13 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="160" column="28" lean-forward="true" selection-start-line="160" selection-start-column="28" selection-end-line="160" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/bundles/admin/assets/js/users.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -1201,63 +826,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="106" column="22" lean-forward="false" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/admin/assets/js/courrier.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="88" column="52" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="101" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/courrier.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="91" lean-forward="false" selection-start-line="9" selection-start-column="91" selection-end-line="9" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="48" column="52" lean-forward="false" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding>
-            <marker date="1598538955774" expanded="true" signature="100:106" ph="admin_produit_delete: &lt;3 keys&gt;" />
-            <marker date="1598538955774" expanded="true" signature="295:299" ph="/produit/add" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="83" column="83" lean-forward="false" selection-start-line="83" selection-start-column="83" selection-end-line="83" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Entity/Courrier.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-258">
           <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
           <folding>
-            <element signature="e#38#86#0#PHP" expanded="true" />
+            <element signature="e#38#86#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1270,30 +844,187 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/CourrierController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="50" column="25" lean-forward="false" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
-            <element signature="e#124#156#0#PHP" expanded="true" />
-            <element signature="e#7899#8918#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/nottreat.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="51">
+            <caret line="3" column="114" lean-forward="false" selection-start-line="3" selection-start-column="114" selection-end-line="3" selection-end-column="114" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/archives.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        <state relative-caret-position="-139">
+          <caret line="28" column="53" lean-forward="false" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="83" column="143" lean-forward="false" selection-start-line="83" selection-start-column="143" selection-end-line="83" selection-end-column="143" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/nottreat.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="44" column="88" lean-forward="false" selection-start-line="44" selection-start-column="88" selection-end-line="44" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="91" column="70" lean-forward="false" selection-start-line="91" selection-start-column="70" selection-end-line="91" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/85c046dd/94609d3a-4c12-4ecb-9616-0413231ad996/courria.utilisateur">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/courrier.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="188" column="29" lean-forward="false" selection-start-line="188" selection-start-column="29" selection-end-line="188" selection-end-column="29" />
+          <folding>
+            <element signature="e#224#1401#0" expanded="false" />
+            <element signature="e#2709#4912#0" expanded="false" />
+            <element signature="e#4972#5257#0" expanded="false" />
+            <element signature="e#5318#5909#0" expanded="false" />
+            <element signature="e#5993#6195#0" expanded="false" />
+            <element signature="e#6257#7900#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/admin/assets/js/courrier.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="188" column="29" lean-forward="false" selection-start-line="188" selection-start-column="29" selection-end-line="188" selection-end-column="29" />
+          <folding>
+            <element signature="e#224#1401#0" expanded="false" />
+            <element signature="e#2709#4912#0" expanded="false" />
+            <element signature="e#4972#5257#0" expanded="false" />
+            <element signature="e#5318#5909#0" expanded="false" />
+            <element signature="e#5993#6195#0" expanded="false" />
+            <element signature="e#6257#7900#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/85c046dd/94609d3a-4c12-4ecb-9616-0413231ad996/courria.observation">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/change_password.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="62" lean-forward="false" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="168" column="49" lean-forward="false" selection-start-line="168" selection-start-column="49" selection-end-line="168" selection-end-column="49" />
+          <folding>
+            <element signature="e#1851#2278#0#PHP" expanded="false" />
+            <element signature="e#2285#4429#0#PHP" expanded="false" />
+            <element signature="e#4435#6118#0#PHP" expanded="false" />
+            <element signature="e#6124#7058#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/details.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="27" column="40" lean-forward="false" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="61" column="131" lean-forward="false" selection-start-line="61" selection-start-column="131" selection-end-line="61" selection-end-column="131" />
+          <folding>
+            <element signature="e#2137#2266#0#HTML" expanded="false" />
+            <element signature="e#8684#8703#0#HTML" expanded="false" />
+            <element signature="e#11052#11071#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/85c046dd/94609d3a-4c12-4ecb-9616-0413231ad996/courria.courrier">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="35" column="56" lean-forward="false" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
+          <folding>
+            <marker date="1598570670793" expanded="true" signature="100:106" ph="admin_produit_delete: &lt;3 keys&gt;" />
+            <marker date="1598570670793" expanded="true" signature="442:446" ph="/produit/add" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/CourrierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+            <element signature="e#124#156#0#PHP" expanded="true" />
+            <element signature="e#1435#2142#0#PHP" expanded="false" />
+            <element signature="e#2148#2490#0#PHP" expanded="false" />
+            <element signature="e#2496#2837#0#PHP" expanded="false" />
+            <element signature="e#2843#3350#0#PHP" expanded="false" />
+            <element signature="e#3356#3538#0#PHP" expanded="false" />
+            <element signature="e#3544#5765#0#PHP" expanded="false" />
+            <element signature="e#5771#6699#0#PHP" expanded="false" />
+            <element signature="e#6705#7523#0#PHP" expanded="false" />
+            <element signature="e#7529#8965#0#PHP" expanded="false" />
+            <element signature="e#8971#9990#0#PHP" expanded="false" />
+            <element signature="e#9996#11370#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/DashboardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding>
+            <element signature="e#124#156#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/dashboard.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="39" column="130" lean-forward="false" selection-start-line="39" selection-start-column="130" selection-end-line="39" selection-end-column="130" />
           <folding />
         </state>
       </provider>

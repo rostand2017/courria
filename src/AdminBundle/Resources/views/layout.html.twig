@@ -81,14 +81,14 @@
                             </a>
                         </li>
                         {% if app.session.get("user").fonction == "SECRETAIRE_TYPE" %}
-                            <li class="{% if  uri ==  path('admin_courrier_nottreat')%}current_section{% endif %}" title="Gérez les utilisateurs">
+                            <li class="{% if  uri ==  path('admin_courrier_nottreat')%}current_section{% endif %}" title="Courriers non traités">
                                 <a href="{{ path('admin_courrier_nottreat') }}">
                                     <span class="menu_icon"><i class="uk-icon-circle-o-notch uk-icon-medium"></i></span>
                                     <span class="menu_title">Courriers non traités</span>
                                 </a>
                             </li>
                         {% endif %}
-                        <li class="{% if  uri ==  path('admin_courrier_archives')%}current_section{% endif %}" title="Ajouter un courrier">
+                        <li class="{% if  uri ==  path('admin_courrier_archives')%}current_section{% endif %}" title="Archives">
                             <a href="{{ path('admin_courrier_archives') }}">
                                 <span class="menu_icon"><i class="uk-icon-archive uk-icon-medium"></i></span>
                                 <span class="menu_title">Archives</span>

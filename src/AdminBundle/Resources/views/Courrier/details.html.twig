@@ -1,0 +1,50 @@
+{% extends "AdminBundle::layout.html.twig" %}
+{% block title %} Courrier de {{ courrier.expediteur }}-Stocks  {% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{{ asset("bundles/admin/assets/skins/dropify/css/dropify.css")}}"/>
+{% endblock %}
+{% block body %}
+    <div class="md-card uk-margin-medium-bottom">
+        <div class="md-card-toolbar">
+            <div class="md-card-toolbar-actions">
+                <i class="md-icon material-icons md-card-fullscreen-activate">&#xE5D0;</i>
+                <i class="md-icon material-icons md-card-toggle">&#xE316;</i>
+                <a href="{{ path('admin_courrier_details', {id: courrier.id}) }}"><i class="md-icon uk-icon-refresh"></i></a>
+            </div>
+            <h3 class="md-card-toolbar-heading-text">
+                {{ courrier.objet }}
+                <span class="uk-badge uk-badge-warning">{{ courrier.observation | length }}</span>
+            </h3>
+        </div>
+        <div class="md-card-content">
+            <p>Courrier vers {% if courrier.service == "" %} le controlleur{% else %}{{ courrier.service }}{% endif %}</p>
+            <div>
+                <div class="uk-grid" data-uk-grid-margin="">
+                    <div class="uk-width-medium-1-1">
+                        <table class="uk-table uk-table-nowrap table_check">
+                            <tbody>
+                            {% for observation in courrier.observation %}
+                                <tr>
+                                    <td>
+                                        <h4> >>> {{ observation.libelle }} <<< </h4>
+                                        <p>{{ observation.observation }}</p>
+                                        <span class="uk-badge uk-badge-primary">Ajouté par le service: {{ observation.service }}</span> le <i>{{ observation.dateajout | date('d M Y à h:i')}}</i>
+                                    </td>
+                                </tr>
+                            {% else %}
+                                <tr><td class="uk-text-danger uk-text-center">Aucune observation</td></tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script src="{{ asset("bundles/admin/assets/js/custom/dropify/dist/js/dropify.min.js") }}"></script>
+    <script src="{{ asset("bundles/admin/assets/js/pages/forms_file_input.min.js") }}"></script>
+    <script src="{{ asset("bundles/admin/bower_components/ckeditor/ckeditor.js") }}"></script>
+    <script src="{{ asset("bundles/admin/bower_components/ckeditor/adapters/jquery.js") }}"></script>
+{% endblock %}

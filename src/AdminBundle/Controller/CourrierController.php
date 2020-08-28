@@ -17,29 +17,38 @@ use Symfony\Component\HttpFoundation\Request;
 
 class CourrierController extends Controller
 {
-    const SEC_CON = "secretariat_controller";
+    const SEC_CON = "controlleur_secretariat";
     const SEC = "secretariat";
-    const CON = "controller";
+    const CON = "controlleur";
+    const TRA = "traitement";
 
     public function indexAction(Request $request){
         $em = $this->getDoctrine()->getManager();
+        $user = $request->getSession()->get("user");
+        if($user->getFonction()== AccountController::$USER_TYPE['CONTROLLER_TYPE']){
+            $courriers = $em->getRepository(Courrier::class)->findBy(["position"=>self::CON], ["dateexpedition"=>"desc"]);
+        }else if($user->getFonction()== AccountController::$USER_TYPE['CHEF_TYPE']){
+            $courriers = $em->getRepository(Courrier::class)->findBy(["position"=>$user->getService()], ["dateexpedition"=>"desc"]);
+        }else{
+            $courriers = $em->getRepository(Courrier::class)->findBy([], ["position"=>"asc", "dateexpedition"=>"desc"]);
+        }
 
-        $courriers = $em->getRepository(Courrier::class)->findBy([], ["dateexpedition"=>"desc"]);
         return $this->render('AdminBundle:Courrier:index.html.twig', array(
             "courriers" => $courriers
         ));
     }
 
     public function nottreatAction(Request $request){
+        $user = $request->getSession()->get("user");
+        if($user->getFonction() != AccountController::$USER_TYPE["SECRETAIRE_TYPE"])
+            return $this->redirectToRoute("admin_homepage");
         $em = $this->getDoctrine()->getManager();
-
         $courriers1 = $em->getRepository(Courrier::class)->findBy([], ["dateexpedition"=>"desc"]);
         $courriers = [];
         foreach ($courriers1 as $courrier){
             if($this->isNotTreat($courrier))
                 array_push($courriers, $courrier);
         }
-        $courriers = $em->getRepository(Courrier::class)->findBy([], ["dateexpedition"=>"desc"]);
         return $this->render('AdminBundle:Courrier:nottreat.html.twig', array(
             "courriers" => $courriers
         ));
@@ -79,6 +88,12 @@ class CourrierController extends Controller
         }
         return $this->render('AdminBundle:Courrier:archives.html.twig', array(
             "courriers" => $courriers
+        ));
+    }
+
+    public function detailsAction(Courrier $courrier){
+        return $this->render('AdminBundle:Courrier:details.html.twig', array(
+            "courrier" => $courrier
         ));
     }
 
@@ -132,6 +147,7 @@ class CourrierController extends Controller
             $courrier->setObjet($objet);
             $courrier->setExpediteur($expeditieur);
             $courrier->setUtilisateur($user);
+            $courrier->setPosition(self::CON);
             $em->persist($courrier);
             $em->flush();
             return new JsonResponse(array(
@@ -142,6 +158,9 @@ class CourrierController extends Controller
     }
 
     public function setServiceAction(Request $request, Courrier $courrier){
+        $user = $request->getSession()->get("user");
+        if($user->getFonction() != AccountController::$USER_TYPE["CONTROLLER_TYPE"])
+            return new JsonResponse(array("status"=>1, "mes"=>"Vous ne pouvez pas effectuer cette opération"), 403);
         $em = $this->getDoctrine()->getManager();
         $service = $request->request->get("service");
         if($service == ''){
@@ -156,29 +175,26 @@ class CourrierController extends Controller
         $em->flush();
         return new JsonResponse(array(
             "status"=>0,
-            "mes"=>"Courrier affecté avec succès au service: $service"
+            "mes"=>"Courrier affecté avec succès au service $service"
         ));
     }
 
     public function transfertToServiceAction(Request $request, Courrier $courrier){
         $user = $request->getSession()->get("user");
-        if($user->getFonction() != AccountController::$USER_TYPE["SECRETAIRE_TYPE"])
+        if($user->getFonction() == AccountController::$USER_TYPE["CONTROLLER_TYPE"])
             return new JsonResponse(array("status"=>1, "mes"=>"Vous ne pouvez pas effectuer cette opération"), 403);
-
         $em = $this->getDoctrine()->getManager();
-        $service = $request->request->get("service");
-        if($service == ''){
-            return new JsonResponse(array(
-                "status"=>1,
-                "mes"=>"Renseignez le service chargé de traiter le dossier."
-            ));
-        }
-        $courrier->setPosition($service);
+
+        if($user->getFonction() == AccountController::$USER_TYPE["SECRETAIRE_TYPE"])
+            $courrier->setPosition($courrier->getService());
+        else
+            $courrier->setPosition($courrier->getService()."_".self::SEC);
+
         $em->persist($courrier);
         $em->flush();
         return new JsonResponse(array(
             "status"=>0,
-            "mes"=>"Courrier transféré avec succès au service: $service"
+            "mes"=>"Le courrier a été transferé avec succès"
         ));
     }
 
@@ -244,6 +260,31 @@ class CourrierController extends Controller
         }
     }
 
+    public function setObservationAction(Request $request, Courrier $courrier){
+        $user = $request->getSession()->get('user');
+        if($user->getFonction() != AccountController::$USER_TYPE["CHEF_TYPE"])
+            return new JsonResponse(array("status"=>1, "mes"=>"Vous ne pouvez pas effectuer cette opération"), 403);
+        $em = $this->getDoctrine()->getManager();
+        $libelle = $request->request->get("libelle");
+        $observations = $request->request->get("observation");
+        $traite = $request->request->get("traite")=="on"?true:false;
+        if(!$libelle || !$observations){
+            return new JsonResponse(array("status"=>1, "mes"=>"Renseignez correctement les différents champs"), 403);
+        }
+
+        $user = $em->getRepository(Utilisateur::class)->find($user->getId());
+        $observation = new Observation();
+        $observation->setLibelle($libelle);
+        $observation->setObservation($observations);
+        $observation->setService($courrier->getService());
+        $observation->setTraite($traite);
+        $observation->setUtilisateur($user);
+        $courrier->setPosition($courrier->getService().'_'.self::SEC);
+        $observation->setCourrier($courrier);
+        $em->persist($observation);
+        $em->flush();
+        return new JsonResponse(array("status"=>0, "mes"=>"Observation ajoutée avec succès"), 200);
+    }
 
     private function getUniqueFileName(){
         return md5(uniqid());

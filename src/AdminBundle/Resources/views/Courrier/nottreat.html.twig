@@ -38,7 +38,7 @@
                                     <td>{{ courrier.objet }}</td>
                                     <td>{{ courrier.service }}</td>
                                     <td>{{ courrier.dateexpedition | date('d M Y')}}</td>
-                                    <td><a href="path('admin_stock', {id: courrier.id})" class="uk-badge uk-badge-primary">Détails</a></td>
+                                    <td><a href="{{ path('admin_courrier_details', {id: courrier.id}) }}" class="uk-badge uk-badge-primary">Détails</a></td>
                                     <td>
                                         <a class='editCourrier' data-uk-tooltip="{pos:'top'}" title="Modifier le courrier" data-id="{{ courrier.id }}" data-expediteur="{{ courrier.expediteur }}"
                                            data-objet="{{ courrier.objet }}" data-service="{{ courrier.service }}"><i class='uk-icon-edit uk-icon-medium'></i></a>

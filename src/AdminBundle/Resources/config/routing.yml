@@ -7,6 +7,11 @@ admin_courrier_delete:
     defaults: { _controller: AdminBundle:Courrier:delete }
     requirements:
         id: \d+
+admin_courrier_details:
+    path:     /courrier/{id}
+    defaults: { _controller: AdminBundle:Courrier:details }
+    requirements:
+        id: \d+
 admin_courrier_add:
     path:     /courrier/add
     defaults: { _controller: AdminBundle:Courrier:add }
@@ -16,6 +21,21 @@ admin_courrier_nottreat:
 admin_courrier_archives:
     path:     /courrier/archives
     defaults: { _controller: AdminBundle:Courrier:archives }
+admin_set_service:
+    path:     /courrier/service/{id}
+    defaults: { _controller: AdminBundle:Courrier:setService }
+    requirements:
+        id: \d+
+admin_transfert_service:
+    path:     /courrier/transfert/{id}
+    defaults: { _controller: AdminBundle:Courrier:transfertToService }
+    requirements:
+        id: \d+
+admin_set_observation:
+    path:     /courrier/observation/{id}
+    defaults: { _controller: AdminBundle:Courrier:setObservation }
+    requirements:
+        id: \d+
 
 #Dashboard
 admin_dashboard:
