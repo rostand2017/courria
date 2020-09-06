@@ -20,6 +20,11 @@ class CourrierController extends Controller
     const SEC_CON = "controlleur_secretariat";
     const SEC = "secretariat";
     const CON = "controlleur";
+    const SER_SOLDE = "solde_pension";
+    const SER_VISA = "visa";
+    const SER_BRIGADE = "brigade regionale";
+    const SER_SUIVI = "suivi des operations de gestion des matière";
+    const SER_ADMIN = "administratif et financier";
     const TRA = "traitement";
 
     public function indexAction(Request $request){

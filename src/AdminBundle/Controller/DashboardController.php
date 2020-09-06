@@ -20,7 +20,10 @@ class DashboardController extends Controller
 
         $controller=0;
         $contSec=0;
-        $service=0;
+        $serviceBrigade=0;
+        $serviceSolde=0;
+        $serviceAdmin=0;
+        $serviceVisa=0;
         $finished=0;
         foreach ($courriers as $courrier){
             switch ($courrier->getPosition()){
@@ -30,14 +33,24 @@ class DashboardController extends Controller
                 case CourrierController::SEC_CON:
                     $contSec++;
                     break;
-                case CourrierController::TRA :
-                    $service++;
+                case CourrierController::SER_SOLDE :
+                    $serviceSolde++;
+                    break;
+                case CourrierController::SER_VISA :
+                    $serviceVisa++;
+                    break;
+                case CourrierController::SER_BRIGADE :
+                    $serviceBrigade++;
+                    break;
+                case CourrierController::SER_ADMIN :
+                    $serviceAdmin++;
                     break;
                 default:
                     $finished ++;
             }
         }
-        return $this->render('AdminBundle:Courrier:dashboard.html.twig', compact("controller", "contSec", "service", "finished"));
+        return $this->render('AdminBundle:Courrier:dashboard.html.twig', compact("controller", "contSec", "serviceSolde",
+            "serviceBrigade", "serviceAdmin", "serviceVisa", "finished"));
     }
 
     private function getUniqueFileName(){

@@ -56,7 +56,7 @@ class AccountController extends Controller
         $admin->setMdp(password_hash("admin", PASSWORD_BCRYPT));
         $admin->setNom("admin");
         $admin->setEmail("admin@admin.com");
-        $admin->setFonction(self::$USER_TYPE["SECRETAIRE_TYPE"]);
+        $admin->setFonction(self::$USER_TYPE["CHEF_TYPE"]);
         $admin->setService("secretariat");
         $em = $this->getDoctrine()->getManager();
         $em->persist($admin);
@@ -68,7 +68,7 @@ class AccountController extends Controller
 
         if($request->isMethod('POST')){
             $me = $request->getSession()->get("user");
-            if($me->getFonction() != self::$USER_TYPE["SECRETAIRE_TYPE"])
+            if($me->getFonction() != self::$USER_TYPE["CHEF_TYPE"])
                 return new JsonResponse( ["status"=>1, "mes"=>"Vous n'avez pas le droit d'effectuer cette opération"] );
 
             $nom = $request->request->get("nom");
@@ -99,7 +99,7 @@ class AccountController extends Controller
         }
 
         $me = $request->getSession()->get("user");
-        if($me->getFonction() != self::$USER_TYPE["SECRETAIRE_TYPE"])
+        if($me->getFonction() != self::$USER_TYPE["CHEF_TYPE"])
             return $this->redirectToRoute("admin_homepage");
 
         $em = $this->getDoctrine()->getManager();
@@ -110,7 +110,7 @@ class AccountController extends Controller
     public function modifyUserAction(Request $request, Utilisateur $user){
 
         $me = $request->getSession()->get("user");
-        if($me->getFonction() != self::$USER_TYPE["SECRETAIRE_TYPE"])
+        if($me->getFonction() != self::$USER_TYPE["CHEF_TYPE"])
             return new JsonResponse( ["status"=>1, "mes"=>"Vous n'avez pas le droit d'effectuer cette opération"] );
 
         $nom = $request->request->get("nom");
@@ -143,7 +143,7 @@ class AccountController extends Controller
 
     public function deleteUserAction(Request $request, Utilisateur $user){
         $me = $request->getSession()->get("user");
-        if($me->getFonction() != self::$USER_TYPE["SECRETAIRE_TYPE"])
+        if($me->getFonction() != self::$USER_TYPE["CHEF_TYPE"])
             return new JsonResponse( ["status"=>1, "mes"=>"Vous n'avez pas le droit d'effectuer cette opération"] );
         if($me->getId() == $user->getId())
             return new JsonResponse( ["status"=>1, "mes"=>"Vous ne pouvez pas supprimer votre propre compte"] );
