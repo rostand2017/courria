@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="courria@localhost" uuid="94609d3a-4c12-4ecb-9616-0413231ad996">
+    <data-source source="LOCAL" name="courria@localhost" uuid="4e3b6423-3979-43ef-9bee-8f5ea42399a0">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>

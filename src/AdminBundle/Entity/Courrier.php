@@ -74,6 +74,13 @@ class Courrier
      */
     private $observation;
 
+    /**
+     * @var ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="AdminBundle\Entity\Files", mappedBy="courrier", cascade={"persist", "remove"})
+     */
+    private $files;
+
 
     public function __construct()
     {
@@ -207,6 +214,22 @@ class Courrier
     public function setUtilisateur($utilisateur)
     {
         $this->utilisateur = $utilisateur;
+    }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getFiles()
+    {
+        return $this->files;
+    }
+
+    /**
+     * @param ArrayCollection $files
+     */
+    public function setFiles($files)
+    {
+        $this->files = $files;
     }
 
 

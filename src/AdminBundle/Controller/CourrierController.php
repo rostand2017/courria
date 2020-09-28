@@ -9,9 +9,12 @@
 namespace AdminBundle\Controller;
 
 use AdminBundle\Entity\Courrier;
+use AdminBundle\Entity\Files;
 use AdminBundle\Entity\Observation;
 use AdminBundle\Entity\Utilisateur;
+use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -23,7 +26,7 @@ class CourrierController extends Controller
     const SER_SOLDE = "solde_pension";
     const SER_VISA = "visa";
     const SER_BRIGADE = "brigade regionale";
-    const SER_SUIVI = "suivi des operations de gestion des matière";
+    const SER_SUIVI = "suivi des operations de gestion des matières";
     const SER_ADMIN = "administratif et financier";
     const TRA = "traitement";
 
@@ -153,6 +156,9 @@ class CourrierController extends Controller
             $courrier->setExpediteur($expeditieur);
             $courrier->setUtilisateur($user);
             $courrier->setPosition(self::CON);
+            if(!empty($request->files->get("files")))
+                $courrier->setFiles($this->saveFiles($request->files->get("files"), $courrier));
+
             $em->persist($courrier);
             $em->flush();
             return new JsonResponse(array(
@@ -160,6 +166,25 @@ class CourrierController extends Controller
                 "mes" => "Le courrier de " . $courrier->getExpediteur() . " a été ajouté avec succès."
             ));
         }
+    }
+
+    /**
+     * Saved files in the disk
+     * @param $files
+     * @param $courrier
+     * @return ArrayCollection
+     */
+    public function saveFiles($files, $courrier){
+        $filesDirectory = $this->getParameter("files_directory");
+        $filesEnd = new ArrayCollection();
+        foreach ($files as $file ){
+            $filename = $this->getUniqueFileName().".".$file->guessExtension();
+            $file->move($filesDirectory, $filename);
+            $_file = new Files($filename);
+            $_file->setCourrier($courrier);
+            $filesEnd->add($_file);
+        }
+        return $filesEnd;
     }
 
     public function setServiceAction(Request $request, Courrier $courrier){
@@ -244,6 +269,7 @@ class CourrierController extends Controller
 
         $em = $this->getDoctrine()->getManager();
         if($courrier){
+            $this->removeFiles($courrier->getFiles());
             $em->remove($courrier);
             try{
                 $em->flush();
@@ -262,6 +288,17 @@ class CourrierController extends Controller
                 "status"=>1,
                 "mes"=>"Une erreur est survenue"
             ));
+        }
+    }
+
+    /**
+     * Delete a files in the disk
+     * @param $files ArrayCollection
+     */
+    public function removeFiles($files){
+        foreach ($files as $file){
+            if(file_exists($this->getParameter("files_directory").$file->getPath()))
+                unlink($this->getParameter("files_directory").$file->getPath());
         }
     }
 

@@ -103,6 +103,8 @@ $(document).ready(function() {
 
     $(document).on('click','#addCourrier', function (e) {
         e.preventDefault();
+        $('#files').show();
+        $('#files').val('');
         $('#messageformSalle').html("");
         $('#expediteur').val('');
         $('#objet').val('');
@@ -122,6 +124,7 @@ $(document).ready(function() {
         $('#expediteur').val(expediteur);
         $('#service').val(service);
         $('#id').val(id);
+        $('#files').hide();
         $('.md-input-wrapper').addClass('md-input-focus');
         $('.titleForm').text("Modifier le courrier");
         $('.sendBtn').text("Modifier");

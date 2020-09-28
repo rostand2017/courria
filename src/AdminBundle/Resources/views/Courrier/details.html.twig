@@ -1,5 +1,5 @@
 {% extends "AdminBundle::layout.html.twig" %}
-{% block title %} Courrier de {{ courrier.expediteur }}-Stocks  {% endblock %}
+{% block title %} Courrier de {{ courrier.expediteur }}  {% endblock %}
 {% block style %}
     <link rel="stylesheet" href="{{ asset("bundles/admin/assets/skins/dropify/css/dropify.css")}}"/>
 {% endblock %}
@@ -12,12 +12,17 @@
                 <a href="{{ path('admin_courrier_details', {id: courrier.id}) }}"><i class="md-icon uk-icon-refresh"></i></a>
             </div>
             <h3 class="md-card-toolbar-heading-text">
-                {{ courrier.objet }}
+                Courrier de {{ courrier.expediteur }}
                 <span class="uk-badge uk-badge-warning">{{ courrier.observation | length }}</span>
             </h3>
         </div>
         <div class="md-card-content">
-            <p>Courrier vers {% if courrier.service == "" %} le controlleur{% else %}{{ courrier.service }}{% endif %}</p>
+            <p>{{ courrier.objet }}</p>
+            <p>
+                <span class="uk-badge uk-badge-danger">
+                    Courrier vers {% if courrier.service == "" %} le controlleur{% else %}{{ courrier.service }}{% endif %}
+                </span>
+            </p>
             <div>
                 <div class="uk-grid" data-uk-grid-margin="">
                     <div class="uk-width-medium-1-1">
@@ -39,6 +44,24 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="md-card uk-margin-medium-bottom">
+        <div class="md-card-toolbar">
+            <div class="md-card-toolbar-actions">
+                <i class="md-icon material-icons md-card-toggle">&#xE316;</i>
+            </div>
+            <h4 class="md-card-toolbar-heading-text">
+                Pièces jointes
+            </h4>
+        </div>
+        <div class="md-card-content">
+            {% for file in courrier.files %}
+                 <p><a href="/uploads/files/{{ file.path }}" target="_blank" >Pièce {{ loop.index }}</a></p>
+            {% else %}
+                <p>Aucune pièces jointes</p>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

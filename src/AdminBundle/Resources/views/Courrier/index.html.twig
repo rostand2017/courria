@@ -20,7 +20,7 @@
             <div class="">
                 <div class="uk-grid" data-uk-grid-margin="">
                     <div class="uk-width-medium-1-1">
-                        <table class="uk-table uk-table-nowrap table_check">
+                        <table class="uk-table table_check">
                             <thead>
                             <tr>
                                 <th>Expediteur</th>
@@ -115,6 +115,13 @@
                             <div class="parsley-row">
                                 <input type="hidden" id="id" name="id">
                                 <input type="text" placeholder="Objet du courrier" required name="objet" id="objet" class="md-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-medium-1-1">
+                            <div class="parsley-row">
+                                <input type="file" multiple="multiple" name="files[]" id="files">
                             </div>
                         </div>
                     </div>

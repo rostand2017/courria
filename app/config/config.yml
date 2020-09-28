@@ -9,8 +9,7 @@ imports:
 parameters:
     locale: fr
     image_directory: '%kernel.project_dir%/web/uploads/images'
-    thumbnail_directory: '%kernel.project_dir%/web/uploads/thumbnails'
-    image_product: '%kernel.project_dir%/web/uploads/products_images/'
+    files_directory: '%kernel.project_dir%/web/uploads/files/'
 
 framework:
     #esi: ~
