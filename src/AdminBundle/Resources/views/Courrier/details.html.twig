@@ -26,14 +26,15 @@
             <div>
                 <div class="uk-grid" data-uk-grid-margin="">
                     <div class="uk-width-medium-1-1">
-                        <table class="uk-table uk-table-nowrap table_check">
+                        <table class="uk-table table_check">
                             <tbody>
                             {% for observation in courrier.observation %}
+                                <hr>
                                 <tr>
                                     <td>
-                                        <h4> >>> {{ observation.libelle }} <<< </h4>
+                                        <h4> {{ observation.libelle }} </h4>
                                         <p>{{ observation.observation }}</p>
-                                        <span class="uk-badge uk-badge-primary">Ajouté par le service: {{ observation.service }}</span> le <i>{{ observation.dateajout | date('d M Y à h:i')}}</i>
+                                        <i>Ajouté par le service "{{ observation.service }}" le {{ observation.dateajout | date('d M Y à h:i')}}</i>
                                     </td>
                                 </tr>
                             {% else %}

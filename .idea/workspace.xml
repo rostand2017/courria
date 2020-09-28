@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f152b40-4f47-4a7b-b562-88bb7dfe4f61" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/AdminBundle/Entity/Files.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Controller/CourrierController.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/CourrierController.php" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Entity/Courrier.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Entity/Courrier.php" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/courrier.js" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/courrier.js" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php" />
       <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/details.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/details.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/index.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/index.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,7 +53,7 @@
       <file leaf-file-name="CourrierController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/CourrierController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
+            <state relative-caret-position="1662">
               <caret line="174" column="30" lean-forward="false" selection-start-line="174" selection-start-column="30" selection-end-line="174" selection-end-column="30" />
               <folding>
                 <element signature="e#6#87#0#PHP" expanded="true" />
@@ -92,35 +88,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="courrier.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/courrier.js">
+      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="153" column="31" lean-forward="false" selection-start-line="153" selection-start-column="31" selection-end-line="153" selection-end-column="31" />
-              <folding>
-                <element signature="e#1468#2646#0" expanded="false" />
-                <element signature="e#2709#4912#0" expanded="false" />
-                <element signature="e#5375#5994#0" expanded="false" />
-                <element signature="e#6078#6280#0" expanded="false" />
-                <element signature="e#8064#8215#0" expanded="false" />
-                <element signature="e#8281#9873#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="205">
+              <caret line="96" column="82" lean-forward="false" selection-start-line="96" selection-start-column="82" selection-end-line="96" selection-end-column="82" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="courrier.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/bundles/admin/assets/js/courrier.js">
+      <file leaf-file-name="AccountController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+            <state relative-caret-position="113">
+              <caret line="168" column="56" lean-forward="false" selection-start-line="168" selection-start-column="56" selection-end-line="168" selection-end-column="56" />
               <folding>
-                <element signature="e#1468#2646#0" expanded="false" />
-                <element signature="e#2709#4912#0" expanded="false" />
-                <element signature="e#5375#5994#0" expanded="false" />
-                <element signature="e#6078#6280#0" expanded="false" />
-                <element signature="e#6342#7985#0" expanded="false" />
-                <element signature="e#8281#9873#0" expanded="false" />
+                <element signature="e#2279#4423#0#PHP" expanded="false" />
+                <element signature="e#4429#6112#0#PHP" expanded="false" />
+                <element signature="e#6118#7052#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -129,49 +115,9 @@
       <file leaf-file-name="details.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/details.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+            <state relative-caret-position="243">
+              <caret line="34" column="53" lean-forward="false" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Files.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Entity/Files.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="33" column="67" lean-forward="false" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Courrier.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Entity/Courrier.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="80" column="7" lean-forward="false" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
-              <folding>
-                <element signature="e#38#86#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="files" pinned="false" current-in-tab="false">
-        <entry file="das://table:/85c046dd/4e3b6423-3979-43ef-9bee-8f5ea42399a0/courria.files">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="courrier" pinned="false" current-in-tab="false">
-        <entry file="das://table:/85c046dd/4e3b6423-3979-43ef-9bee-8f5ea42399a0/courria.courrier">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -288,8 +234,6 @@
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/nottreat.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/change_password.html.twig" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/dashboard.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/DashboardController.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/index.html.twig" />
@@ -300,6 +244,8 @@
         <option value="$PROJECT_DIR$/src/AdminBundle/Entity/Courrier.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/CourrierController.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Entity/Files.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/details.html.twig" />
       </list>
     </option>
@@ -415,7 +361,7 @@
               <item name="courria" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="AdminBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="courria" type="b2602c69:ProjectViewProjectNode" />
@@ -578,7 +524,7 @@
       <workItem from="1598553859584" duration="24162000" />
       <workItem from="1599394631534" duration="4084000" />
       <workItem from="1600572853085" duration="135000" />
-      <workItem from="1601131036845" duration="16428000" />
+      <workItem from="1601131036845" duration="17537000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout de produit et ajout de stock operationnel">
       <created>1562023449735</created>
@@ -657,11 +603,18 @@
       <option name="project" value="LOCAL" />
       <updated>1601168696078</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Adding a files to a mail">
+      <created>1601277266852</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1601277266852</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="668102000" />
+    <option name="totallyTimeSpent" value="669211000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1608" y="-8" width="1616" height="916" extended-state="6" />
@@ -729,7 +682,8 @@
     <MESSAGE value="add description in README" />
     <MESSAGE value="Add dashboard panel.&#10;Mails exchange works well" />
     <MESSAGE value="Adding new type of services" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding new type of services" />
+    <MESSAGE value="Adding a files to a mail" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding a files to a mail" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -920,28 +874,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="58" column="51" lean-forward="false" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
-          <folding>
-            <element signature="e#2279#4411#0#PHP" expanded="false" />
-            <element signature="e#4417#6094#0#PHP" expanded="false" />
-            <element signature="e#6100#7028#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="81" column="29" lean-forward="false" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
-          <folding>
-            <element signature="e#7524#9152#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Account/login.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1010,21 +942,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/admin/assets/js/courrier.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-          <folding>
-            <element signature="e#1468#2646#0" expanded="false" />
-            <element signature="e#2709#4912#0" expanded="false" />
-            <element signature="e#5375#5994#0" expanded="false" />
-            <element signature="e#6078#6280#0" expanded="false" />
-            <element signature="e#6342#7985#0" expanded="false" />
-            <element signature="e#8281#9873#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/assets/js/courrier.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1040,17 +957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="123" column="84" lean-forward="false" selection-start-line="123" selection-start-column="84" selection-end-line="123" selection-end-column="84" />
-          <folding>
-            <element signature="e#8947#11226#0#HTML" expanded="false" />
-            <element signature="e#11319#13057#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e3b6423-3979-43ef-9bee-8f5ea42399a0/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1059,35 +965,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/CourrierController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="174" column="30" lean-forward="false" selection-start-line="174" selection-start-column="30" selection-end-line="174" selection-end-column="30" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
-            <element signature="e#124#156#0#PHP" expanded="true" />
-            <element signature="e#937#1791#0#PHP" expanded="false" />
-            <element signature="e#1797#2504#0#PHP" expanded="false" />
-            <element signature="e#2510#2852#0#PHP" expanded="false" />
-            <element signature="e#2858#3199#0#PHP" expanded="false" />
-            <element signature="e#3205#3712#0#PHP" expanded="false" />
-            <element signature="e#3718#3900#0#PHP" expanded="false" />
-            <element signature="e#6902#7830#0#PHP" expanded="false" />
-            <element signature="e#7836#8654#0#PHP" expanded="false" />
-            <element signature="e#8660#10096#0#PHP" expanded="false" />
-            <element signature="e#10102#11176#0#PHP" expanded="false" />
-            <element signature="e#11269#11522#0#PHP" expanded="false" />
-            <element signature="e#11528#12902#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Entity/Courrier.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="80" column="7" lean-forward="false" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
           <folding>
-            <element signature="e#38#86#0#PHP" expanded="true" />
+            <element signature="e#38#86#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1114,10 +997,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/admin/assets/js/courrier.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <folding>
+            <element signature="e#1468#2646#0" expanded="false" />
+            <element signature="e#2709#4912#0" expanded="false" />
+            <element signature="e#5375#5994#0" expanded="false" />
+            <element signature="e#6078#6280#0" expanded="false" />
+            <element signature="e#6342#7985#0" expanded="false" />
+            <element signature="e#8281#9873#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/CourrierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1662">
+          <caret line="174" column="30" lean-forward="false" selection-start-line="174" selection-start-column="30" selection-end-line="174" selection-end-column="30" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+            <element signature="e#124#156#0#PHP" expanded="true" />
+            <element signature="e#937#1791#0#PHP" expanded="false" />
+            <element signature="e#1797#2504#0#PHP" expanded="false" />
+            <element signature="e#2510#2852#0#PHP" expanded="false" />
+            <element signature="e#2858#3199#0#PHP" expanded="false" />
+            <element signature="e#3205#3712#0#PHP" expanded="false" />
+            <element signature="e#3718#3900#0#PHP" expanded="false" />
+            <element signature="e#6902#7830#0#PHP" expanded="false" />
+            <element signature="e#7836#8654#0#PHP" expanded="false" />
+            <element signature="e#8660#10096#0#PHP" expanded="false" />
+            <element signature="e#10102#11176#0#PHP" expanded="false" />
+            <element signature="e#11269#11522#0#PHP" expanded="false" />
+            <element signature="e#11528#12902#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="96" column="82" lean-forward="false" selection-start-line="96" selection-start-column="82" selection-end-line="96" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/AccountController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="168" column="56" lean-forward="false" selection-start-line="168" selection-start-column="56" selection-end-line="168" selection-end-column="56" />
+          <folding>
+            <element signature="e#2279#4423#0#PHP" expanded="false" />
+            <element signature="e#4429#6112#0#PHP" expanded="false" />
+            <element signature="e#6118#7052#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="123" column="84" lean-forward="false" selection-start-line="123" selection-start-column="84" selection-end-line="123" selection-end-column="84" />
+          <folding>
+            <element signature="e#8947#11226#0#HTML" expanded="false" />
+            <element signature="e#11319#13057#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Courrier/details.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+        <state relative-caret-position="243">
+          <caret line="34" column="53" lean-forward="false" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
           <folding />
         </state>
       </provider>
