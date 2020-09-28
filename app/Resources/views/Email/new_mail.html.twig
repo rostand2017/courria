@@ -1,16 +1,18 @@
 <html>
 <head>
-    <title>News Concert Camer</title>
+    <title>News Follow</title>
     <meta charset="utf-8">
 </head>
 <body>
 <div>
     <div style="position:relative;padding: 10px; width: 70%;background: #39f">
-        <h2 style="color: white;">Concert Camer</h2>
+        <h2 style="color: white;">Nouveau courrier</h2>
     </div>
     <div style="margin-top: 5px">
-        <h3 style="margin: 5px;"><b><span id="salutation"></span> {{ nom }}</b></h3>
-        <p style="margin: 5px">{{ message }}</p>
+        <h3 style="margin: 5px;"><b><span id="salutation"></span> {{ nom }}.Vous avez reçu un nouveau courrier <span style="color: #0a6aa1; font-size: 20px">{{ code }}</span></b></h3>
+        <p><b>Emeteur du courrier</b> {{ courrier.expediteur }}</p>
+        <p><b>Objet</b> {{ courrier.objet }}</p>
+        <p style="margin: 5px"><a href="{{ link }}">Acceder directement au courrier</a></p>
     </div>
 </div>
 <script>

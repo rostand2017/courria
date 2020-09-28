@@ -203,10 +203,39 @@ class CourrierController extends Controller
         $courrier->setPosition(self::SEC_CON);
         $em->persist($courrier);
         $em->flush();
+
+        $chefOfService = $em->getRepository(Utilisateur::class)->findOneBy(["service"=>$service, "fonction"=>"CHEF_TYPE"]);
+        if($chefOfService)
+            $this->sentMail($chefOfService->getEmail(), $chefOfService->getNom(), $courrier);
+
         return new JsonResponse(array(
             "status"=>0,
             "mes"=>"Courrier affecté avec succès au service $service"
         ));
+    }
+
+    /**
+     * send a  mail to a user
+     * @param $email
+     * @param $nom
+     * @param $courrier
+     */
+    private function sentMail($email, $nom, $courrier){
+        $mes = (new \Swift_Message("Nouveau courrier"))
+            ->setFrom('contact@follow.com')
+            ->setTo($email)
+            ->setBody(
+                $this->renderView(
+                    'Email/new_mail.html.twig',
+                    array(
+                        'nom' => $nom,
+                        "link "=> $this->generateUrl("admin_homepage"),
+                        'courrier' => $courrier
+                    )
+                ),
+                "text/html"
+            );
+        $this->get('mailer')->send($mes);
     }
 
     public function transfertToServiceAction(Request $request, Courrier $courrier){
